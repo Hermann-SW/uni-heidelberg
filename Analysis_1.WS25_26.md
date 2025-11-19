@@ -13,7 +13,7 @@ Erstellung/Änderung von MathJax am einfachsten mittels *file edit* auf github.c
 ## Lemmata, Sätze, Definitionen, ... der Vorlesungen 1-8
 (der rein handschriftlichen Vorlesungen, beginnend mit Vorlesung 9 nicht mehr nötig)
 
-(Vorlesung 1)
+[Vorlesung 1]
 
 # 1. Grundlagen
 
@@ -51,7 +51,7 @@ Produktmenge von $\mathcal{A}$ und $\mathcal{B}$
 
 i) $\mathcal{A}$ und $\mathcal{B}$ sind disjunkt, falls gilt $\mathcal{A}\cap\mathcal{B}=\emptyset$
 
-(Vorlesung 2)
+[Vorlesung 2]
 
 ## 1.2. Abbildungen
 
@@ -80,12 +80,12 @@ $\forall y\in \mathcal{B}: \exists x\in \mathcal{A}$ s.d. $y=f(x)$
 
 b) $f$ heißt bijektiv, falls $f$ injektiv und surjektiv  
 
-(Vorlesung 3)
+[Vorlesung 3]
 
 ### Satz 1.7.
 Sei $f: \mathcal{A} \to \mathcal{B}$ eine bijektive Abbildung.  
 Dann existiert genau eine Abbildung $g: \mathcal{B} \to \mathcal{A}$ mit Eigenschaften  
 $\forall x\in \mathcal{A}: (g\circ f)(x) = x$  
-$\forall y\in \mathcal{B}: (f\circ g)(y) = y$
+$\forall y\in \mathcal{B}: (f\circ g)(y) = y$  
 Diese Abbildung $g$ heißt Inverse (oder Umkehrabbildung)  
 Notation: $f^{-1}$
