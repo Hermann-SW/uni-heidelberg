@@ -26,4 +26,11 @@ a) $\mathcal{B}\subset \mathcal{A}$ bedeutet: jedes Element in $\mathcal{B}$ ist
 b) Zwei Mengen $\mathcal{A}$ und $\mathcal{B}$ sind gleich ($\mathcal{A}=\mathcal{B}$) falls $\mathcal{A}\subset \mathcal{B}$ und $\mathcal{B}\subset \mathcal{A}$  
 ($\mathcal{A}\subset \mathcal{B}$ und $\mathcal{B}\subset \mathcal{A}$) $\Longleftrightarrow \mathcal{A}=\mathcal{B}$
 
+c) $\mathcal{B}$ ist eine strikte Teilmenge von $\mathcal{A}$, falls existiert ein Element $a\in \mathcal{A}$ mit $a\notin \mathcal{B}$ (Notation $\subsetneq$)
 
+d) $\emptyset := ${} leere Menge oder Nullmenge  
+$\emptyset$ enthält keine Elemente  
+Konventionsgemäß $\emptyset \subset \mathcal{A}$ für alle Mengen $\mathcal{A}$
+
+e) $\mathcal{A}\cup \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ oder $a \in \mathcal{B}$ }  
+Vereinigung von $\mathcal{A}$ und $\mathcal{B}$
