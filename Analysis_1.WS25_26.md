@@ -20,7 +20,7 @@ https://www.wolframalpha.com/input?i=sum+1%2Fk%5E2%2C+k%3D1+to+infinity
 
 ## 1.1. Mengen und Aussagen
 
-### Definition 1.1
+### Definition 1.1.
 (Cantor 1895)
 Eine Menge ist eine wohldefinierte Zusammenfassung verschiedener Objekte zu einem Ganzen
 
