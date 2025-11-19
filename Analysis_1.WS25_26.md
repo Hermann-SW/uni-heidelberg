@@ -34,3 +34,15 @@ Konventionsgemäß $\emptyset \subset \mathcal{A}$ für alle Mengen $\mathcal{A}
 
 e) $\mathcal{A}\cup \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ oder $a \in \mathcal{B}$ }  
 Vereinigung von $\mathcal{A}$ und $\mathcal{B}$
+
+f) $\mathcal{A}\cap \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ und $a \in \mathcal{B}$ }  
+Schnitt oder Durchschnitt von $\mathcal{A}$ und $\mathcal{B}$
+
+g) $\mathcal{A}\setminus \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ und $a \notin \mathcal{B}$ }  
+Differenz von $\mathcal{A}$ und $\mathcal{B}$
+
+h) $\mathcal{A}\times \mathcal{B} :=$ { $(a,b) \vert a\in \mathcal{A}, b \in \mathcal{B}$ }  
+Produktmenge von $\mathcal{A}$ und $\mathcal{B}$
+
+i) $\mathcal{A}$ und $\mathcal{B}$ sind disjunkt, falls gilt $\mathcal{A}\cap\mathcal{B}=\emptyset$
+
