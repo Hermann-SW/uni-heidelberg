@@ -70,8 +70,8 @@ $x\mapsto (g\circ f)(x) := g(f(x))$
 ### Definition 1.6.
 Es sei $f: \mathcal{A} \to \mathcal{B}$ eine Abbildung  
 
-a) $f$ hei0t injektiv, falls gilt  
-$\forall x_1,x_2\in \mathcal{A}: x_1\neq x_2 \implies x_1=x_2$  
+a) $f$ heißt injektiv, falls gilt  
+$\forall x_1,x_2\in \mathcal{A}: x_1\neq x_2 \implies f(x_1)\neq f(x_2)$  
 oder äquivalent  
 $\forall x_1,x_2\in \mathcal{A}: f(x_1)=f(x_2) \implies x_1=x_2$  
 
