@@ -2,7 +2,7 @@
 ## Hausaufgabe 3.3
 
 Anstelle eines normalen Beweises dass 𝔽₄ ein Körper ist,  
-ein automatischer mittels [PARI/GP](https://pari.math.u-bordeaux.fr) script [F4.gp](F4.gp):
+ein automatischer mittels [PARI/GP](https://pari.math.u-bordeaux.fr) script [F4.gp](scripts/F4.gp):
 ```
 $ gp -q < F4.gp 
 0 = 
