@@ -3,7 +3,7 @@
 
 Anstelle eines normalen Beweises mit Fallunterscheidung,  
 automatische Bestimmung aller Gruppen mit 4 Elementen  
-mittels Python script [G4.py](scripts/G4.py):
+mittels Python script [G4.py](../scripts/G4.py):
 ```
 $ python G4.py 
 0 1 2 3

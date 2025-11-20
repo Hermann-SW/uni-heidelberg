@@ -4,7 +4,7 @@
 In der Pleanrübung wurde diskutiert, ob es neben der  
 symmetrischen Gruppe $\mathcal{S}_3$ noch andere Gruppen  
 mit 6 Elementen gibt.  
-Das Python script [G6.py](scripts/G4.py) beantwortet dies:
+Das Python script [G6.py](../scripts/G4.py) beantwortet dies:
 ```
 $ python G6.py 
 nichtisomorphe abelsche Gruppen ( von 60 )
