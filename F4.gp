@@ -15,7 +15,7 @@ slF4 = vecsort(lift(F4));
 inF4(M)=vecsearch(slF4,lift(M));
 
 {
-  F4m0=F4[2..#F4];  \\ Fm0 = F4\{0}
+  F4m0=F4[2..#F4];  \\ F4m0 = F4\{0}
   zero=F4[1];
    one=F4[2];
 
@@ -68,9 +68,9 @@ inF4(M)=vecsearch(slF4,lift(M));
     assert(a*one==a && one*a==a,"M3"));
   print1("(M3)✓ ");
 
-  [a,b] = F4[3..#F4];
-  assert(one*(-one)==one && (-one)*one==one,"M4 1");
-  assert(a*b==one && b*a==one,"M4 a,b");
+  foreach(F4m0,a,
+    assert(inF4(a^-1),"M4 inv1");
+    assert(a*(a^-1)==one,"M4 inv2"));
   print1("(M4)✓ ");
 
   foreach(F4,a,
