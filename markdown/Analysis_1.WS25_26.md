@@ -115,3 +115,40 @@ b) &Auml;quivalenzklassen
 $[a]:=$ { $b\in \mathcal{A}\vert b\sim a$ }    
 $a$ heißt Repr&auml;sentant der &Auml;quivalenzklasse $[a]$
 
+## 1.3 Die nat&uuml;rlichen Zahlen. Das Prinzip der vollst&auml;ndigen Induktion
+
+$\mathbb{N}:=$ { $1,2,3,\dots$ }  
+$\mathbb{N}_0:=$ { $0,1,2,3,\dots$ } $= \mathbb{N}\cup$ { 0 }
+
+### Axiomensystem der nat&uuml;rlichen Zahlen von Peano (Axiome=Grundannahmen)
+
+1. $1\in\mathbb{N}$
+2. $\forall n\in\mathbb{N}\exists!n'\in\mathbb{N}$ als "Nachfolger" von $n$
+3. Die Zahl $1$ ist nicht Nachfolger einer nat&uuml;rlichen Zahl
+4. $n'=m' \implies n=m$
+5. Sei $\mathcal{M}\subset\mathbb{N}$ und $1\in \mathcal{M}$ und $\forall n\in\mathcal{M}: n'\in \mathcal{M}$.  
+Dann $\mathcal{M}=\mathbb{N}$
+
+### Vollst&auml;ndige Induktion (Folgerung von Axiom 5)
+
+Zu jedem $n\in \mathbb{N}$ sei $\mathcal{E}(n)$ eine Aussage  
+Die Aussage $\mathcal{E}(n)$ ist g&uuml;ltig $\forall n\in\mathbb{N}$ falls gilt:
+1. Induktionsanfang: Die Aussage $\mathbb{E}(1)$ ist g&uuml;ltig
+2. Induktionsschritt: Unter der Annahme, dass $\mathcal{E}(n)$ g&uuml;ltig ist, gilt auch $\mathcal{E}(n+1)$
+
+## 1.4. Elemente der Kombinatorik
+
+Notation: Sei $m,n\in \mathbb{Z}, m\leq n, a_m,\dots,a_n\in\mathbb{R}$.
+
+Wir definieren $\prod_{k=m}^n a_k:=a_m\cdot\dots\cdot{a_n}$. 
+
+Falls $m>n \prod_{k=m}^{n}a_k:=1$.
+
+### Definition 1.10. Fakult&auml;t  
+
+F&uuml;r $n \in \mathbb{N}_0$ ist 
+
+$n! := \prod_{k=1}^{n} k = 1 \cdot 2 \cdot \dots \cdot n$
+
+### Satz 1.11. (Permutation)
+Die Anzahl aller Anordnungen (oder Permutationen) von $n\in \mathbb{N}$ Elementen ist $n!$
