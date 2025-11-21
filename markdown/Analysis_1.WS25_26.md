@@ -100,3 +100,18 @@ $$\forall x_1,x_2 \in\mathcal{A}: f(x_1\oplus_{\mathcal{A}}x_2)=f(x_1)\oplus_{\m
 Ein bijektiver Homomorphismus heißt Isomorphismus  
 $\mathcal{A}$ und $\mathcal{B}$ mit Struktur heißen isomorph, falls es zwischen $\mathcal{A}$ und $\mathcal{B}$ einen Isomorphismus gibt, dessen Umkehrung ebenfalls Isomorphismus ist.
 
+### Definition 1.9.
+a) &Auml;quivalenzrelation auf einer Menge $\mathcal{A}$ ist eine Beziehung $a\sim b$ zwischen Elementen von $\mathcal{A}$ mit Eigenschaften  
+
+$R_1$: $\forall{a,b}\in \mathcal{A}$ gilt entweder $a\sim b$ oder $a\not\sim b$ (Relation)  
+
+$R_2$: $a\sim a$ (Reflexivit&auml;t)  
+
+$R_3$: $a\sim b \implies b\sim a$ (Symmetrie)  
+
+$R_4$: $a\sim b$, $b\sim c \implies a\sim c$ (Transitivit&auml;t)  
+
+b) &Auml;quivalenzklassen  
+$[a]:=$ { $b\in \mathcal{A}\vert b\sim a$ }    
+$a$ heißt Repr&auml;sentant der &Auml;quivalenzklasse $[a]$
+
