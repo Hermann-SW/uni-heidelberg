@@ -90,3 +90,13 @@ $\forall x\in \mathcal{A}: (g\circ f)(x) = x$
 $\forall y\in \mathcal{B}: (f\circ g)(y) = y$  
 Diese Abbildung $g$ heißt Inverse (oder Umkehrabbildung)  
 Notation: $f^{-1}$
+
+### Definition 1.8.
+Sei $\mathcal{A},\mathcal{B}$ Mengen mit Operationen $\oplus_{\mathcal{A}}$
+und $\oplus_{\mathcal{B}}$ (z.B. Addition, Multiplikation)  
+Abbildung $f:\mathcal{A}\to\mathcal{B}$ heißt homomorph (strukturerhaltend) wenn gilt:  
+$$\forall x_1,x_2 \in\mathcal{A}: f(x_1\oplus_{\mathcal{A}}x_2)=f(x_1)\oplus_{\mathcal{B}}f(x_2)$$
+
+Ein bijektiver Homomorphismus heißt Isomorphismus  
+$\mathcal{A}$ und $\mathcal{B}$ mit Struktur heißen isomorph, falls es zwischen $\mathcal{A}$ und $\mathcal{B}$ einen Isomorphismus gibt, dessen Umkehrung ebenfalls Isomorphismus ist.
+
