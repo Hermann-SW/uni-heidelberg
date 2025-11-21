@@ -1,10 +1,15 @@
 
 ## Plenarübung 5 Diskussion
 
-In der Pleanrübung wurde diskutiert, ob es neben der  
-symmetrischen Gruppe $\mathcal{S}_3$ noch andere Gruppen  
-mit 6 Elementen gibt.  
-Das Python script [G6.py](../scripts/G6.py) beantwortet dies:
+In der Pleanrübung wurde diskutiert, ob es neben der symmetrischen Gruppe $\mathcal{S}_3$  
+noch andere Gruppen mit 6 Elementen gibt. Das Python script [G6.py](../scripts/G6.py) beantwortet dies.  
+Die abelsche Gruppe wird z.B. von der 5 zyklisch erzeugt:  
+
+$$\begin{eqnarray*}
+0&\stackrel{\circ 5}{\to}&5\stackrel{\circ 5}{\to}2\stackrel{\circ 5}{\to}1\stackrel{\circ 5}{\to}4\stackrel{\circ 5}{\to}3\stackrel{\circ 5}{\to}\\
+0&\stackrel{\circ 5}{\to}&\dots
+\end{eqnarray*}$$
+
 ```
 $ python G6.py 
 nichtisomorphe abelsche Gruppen ( von 60 )
