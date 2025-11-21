@@ -1,4 +1,5 @@
 
+
 # Analysis 1
 https://heico.uni-heidelberg.de/heiCO/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/391025
 
@@ -152,3 +153,42 @@ $n! := \prod_{k=1}^{n} k = 1 \cdot 2 \cdot \dots \cdot n$
 
 ### Satz 1.11. (Permutation)
 Die Anzahl aller Anordnungen (oder Permutationen) von $n\in \mathbb{N}$ Elementen ist $n!$
+
+
+
+### Definition 1.12. Binomialkoeffizient
+F&uuml;r $n,k\in\mathbb{N}_0$  
+$n\geq k\geq 1$
+
+$$\begin{pmatrix} n  \\ 
+k  \end{pmatrix} :=\frac{n\cdot (n-1)\dots (n-k+1)}{k!}$$
+
+$k=0$ 
+
+$$\begin{pmatrix}
+n \\
+0
+\end{pmatrix} :=1$$
+
+$n<k$ 
+
+$$\begin{pmatrix}
+n \\
+0
+\end{pmatrix} :=0$$
+
+### Lemma 1.13.
+
+F&uuml;r $n,k\in\mathbb{N}, 0<k<n$, gilt  
+
+$$\begin{pmatrix}
+n \\
+k
+\end{pmatrix} =
+\begin{pmatrix}
+n-1 \\
+k-1\end{pmatrix}
++
+\begin{pmatrix}
+n-1 \\
+k\end{pmatrix}$$
