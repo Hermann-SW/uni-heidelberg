@@ -396,3 +396,23 @@ Eine Folge $$(a_n)_{n\in \mathbb{N}}$$ von Zahlen $$a_n\neq 0$$
 
 ist Nullfolge genau dann wenn die Folge $$(\frac{1}{a_n})_{n\in \mathbb{N}}$$ strikt divergent ist
 
+
+### Lemma 2.6.
+$$\text{Sei } (a_n)_{n\in \mathbb{N}} \text{ mit } \lim\limits_{n\to \infty} \vert a_n\vert =a \text{.}$$
+
+$$\text{Dann die Folge } (\vert a_n\vert)_{n\in \mathbb{N}} \text{ ist konvergent und } \lim\limits_{n\to \infty} \vert a_n\vert = \vert a \vert$$
+
+### Lemma 2.7. Teilfolge
+Sei $\mathbb{N}'=\lbrace n_k, k\in \mathbb{N}, n_{k+1}>n_k\rbrace\subset \mathbb{N}$ eine unendliche Teilmenge von $\mathbb{N}$  
+$(a_{n_k})_{k\in \mathbb{N}}$ heißt Teilfolge von $(a_n)_n\in \mathbb{N}$
+
+### Definition 2.8. Cauchy-Folge
+$\text{Eine Folge } (a_n)_{n\in \mathbb{N}} \text{ heißt Cauchy-Folge, wenn }$
+
+$\forall \epsilon>0\exists n_\epsilon\in\mathbb{N} \text{ s.d. } \forall n,m\geq n_\epsilon &#8203; \vert a_n-a_m\vert<\epsilon$
+
+### Lemma 2.9.
+$$\text{Sei } (a_n)_{n\in \mathbb{N}} \text{ eine konvergente Folge mit } \lim\limits_{n\to \infty} a_n=a .$$
+
+Dann ist $(a_n)_{n\in \mathbb{N}}$ eine Cauchy-Folge. Eine Cauchy-Folge ist notwendig beschr&auml;nkt.
+
