@@ -1,5 +1,4 @@
 
-
 # Analysis 1
 https://heico.uni-heidelberg.de/heiCO/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/391025
 
@@ -192,3 +191,35 @@ k-1\end{pmatrix}
 \begin{pmatrix}
 n-1 \\
 k\end{pmatrix}$$
+
+
+### Satz 1.13.
+Sei $a,b\in\mathbb{R}$ und $n\in\mathbb{N}_0$. 
+
+Dann  
+
+$$(a+b)^n=\sum\limits_{k=0}^n \begin{pmatrix}
+n \\
+k
+\end{pmatrix} a^{n-k}b^k $$
+
+bzw.
+
+$$(a+b)^n=\begin{pmatrix}
+n \\
+0
+\end{pmatrix} a^{n} + \begin{pmatrix}
+n \\
+1
+\end{pmatrix} a^{n-1}b + \begin{pmatrix}
+n \\
+2
+\end{pmatrix} a^{n-2}b^2 + \dots + \begin{pmatrix}
+n \\
+n-1
+\end{pmatrix} ab^{n-1} + \begin{pmatrix}
+n \\
+n
+\end{pmatrix} b^{n}
+$$
+
