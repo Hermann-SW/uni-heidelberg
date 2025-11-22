@@ -270,3 +270,27 @@ $$\stackrel{M1}{=}$$ $a^{-1}b^{-1}$
 l) $(1)^{-1} = \frac{1}{1}=1$  
 
 
+### Definition 1.17.
+Ein angeordneter K&ouml;rper ist ein K&ouml;rper $K$ zusammen mit einer Teilmenge $P\subset K$, die die Axiome O1 und O2 erf&uuml;llt.  
+(O1) $\forall a\in K$ gilt geneau eine der folgenden Aussagen  
+i) $a\in P$ Schreibweise $a>0$ Sprich $a$ positiv  
+ii) $a=0$ Schreibweise $a=0$  
+i) $-a\in P$ Schreibweise $-a>0$ Sprich $a$ negativ  
+(O2)
+
+$$
+\forall a,b\in P \implies a+b, ab \in P&#8203;&#8203;
+a,b>0 \implies  \stackrel{a+b>0}{ab>0} 
+$$
+
+### Definition 1.18. (Positivit&auml;t)
+Sei $(K,+,\cdot)$ ein angeordneter K&ouml;rper  
+$a\in K$ heißt positiv falls $a>0$; $a\in K$ heißt negativ falls $-a>0$  
+$K^+:=$ { $a\in K\vert a>0$ }, $K^-:=$ { $a\in K\vert a<0$ }
+
+### Definition 1.19. (Ordnungsrelation)
+Sei $(K,+,\cdot,>)$ ein angeordneter K&ouml;rper, $a,b\in K$. Dann  
+$a<b&#8203;:\iff b-a\in K^+$  
+$a>b&#8203;:\iff b<a$  
+$a\leq b&#8203;:\iff (a<b\ \text{oder}\ a=b)$  
+$a\geq b&#8203;:\iff b\leq a$  
