@@ -1,4 +1,3 @@
-
 # Analysis 1
 https://heico.uni-heidelberg.de/heiCO/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/391025
 
@@ -222,4 +221,31 @@ n \\
 n
 \end{pmatrix} b^{n}
 $$
+
+[Vorlesung 4]
+
+## 1.5 Grundlegendes &uuml;ber die Zahlenmengen $\mathbb{Z}$ und $\mathbb{Q}$
+
+Was ist ein K&ouml;rper? mehr in LA1
+
+Sei $K$ eine Menge mit Operationen/Verkn&uuml;pfungen "+" (Addition)
+und " $\cdot$ " (Multiplikation) $(a,b)\mapsto a+b, (a,b)\mapsto a\cdot b$
+(Abbildungen $K\times K\mapsto K $)  
+Operation "+" erf&uuml;llt Axiome der Addition falls  
+(A1) $\forall a,b\in K: a+b=b+a$ (Kommutativit&auml;t)  
+(A2) $\forall a,b,c\in K: (a+b)+c=a+(b+c)$ (Assoziativit&auml;t)  
+(A3) $\exists 0\in K: \forall a\in K: a+0=0+a$ (Neutrales Element/Nullelement der Addition)  
+(A4) $\forall a\in K \exists -a\in K: a+(-a)=(-a)+a=0$ (Additive Inverse)  
+
+Operation " $\cdot$ " erf&uuml;llt Axiome der Multiplikation falls  
+(M1) $\forall a,b\in K: a\cdot b=b\cdot a$ (Kommutativit&auml;t)  
+(M2) $\forall a,b,c\in K: (a\cdot b)\cdot c=a\cdot (b\cdot c)$ (Assoziativit&auml;t)  
+(M3) $\exists 1\in K\setminus\{0\}=:K^* : \forall a\in K: a\cdot 1=1\cdot a = a$ (Neutrales Element/Einselement der Multiplikation)  
+(M4) $\forall a\in K^* \exists a^{-1}\in K^*: a\cdot a^{-1}=a^{-1}\cdot a=1$ (Multiplikative Inverse)  
+
+Operationen "+" und " $\cdot$ " erf&uuml;llen Distributivit&auml;t  
+(D) $\forall a,b,c\in K: a\cdot (b+c)=a\cdot b+ a\cdot c$
+
+### Definition 1.14 (K&ouml;rper)
+Eine Menge $K$ mit Operationen "+" und " $\cdot$ " (K,+, $\cdot$ ) die Axiome A1-A4, M1-M4 und D erf&uuml;llt heißt K&ouml;rper
 
