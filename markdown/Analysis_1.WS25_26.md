@@ -249,3 +249,24 @@ Operationen "+" und " $\cdot$ " erf&uuml;llen Distributivit&auml;t
 ### Definition 1.14 (K&ouml;rper)
 Eine Menge $K$ mit Operationen "+" und " $\cdot$ " (K,+, $\cdot$ ) die Axiome A1-A4, M1-M4 und D erf&uuml;llt heißt K&ouml;rper
 
+
+
+### Lemma 1.15.
+Sei $(K,+,\cdot)$ ein K&ouml;rper. Die Elemente $0,1\in K$ sind durch die Axiome eindeutig bestimmt. Zu $a\in K$ ist das Inverse der Addition und zu $a\in K^*$ das Inverse der Multiplikation eindeutig bestimmt
+
+### Lemma 1.16.
+a) F&uuml;r $a,b\in K$ hat die Gleichung $a+x=b$ genaus eine L&ouml;sung in $K$. Das ist %x=b-a\in K$  
+b) $\forall a\in K; -(-a)=a$  
+c) $\forall a,b\in K$: -(a+b)=-a-b=-a+(-b)$  
+d) $\forall a\in K^* \forall b\in K$ hat die Gleichung $ax=b$ genau eine L&ouml;sung in $K$, das ist $x=a^{-1}b$  
+e) $\forall a,b,c\in K: (a+b)c=ac+bc$  
+f) $\forall a\in K: 0a=a0=0$  
+g) Nullteilerfreiheit $ab=0 \implies a=0$ oder $b=0$  
+h) $\forall a\in K: (-1)a=-a$
+i) Es gilt $(-1)\cdot(-1)=1$  
+j) $\forall a\in K^* : (a^{-1})^{-1}=a$  
+k) $a,b\in K^* : ab\in K^* \ \text{und}\ (ab)^{-1}=b^{-1}a^{-1}$
+$$\stackrel{M1}{=}$$ $a^{-1}b^{-1}$  
+l) $(1)^{-1} = \frac{1}{1}=1$  
+
+
