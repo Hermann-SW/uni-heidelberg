@@ -101,10 +101,10 @@ $\mathcal{A}$ und $\mathcal{B}$ mit Struktur heißen isomorph, falls es zwischen
 
 ### Definition 1.9.
 - a) &Auml;quivalenzrelation auf einer Menge $\mathcal{A}$ ist eine Beziehung $a\sim b$ zwischen Elementen von $\mathcal{A}$ mit Eigenschaften  
-$R_1$: $\forall{a,b}\in \mathcal{A}$ gilt entweder $a\sim b$ oder $a\not\sim b$ (Relation)  
-$R_2$: $a\sim a$ (Reflexivit&auml;t)  
-$R_3$: $a\sim b \implies b\sim a$ (Symmetrie)  
-$R_4$: $a\sim b$, $b\sim c \implies a\sim c$ (Transitivit&auml;t)  
+$R_1$: $\forall{a,b}\in \mathcal{A}$ gilt entweder $a\sim b$ oder $a\not\sim b$ &#8203; (Relation)  
+$R_2$: $a\sim a$ &#8203; (Reflexivit&auml;t)  
+$R_3$: $a\sim b \implies b\sim a$ &#8203; (Symmetrie)  
+$R_4$: $a\sim b$, $b\sim c \implies a\sim c$ &#8203; (Transitivit&auml;t)  
 
 - b) &Auml;quivalenzklassen  
 $[a]:=$ { $b\in \mathcal{A}\vert b\sim a$ }    
@@ -228,16 +228,16 @@ Sei $K$ eine Menge mit Operationen/Verkn&uuml;pfungen "+" (Addition)
 und " $\cdot$ " (Multiplikation) $(a,b)\mapsto a+b, (a,b)\mapsto a\cdot b$
 (Abbildungen $K\times K\mapsto K $)  
 Operation "+" erf&uuml;llt Axiome der Addition falls  
-- (A1) $\forall a,b\in K: a+b=b+a$ (Kommutativit&auml;t)  
-- (A2) $\forall a,b,c\in K: (a+b)+c=a+(b+c)$ (Assoziativit&auml;t)  
-- (A3) $\exists 0\in K: \forall a\in K: a+0=0+a$ (Neutrales Element/Nullelement der Addition)  
-- (A4) $\forall a\in K \exists -a\in K: a+(-a)=(-a)+a=0$ (Additive Inverse)  
+- (A1) $\forall a,b\in K: a+b=b+a$ &#8203; (Kommutativit&auml;t)  
+- (A2) $\forall a,b,c\in K: (a+b)+c=a+(b+c)$ &#8203; (Assoziativit&auml;t)  
+- (A3) $\exists 0\in K: \forall a\in K: a+0=0+a$ &#8203; (Neutrales Element/Nullelement der Addition)  
+- (A4) $\forall a\in K \exists -a\in K: a+(-a)=(-a)+a=0$ &#8203; (Additive Inverse)  
 
 Operation " $\cdot$ " erf&uuml;llt Axiome der Multiplikation falls  
-- (M1) $\forall a,b\in K: a\cdot b=b\cdot a$ (Kommutativit&auml;t)  
-- (M2) $\forall a,b,c\in K: (a\cdot b)\cdot c=a\cdot (b\cdot c)$ (Assoziativit&auml;t)  
-- (M3) $\exists 1\in K\setminus\{0\}=:K^* : \forall a\in K: a\cdot 1=1\cdot a = a$ (Neutrales Element/Einselement der Multiplikation)  
-- (M4) $\forall a\in K^* \exists a^{-1}\in K^*: a\cdot a^{-1}=a^{-1}\cdot a=1$ (Multiplikative Inverse)  
+- (M1) $\forall a,b\in K: a\cdot b=b\cdot a$ &#8203; (Kommutativit&auml;t)  
+- (M2) $\forall a,b,c\in K: (a\cdot b)\cdot c=a\cdot (b\cdot c)$ &#8203; (Assoziativit&auml;t)  
+- (M3) $\exists 1\in K\setminus\{0\}=:K^* : \forall a\in K: a\cdot 1=1\cdot a = a$ &#8203; (Neutrales Element/Einselement der Multiplikation)  
+- (M4) $\forall a\in K^* \exists a^{-1}\in K^*: a\cdot a^{-1}=a^{-1}\cdot a=1$ &#8203; (Multiplikative Inverse)  
 
 Operationen "+" und " $\cdot$ " erf&uuml;llen Distributivit&auml;t  
 - (D) $\forall a,b,c\in K: a\cdot (b+c)=a\cdot b+ a\cdot c$
@@ -269,9 +269,9 @@ $$\stackrel{M1}{=}$$ $a^{-1}b^{-1}$
 ### Definition 1.17.
 Ein angeordneter K&ouml;rper ist ein K&ouml;rper $K$ zusammen mit einer Teilmenge $P\subset K$, die die Axiome O1 und O2 erf&uuml;llt.  
 - (O1) $\forall a\in K$ gilt geneau eine der folgenden Aussagen  
-  - i) $a\in P$ Schreibweise $a>0$ Sprich $a$ positiv  
+  - i) $a\in P$ Schreibweise $a>0$ &#8203; Sprich $a$ positiv  
   - ii) $a=0$ Schreibweise $a=0$  
-  - iii) $-a\in P$ Schreibweise $-a>0$ Sprich $a$ negativ  
+  - iii) $-a\in P$ Schreibweise $-a>0$ &#8203; Sprich $a$ negativ  
 - (O2)
 
 $$
