@@ -372,24 +372,27 @@ Die quadratische Gleichung $x^2=2$ besitzt keine rationale L&ouml;sung
 ### Definition 2.2 Zahlenfolge in $\mathbb{Q}$
 Eine  Menge $(a_n)_{n\in \mathbb{N}}$ numerierter rationaler Zahlen wird Folge genannt (Hier: $a_n\in \mathbb{Q} \forall n$)
 
-### Definition 2.3. Konvergenz
-Eine Folge $(a_n)_{n\in \mathbb{N}}$, $a_n\in \mathbb{Q}$ heißt konvergent gegen
-einen Limes $a\in \mathbb{Q}$, wenn gilt $\vert a_n-a\vert\to0, n\to \infty$.  
-Falls $\vert a_n\vert\to \infty, n\to \infty$, heißt die Folge strikt divergent  
 
-Was bedeutet $\vert a_n-a\vert\to 0$?  
 
-Pr&auml;ziser: Cauchy  
-Eine Folge $$(a_n)_{n\in \mathbb{N}},  a_n\in \mathbb{Q}$$  
+[Vorlesung 7]
 
-konvergiert gegen ein Limes $a\in \mathbb{Q}$ wenn  
+### Definition 2.3. Cauchy Konvergenzkriterium
+Eine Folge $(a_n)_{n\in \mathbb{N}}, a_n\in \mathbb{Q}$ konvergent gegen ein Limes $a\in \mathbb{Q} \text{wenn}$ 
+
 $\forall \epsilon>0$ &#8203; ($\epsilon$ beliebig klein)  
 $\exists$ Zahl $n:=n(\epsilon)$ (bzw. $n:=n_\epsilon$)  
-s.d. $\forall n\geq n_\epsilon$ gilt $\vert a_n-a\vert\leq \epsilon$  
+s.d. $\forall n\geq n_\epsilon$ gilt $\vert a_n-a\vert< \epsilon$  
 Schreibweise: 
 
 $$a_n\to a, n\to \infty &#8203; , &#8203; \underset{n\to \infty}{a_n\to a} &#8203; , &#8203;\lim\limits_{n\to \infty}{}a_n=a$$ 
 
-Die Folge ist strikt divergent, falls $\vert a_n\vert>\frac{1}{\epsilon}$ für $n\geq n_\epsilon$ &#8203; (korrigiert nach Rannacher)
+Die Folge ist strikt divergent, falls $\vert a_n\vert>\frac{1}{\epsilon}$ für $n\geq n_\epsilon$
 
+### Definition 2.4. Nullfolge
+Eine Folge $(a_n)_{n\in \mathbb{N}}$ mit Limes $a=0$ heißt Nullfolge
+
+### Lemma 2.5
+Eine Folge $$(a_n)_{n\in \mathbb{N}}$$ von Zahlen $$a_n\neq 0$$ 
+
+ist Nullfolge genau dann wenn die Folge $$(\frac{1}{a_n})_{n\in \mathbb{N}}$$ strikt divergent ist
 
