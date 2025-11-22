@@ -280,7 +280,10 @@ i) $-a\in P$ Schreibweise $-a>0$ Sprich $a$ negativ
 
 $$
 \forall a,b\in P \implies a+b, ab \in P&#8203;&#8203;
-a,b>0 \implies  \stackrel{a+b>0}{ab>0} 
+a,b>0 \implies  \begin{cases}
+    a+b>0 \\ 
+    ab>0
+\end{cases}
 $$
 
 ### Definition 1.18. (Positivit&auml;t)
@@ -294,3 +297,23 @@ $a<b&#8203;:\iff b-a\in K^+$
 $a>b&#8203;:\iff b<a$  
 $a\leq b&#8203;:\iff (a<b\ \text{oder}\ a=b)$  
 $a\geq b&#8203;:\iff b\leq a$  
+
+
+### Definition 1.20. Absolutbetrag
+Das Maximum zweier Elemente in $(K,+,\cdot,>)$ ist  
+
+$$
+\underbrace{max\lbrace a,b\rbrace}_{\in K} := \begin{cases}
+    a & \text{falls } a\geq b \\
+    b & \text{falls } a\text{<} b
+\end{cases} &#8203; a,b\in K
+$$
+
+Der Absolutbetrag eines Elementes in $K$ ist  
+
+$$
+\vert a\vert := max\lbrace -a, a\rbrace = \begin{cases}
+    a & \text{falls } a\geq b \\
+    -a & \text{falls } a\text{<} b
+\end{cases}
+$$
