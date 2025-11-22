@@ -262,7 +262,7 @@ d) $\forall a\in K^* \forall b\in K$ hat die Gleichung $ax=b$ genau eine L&ouml;
 e) $\forall a,b,c\in K: (a+b)c=ac+bc$  
 f) $\forall a\in K: 0a=a0=0$  
 g) Nullteilerfreiheit $ab=0 \implies a=0$ oder $b=0$  
-h) $\forall a\in K: (-1)a=-a$
+h) $\forall a\in K: (-1)a=-a$  
 i) Es gilt $(-1)\cdot(-1)=1$  
 j) $\forall a\in K^* : (a^{-1})^{-1}=a$  
 k) $a,b\in K^* : ab\in K^* \ \text{und}\ (ab)^{-1}=b^{-1}a^{-1}$
