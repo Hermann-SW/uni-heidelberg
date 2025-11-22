@@ -275,7 +275,7 @@ Ein angeordneter K&ouml;rper ist ein K&ouml;rper $K$ zusammen mit einer Teilmeng
 (O1) $\forall a\in K$ gilt geneau eine der folgenden Aussagen  
 i) $a\in P$ Schreibweise $a>0$ Sprich $a$ positiv  
 ii) $a=0$ Schreibweise $a=0$  
-i) $-a\in P$ Schreibweise $-a>0$ Sprich $a$ negativ  
+iii) $-a\in P$ Schreibweise $-a>0$ Sprich $a$ negativ  
 (O2)
 
 $$
@@ -317,3 +317,10 @@ $$
     -a & \text{falls } a\text{<} b
 \end{cases}
 $$
+
+### Satz 1.21.
+Seien $a,b\in K$, $K$ angeordneter K&ouml;rper.  
+a) $\vert a\vert\geq 0, \vert a\vert=0 \iff a=0$ &#8203; Definitheit  
+b) $\vert a\cdot b\vert = \vert a\vert\cdot\vert b\vert$ &#8203; Multiplikativit&auml;t  
+c) $\vert a+b\vert \leq \vert a\vert +\vert b\vert$ &#8203; Dreiecksungleichung
+
