@@ -2,7 +2,7 @@
 https://heico.uni-heidelberg.de/heiCO/ee/ui/ca2/app/desktop/#/slc.tm.cp/student/courses/391025
 
 ## MathJax
-Einfaches [MathJax](https://www.mathjax.org/) Beispiel für [LaTeX](https://de.wikipedia.org/wiki/LaTeX) Formeln (nicht perfekt) im Browser (unterstützt von [github markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github)). Erstellung/Änderung von MathJax am einfachsten mittels **file edit** auf github.com im browser. Öffnen des **Preview** tabs ermöglicht das Beurteilen/Korrigieren vor Speicherung:
+Erstellung/Änderung von MathJax am einfachsten mittels **file edit** auf github.com im browser. Öffnen des **Preview** tabs ermöglicht das Betrachten, des **Edit** tabs das Korrigieren vor Speicherung. Einfaches [MathJax](https://www.mathjax.org/) Beispiel für [LaTeX](https://de.wikipedia.org/wiki/LaTeX) Formeln (nicht perfekt) im Browser (unterstützt von [github markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github)):
 <pre>$$\sum\limits_{k=1}^{\infty} \frac{1}{k^2}=\frac{\pi^2}{6}$$</pre>   
 $$\sum\limits_{k=1}^{\infty} \frac{1}{k^2}=\frac{\pi^2}{6}$$   
 
@@ -478,3 +478,47 @@ F&uuml;r eine C.F. rationaler Zahlen $(a_n)_{n\in \mathbb{N}}$ wird zugeordnetes
 $$a=\lim\limits_{n\to \infty}a_n$$
 
 $(a_n)_{n\in \mathbb{N}}$ heißt eine "approximierende" Folge von $a\in \mathbb{R}$. In diesem Sinne hat jede C.F. rationaler Zahlen nach Konstruktion einen Grenzwert in $\mathbb{R}$
+
+## 2.2 Der K&ouml;rper $\mathbb{R}$
+
+### Definition 2.14.
+$$\text{Seien  } a \in \mathbb{R}, b \in \mathbb{R}, (a_n)_{n\in \mathbb{N}},  (b_n)_{n\in \mathbb{N}}$$
+
+zugeh&ouml;rige approximative Folgen rationaler Zahlen
+- Absolutbetrag
+
+$$\vert a\vert := \lim\limits_{n\to \infty}\vert a_n\vert$$
+
+  Folgerung: Begriffe "Konvergenz" und Cauchy Folgen f&uuml;r Folgen reeller Zahlen gelten
+
+- Arithmetische Grundoperationen
+
+$$a+b := \lim\limits_{n\to \infty}(a_n+b_n), &#8203; a\cdot b := \lim\limits_{n\to \infty}(a_n\cdot b_n)$$
+
+- Ordnungsrelation
+
+$$
+\begin{eqnarray*}
+a>b &:=& \lim\limits_{n\to \infty}(a_n-b_n)>0 \\
+a\geq b &:=& a>b \text{ oder } a=b \\
+a < b &:=& b > a \\
+a\leq b &:=& b\geq a
+\end{eqnarray*}
+$$
+
+- Positivit&auml;t
+
+$$\mathbb{R}_+ := \lbrace a\in \mathbb{R} \vert a>0 \rbrace$$
+
+### Satz 2.15. (der vollst&auml;ndige K&ouml;rper $\mathbb{R}$)
+1. $(\mathbb{R},+,\cdot,>)$ angeordneter K&ouml;rper
+2. $\mathbb{Q}$ ist Unterk&ouml;rper von $\mathbb{R}$
+3. Der K&ouml;rper $\mathbb{R}$ ist vollst&auml;ndig, d.h. jede Cauchy Folge in $\mathbb{R}$ hat ein Limes in $\mathbb{R}$
+4. Der Unterk&ouml;rper $\mathbb{Q}$ ist dicht in $\mathbb{R}$, d.h.
+
+$$\forall a\in \mathbb{R}, \forall\epsilon>0, \exists q_\epsilon\in \mathbb{Q} \text{ s.d. } \vert a-q_\epsilon\vert\leq\epsilon$$
+
+[Vorlesung 9]
+
+Ab Vorlesung 9 sind S&auml;tze, Lemmata, Definitionen, $\dots$ nicht mehr handschriftlich und Suchbegriffe k&ouml;nnen dort gesucht werden. Dieses Dokument erlaubt die Suche nach Begriffen in den rein handschriftlichen Vorlesungen 1-8.
+
