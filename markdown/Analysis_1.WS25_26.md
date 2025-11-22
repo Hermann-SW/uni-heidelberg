@@ -416,3 +416,33 @@ $$\text{Sei } (a_n)_{n\in \mathbb{N}} \text{ eine konvergente Folge mit } \lim\l
 
 Dann ist $(a_n)_{n\in \mathbb{N}}$ eine Cauchy-Folge. Eine Cauchy-Folge ist notwendig beschr&auml;nkt.
 
+
+### Lemma 2.10.
+
+$$\text{Seien } (a_n)_{n\in \mathbb{N}} \text{ und } (b_n)_{n\in \mathbb{N}} \text{ Cauchy-Folgen} &#8203; (a_n\in K, b_n\in K \forall n)$$
+
+- (1) Dann sind die Summen- und Produktfolgen
+
+$$(a_n+b_n)_{n\in \mathbb{N}} \text{ und } (a_n\cdot b_n)_{n\in \mathbb{N}}$$
+
+Cauchy-Folgen. Falls die Folgen 
+
+$$(a_n)_{n\in \mathbb{N}}, (b_n)_{n\in \mathbb{N}}$$ 
+
+konvergieren 
+
+$$\lim\limits_{n\to \infty} a_n=a, a\in K \text{ und } \lim\limits_{n\to \infty} b_n=a, b\in K,$$
+
+dann gilt: 
+
+$$\lim\limits_{n\to \infty} (a_n+b_n) = a+b, \lim\limits_{n\to \infty} (a_n\cdot b_n)=a\cdot b$$
+
+- (2) Sei $\vert b_n>\vert\alpha>0$. Dann ist die Quotientenfolge $\left(\frac{a_n}{b_n}\right)_{n\in\mathbb{N}}$ Cauchy-Folge.
+Falls $\underset{n\to \infty}{a_n\to a}, \underset{n\to \infty}{b_n\to b}, \vert b\vert > 0$, dann gilt 
+
+$$\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\frac{a}{b}$$
+
+- (3) Falls $a_n\leq b_n$ f&uuml;r fast alle $n\in \mathbb{N}$ dann gilt $a\leq b$
+
+[Vorlesung 8]
+
