@@ -26,30 +26,30 @@ Eine Menge ist eine wohldefinierte Zusammenfassung verschiedener Objekte zu eine
 ### Definition 1.2.
 Seien $\mathcal{A}$ und $\mathcal{B}$ Mengen
 
-a) $\mathcal{B}\subset \mathcal{A}$ bedeutet: jedes Element in $\mathcal{B}$ ist auch Element von $\mathcal{A}$; $\mathcal{B}$ ist eine Teilmenge von $\mathcal{A}$
+- a) $\mathcal{B}\subset \mathcal{A}$ bedeutet: jedes Element in $\mathcal{B}$ ist auch Element von $\mathcal{A}$; $\mathcal{B}$ ist eine Teilmenge von $\mathcal{A}$
 
-b) Zwei Mengen $\mathcal{A}$ und $\mathcal{B}$ sind gleich ($\mathcal{A}=\mathcal{B}$) falls $\mathcal{A}\subset \mathcal{B}$ und $\mathcal{B}\subset \mathcal{A}$  
+- b) Zwei Mengen $\mathcal{A}$ und $\mathcal{B}$ sind gleich ($\mathcal{A}=\mathcal{B}$) falls $\mathcal{A}\subset \mathcal{B}$ und $\mathcal{B}\subset \mathcal{A}$  
 ($\mathcal{A}\subset \mathcal{B}$ und $\mathcal{B}\subset \mathcal{A}$) $\Longleftrightarrow \mathcal{A}=\mathcal{B}$
 
-c) $\mathcal{B}$ ist eine strikte Teilmenge von $\mathcal{A}$, falls existiert ein Element $a\in \mathcal{A}$ mit $a\notin \mathcal{B}$ (Notation $\subsetneq$)
+- c) $\mathcal{B}$ ist eine strikte Teilmenge von $\mathcal{A}$, falls existiert ein Element $a\in \mathcal{A}$ mit $a\notin \mathcal{B}$ (Notation $\subsetneq$)
 
-d) $\emptyset := ${} leere Menge oder Nullmenge  
+- d) $\emptyset := ${} leere Menge oder Nullmenge  
 $\emptyset$ enthält keine Elemente  
 Konventionsgemäß $\emptyset \subset \mathcal{A}$ für alle Mengen $\mathcal{A}$
 
-e) $\mathcal{A}\cup \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ oder $a \in \mathcal{B}$ }  
+- e) $\mathcal{A}\cup \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ oder $a \in \mathcal{B}$ }  
 Vereinigung von $\mathcal{A}$ und $\mathcal{B}$
 
-f) $\mathcal{A}\cap \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ und $a \in \mathcal{B}$ }  
+- f) $\mathcal{A}\cap \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ und $a \in \mathcal{B}$ }  
 Schnitt oder Durchschnitt von $\mathcal{A}$ und $\mathcal{B}$
 
-g) $\mathcal{A}\setminus \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ und $a \notin \mathcal{B}$ }  
+- g) $\mathcal{A}\setminus \mathcal{B} :=$ { $a \vert a\in \mathcal{A}$ und $a \notin \mathcal{B}$ }  
 Differenz von $\mathcal{A}$ und $\mathcal{B}$
 
-h) $\mathcal{A}\times \mathcal{B} :=$ { $(a,b) \vert a\in \mathcal{A}, b \in \mathcal{B}$ }  
+- h) $\mathcal{A}\times \mathcal{B} :=$ { $(a,b) \vert a\in \mathcal{A}, b \in \mathcal{B}$ }  
 Produktmenge von $\mathcal{A}$ und $\mathcal{B}$
 
-i) $\mathcal{A}$ und $\mathcal{B}$ sind disjunkt, falls gilt $\mathcal{A}\cap\mathcal{B}=\emptyset$
+- i) $\mathcal{A}$ und $\mathcal{B}$ sind disjunkt, falls gilt $\mathcal{A}\cap\mathcal{B}=\emptyset$
 
 [Vorlesung 2]
 
@@ -70,15 +70,15 @@ $x\mapsto (g\circ f)(x) := g(f(x))$
 ### Definition 1.6.
 Es sei $f: \mathcal{A} \to \mathcal{B}$ eine Abbildung  
 
-a) $f$ heißt injektiv, falls gilt  
+- a) $f$ heißt injektiv, falls gilt  
 $\forall x_1,x_2\in \mathcal{A}: x_1\neq x_2 \implies f(x_1)\neq f(x_2)$  
 oder äquivalent  
 $\forall x_1,x_2\in \mathcal{A}: f(x_1)=f(x_2) \implies x_1=x_2$  
 
-b) $f$ heißt surjektiv, falls gilt  
+- b) $f$ heißt surjektiv, falls gilt  
 $\forall y\in \mathcal{B}: \exists x\in \mathcal{A}$ s.d. $y=f(x)$
-
-b) $f$ heißt bijektiv, falls $f$ injektiv und surjektiv  
+ 
+- c) $f$ heißt bijektiv, falls $f$ injektiv und surjektiv  
 
 [Vorlesung 3]
 
@@ -100,17 +100,13 @@ Ein bijektiver Homomorphismus heißt Isomorphismus
 $\mathcal{A}$ und $\mathcal{B}$ mit Struktur heißen isomorph, falls es zwischen $\mathcal{A}$ und $\mathcal{B}$ einen Isomorphismus gibt, dessen Umkehrung ebenfalls Isomorphismus ist.
 
 ### Definition 1.9.
-a) &Auml;quivalenzrelation auf einer Menge $\mathcal{A}$ ist eine Beziehung $a\sim b$ zwischen Elementen von $\mathcal{A}$ mit Eigenschaften  
-
+- a) &Auml;quivalenzrelation auf einer Menge $\mathcal{A}$ ist eine Beziehung $a\sim b$ zwischen Elementen von $\mathcal{A}$ mit Eigenschaften  
 $R_1$: $\forall{a,b}\in \mathcal{A}$ gilt entweder $a\sim b$ oder $a\not\sim b$ (Relation)  
-
 $R_2$: $a\sim a$ (Reflexivit&auml;t)  
-
 $R_3$: $a\sim b \implies b\sim a$ (Symmetrie)  
-
 $R_4$: $a\sim b$, $b\sim c \implies a\sim c$ (Transitivit&auml;t)  
 
-b) &Auml;quivalenzklassen  
+- b) &Auml;quivalenzklassen  
 $[a]:=$ { $b\in \mathcal{A}\vert b\sim a$ }    
 $a$ heißt Repr&auml;sentant der &Auml;quivalenzklasse $[a]$
 
@@ -232,19 +228,19 @@ Sei $K$ eine Menge mit Operationen/Verkn&uuml;pfungen "+" (Addition)
 und " $\cdot$ " (Multiplikation) $(a,b)\mapsto a+b, (a,b)\mapsto a\cdot b$
 (Abbildungen $K\times K\mapsto K $)  
 Operation "+" erf&uuml;llt Axiome der Addition falls  
-(A1) $\forall a,b\in K: a+b=b+a$ (Kommutativit&auml;t)  
-(A2) $\forall a,b,c\in K: (a+b)+c=a+(b+c)$ (Assoziativit&auml;t)  
-(A3) $\exists 0\in K: \forall a\in K: a+0=0+a$ (Neutrales Element/Nullelement der Addition)  
-(A4) $\forall a\in K \exists -a\in K: a+(-a)=(-a)+a=0$ (Additive Inverse)  
+- (A1) $\forall a,b\in K: a+b=b+a$ (Kommutativit&auml;t)  
+- (A2) $\forall a,b,c\in K: (a+b)+c=a+(b+c)$ (Assoziativit&auml;t)  
+- (A3) $\exists 0\in K: \forall a\in K: a+0=0+a$ (Neutrales Element/Nullelement der Addition)  
+- (A4) $\forall a\in K \exists -a\in K: a+(-a)=(-a)+a=0$ (Additive Inverse)  
 
 Operation " $\cdot$ " erf&uuml;llt Axiome der Multiplikation falls  
-(M1) $\forall a,b\in K: a\cdot b=b\cdot a$ (Kommutativit&auml;t)  
-(M2) $\forall a,b,c\in K: (a\cdot b)\cdot c=a\cdot (b\cdot c)$ (Assoziativit&auml;t)  
-(M3) $\exists 1\in K\setminus\{0\}=:K^* : \forall a\in K: a\cdot 1=1\cdot a = a$ (Neutrales Element/Einselement der Multiplikation)  
-(M4) $\forall a\in K^* \exists a^{-1}\in K^*: a\cdot a^{-1}=a^{-1}\cdot a=1$ (Multiplikative Inverse)  
+- (M1) $\forall a,b\in K: a\cdot b=b\cdot a$ (Kommutativit&auml;t)  
+- (M2) $\forall a,b,c\in K: (a\cdot b)\cdot c=a\cdot (b\cdot c)$ (Assoziativit&auml;t)  
+- (M3) $\exists 1\in K\setminus\{0\}=:K^* : \forall a\in K: a\cdot 1=1\cdot a = a$ (Neutrales Element/Einselement der Multiplikation)  
+- (M4) $\forall a\in K^* \exists a^{-1}\in K^*: a\cdot a^{-1}=a^{-1}\cdot a=1$ (Multiplikative Inverse)  
 
 Operationen "+" und " $\cdot$ " erf&uuml;llen Distributivit&auml;t  
-(D) $\forall a,b,c\in K: a\cdot (b+c)=a\cdot b+ a\cdot c$
+- (D) $\forall a,b,c\in K: a\cdot (b+c)=a\cdot b+ a\cdot c$
 
 ### Definition 1.14 (K&ouml;rper)
 Eine Menge $K$ mit Operationen "+" und " $\cdot$ " (K,+, $\cdot$ ) die Axiome A1-A4, M1-M4 und D erf&uuml;llt heißt K&ouml;rper
@@ -255,28 +251,28 @@ Eine Menge $K$ mit Operationen "+" und " $\cdot$ " (K,+, $\cdot$ ) die Axiome A1
 Sei $(K,+,\cdot)$ ein K&ouml;rper. Die Elemente $0,1\in K$ sind durch die Axiome eindeutig bestimmt. Zu $a\in K$ ist das Inverse der Addition und zu $a\in K^*$ das Inverse der Multiplikation eindeutig bestimmt
 
 ### Lemma 1.16.
-a) F&uuml;r $a,b\in K$ hat die Gleichung $a+x=b$ genaus eine L&ouml;sung in $K$. Das ist %x=b-a\in K$  
-b) $\forall a\in K; -(-a)=a$  
-c) $\forall a,b\in K$: -(a+b)=-a-b=-a+(-b)$  
-d) $\forall a\in K^* \forall b\in K$ hat die Gleichung $ax=b$ genau eine L&ouml;sung in $K$, das ist $x=a^{-1}b$  
-e) $\forall a,b,c\in K: (a+b)c=ac+bc$  
-f) $\forall a\in K: 0a=a0=0$  
-g) Nullteilerfreiheit $ab=0 \implies a=0$ oder $b=0$  
-h) $\forall a\in K: (-1)a=-a$  
-i) Es gilt $(-1)\cdot(-1)=1$  
-j) $\forall a\in K^* : (a^{-1})^{-1}=a$  
-k) $a,b\in K^* : ab\in K^* \ \text{und}\ (ab)^{-1}=b^{-1}a^{-1}$
+- a) F&uuml;r $a,b\in K$ hat die Gleichung $a+x=b$ genaus eine L&ouml;sung in $K$. Das ist x=b-a\in K$  
+- b) $\forall a\in K; -(-a)=a$  
+- c) $\forall a,b\in K$: -(a+b)=-a-b=-a+(-b)$  
+- d) $\forall a\in K^* \forall b\in K$ hat die Gleichung $ax=b$ genau eine L&ouml;sung in $K$, das ist $x=a^{-1}b$  
+- e) $\forall a,b,c\in K: (a+b)c=ac+bc$  
+- f) $\forall a\in K: 0a=a0=0$  
+- g) Nullteilerfreiheit $ab=0 \implies a=0$ oder $b=0$  
+- h) $\forall a\in K: (-1)a=-a$  
+- i) Es gilt $(-1)\cdot(-1)=1$  
+- j) $\forall a\in K^* : (a^{-1})^{-1}=a$  
+- k) $a,b\in K^* : ab\in K^* \ \text{und}\ (ab)^{-1}=b^{-1}a^{-1}$
 $$\stackrel{M1}{=}$$ $a^{-1}b^{-1}$  
-l) $(1)^{-1} = \frac{1}{1}=1$  
+- l) $(1)^{-1} = \frac{1}{1}=1$  
 
 
 ### Definition 1.17.
 Ein angeordneter K&ouml;rper ist ein K&ouml;rper $K$ zusammen mit einer Teilmenge $P\subset K$, die die Axiome O1 und O2 erf&uuml;llt.  
-(O1) $\forall a\in K$ gilt geneau eine der folgenden Aussagen  
-i) $a\in P$ Schreibweise $a>0$ Sprich $a$ positiv  
-ii) $a=0$ Schreibweise $a=0$  
-iii) $-a\in P$ Schreibweise $-a>0$ Sprich $a$ negativ  
-(O2)
+- (O1) $\forall a\in K$ gilt geneau eine der folgenden Aussagen  
+  - i) $a\in P$ Schreibweise $a>0$ Sprich $a$ positiv  
+  - ii) $a=0$ Schreibweise $a=0$  
+  - iii) $-a\in P$ Schreibweise $-a>0$ Sprich $a$ negativ  
+- (O2)
 
 $$
 \forall a,b\in P \implies a+b, ab \in P&#8203;&#8203;
@@ -293,10 +289,10 @@ $K^+:=$ { $a\in K\vert a>0$ }, $K^-:=$ { $a\in K\vert a<0$ }
 
 ### Definition 1.19. (Ordnungsrelation)
 Sei $(K,+,\cdot,>)$ ein angeordneter K&ouml;rper, $a,b\in K$. Dann  
-$a<b&#8203;:\iff b-a\in K^+$  
-$a>b&#8203;:\iff b<a$  
-$a\leq b&#8203;:\iff (a<b\ \text{oder}\ a=b)$  
-$a\geq b&#8203;:\iff b\leq a$  
+- $a<b&#8203;:\iff b-a\in K^+$  
+- $a>b&#8203;:\iff b<a$  
+- $a\leq b&#8203;:\iff (a<b\ \text{oder}\ a=b)$  
+- $a\geq b&#8203;:\iff b\leq a$  
 
 
 ### Definition 1.20. Absolutbetrag
@@ -320,7 +316,7 @@ $$
 
 ### Satz 1.21.
 Seien $a,b\in K$, $K$ angeordneter K&ouml;rper.  
-a) $\vert a\vert\geq 0, \vert a\vert=0 \iff a=0$ &#8203; Definitheit  
-b) $\vert a\cdot b\vert = \vert a\vert\cdot\vert b\vert$ &#8203; Multiplikativit&auml;t  
-c) $\vert a+b\vert \leq \vert a\vert +\vert b\vert$ &#8203; Dreiecksungleichung
+- a) $\vert a\vert\geq 0, \vert a\vert=0 \iff a=0$ &#8203; Definitheit  
+- b) $\vert a\cdot b\vert = \vert a\vert\cdot\vert b\vert$ &#8203; Multiplikativit&auml;t  
+- c) $\vert a+b\vert \leq \vert a\vert +\vert b\vert$ &#8203; Dreiecksungleichung
 
