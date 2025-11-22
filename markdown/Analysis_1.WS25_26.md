@@ -325,3 +325,71 @@ F&uuml;r alle $a,b\in K$ gilt &#8203; $\vert \vert a\vert -\vert b\vert \vert \l
 
 [Vorlesung 5]
 
+# Die K&ouml;rkeraxiome und Folgerungen
+
+## Folgerungen aus den Axiomen der Addition
+
+## Folgerungen aus den Axiomen der Multiplikation
+
+## Potenzen
+
+## Folgerungen aus den Anordnungsaxiomen
+
+[Vorlesung 6]
+
+### Satz 1.23. (Dezimalbruchdarstellung)
+Jede rationale Zahl $a$ besitzt eine endliche oder periodische
+Dezimalbruchdarstellung der Form  
+
+$$
+a=\pm (a_0+0,d_1\dots d_s) &#8203;:\iff a=\pm(a_0+\sum\limits_{k=1}^{s}d_k\cdot 10^{-k})
+$$
+
+bzw.
+
+$$
+\begin{eqnarray*}
+a&=&\pm (a_0+0,d_1\dots d_s\overbrace{d_{s+1}\dots d_{s+t}}^{bar} ) &#8203;:\iff \\
+a&=&\pm(a_0+0,d_1\dots d_s\underbrace{d_{s+1}\dots d_{s+t}}\underbrace{d_{s+1}\dots d_{s+t}}\dots) \\
+&&\\
+& & a_0\in\mathbb{N}, d_1\dots d_{s+t}\in\lbrace0,1,\dots,9\rbrace \text{ Ziffern} \\
+\end{eqnarray*}
+$$
+
+Umgekehrt stellt jede Dezimalbruchzerlegung dieser Art eine rationale Zahl dar.  
+
+Hier: bei periodischen Dezimalbr&uuml;chen die Periode $\bar{9}$ nicht zugelassen:  
+
+$a_0+0,d_1\dots d_{k-1}d_k\bar{9} := a_0+0,d_1\dots d_{k-1}(d_k+1), d_k<9$
+
+# Kapitel 2. Die reellen Zahlen
+
+## 2.1 Von den rationalen zu den reellen Zahlen
+
+### Lemma 2.1 Irrationalit&auml;t der Quadratwurzel
+Die quadratische Gleichung $x^2=2$ besitzt keine rationale L&ouml;sung
+
+### Definition 2.2 Zahlenfolge in $\mathbb{Q}$
+Eine  Menge $(a_n)_{n\in \mathbb{N}}$ numerierter rationaler Zahlen wird Folge genannt (Hier: $a_n\in \mathbb{Q} \forall n$)
+
+### Definition 2.3. Konvergenz
+Eine Folge $(a_n)_{n\in \mathbb{N}}$, $a_n\in \mathbb{Q}$ heißt konvergent gegen
+einen Limes $a\in \mathbb{Q}$, wenn gilt $\vert a_n-a\vert\to0, n\to \infty$.  
+Falls $\vert a_n\vert\to \infty, n\to \infty$, heißt die Folge strikt divergent  
+
+Was bedeutet $\vert a_n-a\vert\to 0$?  
+
+Pr&auml;ziser: Cauchy  
+Eine Folge $$(a_n)_{n\in \mathbb{N}},  a_n\in \mathbb{Q}$$  
+
+konvergiert gegen ein Limes $a\in \mathbb{Q}$ wenn  
+$\forall \epsilon>0$ &#8203; ($\epsilon$ beliebig klein)  
+$\exists$ Zahl $n:=n(\epsilon)$ (bzw. $n:=n_\epsilon$)  
+s.d. $\forall n\geq n_\epsilon$ gilt $\vert a_n-a\vert\leq \epsilon$  
+Schreibweise: 
+
+$$a_n\to a, n\to \infty &#8203; , &#8203; \underset{n\to \infty}{a_n\to a} &#8203; , &#8203;\lim\limits_{n\to \infty}{}a_n=a$$ 
+
+Die Folge ist strikt divergent, falls $\vert a_n\vert>\frac{1}{\epsilon}$ für $n\geq n_\epsilon$ &#8203; (korrigiert nach Rannacher)
+
+
