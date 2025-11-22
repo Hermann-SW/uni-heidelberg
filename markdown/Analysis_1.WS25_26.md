@@ -446,3 +446,35 @@ $$\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\frac{a}{b}$$
 
 [Vorlesung 8]
 
+Ziel: Reelle Zahlen als Grenzwerte von rationalen Cauchy-Folgen  
+Wichtig: mehrere C.F. mit gleichem Limes definieren gleiche Zahl  
+Deshalb: &Auml;quivalenzrelation f&uuml;r Cauchy-Folgen in $\mathbb{Q}$
+
+$$(a_n)_{n\in \mathbb{N}} \sim (a'_n)_{n\in \mathbb{N}} &#8203; :\iff \vert a_n-a'_n\vert \to 0 &#8203; (n\to \infty)$$
+
+### Lemma 2.11.
+Die &Auml;quivalenzeigenschaften sind erf&uuml;llt
+1. Reflexivit&auml;t ($a\sim a$)
+2. Symmetrie ($a\sim b \implies b\sim a$)
+3. Transitivit&auml;t ($a\sim b, b\sim c \implies a\sim c$)
+
+### Definition 2.12 &Auml;quivalenzklassen
+
+$$
+\begin{eqnarray*}
+\tilde{\mathbb{R}} & := & \lbrace [(a_n)_{n\in \mathbb{N}}]\rbrace \\
+& & \lbrace (a'_n)_{n\in \mathbb{N}} \text{ Cauchy-Folge } \vert (a'_n)_{n\in \mathbb{N}} \sim (a_n)_{n\in \mathbb{N}} \rbrace \\
+& & \lbrace (a'_n)_{n\in \mathbb{N}} \vert (a'_n-a_n)_{n\in \mathbb{N}}\text{ Nullfolge} \rbrace \\
+\end{eqnarray*}
+$$
+
+### Satz 2.13. 
+Jeder &Auml;quivalenzklasse $[(a_n)_{n\in \mathbb{N}}]$ entspricht genau ein (m&ouml;glicherweise unendlicher) Dezimalbruch. Die Menge aller Dezimalbr&uuml;che wird als Menge $\mathbb{R}$ der reellen Zahlen bezeichnet  
+
+$$\mathbb{R} = \lbrace a:=\pm(a_0+0,d_1d_2\dots d_k\dots) \vert a_0\in \mathbb{N}_0, d_k\in \lbrace 0,\dots,9\rbrace\rbrace$$
+
+F&uuml;r eine C.F. rationaler Zahlen $(a_n)_{n\in \mathbb{N}}$ wird zugeordnetes $a\in \mathbb{R}$ als Grenzwert bezeichnet 
+
+$$a=\lim\limits_{n\to \infty}a_n$$
+
+$(a_n)_{n\in \mathbb{N}}$ heißt eine "approximierende" Folge von $a\in \mathbb{R}$. In diesem Sinne hat jede C.F. rationaler Zahlen nach Konstruktion einen Grenzwert in $\mathbb{R}$
