@@ -268,7 +268,7 @@ $$\stackrel{M1}{=}$$ $a^{-1}b^{-1}$
 
 ### Definition 1.17.
 Ein angeordneter K&ouml;rper ist ein K&ouml;rper $K$ zusammen mit einer Teilmenge $P\subset K$, die die Axiome O1 und O2 erf&uuml;llt.  
-- (O1) $\forall a\in K$ gilt geneau eine der folgenden Aussagen  
+- (O1) $\forall a\in K$ gilt genau eine der folgenden Aussagen  
   - i) $a\in P$ Schreibweise $a>0$ &#8203; Sprich $a$ positiv  
   - ii) $a=0$ Schreibweise $a=0$  
   - iii) $-a\in P$ Schreibweise $-a>0$ &#8203; Sprich $a$ negativ  
@@ -319,4 +319,9 @@ Seien $a,b\in K$, $K$ angeordneter K&ouml;rper.
 - a) $\vert a\vert\geq 0, \vert a\vert=0 \iff a=0$ &#8203; Definitheit  
 - b) $\vert a\cdot b\vert = \vert a\vert\cdot\vert b\vert$ &#8203; Multiplikativit&auml;t  
 - c) $\vert a+b\vert \leq \vert a\vert +\vert b\vert$ &#8203; Dreiecksungleichung
+
+### Korollar 1.22. Umgekehrte Dreiecksregel
+F&uuml;r alle $a,b\in K$ gilt &#8203; $\vert \vert a\vert -\vert b\vert \vert \leq \vert a \vert - \vert b \vert$
+
+[Vorlesung 5]
 
