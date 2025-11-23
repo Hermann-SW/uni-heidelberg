@@ -84,6 +84,29 @@ Produktmenge von $\mathcal{A}$ und $\mathcal{B}$
 Seien $\mathcal{A}, \mathcal{B}$ zwei Mengen.  
 Eine Abbildung $f: \mathcal{A} \to \mathcal{B}$ ist eine Vorschrift, die jedem Element $x\in \mathcal{A}$ genau ein Element $y\in \mathcal{B}$ zuordnet
 
+Weitere Begriffe: Es sei $f: \mathcal{A}\to\mathcal{B}$ eine Abbildung und
+$\mathcal{A}_1\subset\mathcal{A}$, $\mathcal{B}_1\subset\mathcal{B}$ Teilmengen
+- a) Bild von $\mathcal{A}_1$ (unter $f$)
+
+$$f(\mathcal{A}_1):=\lbrace f(x) \vert x\in \mathcal{A}_1\rbrace=\lbrace y \in \mathcal{B} \vert \exists x\in \mathcal{A}_1: y=f(x)\rbrace$$ $$f(\mathcal{A}_1)\subset\mathcal{B}$$
+
+- b) Urbild von $\mathcal{B}_1$
+
+$$f^{-1}(\mathcal{B}_1):=\lbrace x\in \mathcal{A} \vert f(x)\in \mathcal{B}_1\rbrace\subset\mathcal{A}$$
+
+- c) Einschr&auml;nkung von $f$ auf $\mathcal{A}_1$
+
+$$\begin{eqnarray*}
+f\vert_{\mathcal{A}_1} &:& \mathcal{A}_1\to\mathcal{B}\\
+&&x\mapsto y
+\end{eqnarray*}$$
+
+- d) Graph von $f$: &#8203; $G(f):=\lbrace (x,y)\vert x\in \mathcal{A}, y=f(x)\rbrace \subset \mathcal{A}\times\mathcal{B}$
+
+Wir nennen: zwei Abbildungen $f,g:\mathcal{A}\to\mathcal{B}$ sind gleich, falls gilt
+
+$$\forall x\in \mathcal{A}: f(x)=g(x). &#8203;&#8203; \text{ Schreibweise } f=g$$
+
 ### Lemma 1.4.
 Es sei $f: \mathcal{A} \to \mathcal{B}$ und Teilmengen $\mathcal{A}_1, \mathcal{A}_2 \subset \mathcal{A}$ gegeben.  
 Dann gilt: $f(\mathcal{A}_1\cup\mathcal{A}_2)=f(\mathcal{A}_1)\cup f(\mathcal{A}_2)$
