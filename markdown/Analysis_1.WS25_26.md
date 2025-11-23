@@ -13,6 +13,10 @@ https://www.wolframalpha.com/input?i=sum+1%2Fk%5E2%2C+k%3D1+to+infinity
 ## Lemmata, Sätze, Definitionen, ... der Vorlesungen 1-8
 (der rein handschriftlichen Vorlesungen, beginnend mit Vorlesung 9 nicht mehr nötig)
 
+Man kann auch alle Vorlesungsskripte in ein PDF file zusammenkopieren (145MB f&uuml;r die ersten 12). z.B. mit:
+
+    pdfunite $(ls */*[vV][Ll]*.pdf| grep -v vorher | sort) all.pdf
+    
 [Vorlesung 1]
 
 # 1. Grundlagen
