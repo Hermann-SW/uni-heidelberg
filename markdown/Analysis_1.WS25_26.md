@@ -74,6 +74,10 @@ Produktmenge von $\mathcal{A}$ und $\mathcal{B}$
 
 [Vorlesung 2]
 
+- Aussagen
+- Implikationen zwischen Aussagen
+- Quantoren
+
 ## 1.2. Abbildungen
 
 ### Definition 1.3.
