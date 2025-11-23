@@ -22,6 +22,28 @@ https://www.wolframalpha.com/input?i=sum+1%2Fk%5E2%2C+k%3D1+to+infinity
 ### Definition 1.1. (Cantor 1895)
 Eine Menge ist eine wohldefinierte Zusammenfassung verschiedener Objekte zu einem Ganzen
 
+Die Objekte heißen Elemente der Menge  
+ 
+
+$$\text{wohldefiniert }\begin{cases}\text{ von jedem Objekt steht fest, ob es}\\
+\text{ Element der Menge ist oder nicht}
+\end{cases}$$
+
+$$\text{verschieden }\begin{cases}\text{ Die Elemente einer Menge sind alle}\\
+\text{ von einander unterschieden}
+\end{cases}$$
+
+Beschreibung von Mengen
+- a) Durch Aufz&auml;hlung  
+      $\mathbb{N} := \lbrace 1,2,3,\dots \rbrace$ &#8203; Die Menge er nat&uuml;rlichen Zahlen
+- b) Durch eine charakterisierende Eigenschaft in Form einer Aussage. Eine Aussage ist ein Satz, von dem eindeutig feststeht, ob er wahr oder falsch ist
+
+$$\mathcal{A} := \lbrace a \vert a \text{ hat eine Eigenschaft } \mathcal{E} \rbrace$$
+
+Alternative Schreibweise
+
+$$\mathcal{A} := \lbrace a\ : a \text{ hat eine Eigenschaft } \mathcal{E} \rbrace$$
+
 ### Definition 1.2.
 Seien $\mathcal{A}$ und $\mathcal{B}$ Mengen
 
