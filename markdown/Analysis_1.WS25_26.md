@@ -6,7 +6,7 @@ Erstellung/Änderung von MathJax am einfachsten mittels **file edit** auf github
 <pre>$$\sum\limits_{k=1}^{\infty} \frac{1}{k^2}=\frac{\pi^2}{6}$$</pre>   
 $$\sum\limits_{k=1}^{\infty} \frac{1}{k^2}=\frac{\pi^2}{6}$$   
 
-**Tip:** Ausrechnen dieser Formel mit **WolframAlpha**  
+**Tip:** Ausrechnen des linken Teils dieser Formel mit **WolframAlpha**  
 https://www.wolframalpha.com/input?i=sum+1%2Fk%5E2%2C+k%3D1+to+infinity
 
 
