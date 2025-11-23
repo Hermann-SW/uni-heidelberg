@@ -39,7 +39,7 @@ $$\text{verschieden }\begin{cases}\text{ Die Elemente einer Menge sind alle}\\
 
 Beschreibung von Mengen
 - a) Durch Aufz&auml;hlung  
-      $\mathbb{N} := \lbrace 1,2,3,\dots \rbrace$ &#8203; Die Menge er nat&uuml;rlichen Zahlen
+      $\mathbb{N} := \lbrace 1,2,3,\dots \rbrace$ &#8203; Die Menge der nat&uuml;rlichen Zahlen
 - b) Durch eine charakterisierende Eigenschaft in Form einer Aussage. Eine Aussage ist ein Satz, von dem eindeutig feststeht, ob er wahr oder falsch ist
 
 $$\mathcal{A} := \lbrace a \vert a \text{ hat eine Eigenschaft } \mathcal{E} \rbrace$$
@@ -180,22 +180,26 @@ Dann $\mathcal{M}=\mathbb{N}$
 
 Zu jedem $n\in \mathbb{N}$ sei $\mathcal{E}(n)$ eine Aussage  
 Die Aussage $\mathcal{E}(n)$ ist g&uuml;ltig $\forall n\in\mathbb{N}$ falls gilt:
-1. Induktionsanfang: Die Aussage $\mathbb{E}(1)$ ist g&uuml;ltig
+1. Induktionsanfang: Die Aussage $\mathcal{E}(1)$ ist g&uuml;ltig
 2. Induktionsschritt: Unter der Annahme, dass $\mathcal{E}(n)$ g&uuml;ltig ist, gilt auch $\mathcal{E}(n+1)$
 
 ## 1.4. Elemente der Kombinatorik
 
 Notation: Sei $m,n\in \mathbb{Z}, m\leq n, a_m,\dots,a_n\in\mathbb{R}$.
 
-Wir definieren $\prod_{k=m}^n a_k:=a_m\cdot\dots\cdot{a_n}$. 
+Wir definieren 
 
-Falls $m>n \prod_{k=m}^{n}a_k:=1$.
+$$\prod\limits_{k=m}^n a_k:=a_m\cdot\dots\cdot{a_n}.$$ 
+
+Falls $m>n$
+
+$$ \prod\limits_{k=m}^{n}a_k:=1.$$
 
 ### Definition 1.10. Fakult&auml;t  
 
 F&uuml;r $n \in \mathbb{N}_0$ ist 
 
-$n! := \prod_{k=1}^{n} k = 1 \cdot 2 \cdot \dots \cdot n$
+$$n! := \prod\limits_{k=1}^{n} k = 1 \cdot 2 \cdot \dots \cdot n$$
 
 ### Satz 1.11. (Permutation)
 Die Anzahl aller Anordnungen (oder Permutationen) von $n\in \mathbb{N}$ Elementen ist $n!$
@@ -220,7 +224,7 @@ $n<k$
 
 $$\begin{pmatrix}
 n \\
-0
+k
 \end{pmatrix} :=0$$
 
 ### Lemma 1.13.
@@ -240,7 +244,7 @@ n-1 \\
 k\end{pmatrix}$$
 
 
-### Satz 1.13.
+### Satz 1.13. (Binomische Formel)
 Sei $a,b\in\mathbb{R}$ und $n\in\mathbb{N}_0$. 
 
 Dann  
@@ -274,6 +278,10 @@ $$
 
 ## 1.5 Grundlegendes &uuml;ber die Zahlenmengen $\mathbb{Z}$ und $\mathbb{Q}$
 
+...
+
+$\mathbb{Q}$ mit den Operationen "+" und " $\cdot$ " bildet einen K&ouml;rper
+
 Was ist ein K&ouml;rper? mehr in LA1
 
 Sei $K$ eine Menge mit Operationen/Verkn&uuml;pfungen "+" (Addition)
@@ -300,12 +308,13 @@ Eine Menge $K$ mit Operationen "+" und " $\cdot$ " (K,+, $\cdot$ ) die Axiome A1
 
 
 ### Lemma 1.15.
-Sei $(K,+,\cdot)$ ein K&ouml;rper. Die Elemente $0,1\in K$ sind durch die Axiome eindeutig bestimmt. Zu $a\in K$ ist das Inverse der Addition und zu $a\in K^*$ das Inverse der Multiplikation eindeutig bestimmt
+Sei $(K,+,\cdot)$ ein K&ouml;rper. Die Elemente $0,1\in K$ sind durch die Axiome eindeutig bestimmt. Zu $a\in K$ ist das Inverse der Addition und zu $a\in K^*$ das Inverse der Multiplikation eindeutig bestimmt  
+Schreibweise: $-a$ und $a^{-1}$
 
 ### Lemma 1.16.
-- a) F&uuml;r $a,b\in K$ hat die Gleichung $a+x=b$ genaus eine L&ouml;sung in $K$. Das ist x=b-a\in K$  
+- a) F&uuml;r $a,b\in K$ hat die Gleichung $a+x=b$ genaus eine L&ouml;sung in $K$. Das ist $x=b-a\in K$  
 - b) $\forall a\in K; -(-a)=a$  
-- c) $\forall a,b\in K$: -(a+b)=-a-b=-a+(-b)$  
+- c) $\forall a,b\in K$: $-(a+b)=-a-b=-a+(-b)$  
 - d) $\forall a\in K^* \forall b\in K$ hat die Gleichung $ax=b$ genau eine L&ouml;sung in $K$, das ist $x=a^{-1}b$  
 - e) $\forall a,b,c\in K: (a+b)c=ac+bc$  
 - f) $\forall a\in K: 0a=a0=0$  
@@ -327,7 +336,7 @@ Ein angeordneter K&ouml;rper ist ein K&ouml;rper $K$ zusammen mit einer Teilmeng
 - (O2)
 
 $$
-\forall a,b\in P \implies a+b, ab \in P&#8203;&#8203;
+a,b\in P \implies a+b, ab \in P&#8203;&#8203;
 a,b>0 \implies  \begin{cases}
     a+b>0 \\ 
     ab>0
@@ -352,8 +361,8 @@ Das Maximum zweier Elemente in $(K,+,\cdot,>)$ ist
 
 $$
 \underbrace{max\lbrace a,b\rbrace}_{\in K} := \begin{cases}
-    a & \text{falls } a\geq b \\
-    b & \text{falls } a\text{<} b
+    a, & \text{falls } a\geq b \\
+    b, & \text{falls } a\text{<} b
 \end{cases} &#8203; a,b\in K
 $$
 
@@ -361,8 +370,8 @@ Der Absolutbetrag eines Elementes in $K$ ist
 
 $$
 \vert a\vert := max\lbrace -a, a\rbrace = \begin{cases}
-    a & \text{falls } a\geq b \\
-    -a & \text{falls } a\text{<} b
+    a, & \text{falls } a\geq 0 \\
+    -a, & \text{falls } a\text{<} 0
 \end{cases}
 $$
 
@@ -412,7 +421,8 @@ Umgekehrt stellt jede Dezimalbruchzerlegung dieser Art eine rationale Zahl dar.
 
 Hier: bei periodischen Dezimalbr&uuml;chen die Periode $\bar{9}$ nicht zugelassen:  
 
-$a_0+0,d_1\dots d_{k-1}d_k\bar{9} := a_0+0,d_1\dots d_{k-1}(d_k+1)$, &#8203; $d_k<9$
+$a_0+0,d_1\dots d_{k-1}d_k\bar{9} := a_0+0,d_1\dots d_{k-1}(d_k+1)$, &#8203; $d_k<9$  
+(korrigiert nach Rannacher, S. 18 oben)
 
 # Kapitel 2. Die reellen Zahlen
 
@@ -450,13 +460,14 @@ ist Nullfolge genau dann wenn die Folge $$(\frac{1}{a_n})_{n\in \mathbb{N}}$$ st
 
 
 ### Lemma 2.6.
-$$\text{Sei } (a_n)_{n\in \mathbb{N}} \text{ mit } \lim\limits_{n\to \infty} \vert a_n\vert =a \text{.}$$
+$$\text{Sei } (a_n)_{n\in \mathbb{N}} \text{ mit } \lim\limits_{n\to \infty} a_n =a \text{.}$$
 
 $$\text{Dann die Folge } (\vert a_n\vert)_{n\in \mathbb{N}} \text{ ist konvergent und } \lim\limits_{n\to \infty} \vert a_n\vert = \vert a \vert$$
 
 ### Lemma 2.7. Teilfolge
 Sei $\mathbb{N}'=\lbrace n_k, k\in \mathbb{N}, n_{k+1}>n_k\rbrace\subset \mathbb{N}$ eine unendliche Teilmenge von $\mathbb{N}$  
-$(a_{n_k})_{k\in \mathbb{N}}$ heißt Teilfolge von $(a_n)_n\in \mathbb{N}$
+
+$$(a_{n_k})_{k\in \mathbb{N}} \text{ heißt Teilfolge von } (a_n)_{n\in \mathbb{N}}$$
 
 ### Definition 2.8. Cauchy-Folge
 $\text{Eine Folge } (a_n)_{n\in \mathbb{N}} \text{ heißt Cauchy-Folge, wenn }$
@@ -483,13 +494,13 @@ $$(a_n)_{n\in \mathbb{N}}, (b_n)_{n\in \mathbb{N}}$$
 
 konvergieren 
 
-$$\lim\limits_{n\to \infty} a_n=a, a\in K \text{ und } \lim\limits_{n\to \infty} b_n=a, b\in K,$$
+$$\lim\limits_{n\to \infty} a_n=a, a\in K \text{ und } \lim\limits_{n\to \infty} b_n=b, b\in K,$$
 
 dann gilt: 
 
 $$\lim\limits_{n\to \infty} (a_n+b_n) = a+b, \lim\limits_{n\to \infty} (a_n\cdot b_n)=a\cdot b$$
 
-- (2) Sei $\vert b_n>\vert\alpha>0$. Dann ist die Quotientenfolge $\left(\frac{a_n}{b_n}\right)_{n\in\mathbb{N}}$ Cauchy-Folge.
+- (2) Sei $\vert b_n\vert\geq\alpha>0$. Dann ist die Quotientenfolge $\left(\frac{a_n}{b_n}\right)_{n\in\mathbb{N}}$ Cauchy-Folge.
 Falls $\underset{n\to \infty}{a_n\to a}, \underset{n\to \infty}{b_n\to b}, \vert b\vert > 0$, dann gilt 
 
 $$\lim\limits_{n\to \infty}\frac{a_n}{b_n}=\frac{a}{b}$$
@@ -519,6 +530,8 @@ $$
 & & \lbrace (a'_n)_{n\in \mathbb{N}} \vert (a'_n-a_n)_{n\in \mathbb{N}}\text{ Nullfolge} \rbrace \\
 \end{eqnarray*}
 $$
+
+$$(a_n)_{n\in \mathbb{N}}\text{ Repräsentant von Klasse }[(a_n)_{n\in \mathbb{N}}]$$
 
 ### Satz 2.13. 
 Jeder &Auml;quivalenzklasse $[(a_n)_{n\in \mathbb{N}}]$ entspricht genau ein (m&ouml;glicherweise unendlicher) Dezimalbruch. Die Menge aller Dezimalbr&uuml;che wird als Menge $\mathbb{R}$ der reellen Zahlen bezeichnet  
