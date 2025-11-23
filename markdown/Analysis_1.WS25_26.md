@@ -369,7 +369,7 @@ Seien $a,b\in K$, $K$ angeordneter K&ouml;rper.
 - c) $\vert a+b\vert \leq \vert a\vert +\vert b\vert$ &#8203; Dreiecksungleichung
 
 ### Korollar 1.22. Umgekehrte Dreiecksregel
-F&uuml;r alle $a,b\in K$ gilt &#8203; $\vert \vert a\vert -\vert b\vert \vert \leq \vert a \vert - \vert b \vert$
+F&uuml;r alle $a,b\in K$ gilt &#8203; $\vert\vert a\vert -\vert b\vert\vert \leq \vert a \vert - \vert b \vert$
 
 [Vorlesung 5]
 
@@ -408,7 +408,7 @@ Umgekehrt stellt jede Dezimalbruchzerlegung dieser Art eine rationale Zahl dar.
 
 Hier: bei periodischen Dezimalbr&uuml;chen die Periode $\bar{9}$ nicht zugelassen:  
 
-$a_0+0,d_1\dots d_{k-1}d_k\bar{9} := a_0+0,d_1\dots d_{k-1}(d_k+1), d_k<9$
+$a_0+0,d_1\dots d_{k-1}d_k\bar{9} := a_0+0,d_1\dots d_{k-1}(d_k+1)$, &#8203; $d_k<9$
 
 # Kapitel 2. Die reellen Zahlen
 
