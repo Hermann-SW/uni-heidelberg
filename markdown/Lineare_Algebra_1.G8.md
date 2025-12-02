@@ -100,3 +100,18 @@ hermann@7950x:~$ tail uni-heidelberg/scripts/nohup.out
 hermann@7950x:~$ 
 ```
 
+After 28.4h:
+```
+hermann@7950x:~$ tail uni-heidelberg/scripts/nohup.out 
+27:9:56  abelsch  3(504) / 2(492)
+27:35:6  abelsch  3(505) / 2(492)
+27:40:8  abelsch  3(506) / 2(492)
+27:45:9  abelsch  3(507) / 2(492)
+27:55:17  abelsch  3(508) / 2(492)
+28:0:22  abelsch  3(509) / 2(492)
+28:5:17  abelsch  3(510) / 2(492)
+28:20:23  abelsch  3(511) / 2(492)
+28:25:29  abelsch  3(512) / 2(492)
+28:35:37  abelsch  3(513) / 2(492)
+hermann@7950x:~$ 
+```
