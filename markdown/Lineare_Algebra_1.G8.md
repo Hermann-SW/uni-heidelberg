@@ -83,3 +83,20 @@ Nicht abelsch:
 All diese Gruppen wurden in den ersten 3 Minuten gefunden.
 
 Von einem früheren Lauf der unbeabsichtigt nach fast 48h abgebrochen wurde weiß ich von mehr als 1000 gefunden Gruppen, da war aber noch nicht die Anzahl der nichtisomorphen geloggt worden.
+
+Es war schon wieder was schief gegangen, nach Neustart ist dies der Zwischenstand nach fast 23h — insgesamt 960 Gruppen, aber nur die 5 schon bekannten 5 nichisomorphen Gruppen:
+```
+hermann@7950x:~$ tail uni-heidelberg/scripts/nohup.out 
+22:50:24  abelsch  3(471) / 2(480)
+22:50:25  abelsch  3(472) / 2(480)
+22:50:32  abelsch  3(473) / 2(480)
+22:50:33  abelsch  3(474) / 2(480)
+22:50:35  abelsch  3(475) / 2(480)
+22:50:36  abelsch  3(476) / 2(480)
+22:50:45  abelsch  3(477) / 2(480)
+22:50:47  abelsch  3(478) / 2(480)
+22:50:49  abelsch  3(479) / 2(480)
+22:50:51  abelsch  3(480) / 2(480)
+hermann@7950x:~$ 
+```
+
