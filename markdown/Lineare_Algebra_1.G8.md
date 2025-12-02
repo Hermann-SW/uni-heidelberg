@@ -84,7 +84,7 @@ All diese Gruppen wurden in den ersten 3 Minuten gefunden.
 
 Von einem früheren Lauf der unbeabsichtigt nach fast 48h abgebrochen wurde weiß ich von mehr als 1000 gefunden Gruppen, da war aber noch nicht die Anzahl der nichtisomorphen geloggt worden.
 
-Es war schon wieder was schief gegangen, nach Neustart ist dies der Zwischenstand nach fast 23h — insgesamt 960 Gruppen, aber nur die 5 schon bekannten 5 nichisomorphen Gruppen:
+Es war schon wieder was schief gegangen, nach Neustart ist dies der Zwischenstand nach fast 23h — insgesamt 960 Gruppen, aber nur die 5 schon bekannten nichtisomorphen Gruppen:
 ```
 hermann@7950x:~$ tail uni-heidelberg/scripts/nohup.out 
 22:50:24  abelsch  3(471) / 2(480)
