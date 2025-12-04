@@ -82,6 +82,9 @@ Nicht abelsch:
 
 All diese Gruppen wurden in den ersten 3 Minuten gefunden.
 
+**Wir sind eigentlich schon fertig!**  
+Die [Liste aller Gruppen bis Ordnung 24](https://de.wikipedia.org/wiki/Liste_kleiner_Gruppen#Liste_aller_Gruppen_bis_Ordnung_24) zeigt für Ordnung 8 genau 5 verschiedene Gruppen ...
+
 Von einem früheren Lauf der unbeabsichtigt nach fast 48h abgebrochen wurde weiß ich von mehr als 1000 gefunden Gruppen, da war aber noch nicht die Anzahl der nichtisomorphen geloggt worden.
 
 Es war schon wieder was schief gegangen, nach Neustart ist dies der Zwischenstand nach fast 23h — insgesamt 960 Gruppen, aber nur die 5 schon bekannten nichtisomorphen Gruppen:
