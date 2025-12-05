@@ -103,20 +103,20 @@ hermann@7950x:~$ tail uni-heidelberg/scripts/nohup.out
 hermann@7950x:~$ 
 ```
 
-After 50.39h:
+After 79.13h:
 ```
 hermann@7950x:~$ top -b -n1 | grep G8
-  17308 hermann   20   0    7168   3584   3072 R 100,0   0,0     50,39 G8
+  17308 hermann   20   0    7432   3840   3072 R  90,9   0,0     79,13 G8
 hermann@7950x:~$ tail uni-heidelberg/scripts/nohup.out 
-49:44:11  nicht abelsch  3(740) / 2(552)
-49:44:11  abelsch  3(741) / 2(552)
-49:44:11  abelsch  3(742) / 2(552)
-49:44:11  abelsch  3(743) / 2(552)
-49:44:11  abelsch  3(744) / 2(552)
-50:9:51  abelsch  3(745) / 2(552)
-50:14:46  abelsch  3(746) / 2(552)
-50:19:38  abelsch  3(747) / 2(552)
-50:30:13  abelsch  3(748) / 2(552)
-50:35:0  abelsch  3(749) / 2(552)
+79:0:6  abelsch  3(995) / 2(610)
+79:0:6  abelsch  3(996) / 2(610)
+79:0:6  abelsch  3(997) / 2(610)
+79:0:6  abelsch  3(998) / 2(610)
+79:5:7  nicht abelsch  3(998) / 2(611)
+79:5:7  nicht abelsch  3(998) / 2(612)
+79:5:7  abelsch  3(999) / 2(612)
+79:5:7  abelsch  3(1000) / 2(612)
+79:5:7  abelsch  3(1001) / 2(612)
+79:5:7  abelsch  3(1002) / 2(612)
 hermann@7950x:~$ 
 ```
