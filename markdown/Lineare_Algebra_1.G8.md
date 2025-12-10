@@ -2839,7 +2839,7 @@ Die [Liste aller Gruppen bis Ordnung 24](https://de.wikipedia.org/wiki/Liste_kle
 
 ## 3 gefundene nichtisomorphe abelsche Gruppen
 
-$\mathbb{Z}_2^3\cong \mathcal{D}_2\times \mathbb{Z}_2$:
+$\mathbb{Z}_2^3\cong {\displaystyle D_2}\times \mathbb{Z}_2$:
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
@@ -2882,7 +2882,7 @@ $$\begin{eqnarray*}
 
 ## 2 gefundene nichtisomorphe nicht abelsche Gruppen
 
-[Diedergruppe](https://de.wikipedia.org/wiki/Diedergruppe) $\mathcal{D}_4$:
+[Diedergruppe](https://de.wikipedia.org/wiki/Diedergruppe) $\displaystyle D_4$:
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
@@ -2894,7 +2894,7 @@ $$\begin{eqnarray*}
 7 6 4 5 3 2 0 1
 ```
 
-Dies ist $\mathcal{Q}_8\cong \textrm{Dic}_2$.   
+Dies ist ${\displaystyle Q_8}\cong \textrm{Dic}_2$.   
 Die [Quaternionengruppe](https://de.wikipedia.org/wiki/Quaternionengruppe) ist leicht erkennbar:
 ```
 -1=i⋅i=j⋅j=k⋅k (=i⋅j⋅k)
