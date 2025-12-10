@@ -2838,6 +2838,8 @@ Die [Liste aller Gruppen bis Ordnung 24](https://de.wikipedia.org/wiki/Liste_kle
 </details>
 
 ## 3 gefundene nichtisomorphe abelsche Gruppen
+
+$\mathbb{Z}_2^3\cong \mathcal{D}_2\times \mathbb{Z}_2$:
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
@@ -2848,6 +2850,8 @@ Die [Liste aller Gruppen bis Ordnung 24](https://de.wikipedia.org/wiki/Liste_kle
 6 7 4 5 2 3 0 1
 7 6 5 4 3 2 1 0
 ```
+
+$\mathbb{Z}_2\times \mathbb{Z}_4$:
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
