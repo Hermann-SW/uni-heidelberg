@@ -2887,6 +2887,15 @@ $$\begin{eqnarray*}
 6 7 5 4 2 3 1 0
 7 6 4 5 3 2 0 1
 ```
+
+Dies ist $\mathcal{Q}_8\cong \textrm{Dic}_2$.   
+Die [Quaternionengruppe](https://de.wikipedia.org/wiki/Quaternionengruppe) ist leicht erkennbar:
+```
+-1=i⋅i=j⋅j=k⋅k (=i⋅j⋅k)
+
+  -   -   -   -
+1 1 i i j j k k
+```
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
