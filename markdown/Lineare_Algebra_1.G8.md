@@ -19,7 +19,12 @@ hermann@7950x:~/uni-heidelberg/scripts$ tail -6 nohup.out
 hermann@7950x:~/uni-heidelberg/scripts$ 
 ```
 
-Es wurden 1920 abelsche und 840 nicht abelsche Gruppen gefunden. Jedoch gibt es unter denen nur 3 nichtisomorphe ablesche und 2 nichtisomorphe nichtabelsche Gruppen. Diese fünf Gruppen wurden in den ersten 8 Sekunden(!) gefunden und ausgegeben.
+Es wurden 1920 abelsche und 840 nicht abelsche Gruppen gefunden.
+Diese 
+lassen sich jedoch in genau 5 Isomorphieklassen, davon 3 abelsch und 2 
+nicht-abelsch, unterteilen. Mindestens ein Repräsentant für jede dieser 
+Klasse von Gruppen wurden in den ersten 8 Sekunden(!) gefunden und 
+ausgegeben.
 
 Die [Liste aller Gruppen bis Ordnung 24](https://de.wikipedia.org/wiki/Liste_kleiner_Gruppen#Liste_aller_Gruppen_bis_Ordnung_24) zeigt für Ordnung 8 genau 5 verschiedene Gruppen, und bestätigt die beendete Berechnung.
 
