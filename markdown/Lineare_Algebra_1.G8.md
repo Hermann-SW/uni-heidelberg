@@ -2837,7 +2837,7 @@ Die [Liste aller Gruppen bis Ordnung 24](https://de.wikipedia.org/wiki/Liste_kle
 0inputs+14248outputs (0major+561minor)pagefaults 0swaps   
 </details>
 
-3 gefundene nichtisomorphe abelsche Gruppen:
+## 3 gefundene nichtisomorphe abelsche Gruppen
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
@@ -2876,7 +2876,9 @@ $$\begin{eqnarray*}
 ```
 
 
-2 gefundene nichtisomorphe nicht abelsche Gruppen:
+## 2 gefundene nichtisomorphe nicht abelsche Gruppen
+
+[Diedergruppe](https://de.wikipedia.org/wiki/Diedergruppe) $\mathcal{D}_4$:
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
