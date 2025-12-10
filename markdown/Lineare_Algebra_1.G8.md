@@ -2858,6 +2858,12 @@ Die [Liste aller Gruppen bis Ordnung 24](https://de.wikipedia.org/wiki/Liste_kle
 6 7 4 5 3 2 1 0
 7 6 5 4 2 3 0 1
 ```
+
+Dies ist die einzige zyklische Gruppe ($\mathbb{Z}_8$) und wird z.B. von der 7 zyklisch erzeugt:  
+
+$$\begin{eqnarray*}
+7\stackrel{\star 7}{\to}3\stackrel{\star 7}{\to}5\stackrel{\star 7}{\to}1\stackrel{\star 7}{\to}6\stackrel{\star 7}{\to}2\stackrel{\star 7}{\to}4\stackrel{\star 7}{\to}0\stackrel{\star 7}{\to}7\stackrel{\star 7}{\to}\dots
+\end{eqnarray*}$$
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
