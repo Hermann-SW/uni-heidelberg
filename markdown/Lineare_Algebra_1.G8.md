@@ -2887,7 +2887,8 @@ $$\begin{eqnarray*}
 
 ## 2 gefundene nichtisomorphe nicht abelsche Gruppen
 
-[Diedergruppe](https://de.wikipedia.org/wiki/Diedergruppe) $\displaystyle D_4$:
+[Diedergruppe](https://de.wikipedia.org/wiki/Diedergruppe) $\displaystyle D_4$:   
+![D_4](../res/D_4.png)
 ```
 0 1 2 3 4 5 6 7
 1 0 3 2 5 4 7 6
