@@ -2899,7 +2899,7 @@ $$\begin{eqnarray*}
 7 6 4 5 3 2 0 1
 ```
 
-Dies ist ${\displaystyle Q_8}\cong \textrm{Dic}_2$.   
+Dies ist ${\displaystyle Q_8}\cong \textrm{Dic}_2$ ([Dizyklische Gruppe](https://de.wikipedia.org/wiki/Dizyklische_Gruppe)).   
 Die [Quaternionengruppe](https://de.wikipedia.org/wiki/Quaternionengruppe) ist leicht erkennbar:
 ```
 -1=i⋅i=j⋅j=k⋅k (=i⋅j⋅k)
