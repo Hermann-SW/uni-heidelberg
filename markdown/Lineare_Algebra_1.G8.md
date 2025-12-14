@@ -1,5 +1,5 @@
 
-## Alle Gruppen mit 8 Eelementen
+## Alle Gruppen mit 8 Elementen
 
 Dies ist ein followup zur [Bestimmung aller Gruppen mit 6 Elementen](./Lineare_Algebra_1.Plenaruebung_Diskussion.md).
 
