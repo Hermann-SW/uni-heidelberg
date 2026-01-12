@@ -1,7 +1,7 @@
 
 ## Rangfaktorisierung
 
-Nach Lösen der Rangfaktorisierungsaufgaben 10.3c mit Papier und Kueglschreiber hatte ich keine Lust die ganzen Matrizenrechnungen in LaTex einzugeben (wir bearbeiten Übungszettel in LaTex). Stattdesseen habe ich lieber in einer Stunde ein 75 zeiliges Skript geschrieben, welches 246 Zeilen LaTex erzeugt, welches nach übersetzen in 2 vollen A4 Seiten PDF für die Abgabe resultiert ([preview](../res/10.3c.i.pdf) des 2-seitigen PDF files).
+Nach Lösen der Rangfaktorisierungsaufgaben 10.3c mit Papier und Kugelschreiber hatte ich keine Lust die ganzen Matrizenrechnungen in LaTex einzugeben (wir bearbeiten Übungszettel in LaTex). Stattdesseen habe ich lieber in einer Stunde ein 75 zeiliges Skript geschrieben, welches 246 Zeilen LaTex erzeugt, welches nach übersetzen in 2 vollen A4 Seiten PDF für die Abgabe resultiert ([preview](../res/10.3c.i.pdf) des 2-seitigen PDF files).
 
 
 Man  kann so ein Skript in jeder Sprache schreiben, z.B. in der IPI Vorlesungssprache Python.   
