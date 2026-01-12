@@ -61,3 +61,7 @@ pmat(A);
 simple_row();
 footer();
 ```
+
+
+Dies ist der obere Teil von 10.3c.ii:   
+![../res/10.3c.ii.pdf.png](../res/10.3c.ii.pdf.png)
