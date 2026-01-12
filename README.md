@@ -11,4 +11,5 @@
 - [Automatischer Beweis für Lineare Algebra 1 Hausaufgabe 5.2b](markdown/Lineare_Algebra_1.Aufgabe_5.2b.md)
 - [Plenarübung 5 Diskussion, automatisch alle Gruppen mit 6 Elementen](markdown/Lineare_Algebra_1.Plenaruebung_Diskussion.md)
 - automatisch [alle Gruppen mit 8 Elementen](markdown/Lineare_Algebra_1.G8.md) bestimmen (sehr rechenintensiv)
+- 75 Zeilen Skript erzeugt LaTex für 2 Seiten Abgabe von Aufgabe 10.3c.i zur [Rangfaktorisierung](markdown/Lineare_Algebra_1.Rangfaktorisierung.md) 
 
