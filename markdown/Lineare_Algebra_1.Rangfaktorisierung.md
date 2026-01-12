@@ -4,8 +4,8 @@
 Nach Lösen der Rangfaktorisierungsaufgaben 10.3c mit Papier und Kueglschreiber hatte ich keine Lust die ganzen Matrizenrechnungen in LaTex einzugeben (wir bearbeiten Übungszettel in LaTex). Stattdesseen habe ich lieber in einer Stunde ein 75 zeiliges Skript geschrieben, welches 246 Zeilen LaTex erzeugt, welches nach übersetzen in 2 vollen A4 Seiten PDF für die Abgabe resultiert ([preview](../res/10.3c.i.pdf) des 2-seitigen PDF files).
 
 
-Man  kann so ein Skript in jeder Sprache schreibem, z.B. in der IPI Vorlesungssprache Python.   
-Ich habe [PARI/GP](https://pari.math.u-bordeaux.fr/) gewählt, da Matrixmultiplikation (und Rechnen in $\mathbb{Z}/{2\mathbb{Z}}$ für die 2. Aufgabe [10.3c.ii.gp](../scripts/10.3c.ii.gp)) so einfach sind.
+Man  kann so ein Skript in jeder Sprache schreiben, z.B. in der IPI Vorlesungssprache Python.   
+Ich habe [PARI/GP](https://pari.math.u-bordeaux.fr/) gewählt, da Matrixmultiplikation (und Rechnen in $\mathbb{Z}\setminus {2\mathbb{Z}}$ für die 2. Aufgabe [10.3c.ii.gp](../scripts/10.3c.ii.gp)) so einfach sind.
 
 Einfach Skript [10.3c.i.gp](../scripts/10.3c.i.gp) ausführen, mit LaTex übersetzen und das war es schon:
 ```
@@ -16,7 +16,7 @@ $ ls *.pdf
 $ 
 ```
 
-So sieht das untere Ende der 2. Seite aus. Screenshot und entsprechendes generiertes LaTex:   
+So sieht das untere Ende der 2. Seite aus, Screenshot und entsprechendes generiertes LaTex:   
 ![../res/10.3c.i.pdf.png](../res/10.3c.i.pdf.png)   
 ```
 ...
