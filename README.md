@@ -13,3 +13,9 @@
 - automatisch [alle Gruppen mit 8 Elementen](markdown/Lineare_Algebra_1.G8.md) bestimmen (sehr rechenintensiv)
 - 75 Zeilen Skript erzeugt LaTex für 2 Seiten Abgabe von Aufgabe 10.3c.i zur [Rangfaktorisierung](markdown/Lineare_Algebra_1.Rangfaktorisierung.md) 
 
+## Berkeley math 115: Introduction to number theory
+
+- Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
+
+- 53 lecture [summaries](markdown/Math155.md)
+
