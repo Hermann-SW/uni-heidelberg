@@ -1,3 +1,7 @@
+## Berkeley math 115: Introduction to number theory
+
+- Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
+
 ## lecture 1
 - primes
   - sieve of Eratosthenes
