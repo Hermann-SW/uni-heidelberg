@@ -5,7 +5,13 @@
 - [fall 2025](#fall-2025)
 
 # spring 2026
-(6 lectures)
+(6 lectures)  
+- [Linear Algebra 2](#linear-algebra-2)
+- [Analysis 2](#analysis-2)
+- [Hardware-Aware Scientific Computing](#hardware-aware-scientific-computing)
+- [Randomized Algorithms](#randomized-algorithms)
+- [Elementary number theory](#elementary-number-theory)
+- [Berkeley math 115: Introduction to number theory](#berkeley-math-115-introduction-to-number-theory)
 
 ## Linear Algebra 2
 
