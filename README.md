@@ -21,7 +21,7 @@ Script and excercises behind VPN on mampf.mathi.uni-heidelberg.de
 Script behind VPN on moodle.uni-heidelberg.de, but repo accessible:  
 https://parcomp-git.iwr.uni-heidelberg.de/Teaching/hasc-code
 
-benchmarking: find nice pointer_chasing diagrams for 6 different CPU with between 4 and 24 cores [here](pointer_chasing.md) 
+benchmarking: find nice pointer_chasing diagrams for 6 different CPU with between 4 and 24 cores [here](markdown/pointer_chasing.md) 
 
 [STREAM](https://parcomp-git.iwr.uni-heidelberg.de/Teaching/hasc-code/-/tree/master/stream?ref_type=heads) is the de facto industry standard benchmark for measuring sustained memory bandwidth. Here executed on 8× 24C/48T Intel Xeon E7 8890v4 CPUs in Lenovo x3950-X6 8-socket server:  
 ```
