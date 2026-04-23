@@ -58,7 +58,7 @@ Solution Validates: avg error less than 1.000000e-13 on all three arrays
 hermann@x3950-X6:~/hasc-code/stream$
 ```
 
-stream.cc was compiled with option -ffreestanding avoiding use of memcpy() for copy operation test. 
+stream.c was compiled with option -ffreestanding avoiding use of memcpy() for copy operation test. 
 
 From https://blogs.fau.de/hager/archives/8263;  
 ... , and the output of the benchmark must be corrected by a factor of 1.5 (Scale) or 1.33 (Triad). This line of thinking is what John McCalpin calls “hardware byte counting” [3], and for me it is the only valid option. I want to know how many bytes the memory interface can transfer per second, and if that means I have to account for write-allocates, so be it. ...
