@@ -47,7 +47,7 @@
 - quadratic residue
 - quadratic reciprocity
 - addititive number theory, every even number is sum of two primes (Goldbach)
-- twin prime conjecture, Zheng, Tao
+- twin prime conjecture, Zhang, Tao
 - Dirichlet: a+nb with (a,b)=1 has infinitely many primes 
 - recreational number theory
   - perfect numbers 6,28,496
@@ -77,6 +77,10 @@
     - formula F_n, guess->Ansatz
     - phi, golden ratio
 
+----
+- observation: divisors in Euclid's algorithm determne continued fraction
+- Euclid's algorithm finitely many steps implies rational numbers are finite continued fractions
+
 ## lecture 4: More on Euclid's algorithm
 
 - Euclid's algorithm allows to solve ax+by=d with (a,b)=d
@@ -87,4 +91,35 @@
 - better euclid, avoid long division
 - lcm(a,b)=ab/gcd(a,b)
 
-## lecture 5
+## lecture 5: Primes
+
+- negative prime: product with unit
+- prime test: only primes as divisors, up to sqrt(N)
+- fundamental theorem of arithmetic, proof; for poly
+- no primes on reals
+- no primes on functions of reals
+- algebraic numbers m+sqrt(-1) gaussian integers unique factorization
+- euclid numbers are not always prime
+- Dirichlet: an+b infinitely many primes if (a,b)=1
+- $$(2 p_1 p_2 ... p_k)^2+1$$ implies of form $$4n+1 or 2$$, not divisible by $$2, p_1,\dots,p_k$$ => infinitely many primes $$4n+1$$
+- no bound on size of gaps between primes ($$n! + 2,3,\dots,n$$ all composite)
+- 
+## lecture 6: arithmetical functions
+
+- multiplicative functions
+  - d(n) #divisors
+  - sigma(n) sum of divisors
+  - Euler phi(n) #coprime <n
+  - $$tau(n) = q (1-q)^{24} (1-q^2)^{24} \dots$$
+  - $$mu(n) = (-1)^w(n)$$ if n squarefree and divisible by w(n) primes, 0 otherwise
+  - why interesting: $$\frac{1}{zeta(s)} = \frac{1}{1^s} + \frac{mu(2)}{2^s} + \frac{mu(3)}{3^s} \dots$$
+  - perfect numbers; Euclid $$n=2^{p-1}(2^p-1)$$ with $$2^p-1$$ prime, then n is perfect number
+  - Euler: even perfect numbers are of this form
+  - infinitely many even perfect numbers?
+  - odd perfect numbers?
+  - Landau (infinitely many): 
+    - $$2n=p_1+p_2$$? (Goldbach conjecture)
+    - $$p_1-p_2=2$$? (twin prime conjectore)
+    - $$n^2 < p < (n+1)^2$$?
+    - $$n^2+1$$?
+    - likely all 4 are yes, but out of reach
