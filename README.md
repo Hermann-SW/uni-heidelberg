@@ -47,7 +47,7 @@ Fall 2024 script, recordings and excercises behind VPN on mampf.mathi.uni-heidel
 
 
 # fall 2025
-(2 lectures)
+(2 lectures, German language only)
 
 ## Lineare Algebra 1
 - [Algebraische Strukturen Diagramm](https://stamm-wilbrandt.de/GraphvizFiddle/2.1.2/#_LA1): Mengen, Halbgruppen, ..., Körper  
