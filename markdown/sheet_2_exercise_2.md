@@ -59,3 +59,6 @@ Finished 16-core AVX-512 workload.
 
 hermann@7950x:~$
 ```
+
+Computing GFLOPS with 16 double precison operations per perf counter "fp_ret_sse_avx_ops.mac_flops":  
+10240000000000 * 16 / (8.118225634 * 10^9) = 20181 GFLOPS (AMD 7950X) = 20.18 TFLOPS FP64
