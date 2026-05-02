@@ -12,7 +12,7 @@ hermann@7950x:~$ objdump -d $f | sed -n "/vfmadd132pd/,/jne/p"
     1252:	62 f2 fd 48 98 d1    	vfmadd132pd %zmm1,%zmm0,%zmm2
     1258:	48 83 e8 01          	sub    $0x1,%rax
     125c:	75 e2                	jne    1240 <main._omp_fn.0+0x70>
-hermann@7950x:~$ sed -n "/long i/,/^    }/p" avx512_fma_double_openmp.c 
+hermann@7950x:~$ sed -n "/long i/,/^    }/p" $f.c 
     for (long i = 0; i < 10000000000L; ++i) {
         a0  = _mm512_fmadd_pd(a0,  b, c);
         a1  = _mm512_fmadd_pd(a1,  b, c);
