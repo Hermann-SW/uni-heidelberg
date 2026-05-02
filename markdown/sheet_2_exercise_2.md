@@ -65,3 +65,27 @@ hermann@7950x:~$
 
 Computing GFLOPS with 16 double precison operations per perf counter "fp_ret_sse_avx_ops.mac_flops":  
 10240000000000 * 16 / (8.118225634 * 10^9) = 20181 GFLOPS (AMD 7950X) = 20.18 TFLOPS FP64
+
+Single core execution runs at 5.538 GHz instead of 4.951 GHz for all 16 cores, resulting in 1.41 TFLOPS FP64:  
+```
+hermann@7950x:~$ OMP_NUM_THREADS=1 perf stat -e fp_ret_sse_avx_ops.mac_flops,cycles,instructions,task-clock ./$f
+Results 0-3: 1.000000000000  1.000000491214  1.000000940659  1.000001393028
+Finished 1-core AVX-512 workload.
+
+ Performance counter stats for './avx512_fma_double_openmp':
+
+   640.000.000.000      fp_ret_sse_avx_ops.mac_flops     #   88,427 G/sec                     
+    40.082.548.500      cycles                           #    5,538 GHz                       
+    60.067.840.162      instructions                     #    1,50  insn per cycle            
+          7.237,62 msec task-clock                       #    1,000 CPUs utilized             
+
+       7,238446712 seconds time elapsed
+
+       7,238086000 seconds user
+       0,000000000 seconds sys
+
+
+hermann@7950x:~$ 
+```
+
+Doing same runs on 8C/16T 8840HS laptop processor shows 8.49 TFLOPS / 1.26 TFLOPS when running with all 8 cores / single core (at 4.18 GHz / 4.97 GHz).
