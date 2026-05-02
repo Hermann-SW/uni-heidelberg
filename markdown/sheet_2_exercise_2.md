@@ -1,3 +1,8 @@
+|  [TFLOPS] ([GHz])  |    1-core   |     8-core   |    16-core   |
+|:------------------:|:-----------:|:------------:|:------------:|
+| AMD 7950X  16C/32T | 1.41 (5.54) | 11.07 (5.42) | 20.18 (4.95) |
+| AMD 8840HS  8C/16T | 1.26 (4.97) | 8.49  (4.18) |       —      |
+
 [avx512_fma_double_openmp.c](../scripts/avx512_fma_double_openmp.c)
 
 ```
@@ -90,7 +95,3 @@ hermann@7950x:~$
 
 Doing same runs on 8C/16T AMD 8840HS laptop processor shows 8.49 TFLOPS / 1.26 TFLOPS when running with all 8 cores / single core (at 4.18 GHz / 4.97 GHz).  
 
-|  [TFLOPS] ([GHz])  |    1-core   |     8-core   |    16-core   |
-|:------------------:|:-----------:|:------------:|:------------:|
-| AMD 7950X  16C/32T | 1.41 (5.54) | 11.07 (5.42) | 20.18 (4.95) |
-| AMD 8840HS  8C/16T | 1.26 (4.97) | 8.49  (4.18) |       —      |
