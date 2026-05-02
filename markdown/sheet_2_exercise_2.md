@@ -88,4 +88,4 @@ Finished 1-core AVX-512 workload.
 hermann@7950x:~$ 
 ```
 
-Doing same runs on 8C/16T 8840HS laptop processor shows 8.49 TFLOPS / 1.26 TFLOPS when running with all 8 cores / single core (at 4.18 GHz / 4.97 GHz).
+Doing same runs on 8C/16T AMD 8840HS laptop processor shows 8.49 TFLOPS / 1.26 TFLOPS when running with all 8 cores / single core (at 4.18 GHz / 4.97 GHz).
