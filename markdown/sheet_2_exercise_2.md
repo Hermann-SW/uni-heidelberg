@@ -1,3 +1,5 @@
+[avx512_fma_double_openmp.c](../scripts/avx512_fma_double_openmp.c)
+
 ```
 hermann@7950x:~$ f=avx512_fma_double_openmp
 hermann@7950x:~$ gcc -O3 -mavx512f -mfma -fopenmp $f.c -o $f
