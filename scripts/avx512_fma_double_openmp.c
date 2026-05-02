@@ -4,6 +4,7 @@
 f=avx512_fma_double_openmp
 gcc -O3 -mavx512f -mfma -fopenmp $f.c -o $f
 objdump -d $f | sed -n "/vfmadd132pd/,/jne/p"
+echo 0 | sudo tee /proc/sys/kernel/perf_event_paranoid
 OMP_NUM_THREADS=16 perf stat -e fp_ret_sse_avx_ops.mac_flops,cycles,instructions,task-clock ./$f
 
 ...

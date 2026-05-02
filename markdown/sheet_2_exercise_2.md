@@ -25,6 +25,9 @@ hermann@7950x:~$
 ```
 
 ```
+hermann@7950x:~$ echo 0 | sudo tee /proc/sys/kernel/perf_event_paranoid
+[sudo] password for hermann: 
+0
 hermann@7950x:~$ OMP_NUM_THREADS=16 perf stat -e fp_ret_sse_avx_ops.mac_flops,cycles,instructions,task-clock ./$f
 Results 0-3: 1.000000000000  1.000000491214  1.000000940659  1.000001393028
 Results 0-3: 1.000000000000  1.000000491214  1.000000940659  1.000001393028
