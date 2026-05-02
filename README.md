@@ -31,7 +31,7 @@ benchmarking: find nice [pointer_chasing.cc](https://parcomp-git.iwr.uni-heidelb
 
 [STREAM](https://parcomp-git.iwr.uni-heidelberg.de/Teaching/hasc-code/-/tree/master/stream?ref_type=heads) is the de facto industry standard benchmark for measuring sustained memory bandwidth. Find output, discussion, … when executed on 8× 24C/48T Intel Xeon E7 8890v4 CPUs in Lenovo x3950-X6 8-socket server [here](markdown/stream.md) (… true memory bandwidth for Scale and Triad was 549 GByte/s and 561 GByte/s …)
 
-[Sheet 2 Excercise 2](markdown/sheet_2_excercise_2.md): avx512 fma code shows 20.18 TFLOPS on 16C/32T AMD 7950X CPU
+[Sheet 2 Exercise 2](markdown/sheet_2_exercise_2.md): avx512 fma code shows 20.18 TFLOPS on 16C/32T AMD 7950X CPU
 
 ## Randomized Algorithms
 
