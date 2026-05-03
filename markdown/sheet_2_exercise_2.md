@@ -146,7 +146,7 @@ hermann@7950x:~$
   
 Computing 7950X peak performance  with 16 double precison operations per perf counter "fp_ret_sse_avx_ops.mac_flops":  
 ```
-10240000000000 * 16 / (8.118225634 * 10^9) = 20181 GFLOPS (AMD 7950X) = 20.18 TFLOPS FP64
+10240000000000 / (8.118225634 * 10^9) = 1261 GFLOPS (AMD 7950X)
 ```
   
   
