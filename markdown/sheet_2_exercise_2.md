@@ -35,7 +35,7 @@ Types of differences:
   
   
 
-AMD perf counter "fp_ret_sse_avx_ops.mac_flops" increments by 2×(512/64)=16 for fma (1 multiplication, 1 addition).    
+AVX512 perf counter "fp_ret_sse_avx_ops.mac_flops" increments by 2×(512/64)=16 for fma (1 multiplication, 1 addition).    
 AVX2 perf counter "r10c7" increments by 2 for fma, additional multiply by (256/64)=4 needed.    
 NEON perf counter "r74" increments by 1 for fma, additional multiply by (128/64)=2 needed.    
 ```
