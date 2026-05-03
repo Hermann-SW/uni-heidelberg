@@ -150,7 +150,7 @@ Computing 7950X peak performance  with 16 double precison operations per perf co
 ```
   
   
-Single-core execution runs at 5.538 GHz instead of 4.951 GHz for all 16 cores, resulting in 1.41 TFLOPS FP64:  
+Single-core execution runs at 5.538 GHz instead of 4.951 GHz for all 16 cores, resulting in 87 GFLOPS FP64:  
 ```
 hermann@7950x:~$ OMP_NUM_THREADS=1 perf stat -e fp_ret_sse_avx_ops.mac_flops,cycles,instructions,task-clock ./$f
 Results 0-3: 1.000000000000  1.000000491214  1.000000940659  1.000001393028
