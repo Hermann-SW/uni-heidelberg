@@ -35,9 +35,9 @@ Types of differences:
   
   
 
-AMD perf counter "fp_ret_sse_avx_ops.mac_flops" increments by 2 for fma (1 multiplication, 1 addition).    
-AVX2 perf counter "r10c7" increments by 1 for fma, additional multiply by 2 needed.    
-NEON perf counter "r74" increments by 1 for fma, additional multiply by 2 needed.    
+AMD perf counter "fp_ret_sse_avx_ops.mac_flops" increments by 2×(512/64)=16 for fma (1 multiplication, 1 addition).    
+AVX2 perf counter "r10c7" increments by 2 for fma, additional multiply by (256/64)=4 needed.    
+NEON perf counter "r74" increments by 1 for fma, additional multiply by (128/64)=2 needed.    
 ```
   OMP_NUM_THREADS=16 perf stat -e fp_ret_sse_avx_ops.mac_flops,cycles,instructions,task-clock ./$f
   OMP_NUM_THREADS=192 perf stat -a -e r10c7,cycles,instructions,task-clock ./$f
