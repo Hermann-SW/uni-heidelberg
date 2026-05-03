@@ -1,16 +1,84 @@
-|  [TFLOPS] ([GHz])  |    1-core   |     8-core   |    16-core   |
-|:------------------:|:-----------:|:------------:|:------------:|
-| AMD 7950X  16C/32T | 1.41 (5.54) | 11.07 (5.42) | 20.18 (4.95) |
-| AMD 8840HS  8C/16T | 1.26 (4.97) | 8.49  (4.18) |       —      |
+```
+Exercise 2 (Peak Performance) shortened:    
+…, it is useful to consider additional metrics.  
+Two common ones are operation throughput (GFlops/s) and memory bandwidth (GB/s). …  
+a) Determine the peak performance of your processor (single-core and all cores)  
+b) Explain where these peak values come from  
+```
 
-[avx512_fma_double_openmp.c](../scripts/avx512_fma_double_openmp.c)
+Single-core peak performance in 1-core, multi-core peak performance in rightmost column:  
 
+|     |  [TFLOPS] ([GHz])    | units|#FP64ops /clockcycle|1-core|      4-core  |     8-core   |    16-core   |    22-core  |    24-core  | |  2-socket   | 4-socket    | 8-socket    |
+|:---:|:--------------------:|:----:|:------:|:-----------:|:-------------|:------------:|:------------:|:-----------:|:-----------:|-|:-----------:|:-----------:|:-----------:|
+| AMD Ryzen |7950X  16C/32T  |AVX512| 2×8    | 1.41 (5.54) |       —      | 11.07 (5.42) | 20.18 (4.95) |      —      |      —      | |      —      |      —      |      —      |
+| AMD Ryzen |8840HS  8C/16T  |AVX512| 2×8    | 1.26 (4.97) |       —      | 8.49  (4.18) |       —      |      —      |      —      | |      —      |      —      |      —      |
+|Intel XEON |8890v4 24C/48T  | AVX2 | 2×4    | 0.082 (3.39)|       —      |       —      |       —      |      —      | 1.34 (2.59) | | 2.68 (2.59) | 5.04 (2.59) | 10.68 (2.59)|
+|Intel XEON |2696v4 22C/44T  | AVX2 | 2×4    | 0.066 (2.80)|       —      |       —      |       —      | 1.24 (2.80) |      —      | | 2.62 (2.80) |      —      |      —      |
+| ARM Cortex|A76 4C/8T       | NEON | 2×2    | 0.024 (3.00)| 0.095 (3.00) |       —      |       —      |      —      |      —      | |      —      |      —      |      —      |
+  
+  
+[avx512_fma_double_openmp.c](../scripts/avx512_fma_double_openmp.c)  
+[avx2_fma_double_openmp.c](../scripts/avx2_fma_double_openmp.c)  
+[neon_fma_double_openmp.c](../scripts/neon_fma_double_openmp.c)  
+
+Types of differences:  
+```
+  gcc -O3 -mavx512f -mfma -fopenmp $f.c -o $f
+  gcc -O3 -mavx2 -mfma -fopenmp $f.c -o $f
+  gcc -O3 -mcpu=cortex-a76 -ffast-math -fopenmp $f.c -o $f
+```
+```
+  objdump -d $f | sed -n "/vfmadd132pd/,/jne/p"
+  objdump -d $f | sed -n "/vfmadd132pd/,/jne/p"
+  objdump -d $f | sed -n "/subs/,/b\.ne/p"
+```
+  
+  
+
+AMD perf counter "fp_ret_sse_avx_ops.mac_flops" increments by 2 for fma (1 multiplication, 1 addition).    
+AVX2 perf counter "r10c7" increments by 1 for fma, additional multiply by 2 needed.    
+NEON perf counter "r74" increments by 1 for fma, additional multiply by 2 needed.    
+```
+  OMP_NUM_THREADS=16 perf stat -e fp_ret_sse_avx_ops.mac_flops,cycles,instructions,task-clock ./$f
+  OMP_NUM_THREADS=192 perf stat -a -e r10c7,cycles,instructions,task-clock ./$f
+  OMP_NUM_THREADS=4 perf stat -e r74,cycles,instructions,task-clock ./$f
+```
+```
+  #include <immintrin.h>
+  #include <immintrin.h>
+  #include <arm_neon.h>
+```
+```
+      __m512d a0 = _mm512_set1_pd(1.0);
+      __m256d a0 = _mm256_set1_pd(1.0);
+      float64x2_t a0 = vdupq_n_f64(1.0);
+```
+```
+          a0  = _mm512_fmadd_pd(a0,  b, c);
+          a0  = _mm256_fmadd_pd(a0,  b, c);
+          a0  = vfmaq_f64(a0,  b, c);
+```
+```
+      double res[8];
+      double res[4];
+      double res[2];
+```
+```
+      _mm512_storeu_pd(res, a0);
+      _mm256_storeu_pd(res, a0);
+      vst1q_f64(res, a0);
+```
+  
+  
+Compile:  
 ```
 hermann@7950x:~$ f=avx512_fma_double_openmp
 hermann@7950x:~$ gcc -O3 -mavx512f -mfma -fopenmp $f.c -o $f
 hermann@7950x:~$ 
 ```
-
+  
+  
+Compare innermost loop in assembler and C:  
 ```
 hermann@7950x:~$ objdump -d $f | sed -n "/vfmadd132pd/,/jne/p"
     1240:	62 f2 fd 48 98 e9    	vfmadd132pd %zmm1,%zmm0,%zmm5
@@ -28,7 +96,9 @@ hermann@7950x:~$ sed -n "/long i/,/^    }/p" $f.c
     }
 hermann@7950x:~$ 
 ```
-
+  
+  
+Execute with 16 threads:  
 ```
 hermann@7950x:~$ echo 0 | sudo tee /proc/sys/kernel/perf_event_paranoid
 [sudo] password for hermann: 
@@ -67,11 +137,15 @@ Finished 16-core AVX-512 workload.
 
 hermann@7950x:~$
 ```
-
-Computing GFLOPS with 16 double precison operations per perf counter "fp_ret_sse_avx_ops.mac_flops":  
+  
+  
+Computing 7950X peak performance  with 16 double precison operations per perf counter "fp_ret_sse_avx_ops.mac_flops":  
+```
 10240000000000 * 16 / (8.118225634 * 10^9) = 20181 GFLOPS (AMD 7950X) = 20.18 TFLOPS FP64
-
-Single core execution runs at 5.538 GHz instead of 4.951 GHz for all 16 cores, resulting in 1.41 TFLOPS FP64:  
+```
+  
+  
+Single-core execution runs at 5.538 GHz instead of 4.951 GHz for all 16 cores, resulting in 1.41 TFLOPS FP64:  
 ```
 hermann@7950x:~$ OMP_NUM_THREADS=1 perf stat -e fp_ret_sse_avx_ops.mac_flops,cycles,instructions,task-clock ./$f
 Results 0-3: 1.000000000000  1.000000491214  1.000000940659  1.000001393028
@@ -92,6 +166,6 @@ Finished 1-core AVX-512 workload.
 
 hermann@7950x:~$ 
 ```
-
-Doing same runs on 8C/16T AMD 8840HS laptop processor shows 8.49 TFLOPS / 1.26 TFLOPS when running with all 8 cores / single core (at 4.18 GHz / 4.97 GHz).  
-
+  
+  
+For the other CPUs find peak performances and CPU frequencies in above table.  
