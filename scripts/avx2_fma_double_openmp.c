@@ -14,7 +14,7 @@ OMP_NUM_THREADS=192 perf stat -a -e r10c7,cycles,instructions,task-clock ./$f
        8,118225634 seconds time elapsed
 ...
 
-10240000000000 * 16 / (8.118225634 * 10^9) = 20181 GFLOPS (AMD 7950X)
+10240000000000 / (8.118225634 * 10^9) = 1261 GFLOPS (AMD 7950X)
 
 */
 #include <immintrin.h>
@@ -43,6 +43,8 @@ int main() {
         a2  = _mm256_fmadd_pd(a2,  b, c);
         a3  = _mm256_fmadd_pd(a3,  b, c);
     }
+
+    // a0  = _mm256_fmadd_pd(a0,  b, c); // odd #fma, increase by 2
 
     double res[4];
     _mm256_storeu_pd(res, a0);

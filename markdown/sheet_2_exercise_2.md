@@ -8,13 +8,13 @@ b) Explain where these peak values come from …
 
 Single-core peak performance in 1-core, multi-core peak performance in rightmost column:  
 
-|     |  [TFLOPS] ([GHz])    | units|#FP64ops /clockcycle|1-core|      4-core  |     8-core   |    16-core   |    22-core  |    24-core  | |  2-socket   | 4-socket    | 8-socket    |
+|     |  [GFLOPS] ([GHz])    | units|×counter|       1-core|      4-core  |     8-core   |    16-core   |    22-core  |    24-core  | |  2-socket   | 4-socket    | 8-socket    |
 |:---:|:--------------------:|:----:|:------:|:-----------:|:-------------|:------------:|:------------:|:-----------:|:-----------:|-|:-----------:|:-----------:|:-----------:|
-| AMD Ryzen |7950X  16C/32T  |AVX512| 2×8    | 1.41 (5.54) |       —      | 11.07 (5.42) | 20.18 (4.95) |      —      |      —      | |      —      |      —      |      —      |
-| AMD Ryzen |8840HS  8C/16T  |AVX512| 2×8    | 1.26 (4.97) |       —      | 8.49  (4.18) |       —      |      —      |      —      | |      —      |      —      |      —      |
-|Intel XEON |8890v4 24C/48T  | AVX2 | 2×4    | 0.082 (3.39)|       —      |       —      |       —      |      —      | 1.34 (2.59) | | 2.68 (2.59) | 5.04 (2.59) | 10.68 (2.59)|
-|Intel XEON |2696v4 22C/44T  | AVX2 | 2×4    | 0.066 (2.80)|       —      |       —      |       —      | 1.24 (2.80) |      —      | | 2.62 (2.80) |      —      |      —      |
-| ARM Cortex|A76 4C/8T       | NEON | 2×2    | 0.048 (3.00)|  0.19 (3.00) |       —      |       —      |      —      |      —      | |      —      |      —      |      —      |
+| AMD Ryzen |7950X  16C/32T  |AVX512|   1    |   87 (5.54) |       —      |  681  (5.42) |  1261 (4.95) |      —      |      —      | |      —      |      —      |      —      |
+| AMD Ryzen |8840HS  8C/16T  |AVX512|   1    |   80 (4.97) |       —      |  531  (4.18) |       —      |      —      |      —      | |      —      |      —      |      —      |
+|Intel XEON |8890v4 24C/48T  | AVX2 |   4    |    22 (3.39)|       —      |       —      |       —      |      —      |  396 (2.59) | |  675 (2.59) | 1321 (2.59) |  2632 (2.59)|
+|Intel XEON |2696v4 22C/44T  | AVX2 |   4    |    17 (2.80)|       —      |       —      |       —      |  330 (2.80) |      —      | |  631 (2.80) |      —      |      —      |
+| ARM Cortex|A76 4C/8T       | NEON |   2    |    12 (3.00)|    48 (3.00) |       —      |       —      |      —      |      —      | |      —      |      —      |      —      |
   
   
 [avx512_fma_double_openmp.c](../scripts/avx512_fma_double_openmp.c)  
@@ -57,6 +57,11 @@ NEON perf counter "r74" increments by 1 for fma, additional multiply by 2 needed
           a0  = _mm512_fmadd_pd(a0,  b, c);
           a0  = _mm256_fmadd_pd(a0,  b, c);
           a0  = vfmaq_f64(a0,  b, c);
+```
+```
+      // a0  = _mm512_fmadd_pd(a0,  b, c); // odd #fma, increase by 2*(512/64)
+      // a0  = _mm256_fmadd_pd(a0,  b, c); // odd #fma, increase by 2
+      // a0  = vfmaq_f64(a0,  b, c); // odd #fma, increase by 1
 ```
 ```
       double res[8];

@@ -14,7 +14,7 @@ OMP_NUM_THREADS=4 perf stat -e r74,cycles,instructions,task-clock ./$f
        8,118225634 seconds time elapsed
 ...
 
-10240000000000 * 16 / (8.118225634 * 10^9) = 20181 GFLOPS (AMD 7950X)
+10240000000000 / (8.118225634 * 10^9) = 1261 GFLOPS (AMD 7950X)
 
 */
 #include <arm_neon.h>
@@ -43,6 +43,8 @@ int main() {
         a2  = vfmaq_f64(a2,  b, c);
         a3  = vfmaq_f64(a3,  b, c);
     }
+
+    // a0  = vfmaq_f64(a0,  b, c); // odd #fma, increase by 1
 
     double res[2];
     vst1q_f64(res, a0);
