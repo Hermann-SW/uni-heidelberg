@@ -1,9 +1,5 @@
 ```
-Exercise 2 (Peak Performance) shortened:    
-…, it is useful to consider additional metrics.  
-Two common ones are operation throughput (GFlops/s) and memory bandwidth (GB/s). …  
-a) Determine the peak performance of your processor (single-core and all cores) …  
-b) Explain where these peak values come from …  
+For exercise 2 (Peak Performance).    
 ```
 
 Single-core peak performance in 1-core, multi-core peak performance in rightmost column:  
