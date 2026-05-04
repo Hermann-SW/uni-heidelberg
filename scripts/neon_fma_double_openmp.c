@@ -44,7 +44,7 @@ int main() {
         a3  = vfmaq_f64(a3,  b, c);
     }
 
-    // a0  = vfmaq_f64(a0,  b, c); // odd #fma, increase by 1
+    // a0  = vfmaq_f64(a0,  b, c); // odd #fma, increase by 4
 
     double res[2];
     vst1q_f64(res, a0);
