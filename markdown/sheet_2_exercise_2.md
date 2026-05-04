@@ -10,7 +10,7 @@ Single-core peak performance in 1-core, multi-core peak performance in rightmost
 | AMD Ryzen |8840HS  8C/16T  |AVX512|   1    |   80 (4.97) |       —      |  531  (4.18) |       —      |      —      |      —      | |      —      |      —      |      —      |
 |Intel XEON |8890v4 24C/48T  | AVX2 |   4    |    22 (3.39)|       —      |       —      |       —      |      —      |  396 (2.59) | |  675 (2.59) | 1321 (2.59) |  2632 (2.59)|
 |Intel XEON |2696v4 22C/44T  | AVX2 |   4    |    17 (2.80)|       —      |       —      |       —      |  330 (2.80) |      —      | |  631 (2.80) |      —      |      —      |
-| ARM Cortex|A76 4C/8T       | NEON |   2    |    12 (3.00)|    48 (3.00) |       —      |       —      |      —      |      —      | |      —      |      —      |      —      |
+| ARM Cortex|A76 4C/8T       | NEON |   1    |     6 (3.00)|     24 (3.00) |       —      |       —      |      —      |      —      | |      —      |      —      |      —      |
   
   
 [avx512_fma_double_openmp.c](../scripts/avx512_fma_double_openmp.c)  
