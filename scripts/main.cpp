@@ -1,3 +1,5 @@
+// created in a very long session with Google Gemini
+//
 #include <stdio.h>
 #include <stdlib.h>
 #include <CL/opencl.h>
