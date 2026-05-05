@@ -1,7 +1,7 @@
 
 
 [Radeon Pro VII Specs](https://www.techpowerup.com/gpu-specs/radeon-pro-vii.c3575)   
-![rear.png](rear.png)  
+![rear.png](../res/rear.png)  
 
 [main.cpp](../scripts/main.cpp)
 
