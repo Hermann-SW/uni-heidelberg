@@ -100,7 +100,21 @@ hermann@7950x:~$ sed -n "/long i/,/^    }/p" $f.c
 hermann@7950x:~$ 
 ```
   
-  
+Watch core frequencies, updates every 2 seconds by default:
+```
+watch 'cat /proc/cpuinfo | grep "MHz"'
+```
+
+Diisable SMT on commandline:
+``` 
+echo off | sudo tee /sys/devices/system/cpu/smt/control
+```
+
+As learned in a previous HASC tutorial, this allows for "ascii" overview:
+```
+lstopo --of ascii --no-io
+```
+ 
 Execute with 16 threads:  
 ```
 hermann@7950x:~$ echo 0 | sudo tee /proc/sys/kernel/perf_event_paranoid
@@ -142,7 +156,7 @@ hermann@7950x:~$
 ```
   
   
-Computing 7950X peak performance  with 16 double precison operations per perf counter "fp_ret_sse_avx_ops.mac_flops":  
+Computing 7950X peak performance  with 16 double precision operations per perf counter "fp_ret_sse_avx_ops.mac_flops":  
 ```
 10240000000000 / (8.118225634 * 10^9) = 1261 GFLOPS (AMD 7950X)
 ```
