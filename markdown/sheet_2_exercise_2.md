@@ -19,7 +19,7 @@ Single-core peak performance in 1-core, multi-core peak performance in rightmost
 
 [Radeon Pro VII GPU synthetic performance](GPU.md)  (5.44 TFLOPS)
 
-Types of differences:  
+Types of differences (from "diff3" output):  
 ```
   gcc -O3 -mavx512f -mfma -fopenmp $f.c -o $f
   gcc -O3 -mavx2 -mfma -fopenmp $f.c -o $f
