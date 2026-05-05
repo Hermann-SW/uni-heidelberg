@@ -81,7 +81,7 @@ hermann@7950x:~$
 ```
   
   
-Compare innermost loop in assembler and C:  
+Compare innermost loop in assembly and C:  
 ```
 hermann@7950x:~$ objdump -d $f | sed -n "/vfmadd132pd/,/jne/p"
     1240:	62 f2 fd 48 98 e9    	vfmadd132pd %zmm1,%zmm0,%zmm5
