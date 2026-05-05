@@ -59,7 +59,7 @@ NEON perf counter "r74" increments by 2×(128/64)=4 for 1×fma, no additional mu
 ```
       // a0  = _mm512_fmadd_pd(a0,  b, c); // odd #fma, increase by 2*(512/64)
       // a0  = _mm256_fmadd_pd(a0,  b, c); // odd #fma, increase by 2
-      // a0  = vfmaq_f64(a0,  b, c); // odd #fma, increase by 1
+      // a0  = vfmaq_f64(a0,  b, c); // odd #fma, increase by 4
 ```
 ```
       double res[8];
