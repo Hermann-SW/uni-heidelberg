@@ -105,7 +105,7 @@ Watch core frequencies, updates every 2 seconds by default:
 watch 'cat /proc/cpuinfo | grep "MHz"'
 ```
 
-Diisable SMT on commandline:
+Disable SMT on commandline:
 ``` 
 echo off | sudo tee /sys/devices/system/cpu/smt/control
 ```
