@@ -2,19 +2,19 @@
 
 [main.cpp](../scripts/main.cpp)
 
-´´´
+```
 $ cat build 
 #!/bin/bash
 g++ -O3 main.cpp -o gemm_bench -I/opt/rocm/include -L/opt/rocm/lib -lOpenCL
 $
-´´´
+```
 
-´´´
+```
 $ cat run 
 #!/bin/bash
 LD_LIBRARY_PATH=/opt/rocm/lib:$LD_LIBRARY_PATH ./gemm_bench
 $
-´´´
+```
 
 Execution:
 ```
