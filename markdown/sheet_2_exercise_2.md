@@ -17,7 +17,7 @@ Single-core peak performance in 1-core, multi-core peak performance in rightmost
 [avx2_fma_double_openmp.c](../scripts/avx2_fma_double_openmp.c)  
 [neon_fma_double_openmp.c](../scripts/neon_fma_double_openmp.c)  
 
-[Radeon Pro VII GPU synthetic performance](GPU.md)
+[Radeon Pro VII GPU synthetic performance](GPU.md)  (5.44 TFLOPS)
 
 Types of differences:  
 ```
