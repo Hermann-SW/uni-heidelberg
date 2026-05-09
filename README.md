@@ -18,7 +18,7 @@
 Script, recordings and excercises:  
 https://scoop.iwr.uni-heidelberg.de/teaching/2026ss/lecture-lineare-algebra/
 
-[strassen.4x4.py](scripts/strassen.4x4.py) uses 6-dimensional Strassen tensor of rank 49 for 4x4 matrix-matrix multiplication (standard tensor has rank 64, AlphaTensor tensor rank 47, the proven lower bound): [markdown/strassen.md](markdown/strassend.md)
+[strassen.4x4.py](scripts/strassen.4x4.py) uses 6-dimensional Strassen tensor of rank 49 for 4x4 matrix-matrix multiplication (standard tensor has rank 64, AlphaTensor tensor rank 47, the proven lower bound): [markdown/strassen.md](markdown/strassen.md)
 
 ## Analysis 2
 
