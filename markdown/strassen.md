@@ -3,7 +3,7 @@ Code uses symarrays for 4x4 matrices A and B to verify symbolically that all com
 - apply A to compute A_operator, then B (to compute A@B)
 - apply B to compute B_operator, then A (to compute A@B)
 - apply C((!), which is normally the result) to compute C_operator, then A (that computes Aᵀ@(A@B))
-- output A@B demonstrating the symbolic matrix-matrix product A@B.
+- output A@B demonstrating the symbolic matrix-matrix product A@B.  
 Especially the C_operator computation is interesting. For orthonormal matrix A, AᵀA=id and the computation would result in B. If A represents linear function f:V->W, the Aᵀ represents f*:W*->V*
 ```
 pi@raspberrypi5:~/uni-heidelberg/scripts $ ~/venv/bin/python strassen.4x4.py 
