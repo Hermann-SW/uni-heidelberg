@@ -90,7 +90,10 @@ B_operator = np.einsum('injklm,lm->injk', T4, B)
 C = np.einsum('injk,jk->in', B_operator, A)
 print("Success apply(B), then A:", sp.Matrix(C) == sp.Matrix(C_actual))
 
+# results in a 4D tensor (4x4x4x4)
+# C:in A:jk B:lm
 C_operator = np.einsum('injklm,in->jklm', T4, A @ B)
+#
 R = np.einsum('jklm,jk->lm', C_operator, A)
 print("Success apply(C), then A, gives A.T @ (A @ B):",
        sp.Matrix(R) == sp.Matrix(A.T @ (A @ B)))
