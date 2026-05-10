@@ -2,7 +2,7 @@
 - apply A and B (to Strassen tensor, in order to compute A@B)
 - apply A to compute A_operator, then B (to compute A@B)
 - apply B to compute B_operator, then A (to compute A@B)
-- apply C((!), which is normally the result) to compute C_operator, then A (that computes Aᵀ@(A@B))
+- apply C[(!), which is normally the output] to compute C_operator, then A (that computes Aᵀ@(A@B))
 - output A@B demonstrating the symbolic matrix-matrix product A@B.  
 
 Especially the C_operator computation is interesting. For orthonormal matrix A, AᵀA=id and the computation would result in B. If A represents linear function f:V->W, the Aᵀ represents dual linear function f*:W*->V*
