@@ -7,7 +7,7 @@
   - … then B (that computes (A@B)@Bᵀ)
 - output A@B demonstrating the symbolic matrix-matrix product A@B.  
 
-Especially the C_operator computation is interesting. For orthonormal matrix A, AᵀA=id and the computation would result in B. If A represents linear function f:V->W, the Aᵀ represents dual linear function f*:W*->V*
+Especially the C_operator computation is interesting. For orthonormal matrix A, AᵀA=id and the computation would result in B. If A represents linear function f:V->W, then Aᵀ represents dual linear function f*:W*->V*.
 ```
 pi@raspberrypi5:~/uni-heidelberg/scripts $ ~/venv/bin/python strassen.4x4.py 
 symbolic symarray()s verification; compute A @ B with rank 47 Strassen tensor
