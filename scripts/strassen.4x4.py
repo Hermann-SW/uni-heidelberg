@@ -97,5 +97,9 @@ C_operator = np.einsum('injklm,in->jklm', T4, A @ B)
 R = np.einsum('jklm,jk->lm', C_operator, A)
 print("Success apply(C), then A, gives A.T @ (A @ B):",
        sp.Matrix(R) == sp.Matrix(A.T @ (A @ B)))
+#
+R = np.einsum('jklm,lm->jk', C_operator, B)
+print("Success apply(C), then B, gives (A @ B) @ B.T:",
+       sp.Matrix(R) == sp.Matrix((A @ B) @ B.T))
 
 print("A @ B =", C_actual)

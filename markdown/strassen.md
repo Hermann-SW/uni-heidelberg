@@ -1,8 +1,10 @@
 [strassen.4x4.py](../scripts/strassen.4x4.py) uses symarrays for 4x4 matrices A and B to verify symbolically that all computations are correct. These are the scenarios for applying to Strassen tensor of demo:
-- apply A and B (to Strassen tensor, in order to compute A@B)
+- apply A and B (to compute A@B)
 - apply A to compute A_operator, then B (to compute A@B)
 - apply B to compute B_operator, then A (to compute A@B)
-- apply C [(!), which is normally the output] to compute C_operator, then A (that computes Aᵀ@(A@B))
+- apply C [(!), which is normally the output] to compute C_operator, …
+  - … then A (that computes Aᵀ@(A@B))
+  - … then B (that computes (A@B)@Bᵀ)
 - output A@B demonstrating the symbolic matrix-matrix product A@B.  
 
 Especially the C_operator computation is interesting. For orthonormal matrix A, AᵀA=id and the computation would result in B. If A represents linear function f:V->W, the Aᵀ represents dual linear function f*:W*->V*
@@ -13,6 +15,7 @@ Success apply(A,B): True
 Success apply(A), then B: True
 Success apply(B), then A: True
 Success apply(C), then A, gives A.T @ (A @ B): True
+Success apply(C), then B, gives (A @ B) @ B.T: True
 A @ B = [[A_0_0*B_0_0 + A_0_1*B_1_0 + A_0_2*B_2_0 + A_0_3*B_3_0
   A_0_0*B_0_1 + A_0_1*B_1_1 + A_0_2*B_2_1 + A_0_3*B_3_1
   A_0_0*B_0_2 + A_0_1*B_1_2 + A_0_2*B_2_2 + A_0_3*B_3_2
