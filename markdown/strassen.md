@@ -1,4 +1,4 @@
-[strassen.4x4.py](../scripts/strassen.4x4.py) uses symarrays for 4x4 matrices A and B to verify symbolically that all computations are correct. These are the scenarios for applying to Strassen tensor of demo:
+[strassen.4x4.py](../scripts/strassen.4x4.py) uses symarrays for 4x4 matrices A and B to verify that stated matrix identities hold (for all cases). These are the scenarios for applying to Strassen tensor of demo:
 - apply A and B (to compute A@B)
 - apply A to compute A_operator, then B (to compute A@B)
 - apply B to compute B_operator, then A (to compute A@B)
