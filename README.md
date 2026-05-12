@@ -35,7 +35,7 @@ benchmarking: find nice [pointer_chasing.cc](https://parcomp-git.iwr.uni-heidelb
 
 [Sheet 2 Exercise 2](markdown/sheet_2_exercise_2.md): avx512 fma code shows peak 1261 GFLOPS on 16C/32T AMD 7950X CPU
 
-[cpufp measurements](markdown/cpufp) for my 8/16/2×22/8×24 core systems
+[cpufp measurements](markdown/cpufp.md) for my 8/16/2×22/8×24 core systems
 
 ## Randomized Algorithms
 
