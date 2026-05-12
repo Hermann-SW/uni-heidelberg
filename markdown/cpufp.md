@@ -1,4 +1,4 @@
-[cpufp](https://github.com/pigirons/cpufp)
+[cpufp repo](https://github.com/pigirons/cpufp)
 
 | Instruction Set | Vector Length | Core Computation      | Peak Performance |  Peak Performance |  Peak Performance |  Peak Performance |
 |-----------------|---------------|-----------------------|------------------| ------------------| ------------------| ------------------|
