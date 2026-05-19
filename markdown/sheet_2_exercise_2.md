@@ -143,15 +143,15 @@ Finished 16-core AVX-512 workload.
 
  Performance counter stats for './avx512_fma_double_openmp':
 
-10.240.000.000.000      fp_ret_sse_avx_ops.mac_flops     #   79,001 G/sec                     
-   641.682.840.447      cycles                           #    4,951 GHz                       
-   960.941.039.529      instructions                     #    1,50  insn per cycle            
-        129.619,13 msec task-clock                       #   15,966 CPUs utilized             
+10,240,000,000,000      fp_ret_sse_avx_ops.mac_flops     #   79.001 G/sec                     
+   641,682,840,447      cycles                           #    4.951 GHz                       
+   960,941,039,529      instructions                     #    1.50  insn per cycle            
+        129,619.13 msec task-clock                       #   15.966 CPUs utilized             
 
-       8,118225634 seconds time elapsed
+       8.118225634 seconds time elapsed
 
-     129,618583000 seconds user
-       0,000999000 seconds sys
+     129.618583000 seconds user
+       0.000999000 seconds sys
 
 
 hermann@7950x:~$
@@ -172,15 +172,15 @@ Finished 1-core AVX-512 workload.
 
  Performance counter stats for './avx512_fma_double_openmp':
 
-   640.000.000.000      fp_ret_sse_avx_ops.mac_flops     #   88,427 G/sec                     
-    40.082.548.500      cycles                           #    5,538 GHz                       
-    60.067.840.162      instructions                     #    1,50  insn per cycle            
-          7.237,62 msec task-clock                       #    1,000 CPUs utilized             
+   640,000,000,000      fp_ret_sse_avx_ops.mac_flops     #   88.427 G/sec                     
+    40,082,548,500      cycles                           #    5.538 GHz                       
+    60,067,840,162      instructions                     #    1.50  insn per cycle            
+          7,237.62 msec task-clock                       #    1.000 CPUs utilized             
 
-       7,238446712 seconds time elapsed
+       7.238446712 seconds time elapsed
 
-       7,238086000 seconds user
-       0,000000000 seconds sys
+       7.238086000 seconds user
+       0.000000000 seconds sys
 
 
 hermann@7950x:~$ 

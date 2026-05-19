@@ -9,7 +9,6 @@
 - [Linear Algebra 2](#linear-algebra-2)
 - [Analysis 2](#analysis-2)
 - [Hardware-Aware Scientific Computing](#hardware-aware-scientific-computing)
-- [Randomized Algorithms](#randomized-algorithms)
 - [Elementary number theory](#elementary-number-theory)
 - [Berkeley math 115: Introduction to number theory](#berkeley-math-115-introduction-to-number-theory)
 
@@ -17,6 +16,8 @@
 
 Script, recordings and excercises:  
 https://scoop.iwr.uni-heidelberg.de/teaching/2026ss/lecture-lineare-algebra/
+
+[strassen.4x4.py](scripts/strassen.4x4.py) uses 6-dimensional Strassen tensor of rank 49 for 4x4 matrix-matrix multiplication (standard tensor has rank 64, AlphaTensor tensor rank 47, the proven lower bound): [markdown/strassen.md](markdown/strassen.md)
 
 ## Analysis 2
 
@@ -33,9 +34,7 @@ benchmarking: find nice [pointer_chasing.cc](https://parcomp-git.iwr.uni-heidelb
 
 [Sheet 2 Exercise 2](markdown/sheet_2_exercise_2.md): avx512 fma code shows peak 1261 GFLOPS on 16C/32T AMD 7950X CPU
 
-## Randomized Algorithms
-
-Script behind VPN on moodle.uni-heidelberg.de  
+[cpufp measurements](markdown/cpufp.md) for my 8/16/2×22/8×24 core systems
 
 ## Elementary number theory
 
