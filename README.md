@@ -9,7 +9,6 @@
 - [Linear Algebra 2](#linear-algebra-2)
 - [Analysis 2](#analysis-2)
 - [Hardware-Aware Scientific Computing](#hardware-aware-scientific-computing)
-- [Randomized Algorithms](#randomized-algorithms)
 - [Elementary number theory](#elementary-number-theory)
 - [Berkeley math 115: Introduction to number theory](#berkeley-math-115-introduction-to-number-theory)
 
@@ -36,10 +35,6 @@ benchmarking: find nice [pointer_chasing.cc](https://parcomp-git.iwr.uni-heidelb
 [Sheet 2 Exercise 2](markdown/sheet_2_exercise_2.md): avx512 fma code shows peak 1261 GFLOPS on 16C/32T AMD 7950X CPU
 
 [cpufp measurements](markdown/cpufp.md) for my 8/16/2×22/8×24 core systems
-
-## Randomized Algorithms
-
-Script behind VPN on moodle.uni-heidelberg.de  
 
 ## Elementary number theory
 
