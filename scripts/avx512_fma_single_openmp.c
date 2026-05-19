@@ -25,7 +25,7 @@ int main() {
   // We tell OpenMP to parallelize this block across all threads
   #pragma omp parallel
   {
-    // 512-bit vectors of doubles (8 doubles per register)
+    // 512-bit vectors of singles (16 singles per register)
     // We use a multiplier very close to 1, and a tiny increment.
     // Initialize 4 independent accumulators
     __m512 a0 = _mm512_set1_ps(1.0);
