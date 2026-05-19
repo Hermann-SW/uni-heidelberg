@@ -6,6 +6,7 @@ Single-core peak performance in 1-core, multi-core peak performance in rightmost
 
 |     |  [GFLOPS] ([GHz])    | units|counter multiplier|       1-core|      4-core  |     8-core   |    16-core   |    22-core  |    24-core  | |  2-socket   | 4-socket    | 8-socket    |
 |:---:|:--------------------:|:----:|:------:|:-----------:|:-------------|:------------:|:------------:|:-----------:|:-----------:|-|:-----------:|:-----------:|:-----------:|
+| (single) |7950X  16C/32T  |AVX512|   1    |  175 (5.47) |       —      | 1376  (5.39) |  2560 (5.03) |      —      |      —      | |      —      |      —      |      —      |
 | AMD Ryzen |7950X  16C/32T  |AVX512|   1    |   87 (5.54) |       —      |  681  (5.42) |  1261 (4.95) |      —      |      —      | |      —      |      —      |      —      |
 | AMD Ryzen |8840HS  8C/16T  |AVX512|   1    |   80 (4.97) |       —      |  531  (4.18) |       —      |      —      |      —      | |      —      |      —      |      —      |
 |Intel XEON |8890v4 24C/48T  | AVX2 |   4    |    22 (3.39)|       —      |       —      |       —      |      —      |  396 (2.59) | |  675 (2.59) | 1321 (2.59) |  2632 (2.59)|
@@ -13,6 +14,7 @@ Single-core peak performance in 1-core, multi-core peak performance in rightmost
 | ARM Cortex|A76 4C/8T       | NEON |   1    |     6 (3.00)|     24 (3.00) |       —      |       —      |      —      |      —      | |      —      |      —      |      —      |
   
   
+[avx512_fma_single_openmp.c](../scripts/avx512_fma_single_openmp.c)  
 [avx512_fma_double_openmp.c](../scripts/avx512_fma_double_openmp.c)  
 [avx2_fma_double_openmp.c](../scripts/avx2_fma_double_openmp.c)  
 [neon_fma_double_openmp.c](../scripts/neon_fma_double_openmp.c)  
