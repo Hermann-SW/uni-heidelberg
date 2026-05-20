@@ -159,10 +159,23 @@ hermann@7950x:~$
 ```
   
   
-Computing 7950X peak performance  with 16 double precision operations per perf counter "fp_ret_sse_avx_ops.mac_flops":  
+Computing AMD 7950X peak performance "GFLOPs = performance_counter / elapsed_nanoseconds":
 ```
-10240000000000 / (8.118225634 * 10^9) = 1261 GFLOPS (AMD 7950X)
+10240000000000 / (8.118225634 * 10^9) = 1261.359
 ```
+
+
+512 bits / 64 bits * "2 (AVX512 execution units per core)" = 16 double precision operations per clock cycle per core; "performance_counter / cycles":
+```
+10240000000000 / 641682840447 = 15.958
+```
+
+
+CPU clock frequency "GHz = cycles / user_nanoseconds":
+```
+641682840447 / 129618583000 = 4.95055
+```
+
   
   
 Single-core execution runs at 5.538 GHz instead of 4.951 GHz for all 16 cores, resulting in 87 GFLOPS FP64:  
