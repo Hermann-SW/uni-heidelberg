@@ -2,7 +2,7 @@
 
 | Instruction Set | Vector Length | Core Computation      | Peak Performance |  Peak Performance |  Peak Performance |  Peak Performance |
 |-----------------|---------------|-----------------------|------------------| ------------------| ------------------| ------------------|
-||||8840HS 8C|7950X 16C|E5-2696v4 2×22C|E7-8890v4 8×24C|
+||||8840HS<BR>8C|7950X<BR>16C|E5-2696v4<BR>2×22C|E7-8890v4<BR>8×24C|
 | AVX512_VNNI     | 512b          | DP4A(s32,u8,s8)       | 4.5797 TOPS      |  10.642 TOPS      |                   |                   |
 | AVX512_VNNI     | 512b          | DP2A(s32,s16,s16)     | 2.2133 TOPS      |  5.3042 TOPS      |                   |                   |
 | AVX512_BF16     | 512b          | DP2A(f32,bf16,bf16)   | 2.1396 TFLOPS    |  5.304 TFLOPS     |                   |                   |
