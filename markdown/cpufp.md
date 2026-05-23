@@ -4,7 +4,7 @@
 |-----------------|---------------|-----------------------|------------------| ------------------| ------------------| ------------------|
 ||||8840HS<BR>8C|7950X<BR>16C|E5-2696v4<BR>2×22C|E7-8890v4<BR>8×24C|
 | AVX512_VNNI     | 512b          | DP4A(s32,u8,s8)       | 4.5797 TOPS      |  10.642 TOPS      |                   |                   |
-| AVX512_VNNI     | 512b          | DP2A(s32,s16,s16)<BR>[simpler](https://gist.github.com/Hermann-SW/9162a47fd59216aea77df90efc8e7ad2)     | 2.2133 TOPS      |  5.3042 TOPS      |                   |                   |
+| AVX512_VNNI     | 512b          | DP2A(s32,s16,s16)     | 2.2133 TOPS<BR>[simpler](https://gist.github.com/Hermann-SW/9162a47fd59216aea77df90efc8e7ad2)      |  5.3042 TOPS      |                   |                   |
 | AVX512_BF16     | 512b          | DP2A(f32,bf16,bf16)   | 2.1396 TFLOPS    |  5.304 TFLOPS     |                   |                   |
 | AVX512F         | 512b          | FMA(f32,f32,f32)      | 1.0786 TFLOPS    |  2.65 TFLOPS      |                   |                   |
 | AVX512F         | 512b          | FMA(f64,f64,f64)      | 537.33 GFLOPS    |  1.3176 TFLOPS    |                   |                   |
