@@ -16,7 +16,7 @@ of threads (i.e. a power of two).
 ### solution
 
 New `wait3` is implemented in this diff ([here](../scripts/Barrier.hh#L38-L80) in Barrier.hh):  
-../scripts/Barrier.hh.diff_5.1b.diff
+[../scripts/Barrier.hh.diff_5.1b.diff](../scripts/Barrier.hh.diff_5.1b.diff)
 
 - based on `wait2`
 - uses binary tree
