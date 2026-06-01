@@ -1,0 +1,55 @@
+diff --git a/scripts/Barrier.hh b/scripts/Barrier.hh
+index c8d3ff8..54da570 100644
+--- a/scripts/Barrier.hh
++++ b/scripts/Barrier.hh
+@@ -18,11 +18,12 @@ class Barrier
+   std::atomic<int> acounter, bcounter; // two counters for mutex-free version
+   std::vector<int> direction; // store counting direction in mutex-free version
+   std::vector<std::atomic<int>> actr, bctr; // two counters for tree-barrier version
++  int last_barrier; // for 5.1c
+ 
+ public:
+   // set up barrier for given number of threads
+   Barrier (int P_) : P(P_), count(0), flag(P_,0), cv(P_), direction(P,0),
+-                     actr(P_), bctr(P_)
++                     actr(P_), bctr(P_), last_barrier(1)
+   {
+     acounter.store(0);
+     bcounter.store(0);
+@@ -34,7 +35,7 @@ public:
+     return P;
+   }
+ 
+-  // tree-barrier version; excercise 5.1b
++  // tree-barrier version; excercise 5.1b+c
+   // counters for inner nodes of binary tree (1..P-1)
+   // P is power of two
+   // leaves are P..2*P-1, or P+threadnum
+@@ -49,10 +50,13 @@ public:
+       if (n%2 == 0) {  // left child goes up
+         if (p > 1) {
+           wait3(p, p/2);
++        } else {  // left child of root declare barrier completed
++          last_barrier = 0;
+         }
+       }
+       bctr[p]++;
+       while (bctr[p].load()<2) ;
++      assert(last_barrier == 0);
+     }
+     else
+     {
+@@ -61,10 +65,13 @@ public:
+       if (n%2 == 0) {  // left child goes up
+         if (p > 1) {
+           wait3(p, p/2);
++        } else {  // left child of root declare barrier completed
++          last_barrier = 1;
+         }
+       }
+       bctr[p]--;
+       while (bctr[p].load()>0) ;
++      assert(last_barrier == 1);
+     }
+ 
+     if (n%2==0) {
