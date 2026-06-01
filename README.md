@@ -36,7 +36,7 @@ benchmarking: find nice [pointer_chasing.cc](https://parcomp-git.iwr.uni-heidelb
 
 [cpufp measurements](markdown/cpufp.md) for my 8/16/2×22/8×24 core systems
 
-[Sheet 5 Exercise 1bc](markdown/sheet_5_exercise_1bc.md): implement tree-barrier and provide code to test correctness and do performance tests comparing to existing barrier implementations
+[Sheet 5 Exercise 1bc](markdown/sheet_5_excercise_1bc.md): implement tree-barrier and provide code to test correctness and do performance tests comparing to existing barrier implementations
 
 ## Elementary number theory
 
