@@ -9,7 +9,7 @@ In the exam project I had to:
 - implement parallelization with C++ threads (my selection from set of options)  
 
 All work had to be done without help from other person or AI.  
-We had separate oral question sessions with professor and tutor to make sue that no AI was used.
+We had separate oral question sessions with professor and tutor to make sure that no AI was used.
 
 I intended to implement this with GPUs, and did that with the help of gemini.google.com  
 (which is no problem because it was not part of the exam).
