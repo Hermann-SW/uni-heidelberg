@@ -17,7 +17,7 @@ updates=1.05268e+08 elapsed=0.010109 performance=10.4179 giga updates per second
 hermann@7600x:~/uni-heidelberg/scripts$ 
 ```
 
-That is slower than AMD 9050X CPU, but for 2050 and more the CPU performance drops below 1 giga updates per second because the data does not fit into L3 cache anymore. No problem for AMD Instinct MI50 GPU, not for 2050x2050 and not even for 16386x16386 problem sizes!
+That is slower than AMD 9050X CPU, but for 2050 and more the CPU performance drops below 1 giga updates per second because the data does not fit into L3 cache anymore. No problem for AMD Instinct MI50 GPU, not for 2050x2050 and not even for 16386x16386 problem sizes! The main reason is the 1.02 TB/s memory bandwidth (VRAM) of the gfx906 type GPUs.
 ```
 hermann@7600x:~/uni-heidelberg/scripts$ ./wave_cell 2050 32000 -100
 ...
