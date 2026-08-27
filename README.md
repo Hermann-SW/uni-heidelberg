@@ -38,6 +38,8 @@ benchmarking: find nice [pointer_chasing.cc](https://parcomp-git.iwr.uni-heidelb
 
 [Sheet 5 Exercise 1bc](markdown/sheet_5_excercise_1bc.md): implement tree-barrier and provide code to test correctness and do performance tests comparing to existing barrier implementations
 
+Acoustice wave equation [exam project](markdown/Acoustic_wave_equation.md) with details and later parallelization on GPUs.
+
 ## Elementary number theory
 
 Fall 2024 script, recordings and excercises behind VPN on mampf.mathi.uni-heidelberg.de
