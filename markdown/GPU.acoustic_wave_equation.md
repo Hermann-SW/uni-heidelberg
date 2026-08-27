@@ -68,3 +68,115 @@ After problems fixed for legacy CPUs, ParaView animation of generated output*.vt
 ![../res/acoustic_wave_equation.anim.gif](../res/acoustic_wave_equation.anim.gif)
 
 
+What impressed me most in my work with Gemini was the problem analysis for a problem happening on only two GPUs connected to old Intel i3-6100 CPUs. Only a short prompt and screenshot copied in!
+
+## One of my prompts in a long chat with gemini.google.com:
+
+OK, now the last code compiles and runs for Radeon vii, Radeon Pro VII, Instinct MI50, Tesla P100 and NVIDIA RTX5060. I compared the output files written with sequential known to be good output files with paraview. Only On Radeon vii and Radeon Pro vii I see the broken image after the initial image right, things become much worse for following images. The left shows the correct image for 100 when running "./wave_cell 514 2000 100".  The three working GPUs run on AMD 7600X, AMD 7950X and Intel W-2225 modern CPUs. The Radeon vii and Radeon Pro VII each run with an old Intel i3-6100 CPU. Since the code is identical, can it be that the i3-6100 CPU is responsible for the bad first output file? (I copied this screenshot into that promt as well):
+![../res/acoustic_wave_equation.problem.png](../res/acoustic_wave_equation.problem.png)
+
+## Answer from Gemini (Wow!):
+
+**No, the Core i3-6100 CPU is not causing the image corruption.**
+
+The CPU merely triggers kernel launches and handles file I/O. The corruption pattern shown in ParaView—where horizontal lines bleed or synchronization breaks as timesteps progress—indicates a **GPU memory visibility / cache coherency issue** or a **race condition inside your CUDA/HIP kernel**.
+
+The reason this only occurs on the Radeon VII and Radeon Pro VII (and not on the MI50, P100, or RTX 5060) stems from hardware architecture differences and ROCm cache management:
+
+---
+
+### Key Causes of the Failure
+
+* **GCN 5th Gen (gfx906) Cache Coherency:**
+The Radeon VII and Radeon Pro VII use the `gfx906` architecture (Vega 20). Unlike modern RDNA or NVIDIA architectures, `gfx906` relies on aggressive write-back L2 caches. If your code uses persistent cooperative kernels (`cg::grid_group::sync()`) or relies on device memory updates across loop iterations, memory written by one Compute Unit (CU) might remain dirty in its local cache and not be visible to other CUs without explicit memory fences.
+* **PCIe Gen3 Memory Snoop Latency (i3-6100 platform):**
+The i3-6100 setup limits your setup to **PCIe Gen 3.0 x8/x16** without PCIe Peer-to-Peer atomics or SmartAccess Memory (SAM / ReBAR) supported by modern CPUs (like your 7950X or 7600X). If the kernel relies on host-allocated zero-copy memory or atomics over PCIe, system memory transfers will silently desynchronize on older PCIe platforms.
+* **Missing Memory Fences in Cooperative Groups:**
+If `wave_cell` uses a persistent kernel design where all timesteps run in a single launch synchronized via `grid.sync()`, `gfx906` requires explicit threadfence instructions to flush L1/L2 caches.
+
+---
+
+### How to Fix the Code
+
+#### Fix 1: Add Explicit Memory Fences
+
+If you are using cooperative groups for grid synchronization (`cg::this_grid().sync()`), ensure you issue a memory fence right before syncing. ROCm’s grid barrier does not automatically invalidate L1 caches on Vega 20:
+
+```cpp
+// Replace standalone grid.sync() with:
+__threadfence();          // Flushes writes to global memory
+grid.sync();              // Synchronize grid
+__threadfence();          // Ensures updated global data is pulled from L2
+
+```
+
+#### Fix 2: Disable SDMA Engine via Environment Variable
+
+On older PCIe platforms paired with `gfx906`, the System DMA (SDMA) engine can cause silent buffer corruptions during host-to-device transfers. Run your binary with SDMA disabled:
+
+```bash
+HSA_ENABLE_SDMA=0 ./wave_cell 514 2000 100
+
+```
+
+#### Fix 3: Disable Cache Coherency Optimizations (If using Host Memory)
+
+If you allocated memory using `hipHostMalloc` or `cudaMallocHost`, ensure you set the coherent allocation flag explicitly on ROCm, or switch to standard device memory (`hipMalloc`) combined with `hipMemcpy`:
+
+```cpp
+// Change pinned/coherent memory allocation:
+hipHostMalloc(&ptr, size, hipHostMallocNonCoherent);
+
+// Or switch to explicit device memory transfers:
+hipMalloc(&d_ptr, size);
+// ... run kernel ...
+hipMemcpy(h_ptr, d_ptr, size, hipMemcpyDeviceToHost);
+
+```
+
+
+## what finally worked
+
+Conditionally disabling SDMA only for legacy CPUs per my request (code from Gemini):
+
+```cpp
+#if defined(__x86_64__) || defined(_M_X64)
+  #include <immintrin.h>
+  #include <cpuid.h>
+
+// Executed automatically BEFORE main() and BEFORE ROCm driver initialization
+__attribute__((constructor)) static void apply_sdma_workaround_early() {
+    unsigned int eax, ebx, ecx, edx;
+    char vendor[13];
+
+    __cpuid(0, eax, ebx, ecx, edx);
+    *reinterpret_cast<int*>(vendor) = ebx;
+    *reinterpret_cast<int*>(vendor + 4) = edx;
+    *reinterpret_cast<int*>(vendor + 8) = ecx;
+    vendor[12] = '\0';
+
+    bool is_legacy = false;
+
+    if (__get_cpuid(1, &eax, &ebx, &ecx, &edx)) {
+        int family = ((eax >> 8) & 0xF) + ((eax >> 20) & 0xFF);
+        int model = ((eax >> 4) & 0xF) | ((eax >> 12) & 0xF0);
+
+        std::string vendor_str(vendor);
+
+        // Intel Pre-Ice Lake (Family 6, Skylake/Kaby Lake/Coffee Lake <= 0x9E)
+        if (vendor_str == "GenuineIntel" && family == 6 && model <= 0x9E) {
+            is_legacy = true;
+        }
+        // AMD Pre-Zen 3 (Family < 0x19)
+        else if (vendor_str == "AuthenticAMD" && family < 0x19) {
+            is_legacy = true;
+        }
+    }
+
+    if (is_legacy) {
+        setenv("HSA_ENABLE_SDMA", "0", 1);
+        std::fprintf(stderr, "[HIP] Early Init: Legacy CPU detected (%s). Set HSA_ENABLE_SDMA=0.\n", vendor);
+    }
+}
+#endif
+```
