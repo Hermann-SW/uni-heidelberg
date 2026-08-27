@@ -17,7 +17,7 @@ updates=1.05268e+08 elapsed=0.010109 performance=10.4179 giga updates per second
 hermann@7600x:~/uni-heidelberg/scripts$ 
 ```
 
-That is slower than AMD 9050X CPU, but for 1026 and more the CPU perfromance drops belowe 1 giga updates per second because the data does not fit into L3 cache anymore. No problem for AMD Instinct MI50 GPU, not for 1026x1026 and not even for 16386x16386 problem sizes!
+That is slower than AMD 9050X CPU, but for 1026 and more the CPU performance drops below 1 giga updates per second because the data does not fit into L3 cache anymore. No problem for AMD Instinct MI50 GPU, not for 1026x1026 and not even for 16386x16386 problem sizes!
 ```
 hermann@7600x:~/uni-heidelberg/scripts$ ./wave_cell 2050 32000 -100
 ...
@@ -111,7 +111,7 @@ hermann@Radeon-vii:~/uni-heidelberg/scripts$
 ```
 
 
-Small demonstration of load data, display and play animation with ParaView here:  
+Small demonstration of load data, display and play animation with [ParaView](https://www.paraview.org/) here:  
 [../res/paraview.recording.mp4](../res/paraview.recording.mp4)  
 
 After problems fixed for legacy CPUs, ParaView animation of generated output*.vtk data:  
