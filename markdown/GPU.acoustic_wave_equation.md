@@ -62,7 +62,7 @@ hermann@Radeon-vii:~/uni-heidelberg/scripts$
 
 
 Small demonstration of load data, display and play animation with ParaView here:  
-[../res/res/paraview.recording.mp4](../res/res/paraview.recording.mp4)  
+[../res/paraview.recording.mp4](../res/paraview.recording.mp4)  
 
 After problems fixed for legacy CPUs, ParaView animation of generated output*.vtk data:  
 ![../res/acoustic_wave_equation.anim.gif](../res/acoustic_wave_equation.anim.gif)
