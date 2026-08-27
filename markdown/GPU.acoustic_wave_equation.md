@@ -48,12 +48,15 @@ hermann@7600x:~/uni-heidelberg/scripts$
 
 # Description of GPU implementation 
 
-I did the GPU implementation with Gemini for these AMD GPUs ...  
-- Instinct MI50, Radeon Pro VII, Radeon VII (all gfx906)
-- RX Vega64, RX Vega56 (all gfx900)
+I did the GPU implementation with Gemini for my AMD GPUs ...  
+- [Instinct MI50](https://www.techpowerup.com/gpu-specs/radeon-instinct-mi50.c3335), [Radeon Pro VII](https://www.techpowerup.com/gpu-specs/radeon-pro-vii.c3575), [Radeon VII](https://www.techpowerup.com/gpu-specs/powercolor-radeon-vii.b6665) (all gfx906)
+- [RX Vega 64](https://www.techpowerup.com/gpu-specs/sapphire-nitro-rx-vega-64.b5937), [RX Vega56 OC](https://www.techpowerup.com/gpu-specs/asus-rog-strix-rx-vega-56-gaming-oc.b4868) (all gfx900)
 
-... and these NVIDIA GPUs ...  
--  Tesla P100 (sm_60), RTX5060 (sm_120), GTX1660 TI (sm_75), Tesla K80 (sm_37, dual GPU)
+... and my NVIDIA GPUs ...  
+- [Tesla P100](https://www.techpowerup.com/gpu-specs/tesla-p100-pcie-16-gb.c2888) (sm_60)
+- [RTX 5060 OC](https://www.techpowerup.com/gpu-specs/geforce-rtx-5060.c4219) (sm_120)
+- [GTX 1660 TI](https://www.techpowerup.com/gpu-specs/geforce-gtx-1660-ti.c3364) (sm_75)
+- [Tesla K80](https://www.techpowerup.com/gpu-specs/tesla-k80.c2616) (sm_37, dual GPU)
 
 using HIP. Top comment of [wave_cell.cc](../scripts/wave_cell.cc) has the build instructions, here for AMD GPUs:  
 ```
