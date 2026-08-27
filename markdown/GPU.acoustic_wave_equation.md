@@ -5,7 +5,7 @@ I did the GPU implementation with Gemini for these AMD GPUs ...
 ... and these NVIDIA GPUs ...  
 -  Tesla P100 (sm_60), RTX5060 (sm_120), GTX1660 TI (sm_75), Tesla K80 (sm_37)
 
-using HIP. Top comment of [wave_cell.cc](../scripts/wave_cell.cc) has the build instrctions, here for AMD GPUs:  
+using HIP. Top comment of [wave_cell.cc](../scripts/wave_cell.cc) has the build instructions, here for AMD GPUs:  
 ```
   export f=wave_cell
   export CCFLAGSBASE="-O3 -std=c++17"
