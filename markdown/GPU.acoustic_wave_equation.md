@@ -53,7 +53,7 @@ I did the GPU implementation with Gemini for these AMD GPUs ...
 - RX Vega64, RX Vega56 (all gfx900)
 
 ... and these NVIDIA GPUs ...  
--  Tesla P100 (sm_60), RTX5060 (sm_120), GTX1660 TI (sm_75), Tesla K80 (sm_37)
+-  Tesla P100 (sm_60), RTX5060 (sm_120), GTX1660 TI (sm_75), Tesla K80 (sm_37, dual GPU)
 
 using HIP. Top comment of [wave_cell.cc](../scripts/wave_cell.cc) has the build instructions, here for AMD GPUs:  
 ```
