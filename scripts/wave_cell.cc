@@ -543,6 +543,15 @@ int main(int argc, char **argv) {
 
         hipDeviceProp_t deviceProp;
         HIP_CHECK(hipGetDeviceProperties(&deviceProp, 0));
+
+	// Changing to "- 0" tested on AMD GPUs:
+	// - degraded perfromance on Instinct MI50 and RX Vega64
+	// - same performance on RX Vega56
+	// - slightly better performance on Radeon Pro VII and and Radeon VII
+	// So keeping "- 1", also per Gemini response:
+	//   Do not launch a persistent kernel that consumes 100% of all CUs.
+	//   Reserve at least 1 or 2 CUs so the GPU scheduler can handle
+	//   background stream tasks and DMA commands seamlessly.
         int numBlocks = maxBlocksPerSM * (deviceProp.multiProcessorCount - 1);
 
         void *args[] = { &h_ctrl, &d_u0, &d_w0_0, &d_w1_0, &d_u1, &d_w0_1, &d_w1_1, &d_read_out };
