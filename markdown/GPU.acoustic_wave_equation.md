@@ -9,7 +9,7 @@ updates=1.05268e+08 elapsed=0.008942 performance=11.7038 giga updates per second
 hermann@9950X:~/hasc-code/wave$
 ```
 
-On my best (6.705 TFLOPS FP64) AMD Instinct MI50 server GPU 
+On my best (6.705 TFLOPS FP64) AMD Instinct MI50 server GPU:  
 ```
 hermann@7600x:~/uni-heidelberg/scripts$ ./wave_cell 1026 32000 -100
 ...
