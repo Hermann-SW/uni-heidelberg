@@ -1,4 +1,4 @@
-# First what did get achieved with the GPU impementations?  
+# First, what did get achieved with the GPU impementations?  
 
 In the exam project I achieved maximal speed up of $12.9\times$ for AMD 9950X 16C/32T CPU:  
 ```
