@@ -1,3 +1,53 @@
+# First what did get achieved with the GPU impementations?  
+
+In the exam project I achieved maximal speed up of $12.9\times$ for AMD 9950X 16C/32T CPU:  
+```
+hermann@9950X:~/hasc-code/wave$ OMP_NUM_THREADS=16 ./wave_omp 1026 32000 -100
+using 16 threads
+...
+updates=1.05268e+08 elapsed=0.008942 performance=11.7038 giga updates per second
+hermann@9950X:~/hasc-code/wave$
+```
+
+On my best (6.705 TFLOPS FP64) AMD Instinct MI50 server GPU 
+```
+hermann@7600x:~/uni-heidelberg/scripts$ ./wave_cell 1026 32000 -100
+...
+updates=1.05268e+08 elapsed=0.010109 performance=10.4179 giga updates per second
+hermann@7600x:~/uni-heidelberg/scripts$ 
+```
+
+That is slower than AMD 9050X CPU, but for 1026 and more the CPU perfromance drops belowe 1 giga updates per second because the data does not fit into L3 cache anymore. No problem for AMD Instinct MI50 GPU, not for 1026x1026 and not even for 16386x16386 problem sizes!
+```
+hermann@7600x:~/uni-heidelberg/scripts$ ./wave_cell 2050 32000 -100
+...
+updates=4.2025e+08 elapsed=0.04522 performance=9.28613 giga updates per second
+hermann@7600x:~/uni-heidelberg/scripts$ 
+```
+```
+hermann@7600x:~/uni-heidelberg/scripts$ ./wave_cell 4098 32000 -100
+...
+updates=1.67936e+09 elapsed=0.219396 performance=7.64607 giga updates per second
+^C
+hermann@7600x:~/uni-heidelberg/scripts$ 
+```
+```
+hermann@7600x:~/uni-heidelberg/scripts$ ./wave_cell 8194 32000 -100
+...
+updates=6.71416e+09 elapsed=0.968737 performance=6.93311 giga updates per second
+^C
+hermann@7600x:~/uni-heidelberg/scripts$ 
+```
+```
+hermann@7600x:~/uni-heidelberg/scripts$ ./wave_cell 16386 32000 -100
+...
+updates=2.68501e+10 elapsed=4.81577 performance=5.58539 giga updates per second
+^C
+hermann@7600x:~/uni-heidelberg/scripts$
+```
+
+# Description of GPU implementation 
+
 I did the GPU implementation with Gemini for these AMD GPUs ...  
 - Instinct MI50, Radeon Pro VII, Radeon VII (all gfx906)
 - RX Vega64, RX Vega56 (all gfx900)
