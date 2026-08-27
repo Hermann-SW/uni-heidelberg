@@ -14,7 +14,7 @@ We had separate oral question sessions with professor and tutor to make sure tha
 I intended to implement this with GPUs, and did that with the help of gemini.google.com  
 (which is no problem because it was not part of the exam).
 
-Details on the GPU implementation [here](GPU.md).
+Details on the GPU implementation [here](GPU.acoustic_wave_equation.md).
 
 ![../res/acoustic_wave_equation.png](../res/acoustic_wave_equation.png)
 
