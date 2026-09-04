@@ -70,6 +70,10 @@ Acoustice wave equation [exam project](markdown/Acoustic_wave_equation.md) with 
 
 Fall 2024 script, recordings and excercises behind VPN on mampf.mathi.uni-heidelberg.de
 
+New tool "LaTex labels for Graphviz":  
+https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
+![res/graph_output.pdf.16pc.png](res/graph_output.pdf.16pc.png)
+
 ## Berkeley math 115: Introduction to number theory
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
