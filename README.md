@@ -1,4 +1,4 @@
-[Studying in my 60s](https://github.com/Hermann-SW/Hermann-SW.github.io/tree/master/studying_in_my_60s#studying-in-my-60s) at Heidelberg/Germany University:
+Studyinc in my 60s](https://github.com/Hermann-SW/Hermann-SW.github.io/tree/master/studying_in_my_60s#studying-in-my-60s) at Heidelberg/Germany University:
 
 - [future lectures](https://stamm-wilbrandt.de/GraphvizFiddle/#_math) currently planned to attend
 - [fall 2026](#fall-2026)
@@ -14,11 +14,11 @@
 
 ## Algebra 1
 
-Script and excercises behind VPN on mampf.mathi.uni-heidelberg.de
+Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
 
 ## Introduction to Optimization
 
-Script, recordings and excercises:  
+Script, recordings and exercises:  
 https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optimierung/
 
 ## (S) Fermat and Number theory
@@ -28,7 +28,7 @@ My seminar presentation:
 
 ## Higher Analysis
 
-Script and excercises behind VPN on mampf.mathi.uni-heidelberg.de
+Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
 
 # spring 2026
 (5 lectures)
@@ -40,14 +40,14 @@ Script and excercises behind VPN on mampf.mathi.uni-heidelberg.de
 
 ## Linear Algebra 2
 
-Script, recordings and excercises:  
+Script, recordings and exercises:  
 https://scoop.iwr.uni-heidelberg.de/teaching/2026ss/lecture-lineare-algebra/
 
 [strassen.4x4.py](scripts/strassen.4x4.py) uses 6-dimensional Strassen tensor of rank 49 for 4x4 matrix-matrix multiplication (standard tensor has rank 64, AlphaTensor tensor rank 47, the proven lower bound): [markdown/strassen.md](markdown/strassen.md)
 
 ## Analysis 2
 
-Script and excercises behind VPN on mampf.mathi.uni-heidelberg.de
+Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
 
 ## Hardware-Aware Scientific Computing
 
@@ -62,13 +62,13 @@ benchmarking: find nice [pointer_chasing.cc](https://parcomp-git.iwr.uni-heidelb
 
 [cpufp measurements](markdown/cpufp.md) for my 8/16/2×22/8×24 core systems
 
-[Sheet 5 Exercise 1bc](markdown/sheet_5_excercise_1bc.md): implement tree-barrier and provide code to test correctness and do performance tests comparing to existing barrier implementations
+[Sheet 5 Exercise 1bc](markdown/sheet_5_exercise_1bc.md): implement tree-barrier and provide code to test correctness and do performance tests comparing to existing barrier implementations
 
 Acoustice wave equation [exam project](markdown/Acoustic_wave_equation.md) with details and later parallelization on GPUs.
 
 ## Elementary number theory
 
-Fall 2024 script, recordings and excercises behind VPN on mampf.mathi.uni-heidelberg.de
+Fall 2024 script, recordings and exercises behind VPN on mampf.mathi.uni-heidelberg.de
 
 New tool "LaTex labels for Graphviz":  
 https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
