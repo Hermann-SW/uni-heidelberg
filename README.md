@@ -1,16 +1,34 @@
 [Studying in my 60s](https://github.com/Hermann-SW/Hermann-SW.github.io/tree/master/studying_in_my_60s#studying-in-my-60s) at Heidelberg/Germany University:
 
 - [future lectures](https://stamm-wilbrandt.de/GraphvizFiddle/#_math) currently planned to attend
+- [fall 2026](#fall-2026)
 - [spring 2026](#spring-2026)
 - [fall 2025](#fall-2025)
 
-# spring 2026
-(6 lectures)  
-- [Linear Algebra 2](#linear-algebra-2)
-- [Analysis 2](#analysis-2)
-- [Hardware-Aware Scientific Computing](#hardware-aware-scientific-computing)
-- [Elementary number theory](#elementary-number-theory)
-- [Berkeley math 115: Introduction to number theory](#berkeley-math-115-introduction-to-number-theory)
+# fall 2026
+(4 lectures)  
+- [Algebra 1](#algebra-1)
+- [Introduction to Optimizatio](#introduction-to-optimization)
+- [(S) Fermat and Number theory](#s-fermat-number-theory)
+- [Higher Analysis](#higher-analysis)
+
+## Algebra 1
+
+Script and excercises behind VPN on mampf.mathi.uni-heidelberg.de
+
+## Introduction to Optimization
+
+Script, recordings and excercises:  
+https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optimierung/
+
+## (S) Fermat and Number theory
+
+My talk:  
+"Elliptic curves and Fermat's proof" (for $n=4$)
+
+## Higher Analysis
+
+Script and excercises behind VPN on mampf.mathi.uni-heidelberg.de
 
 ## Linear Algebra 2
 
