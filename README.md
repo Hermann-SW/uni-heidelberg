@@ -8,8 +8,8 @@
 # fall 2026
 (4 lectures)  
 - [Algebra 1](#algebra-1)
-- [Introduction to Optimizatio](#introduction-to-optimization)
-- [(S) Fermat and Number theory](#s-fermat-number-theory)
+- [Introduction to Optimization](#introduction-to-optimization)
+- [(S) Fermat and Number theory](#s-fermat-and-number-theory)
 - [Higher Analysis](#higher-analysis)
 
 ## Algebra 1
@@ -23,7 +23,7 @@ https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optim
 
 ## (S) Fermat and Number theory
 
-My talk:  
+My seminar üpresentation:  
 "Elliptic curves and Fermat's proof" (for $n=4$)
 
 ## Higher Analysis
