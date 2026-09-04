@@ -23,7 +23,7 @@ https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optim
 
 ## (S) Fermat and Number theory
 
-My seminar üpresentation:  
+My seminar presentation:  
 "Elliptic curves and Fermat's proof" (for $n=4$)
 
 ## Higher Analysis
