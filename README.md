@@ -70,6 +70,8 @@ Acoustice wave equation [exam project](markdown/Acoustic_wave_equation.md) with 
 
 Fall 2024 script, recordings and exercises behind VPN on mampf.mathi.uni-heidelberg.de
 
+[Sheet 8 Exercise 1b](markdown/sheet_8_exercise_1b.md): Show that system of linear diophantine equations is solvable (solution using PARI/GP)
+
 New tool "LaTex labels for Graphviz":  
 https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
 ![res/graph_output.pdf.16pc.png](res/graph_output.pdf.16pc.png)
