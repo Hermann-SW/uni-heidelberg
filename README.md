@@ -74,7 +74,13 @@ Fall 2024 script, recordings and exercises behind VPN on mampf.mathi.uni-heidelb
 
 New tool "LaTex labels for Graphviz":  
 https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
-![res/graph_output.pdf.16pc.png](res/graph_output.pdf.16pc.png)
+<table>
+  <tr>
+    <td bgcolor="white">
+      <img src="res/Latex_labels_for_Graphviz.png" />
+    </td>
+  </tr>
+</table>
 
 ## Berkeley math 115: Introduction to number theory
 
