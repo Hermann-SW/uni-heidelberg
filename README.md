@@ -72,6 +72,10 @@ Fall 2024 script, recordings and exercises behind VPN on mampf.mathi.uni-heidelb
 
 [Sheet 8 Exercise 1b](markdown/sheet_8_exercise_1b.md): Show that system of linear diophantine equations is solvable (solution using PARI/GP)
 
+Def 5.26 introduces of script [Carmichael number](https://en.wikipedia.org/wiki/Carmichael_number)s.  
+Efficient to use ```carm10e24.bin``` for PARI/GP containing 308,279,939 Carmichael numbers below 10²⁴ can be found here:  
+https://stamm-wilbrandt.de/en/#Carmichael
+
 New tool "LaTex labels for Graphviz":  
 https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
 <table>
