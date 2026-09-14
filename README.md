@@ -76,6 +76,22 @@ Def 5.26 of script introduces [Carmichael number](https://en.wikipedia.org/wiki/
 Find efficient to use with PARI/GP ```carm10e24.bin``` containing all 308,279,939 Carmichael numbers <10²⁴ here:  
 https://stamm-wilbrandt.de/en/#Carmichael
 
+Ex 6.7 continued fraction computations with PARI/GP:
+```pari
+$ gp -q
+? v=contfrac(104629/432000)
+[0, 4, 7, 1, 3, 6, 2, 1, 170]
+? M = contfracpnqn(v)
+
+[104629  613]
+
+[432000 2531]
+
+? M[1,1] / M[2,1]
+104629/432000
+? 
+```
+
 New tool "LaTex labels for Graphviz":  
 https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
 <table>
