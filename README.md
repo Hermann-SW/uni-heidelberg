@@ -92,6 +92,20 @@ $ gp -q
 ? 
 ```
 
+```fundsol(d)``` in [scripts/pell.gp](scripts/pell.gp) determines fundamental solution of Pell equation x^2-d\*y^2=1 per
+Cor 6.42 of script.  
+```fundpari(d)``` determines it the PARI/GP way based on ```quaduint()```:  
+```
+hermann@8840hs:~/uni-heidelberg/scripts$ gp -q pell.gp
+? for(i=2,80,if(!issquare(i),print1(fundsol(i)==fundpari(i))))
+111111111111111111111111111111111111111111111111111111111111111111111111
+? [x,y]=fundsol(21)
+[55, 12]
+? x^2-21*y^2==1
+1
+? 
+```
+
 New tool "LaTex labels for Graphviz":  
 https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
 <table>
