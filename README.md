@@ -94,7 +94,7 @@ $ gp -q
 
 ```fundsol(d)``` in [scripts/pell.gp](scripts/pell.gp) determines fundamental solution of Pell equation x^2-d\*y^2=1 per
 Cor 6.42 of script.  
-```fundpari(d)``` determines it the PARI/GP way based on ```quaduint()```:  
+```fundpari(d)``` determines it the PARI/GP way based on [quaduint()](https://pari.math.u-bordeaux.fr/pub/pari/manuals/2.17.4/users.pdf#pdf@labse:quadunit):  
 ```
 hermann@8840hs:~/uni-heidelberg/scripts$ gp -q pell.gp
 ? for(i=2,80,if(!issquare(i),print1(fundsol(i)==fundpari(i))))
