@@ -76,7 +76,7 @@ Def 5.26 of script introduces [Carmichael number](https://en.wikipedia.org/wiki/
 Find efficient to use with PARI/GP ```carm10e24.bin``` containing all 308,279,939 Carmichael numbers <10²⁴ here:  
 https://stamm-wilbrandt.de/en/#Carmichael
 
-Ex 6.7 continued fraction computations with PARI/GP:
+<a name="contfrac">Ex 6.7 continued fraction computations with PARI/GP:
 ```pari
 $ gp -q
 ? v=contfrac(104629/432000)
