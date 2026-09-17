@@ -2,6 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
+[8](#lecture-8-applications-of-binomial-coefficients)
 [7](#lecture-7-binomial-coefficients)
 [6](#lecture-6-arithmetical-functions)
 [5](#lecture-5-primes)
@@ -10,15 +11,30 @@
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+## lecture 8: Applications of binomial coefficients
+
+- fractal like pattern for Pascal's triangle "mod 2"
+- 
 ## lecture 7: Binomial coefficients
 
-- $\binom{n}{k}$
+- binomial $\binom{n}{k}$
   - $(x+y)^n=\binom{n}{0}x^ny^0+\binom{n}{1}x^{n-1}y^1+\dots$
   - #k-element subsets of n-element set
   - Pascal's triangle
   - $= \frac{n!}{(n-k)!k!}$
   - all four are equivalent
-
+- trinomial
+- Pascal's triangle
+  - triangular numbers
+  - tetrahedral numbers
+  - 4-dim tetrahedon numbers
+- basic properties of binomials
+  - horizontal symmetry of Pascal's triangle
+  - row n sum is $2^n$
+  - alternating sign horizontal sum is 0 for $n>0$
+  - sum of binomial mirror products
+  - #ways driving from one point to another on a rectangular grid
+  - k people, divide n coins, there are $\binom{n+k-1}{k-1}$ ways
 
 ## lecture 6: arithmetical functions
 
