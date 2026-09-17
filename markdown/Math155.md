@@ -17,7 +17,9 @@
 - "mod prime"
 - 1000! ends in exactly 249 zeros
 - powers of 7 dividing $\binom{100}{40}$ is two
-- 
+- estimates on binomial size
+- weak version of prime number theorem:   
+  $\frac{1}{2}\frac{n}{\log{n}}\leq\pi(x)\leq 2\frac{n}{\log{n}}$
 
 ## lecture 7: Binomial coefficients
 
