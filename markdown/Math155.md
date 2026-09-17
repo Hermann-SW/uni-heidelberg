@@ -92,11 +92,11 @@
 - primes
   - sieve of Eratosthenes
 - infinitely many primes
-  - $p_{n+1}=p_1·\dots·p_n+1$
+  - $p_{n+1}=p_1\times\dots\times p_n+1$
   - if $p_{n+1}$ is not prime, take smallest prime factor of $p_{n+1}$ as $p_{n+1}$
-  - product of no primes is 1, 1+1=2=p_1
-  - next 2+1=3=p_2, then 2·3+1=7=p_3, 2·3·7+1=43=p_4
-  - then 2·3·7·43+1=1807=13·139, so p_5=13, \dots
+  - product of no primes is 1, $1+1=2=p_1$
+  - next $2+1=3=p_2$, then $2\times 3+1=7=p_3$, $2\times 3\times 7+1=43=p_4$
+  - then $2\times 3\times 7\times 43+1=1807=13\times 139, so p_5=13, \dots
 - Mersenne prime $2^n-1$
   - open problem: infinitely many?
 - Fermat primes
