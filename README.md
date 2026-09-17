@@ -112,7 +112,17 @@ hermann@8840hs:~/uni-heidelberg/scripts$ gp -q pell.gp
 1
 ? 
 ```
-
+   
+In case the norm of quadunit return is -1, u provides solution for Pell equation x²-dy²=-1:  
+```
+hermann@8840hs:~/Downloads$ gp -q
+? d=29;u=quadunit(4*d);[x,y]=[real(u),imag(u)];norm(u)
+-1
+? x^2-d*y^2
+-1
+? 
+```
+   
 New tool "LaTex labels for Graphviz":  
 https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
 <table>
