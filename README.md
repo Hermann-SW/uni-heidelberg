@@ -113,7 +113,7 @@ hermann@8840hs:~/uni-heidelberg/scripts$ gp -q pell.gp
 ? 
 ```
    
-In case the norm of quadunit return is -1, u provides solution for Pell equation x²-dy²=-1:  
+In case the norm of quadunit return is -1, u provides fundamental solution for Pell equation x²-dy²=-1:  
 ```
 hermann@8840hs:~/Downloads$ gp -q
 ? d=29;u=quadunit(4*d);[x,y]=[real(u),imag(u)];norm(u)
