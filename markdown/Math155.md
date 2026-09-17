@@ -14,7 +14,11 @@
 ## lecture 8: Applications of binomial coefficients
 
 - fractal like pattern for Pascal's triangle "mod 2"
+- "mod prime"
+- 1000! ends in exactly 249 zeros
+- powers of 7 dividing $\binom{100}{40}$ is two
 - 
+
 ## lecture 7: Binomial coefficients
 
 - binomial $\binom{n}{k}$
