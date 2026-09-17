@@ -2,6 +2,13 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
+[6](#lecture-6-arithmetical-functions)
+[5](#lecture-5-primes)
+[4](#lecture-4-more-on-euclids-algorithm)
+[3](#lecture-3-divisibility-and-euclids-algorithm)
+[2](#lecture-2-survey)
+[1](#lecture-1)
+
 ## lecture 6: arithmetical functions
 
 - multiplicative functions
