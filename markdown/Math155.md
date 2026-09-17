@@ -79,7 +79,8 @@
 - test if big n is prime
 - quadratic residue
 - quadratic reciprocity
-- addititive number theory, every even number is sum of two primes (Goldbach)
+- addititive number theory   
+  - is every even number sum of two primes? (Goldbach)
 - twin prime conjecture, Zhang, Tao
 - Dirichlet: a+nb with (a,b)=1 has infinitely many primes 
 - recreational number theory
