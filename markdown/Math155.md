@@ -2,6 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
+[11](#lecture-10-eulers-theorem)
 [10](#lecture-10-fermats-theorem)
 [9](#lecture-9-congruences)
 [8](#lecture-8-applications-of-binomial-coefficients)
@@ -13,11 +14,20 @@
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+## lecture 11: Euler's theorem
+
+-
+
+- Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
+
 ## lecture 10: Fermat's theorem
 
 - order of $a$ mod $p$, smallest $n>0$ with $a^n\equiv 1 \mod p$
 - Fermat prime $2^n+1$, with $n$ power of $2$
-- Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
+- $p|2^{2^n}+1$, then $p\equiv 1 \mod 2^{n+1}$, Euler $641\vert 2^{2^5}+1$
+- $a^2\equiv b^2 \mod m$ only if $m$ is prime
+- $a^2\equiv b^2 \mod m^2$ implies $a\equiv \pm b \mod m$? No
+- 
 
 ## lecture 9: Congruences
 
