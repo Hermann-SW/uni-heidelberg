@@ -13,7 +13,7 @@
 ## lecture 7: Binomial coefficients
 
 - $\binom{n}{k}$
-  - $(x+y)^n=\binom{n}{0}x^ny^0+\dots$
+  - $(x+y)^n=\binom{n}{0}x^ny^0+\binom{n}{1}x^{n-1]y^1+\dots$
   - #k-element subsets of n-element set
   - Pascal's triangle
   - $= \frac{n!}{(n-k)!k!}$
