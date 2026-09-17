@@ -89,7 +89,7 @@
 - recreational number theory
   - perfect numbers 6,28,496
   - amicable numbers 220-284
-  - 3n+1
+  - 3n+1 problem
 - algebraic number theory
   - m+ni, i=sqrt(-1)
   - Gaussian integers
