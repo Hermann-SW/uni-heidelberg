@@ -82,7 +82,10 @@
 - addititive number theory   
   - is every even number sum of two primes? (Goldbach)
 - twin prime conjecture, Zhang, Tao
-- Dirichlet: a+nb with (a,b)=1 has infinitely many primes 
+- Dirichlet: a+nb with (a,b)=1 has infinitely many primes
+- $n^2+1$
+  - likely contains infinitely many primes
+  - nobody knows how to prove
 - recreational number theory
   - perfect numbers 6,28,496
   - amicable numbers 220-284
