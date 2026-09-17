@@ -16,7 +16,8 @@
 ## lecture 10: Fermat's theorem
 
 - order of $a$ mod $p$, smallest $n>0$ with $a^n\equiv 1 \mod p$
-- 
+- Fermat prime $2^n+1$, with $n$ power of $2$
+- Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
 
 ## lecture 9: Congruences
 
