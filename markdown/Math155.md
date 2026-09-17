@@ -14,7 +14,12 @@
 
 ## lecture 9: Congruences
 
--
+- $a\equiv b (\mod c)$
+- residue classes
+- ring, zero divisor
+- divisibility by 9, 11
+- sum of three or four squares, three cubes
+- Fermat: If p is prime, then $a^p\equiv a \mod p$
 
 ## lecture 8: Applications of binomial coefficients
 
