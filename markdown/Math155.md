@@ -20,6 +20,11 @@
 - divisibility by 9, 11
 - sum of three or four squares, three cubes
 - Fermat: If p is prime, then $a^p\equiv a \mod p$
+- fast modular exponentiation
+- Carmichael number
+- probabilistic prime number test
+- if $p\vert n^2+1$, then $p=2$ or $p\equiv 1 \mod 4$
+- 
 
 ## lecture 8: Applications of binomial coefficients
 
