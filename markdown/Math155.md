@@ -2,6 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
+[10](#lecture-10-fermats-theorem)
 [9](#lecture-9-congruences)
 [8](#lecture-8-applications-of-binomial-coefficients)
 [7](#lecture-7-binomial-coefficients)
@@ -11,6 +12,11 @@
 [3](#lecture-3-divisibility-and-euclids-algorithm)
 [2](#lecture-2-survey)
 [1](#lecture-1)
+
+## lecture 10: Fermat's theorem
+
+- order of $a$ mod $p$, smallest $n>0$ with $a^n\equiv 1 \mod p$
+- 
 
 ## lecture 9: Congruences
 
@@ -24,7 +30,6 @@
 - Carmichael number
 - probabilistic prime number test
 - if $p\vert n^2+1$, then $p=2$ or $p\equiv 1 \mod 4$
-- 
 
 ## lecture 8: Applications of binomial coefficients
 
