@@ -93,7 +93,7 @@ $ gp -q
 ```
 
 Exercise 12.2 was on [metallic mean](https://en.wikipedia.org/wiki/Metallic_mean) S(n)=[n,n,n,…]. S(1) is golden, S(2) silber ratio.
-We should derive closed formula [S(n)=(n+sqrt(n²+4))/2] and prove that (S(n))^3 is a metallic mean again. Related is sequence
+We should derive closed formula [S(n)=(n+sqrt(n²+4))/2] and prove that (S(n))³ is a metallic mean again. Related is sequence
 https://oeis.org/A352403 "Indices of metallic means that are powers of other metallic means". I submitted new PARI/GP formula (not approved yet):
 ```
 (PARI) [i|i<-Set([contfrac(((n+sqrt(n^2+4))/2)^p)[1]|n<-[1..32]; p<-[3..19], p%2]), i<30000] \\ Hermann Stamm-Wilbrandt, Sep 17 2026
