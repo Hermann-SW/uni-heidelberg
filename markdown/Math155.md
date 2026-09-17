@@ -104,7 +104,7 @@
   - product of no primes is 1, $1+1=2=p_1$
   - next $2+1=3=p_2$, then $2\times 3+1=7=p_3$, $2\times 3\times 7+1=43=p_4$
   - then $2\times 3\times 7\times 43+1=1807=13\times 139$, so $p_5=13$, $\dots$
-- how many primes?
+- how to find large primes?
   - Mersenne prime $2^n-1$
   - open problem: infinitely many?
 - Fermat primes
