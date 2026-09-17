@@ -99,7 +99,7 @@ https://oeis.org/A352403 "Indices of metallic means that are powers of other met
 (PARI) [i|i<-Set([contfrac(((n+sqrt(n^2+4))/2)^p)[1]|n<-[1..32]; p<-[3..19], p%2]), i<30000] \\ Hermann Stamm-Wilbrandt, Sep 17 2026
 ```
    
-```fundsol(d)``` in [scripts/pell.gp](scripts/pell.gp) determines fundamental solution of Pell equation x^2-d\*y^2=1 per
+```fundsol(d)``` in [scripts/pell.gp](scripts/pell.gp) determines fundamental solution of Pell equation x²-dy²=1 per
 Cor 6.42 of script.  
 ```fundpari(d)``` determines it the PARI/GP way based on [quadunit()](https://pari.math.u-bordeaux.fr/pub/pari/manuals/2.17.4/users.pdf#pdf@labse:quadunit):  
 ```
