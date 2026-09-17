@@ -2,6 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
+[9](#lecture-9-congruences)
 [8](#lecture-8-applications-of-binomial-coefficients)
 [7](#lecture-7-binomial-coefficients)
 [6](#lecture-6-arithmetical-functions)
@@ -11,15 +12,20 @@
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+## lecture 9: Congruences
+
+-
+
 ## lecture 8: Applications of binomial coefficients
 
 - fractal like pattern for Pascal's triangle "mod 2"
 - "mod prime"
 - 1000! ends in exactly 249 zeros
 - powers of 7 dividing $\binom{100}{40}$ is two
-- estimates on binomial size
-- weak version of prime number theorem:   
+- estimates on binomial size, Stirling formula for factorial
+- simple prove of weak version of prime number theorem:   
   $\frac{1}{2}\frac{n}{\log{n}}\leq\pi(x)\leq 2\frac{n}{\log{n}}$
+- Catalan numbers $\frac{1}{k+1}\binom{n}{k}$, generating function
 
 ## lecture 7: Binomial coefficients
 
