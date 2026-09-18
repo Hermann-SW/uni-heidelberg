@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[16](#lecture-16-more-numerical-calculation)
 [15](#lecture-15-numerical-calculation)
 [14](#lecture-14-eulers-phi-totient-function)
 [13](#lecture-13-chinese-remainder-theorem)
@@ -19,9 +20,24 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+# [lecture 16](https://www.youtube.com/watch?v=roBKA4adPJE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=16&pp=iAQB): More numerical calculation 
+
 # [lecture 15](https://www.youtube.com/watch?v=ne0gHR57qUU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=15&pp=iAQB): Numerical calculation 
 
--
+- (1) solve ax+by=c  
+  (2) Is n prime? Factorize it  
+  (3) Solve $f(x)\equiv 0\mod p$; $x^2+1\equiv 0 \mod p$  
+  (4) $a^b \mod m$
+- O() notation
+- Fast Fourier Transform: $O(N\log N)+O(N)+O(N\log N)$  
+  FFT (choose $P=2\cdot 3\cdot\dots >mn$)  
+  pointwise multiplication (modulo the prime divisors of P)  
+  inverse FFT (use C.R.T. to reconstruct $mn \mod P$)
+- example: compute determinant of $10\times 10$ matrix of BIG numbers with FFT
+- Russian peasant algorithm, bad for multiplication,  
+  good for exponentiation $O(N\log N)$
+- best possible? NO! $a^{15}$; smallest $l(n)$, $l(191)$
+- calculate polynomial; multiplication by Horner's method
 
 ## [lecture 14](https://www.youtube.com/watch?v=8I0z_Lobtso&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=14&pp=iAQB0gcJCSQMAYcqIYzv): Euler's $\varphi$ (totient) function
 
