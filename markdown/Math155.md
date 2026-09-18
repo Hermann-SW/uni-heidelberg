@@ -2,7 +2,8 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
-[11](#lecture-10-eulers-theorem)
+[12](#lecture-12-wilsons-theorem)
+[11](#lecture-11-eulers-theorem)
 [10](#lecture-10-fermats-theorem)
 [9](#lecture-9-congruences)
 [8](#lecture-8-applications-of-binomial-coefficients)
@@ -14,6 +15,17 @@
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+## lecture 12: Wilsons theorem
+
+- $(p-1)! \mod p$ ?
+- $p$ prime implies $\equiv -1 \mod p$
+- (useless) test for prime: $p$ is prime $\iff (p-1)! \equiv -1 \mod p$
+- application: find $x^2\equiv -1 \mod p$  
+  $p\equiv 3 \mod 4$ no solution
+- $\left(\frac{p-1}{2}\right)!$ is $\sqrt{-1}$ if $p\equiv 1\mod 4$
+-  
+- 
+
 ## lecture 11: Euler's theorem
 
 - if $p$ divides $a^q-1$ with $p, q$ prime then either $p\equiv 1 \mod q$ or $a\equiv 1 \mod p$
@@ -23,7 +35,9 @@
 - disjoint union of cycles, same size
 - $a^{\phi(m)}\equiv 1 \mod m, (a,m)=1$
 - Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
-- 
+- primitive roots
+- last two digits of $7^403$
+- last digit of $7^{7^{7^7}}$
 
 ## lecture 10: Fermat's theorem
 
