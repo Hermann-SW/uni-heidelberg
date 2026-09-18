@@ -2,7 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
-[14](#lecture-14-eulers-phi-totient-function)
+Lectures: [14](#lecture-14-eulers-phi-totient-function)
 [13](#lecture-13-chinese-remainder-theorem)
 [12](#lecture-12-wilsons-theorem)
 [11](#lecture-11-eulers-theorem)
@@ -17,11 +17,11 @@
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-## lecture 14: Euler's $\varphi$ (totient) function
+## [lecture 14](https://www.youtube.com/watch?v=8I0z_Lobtso&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=14&pp=iAQB0gcJCSQMAYcqIYzv): Euler's $\varphi$ (totient) function
 
 -
 
-## lecture 13: Chinese remainder theorem
+## [lecture 13](https://www.youtube.com/watch?v=q99aBlC5Xfk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=13&pp=iAQB0gcJCSQMAYcqIYzv): Chinese remainder theorem
 - $ax\equiv b \mod m$ solvable iff b divisible by (a,m)
 - (a,m)=1 then unique solution, (a,m)>1 then many solutions
 - Solve polynomial $f(x)\equiv 0 \mod m$  
@@ -30,7 +30,7 @@
   (3) $m=p_1^{n_1}p_2^{n_2}\dots$, reduce to (2) using C.R.T.
 - (3) reduce to (2), ho many solutions?
 
-## lecture 12: Wilsons theorem
+## [lecture 12](https://www.youtube.com/watch?v=3JBaDZqtgug&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=12&pp=iAQB): Wilsons theorem
 
 - $(p-1)! \mod p$ ?
 - $p$ prime implies $\equiv -1 \mod p$
@@ -44,7 +44,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 -1 & \text{if -1 is only solution to }x^2=1\text{ (other than 1)}
 \end{cases}$$
 
-## lecture 11: Euler's theorem
+## [lecture 11](https://www.youtube.com/watch?v=V4cB7t-zHxE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=11&pp=iAQB): Euler's theorem
 
 - if $p$ divides $a^q-1$ with $p, q$ prime then either $p\equiv 1 \mod q$ or $a\equiv 1 \mod p$
 - $\frac{x^q-1}{x-1}$
@@ -57,7 +57,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - last two digits of $7^403$
 - last digit of $7^{7^{7^7}}$
 
-## lecture 10: Fermat's theorem
+## [lecture 10](https://www.youtube.com/watch?v=fgHEKAdErbU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=10&pp=iAQB): Fermat's theorem
 
 - order of $a$ mod $p$, smallest $n>0$ with $a^n\equiv 1 \mod p$
 - Fermat prime $2^n+1$, with $n$ power of $2$
@@ -66,7 +66,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - $a^2\equiv b^2 \mod m^2$ implies $a\equiv \pm b \mod m$? No
 - 
 
-## lecture 9: Congruences
+## [lecture 9](https://www.youtube.com/watch?v=E1tikA1GEVU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=9&pp=iAQB): Congruences
 
 - $a\equiv b (\mod c)$
 - residue classes
@@ -79,7 +79,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - probabilistic prime number test
 - if $p\vert n^2+1$, then $p=2$ or $p\equiv 1 \mod 4$
 
-## lecture 8: Applications of binomial coefficients
+## [lecture 8](https://www.youtube.com/watch?v=KIvuGT5V1Fg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=8&pp=iAQB): Applications of binomial coefficients
 
 - fractal like pattern for Pascal's triangle "mod 2"
 - "mod prime"
@@ -90,7 +90,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
   $\frac{1}{2}\frac{n}{\log{n}}\leq\pi(x)\leq 2\frac{n}{\log{n}}$
 - Catalan numbers $\frac{1}{k+1}\binom{n}{k}$, generating function
 
-## lecture 7: Binomial coefficients
+## [lecture 7](https://www.youtube.com/watch?v=TBolWCObRgg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=7&pp=iAQB): Binomial coefficients
 
 - binomial $\binom{n}{k}$
   - $(x+y)^n=\binom{n}{0}x^ny^0+\binom{n}{1}x^{n-1}y^1+\dots$
@@ -111,7 +111,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
   - #ways driving from one point to another on a rectangular grid
   - k people, divide n coins, there are $\binom{n+k-1}{k-1}$ ways
 
-## lecture 6: arithmetical functions
+## [lecture 6](https://www.youtube.com/watch?v=skTslDpxeL8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=6&pp=iAQB): arithmetical functions
 
 - multiplicative functions
   - d(n) #divisors
@@ -131,7 +131,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
     - $$n^2+1$$?
     - likely all 4 are yes, but out of reach
 
-## lecture 5: Primes
+## [lecture 5](https://www.youtube.com/watch?v=VRrP4US7idg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=5&pp=iAQB): Primes
 
 - negative prime: product with unit
 - prime test: only primes as divisors, up to sqrt(N)
@@ -144,7 +144,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - $$(2 p_1 p_2 ... p_k)^2+1$$ implies of form $$4n+1 or 2$$, not divisible by $$2, p_1,\dots,p_k$$ => infinitely many primes $$4n+1$$
 - no bound on size of gaps between primes ($$n! + 2,3,\dots,n$$ all composite)
  
-## lecture 4: More on Euclid's algorithm
+## [lecture 4](https://www.youtube.com/watch?v=R-O8j7FHEXI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=4&pp=iAQB): More on Euclid's algorithm
 
 - Euclid's algorithm allows to solve ax+by=d with (a,b)=d
 - ax+by=c solvable <=> (a,b)|c
@@ -170,7 +170,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
   ```
 - lcm(a,b)=ab/gcd(a,b)
 
-## lecture 3: Divisibility and Euclid's algorithm
+## [lecture 3](https://www.youtube.com/watch?v=pVKhDtOjji8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=3&pp=iAQB): Divisibility and Euclid's algorithm
 
 - a | b  "divides"
 - n(n+1)(n+2)
@@ -189,7 +189,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - observation: divisors in Euclid's algorithm determne continued fraction
 - Euclid's algorithm finitely many steps implies rational numbers are finite continued fractions
 
-## lecture 2: Survey
+## [lecture 2](https://www.youtube.com/watch?v=mduJOLdKrak&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=2&pp=iAQB): Survey
 
 - congruences
 - Fermat's theorem
@@ -217,7 +217,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
   - partition p(n)
   - power series formula
   
-## lecture 1
+## [lecture 1](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1&pp=iAQB)
 - primes
   - sieve of Eratosthenes
 - infinitely many primes
