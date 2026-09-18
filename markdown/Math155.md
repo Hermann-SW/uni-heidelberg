@@ -2,7 +2,9 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
-Lectures: [14](#lecture-14-eulers-phi-totient-function)
+Lectures:
+[15](#lecture-15-numerical-calculation)
+[14](#lecture-14-eulers-phi-totient-function)
 [13](#lecture-13-chinese-remainder-theorem)
 [12](#lecture-12-wilsons-theorem)
 [11](#lecture-11-eulers-theorem)
@@ -17,9 +19,26 @@ Lectures: [14](#lecture-14-eulers-phi-totient-function)
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-## [lecture 14](https://www.youtube.com/watch?v=8I0z_Lobtso&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=14&pp=iAQB0gcJCSQMAYcqIYzv): Euler's $\varphi$ (totient) function
+# [lecture 15](https://www.youtube.com/watch?v=ne0gHR57qUU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=15&pp=iAQB): Numerical calculation 
 
 -
+
+## [lecture 14](https://www.youtube.com/watch?v=8I0z_Lobtso&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=14&pp=iAQB0gcJCSQMAYcqIYzv): Euler's $\varphi$ (totient) function
+
+- number of residue classes (mod n) coprime to n
+- $\varphi(mn)=\varphi(m)\varphi(n), (m,n)=1$
+- $\varphi(n)=\varphi(p_1^{n_1})\varphi(p_2^{n_2})\dots$
+- $\varphi(n)=p_1^{n_1-1}(p_1-1)p_2^{n_2-1}(p_2-1)\dots=n(1-\frac{1}{p_1})(1-\frac{1}{p_2})\dots$
+- inclusion-exclusion principle
+- probability interpretation
+- find all numbers n with $\varphi(n)=24$
+- Carmichael conjecture: given n, is there $m\neq n$ with $\varphi(n)=\varphi(m)$
+- $\varphi(n)=$ power of 2? Construct n-gon
+- how big is $\varphi(n)$?
+- average value of $\varphi(n)/n$?
+- probability m, n coprime is $\frac{\pi^2}{6}$
+- generating function
+- $\sum_{d\vert n}\varphi(d)=n$
 
 ## [lecture 13](https://www.youtube.com/watch?v=q99aBlC5Xfk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=13&pp=iAQB0gcJCSQMAYcqIYzv): Chinese remainder theorem
 - $ax\equiv b \mod m$ solvable iff b divisible by (a,m)
