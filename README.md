@@ -137,7 +137,7 @@ https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
-- 53 lecture [summaries](markdown/Math155.md)
+- 53 lecture [summaries with example code](markdown/Math155.md)
 
 
 # fall 2025
