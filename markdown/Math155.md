@@ -16,9 +16,14 @@
 
 ## lecture 11: Euler's theorem
 
--
-
+- if $p$ divides $a^q-1$ with $p, q$ prime then either $p\equiv 1 \mod q$ or $a\equiv 1 \mod p$
+- $\frac{x^q-1}{x-1}$
+- infinitely many primes $\equiv 1 \mod 10$
+- $a^x\equiv a^y$
+- disjoint union of cycles, same size
+- $a^{\phi(m)}\equiv 1 \mod m, (a,m)=1$
 - Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
+- 
 
 ## lecture 10: Fermat's theorem
 
