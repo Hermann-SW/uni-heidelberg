@@ -2,6 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
+[14](#lecture-14-eulers-phi-totient-function)
 [13](#lecture-13-chinese-remainder-theorem)
 [12](#lecture-12-wilsons-theorem)
 [11](#lecture-11-eulers-theorem)
@@ -16,6 +17,10 @@
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+## lecture 14: Euler's $\phi$ (totient) function
+
+-
+
 ## lecture 13: Chinese remainder theorem
 - $ax\equiv b \mod m$ solvable iff b divisible by (a,m)
 - (a,m)=1 then unique solution, (a,m)>1 then many solutions
@@ -23,7 +28,7 @@
   (1) m prime: if $(a,m)=1$, a has inverse or $a\equiv 0$  
   (2) $m=p^n$ prime power, reduce to m=p (later)  
   (3) $m=p_1^{n_1}p_2^{n_2}\dots$, reduce to (2) using C.R.T.
--
+- (3) reduce to (2), ho many solutions?
 
 ## lecture 12: Wilsons theorem
 
