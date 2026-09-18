@@ -17,7 +17,7 @@
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-## lecture 14: Euler's $\phi$ (totient) function
+## lecture 14: Euler's $\varphi$ (totient) function
 
 -
 
@@ -51,7 +51,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - infinitely many primes $\equiv 1 \mod 10$
 - $a^x\equiv a^y$
 - disjoint union of cycles, same size
-- $a^{\phi(m)}\equiv 1 \mod m, (a,m)=1$
+- $a^{\varphi(m)}\equiv 1 \mod m, (a,m)=1$
 - Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
 - primitive roots
 - last two digits of $7^403$
