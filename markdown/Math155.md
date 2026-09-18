@@ -2,6 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
+[13](#lecture-13-chinese-remainder-theorem)
 [12](#lecture-12-wilsons-theorem)
 [11](#lecture-11-eulers-theorem)
 [10](#lecture-10-fermats-theorem)
@@ -15,6 +16,15 @@
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+## lecture 13: Chinese remainder theorem
+- $ax\equiv b \mod m$ solvable iff b divisible by (a,m)
+- (a,m)=1 then unique solution, (a,m)>1 then many solutions
+- Solve polynomial $f(x)\equiv 0 \mod m$  
+  (1) m prime: if $(a,m)=1$, a has inverse or $a\equiv 0$  
+  (2) $m=p^n$ prime power, reduce to m=p (later)  
+  (3) $m=p_1^{n_1}p_2^{n_2}\dots$, reduce to (2) using C.R.T.
+-
+
 ## lecture 12: Wilsons theorem
 
 - $(p-1)! \mod p$ ?
@@ -23,8 +33,11 @@
 - application: find $x^2\equiv -1 \mod p$  
   $p\equiv 3 \mod 4$ no solution
 - $\left(\frac{p-1}{2}\right)!$ is $\sqrt{-1}$ if $p\equiv 1\mod 4$
--  
-- 
+
+$$\prod_{(a,m)=1} a = \begin{cases}
+1 & \text{if >2 solutions exist to }x^2=1\\
+-1 & \text{if -1 is only solution to }x^2=1\text{ (other than 1)}
+\end{cases}$$
 
 ## lecture 11: Euler's theorem
 
