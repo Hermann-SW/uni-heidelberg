@@ -22,6 +22,14 @@ Lectures:
 
 # [lecture 16](https://www.youtube.com/watch?v=roBKA4adPJE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=16&pp=iAQB): More numerical calculation 
 
+- how solve $x^2\equiv -1 \mod p$, p prime, $p\equiv 1\mod 4$?
+- guess at random, 50% chance to work, repeat
+- worst case EXP TIME, average case POLY TIME
+- test if x is prime
+  - test all factors < $\sqrt{x}$, EXP TIME
+  - write as $x=a^2-b^2$, best with $x=ab$ and a,b close
+  - test whether $a^{m-1}\equiv 1 \mod m$
+
 # [lecture 15](https://www.youtube.com/watch?v=ne0gHR57qUU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=15&pp=iAQB): Numerical calculation 
 
 - (1) solve ax+by=c  
