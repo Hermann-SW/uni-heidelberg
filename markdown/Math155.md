@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[24](#lecture-24-primitive-roots-for-prime) 
 [23](#lecture-23-primitive-roots)
 [22](#lecture-22-chevally-warning-theorem)
 [21](#lecture-21-congruences-modulo-a-prime)
@@ -26,6 +27,11 @@ Lectures:
 [3](#lecture-3-divisibility-and-euclids-algorithm)
 [2](#lecture-2-survey)
 [1](#lecture-1)
+
+# [lecture 24](https://www.youtube.com/watch?v=AfRpXi8r0So&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=24&pp=iAQB): Primitive roots for prime 
+
+- 
+
 
 # [lecture 23](https://www.youtube.com/watch?v=E8UTP0DiCCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=23&pp=iAQB): Primitive roots
 
