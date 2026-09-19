@@ -21,9 +21,17 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 17](https://www.youtube.com/watch?v=Imxx1tFDeSw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=17&pp=iAQB): Factorization
+# [lecture 18](https://www.youtube.com/watch?v=16dAteWM5ZA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=18&pp=iAQB): Cryptography
 
 - 
+
+# [lecture 17](https://www.youtube.com/watch?v=Imxx1tFDeSw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=17&pp=iAQB): Factorization
+
+- Pollard $\rho$ method: find factor p of n  
+  expected running time $<\sqrt[4]{n}$
+- Pollard's $p-1$ methd  
+  good for finding factors p with $p-1$ smooth
+- Lenstra's elliptic curve method
 
 # [lecture 16](https://www.youtube.com/watch?v=roBKA4adPJE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=16&pp=iAQB): More numerical calculation
 
