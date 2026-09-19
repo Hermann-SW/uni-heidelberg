@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[18](#lecture-18-cryptography)
 [17](#lecture-17-factorization)
 [16](#lecture-16-more-numerical-calculation)
 [15](#lecture-15-numerical-calculation)
@@ -23,7 +24,34 @@ Lectures:
 
 # [lecture 18](https://www.youtube.com/watch?v=16dAteWM5ZA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=18&pp=iAQB): Cryptography
 
-- 
+- Alice, Bob, Eve
+  - code book
+  - one time pad
+  - Enigma
+  (share something)
+- Diffie Hellman, trapdoor function: easy to compute, inverse hard
+- blockchain, each block contains "secure hash" of previous blocks
+  - mining bitcoin: find a so that f(a) "nice"
+- Rivest/Shamir/Adleman
+  - choose large p,q, large int k
+  - publish m=pq and k,but not p,q
+  - $f(x)=x^k \mod m$ public function
+  - easy to find large primes, hard to factorize large numbers
+- random
+  - never use builtin random number generation
+- breaking codes
+  - factor m, Shor's algorithm quantum computers
+  - decode without factoring?
+  - rubber host cryptographie
+  - man in the middle attack
+  - users do something stupid
+  - monitor traffic
+  - direction finding
+  - Eve can send fake messages to A, B
+  - social engineering
+  - message padded with junk
+  - compressed message
+  - extra security
 
 # [lecture 17](https://www.youtube.com/watch?v=Imxx1tFDeSw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=17&pp=iAQB): Factorization
 
