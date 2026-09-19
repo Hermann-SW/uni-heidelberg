@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[19](#lecture-19-hensel-and-newtons-method)
 [18](#lecture-18-cryptography)
 [17](#lecture-17-factorization)
 [16](#lecture-16-more-numerical-calculation)
@@ -21,6 +22,28 @@ Lectures:
 [3](#lecture-3-divisibility-and-euclids-algorithm)
 [2](#lecture-2-survey)
 [1](#lecture-1)
+
+# [lecture 19](https://www.youtube.com/watch?v=nrH2vs04TyQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=19&pp=iAQB): Hensel and Newton's method
+
+- $f(x)\equiv 0 \mod m$
+- today "Reduce from $p^m$ to $p$
+  - stupid method $O(p^m)$
+  - not quite so stupid method $O(p*m)$
+    - $x^2\equiv 17 \mod 2^10$, problems: not unique, no lifts
+  - Hensel's method $O(n)$
+    - $f(x_1)\equiv 0 \mod p$, $x_1$ solution
+    - Taylor, derivative, key point:
+    $$\frac{\left(\frac{d}{dx}\right)^n f(x)}{n!}$$
+    has integer solutions  
+    we can solve $f(x)\equiv 0 \mod p$ IF:  
+    (1) we can solve $f(x_1)\equiv 0 \mod p$  
+    (2) $f'(x_1)\not\equiv 0 \mod p$
+
+  - Newton's method (the same)
+    - for reals $f(x)=0$ with tangents
+    - if $f(x)=0\mod p^n$ and $f'(x)\not\equiv 0 \mod p$  
+      then $f(x-\frac{f(x)}{f'(x)})\equiv 0 \mod p^{2n\}$  
+      $O(\log n)$ because of doubling
 
 # [lecture 18](https://www.youtube.com/watch?v=16dAteWM5ZA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=18&pp=iAQB): Cryptography
 
