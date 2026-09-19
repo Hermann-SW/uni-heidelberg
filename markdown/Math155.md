@@ -3,7 +3,8 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
-[22](#lecture-21-chevally-warning-theorem)
+[23](#lecture-23-primitive-roots)
+[22](#lecture-22-chevally-warning-theorem)
 [21](#lecture-21-congruences-modulo-a-prime)
 [20](#lecture-20-padic-numbers)
 [19](#lecture-19-hensel-and-newtons-method)
@@ -26,9 +27,17 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 22](https://www.youtube.com/watch?v=6QZYfpcf79I&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=22&pp=iAQB): Chevalley-Warning theorem
+# [lecture 23](https://www.youtube.com/watch?v=E8UTP0DiCCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=23&pp=iAQB): Primitive roots
 
 - 
+
+# [lecture 22](https://www.youtube.com/watch?v=6QZYfpcf79I&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=22&pp=iAQB): Chevalley-Warning theorem
+
+- If $f(x_1,\dots,x_n)$ has degree $d<n$  
+  then #solutions to $f(x_1,\dots,x_n)\equiv 0\mod p$ is divisible by $p$
+- Useful lemma:
+  $0^i+1^i+2^i+\dots+(p-1)^i\equiv 0 \mod p$ if $i<p-1$
+- Chevalley-Warning theorem implies that integers mod p are "quasi algebraicly closed"   
 
 # [lecture 21](https://www.youtube.com/watch?v=E-6llnLZ7J8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=21&pp=iAQB): Congruences modulo a prime
 
