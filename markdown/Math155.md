@@ -29,10 +29,24 @@ Lectures:
   (3) Solve $f(x)\equiv 0\mod p$; $x^2+1\equiv 0 \mod p$  
   (4) $a^b \mod m$
 - O() notation
-- Fast Fourier Transform: $O(N\log N)+O(N)+O(N\log N)$  
+- Fast Fourier Transform: $O(N\log N)+O(N)+O(N\log N)$ [7:53min in video]  
   FFT (choose $P=2\cdot 3\cdot\dots >mn$)  
   pointwise multiplication (modulo the prime divisors of P)  
-  inverse FFT (use C.R.T. to reconstruct $mn \mod P$)
+  inverse FFT (use C.R.T. to reconstruct $mn \mod P$)  
+  I implemented [proth.gp](../scripts/proth.gp) demo proving 1749 decimal digit Proth number prime
+  using "RNS/CRT/folding reduction" multiplication. While ```Mod(3,N)^((N-1)/2)==Mod(-1,N)```
+  returns 1 in 31ms, the demo does need 41s on AMD 9950X CPU. But it does show all the details,
+  including the not mentioned by lecturer folding reductions:
+  ```
+  hermann@9950x:~/uni-heidelberg/scripts$ gp -q < proth.gp 
+  Digits of N: 1749
+  CRT primes set up: 1027 primes (Max: 8179)
+  Starting modular exponentiation (3^((N-1)/2) mod N)...
+    -> Total Exponentiation time: 40401 ms
+  Comparing result against N - 1...
+  Success! Result matches N - 1. N is prime!
+  hermann@9950x:~/uni-heidelberg/scripts$ 
+  ``` 
 - example: compute determinant of $10\times 10$ matrix of BIG numbers with FFT
 - Russian peasant algorithm, bad for multiplication,  
   good for exponentiation $O(N\log N)$
