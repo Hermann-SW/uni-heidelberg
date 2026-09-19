@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[17](#lecture-17-factorization)
 [16](#lecture-16-more-numerical-calculation)
 [15](#lecture-15-numerical-calculation)
 [14](#lecture-14-eulers-phi-totient-function)
@@ -20,7 +21,11 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 16](https://www.youtube.com/watch?v=roBKA4adPJE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=16&pp=iAQB): More numerical calculation 
+# [lecture 17](https://www.youtube.com/watch?v=Imxx1tFDeSw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=17&pp=iAQB): Factorization
+
+- 
+
+# [lecture 16](https://www.youtube.com/watch?v=roBKA4adPJE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=16&pp=iAQB): More numerical calculation
 
 - how solve $x^2\equiv -1 \mod p$, p prime, $p\equiv 1\mod 4$?
 - guess at random, 50% chance to work, repeat
