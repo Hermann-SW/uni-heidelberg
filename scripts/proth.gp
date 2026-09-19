@@ -12,7 +12,7 @@ $ gp -q
 1
 ? ##
   ***   last result: cpu time 31 ms, real time 31 ms.
-? 
+?
 
 But prototype fully works with 3500 decimal digits in between:
 (max_prime:=precprime(sqrt(2^53)), so squares fit into FP64 w/o precision loss)
