@@ -29,7 +29,14 @@ Lectures:
 
 # [lecture 23](https://www.youtube.com/watch?v=E8UTP0DiCCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=23&pp=iAQB): Primitive roots
 
-- 
+- answer questions:  
+  Which numbers have primitive roots? How many? How find?
+  (carefully counting)
+- Theorem: if $p$ is prime, $p$ has primitive root
+- if $a$ is primitive root mod $m$, order of $a$ is $\varphi(m)$.  
+  Now: $a^b$ has order $\varphi(m) \iff (b, \varphi(m))=1$  
+  primitive roots: $$\\{a^b \mid (b, \varphi(m))=1\\}$$  
+  #primitive roots = $\varphi(\varphi(m))$
 
 # [lecture 22](https://www.youtube.com/watch?v=6QZYfpcf79I&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=22&pp=iAQB): Chevalley-Warning theorem
 
