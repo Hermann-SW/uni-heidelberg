@@ -3,6 +3,8 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[22](#lecture-21-chevally-warning-theorem)
+[21](#lecture-21-congruences-modulo-a-prime)
 [20](#lecture-20-padic-numbers)
 [19](#lecture-19-hensel-and-newtons-method)
 [18](#lecture-18-cryptography)
@@ -23,6 +25,36 @@ Lectures:
 [3](#lecture-3-divisibility-and-euclids-algorithm)
 [2](#lecture-2-survey)
 [1](#lecture-1)
+
+# [lecture 22](https://www.youtube.com/watch?v=6QZYfpcf79I&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=22&pp=iAQB): Chevalley-Warning theorem
+
+- 
+
+# [lecture 21](https://www.youtube.com/watch?v=E-6llnLZ7J8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=21&pp=iAQB): Congruences modulo a prime
+
+- advantages of p prime:
+  - no zero divisors
+  - inverses exist
+  - polynomials of degree n have $\leq n$v roots
+  - Fermat: $x^p\equiv x\mod p$
+  - primitive roots exist mod p
+- wolstenholme's theorem:  
+  $1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{p-1}$, numerator
+  is divisible by $p$ if $p>2$
+- Given $f(x)\equiv 0 \mod p$, problems:  
+  (1) any solutions?  
+  (2) how many?  
+  (3) find them?
+- Euler: (fast, better replace by faster method later [Jacobi symbol])
+
+$$a^{(p-1)/2}\equiv \begin{cases}
++1 & \text{if a is square}\\
+-1 & \text{if a is not square}
+\end{cases}$$
+
+  - If $d$ divides $p-1$, then $x^d-1\equiv 0 \mod p$ has
+    exactly $d$ roots
+  
 
 # [lecture 20](https://www.youtube.com/watch?v=1HTq2zq2RtY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=20&pp=iAQB): p-adic numbers
 
