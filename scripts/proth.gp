@@ -3,7 +3,7 @@
 - using "RNS/CRT/folding reduction" multiplication
 - result of long chat with Gemini
 
-41 seconds below is loooong compared to same builtin proof ;-)
+19 seconds below is loooong compared to same builtin proof ;-)
 
 $ gp -q
 ? k=5795;n=5795;N=k*2^n+1;#digits(N)
@@ -15,12 +15,13 @@ $ gp -q
 ? 
 
 But prototype fully works with 3500 decimal digits in between:
+(max_prime:=precprime(sqrt(2^53)), so squares fit into FP64 w/o precision loss)
 
 hermann@9950x:~/uni-heidelberg/scripts$ gp -q < proth.gp 
 Digits of N: 1749
-CRT primes set up: 1027 primes (Max: 8179)
+CRT primes set up: 439 primes (Max: 94898341)
 Starting modular exponentiation (3^((N-1)/2) mod N)...
-  -> Total Exponentiation time: 40401 ms
+  -> Total Exponentiation time: 19283 ms
 Comparing result against N - 1...
 Success! Result matches N - 1. N is prime!
 hermann@9950x:~/uni-heidelberg/scripts$ 
@@ -37,12 +38,12 @@ print("Digits of N: ", #digits(N));
 target_log = log(N^2);
 primes_list = [];
 current_log = 0;
-p = 2;
+p = 94906249;
 {
 while(current_log < target_log,
     primes_list = concat(primes_list, p);
     current_log += log(p);
-    p = nextprime(p + 1);
+    p = precprime(p - 1);
 );
 }
 
