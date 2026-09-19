@@ -175,6 +175,7 @@ $$a^{(p-1)/2}\equiv \begin{cases}
   - inverse FFT (use C.R.T. to reconstruct $mn \mod P$)  
   I implemented [proth.gp](../scripts/proth.gp) demo with Gemini, proving 1749 decimal digit Proth number prime
   using "RNS/CRT/folding reduction" multiplication. While ```Mod(3,N)^((N-1)/2)==Mod(-1,N)```
+  ([prime proof for Proth number](https://arxiv.org/pdf/0812.2596#page=3) N=k*2^n+1 with k≤n and $3\nmid k$)
   returns 1 in 31ms, the demo did need 19s on AMD 9950X CPU. But it did show all the details,
   including the not mentioned by lecturer folding reductions. Gemini asked whether to port to C++ and we
   did in another very long chat. Down to only 3 seconds now with [proth_prover.cpp](../scripts/proth_prover.cpp)
