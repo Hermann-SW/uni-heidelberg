@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[20](#lecture-20-padic-numbers)
 [19](#lecture-19-hensel-and-newtons-method)
 [18](#lecture-18-cryptography)
 [17](#lecture-17-factorization)
@@ -22,6 +23,19 @@ Lectures:
 [3](#lecture-3-divisibility-and-euclids-algorithm)
 [2](#lecture-2-survey)
 [1](#lecture-1)
+
+# [lecture 20](https://www.youtube.com/watch?v=1HTq2zq2RtY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=20&pp=iAQB): p-adic numbers
+
+- what if $f'(x_1)\equiv 0 \mod p$?
+- p-adic numbers
+  - (informal) number in base p, goes left infinite distance
+  - does not converge to real number, but mod p
+  - add, multiply p-adic numbers, also subtract
+  - division by all numbers $a$ for $p\nmid a$
+- which numbers are square? reals, 2-adics, p-adics
+  -  square $\iff a\text{ is square }\mod p$
+- any for reals has analog for p-adics
+- iteration for reals and p-adics
 
 # [lecture 19](https://www.youtube.com/watch?v=nrH2vs04TyQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=19&pp=iAQB): Hensel and Newton's method
 
