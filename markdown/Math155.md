@@ -30,22 +30,26 @@ Lectures:
   (4) $a^b \mod m$
 - O() notation
 - Fast Fourier Transform: $O(N\log N)+O(N)+O(N\log N)$ [7:53min in video]  
-  FFT (choose $P=2\cdot 3\cdot\dots >mn$)  
-  pointwise multiplication (modulo the prime divisors of P)  
-  inverse FFT (use C.R.T. to reconstruct $mn \mod P$)  
-  I implemented [proth.gp](../scripts/proth.gp) demo proving 1749 decimal digit Proth number prime
+  - FFT (choose $P=2\cdot 3\cdot\dots >mn$)  
+  - pointwise multiplication (modulo the prime divisors of P)  
+  - inverse FFT (use C.R.T. to reconstruct $mn \mod P$)  
+  I implemented [proth.gp](../scripts/proth.gp) demo with Gemini, proving 1749 decimal digit Proth number prime
   using "RNS/CRT/folding reduction" multiplication. While ```Mod(3,N)^((N-1)/2)==Mod(-1,N)```
-  returns 1 in 31ms, the demo does need 41s on AMD 9950X CPU. But it does show all the details,
-  including the not mentioned by lecturer folding reductions:
+  returns 1 in 31ms, the demo did need 19s on AMD 9950X CPU. But it did show all the details,
+  including the not mentioned by lecturer folding reductions. Gemini asked whether to port to C++ and we
+  did in another very long chat. Down to only 3 seconds now with [proth_prover.cpp](../scripts/proth_prover.cpp)
+  based on libgmp and libgmpxx:
   ```
-  hermann@9950x:~/uni-heidelberg/scripts$ gp -q < proth.gp 
+  $ ./proth_prover
   Digits of N: 1749
-  CRT primes set up: 1027 primes (Max: 8179)
+  CRT primes set up: 364 primes (Max: 4294967291)
+  Precomputing Garner CRT coefficients...
   Starting modular exponentiation (3^((N-1)/2) mod N)...
-    -> Total Exponentiation time: 40401 ms
+  Progress: bit 0 / 5807             
+    -> Total Exponentiation time: 3054 ms
   Comparing result against N - 1...
   Success! Result matches N - 1. N is prime!
-  hermann@9950x:~/uni-heidelberg/scripts$ 
+  $ 
   ``` 
 - example: compute determinant of $10\times 10$ matrix of BIG numbers with FFT
 - Russian peasant algorithm, bad for multiplication,  
