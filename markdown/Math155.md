@@ -59,9 +59,13 @@ Lectures:
   $(\mathbb{Z}/m\mathbb{Z})^\times$ has generator $\equiv$ primitive root
 - isomorphic groups ("really the same")
 - Wilsons theorem $(p-1)!\equiv \-1 \mod p$ (p prime)  
-  G finite abelian group, product of all elements is  
-  g (if exactly one element g has order 2)  
-  1 (otherwise)  
+  G finite abelian group, product of all elements is
+  
+$$\\begin{cases} 
+  g & (\text{if exactly one element g has order 2})\\  
+  1 & (otherwise)
+\\end{cases}$$
+
   $G=(\mathbb{Z}/m\mathbb{Z})^\times$
     
 # [lecture 26](https://www.youtube.com/watch?v=GcJImruRSyE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=26&pp=iAQB): Roots of polynomials modulo p
