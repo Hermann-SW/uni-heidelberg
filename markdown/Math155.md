@@ -3,7 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
-[24](#lecture-24-primitive-roots-for-prime) 
+[24](#lecture-24-primitive-roots-for-prime-powers) 
 [23](#lecture-23-primitive-roots)
 [22](#lecture-22-chevally-warning-theorem)
 [21](#lecture-21-congruences-modulo-a-prime)
@@ -28,10 +28,24 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 24](https://www.youtube.com/watch?v=AfRpXi8r0So&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=24&pp=iAQB): Primitive roots for prime 
+# [lecture 24](https://www.youtube.com/watch?v=AfRpXi8r0So&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=24&pp=iAQB): Primitive roots for prime powers
 
-- 
-
+- $p^n$, p odd prime, $n>1$
+  - $p^2$
+  - theorem: if $g$ primitive root mod $p^2$, $p$ odd prime, then primitive root $\mod p^n$ with $n\geq 1$
+-  Equivalent  
+   (1) m has primitive root  
+   (2) m has $\varph(\varphi(m))$ primitive roots  
+   (3) $m=1,2,4,p^n,2p^n$ (p odd prime  
+   (4) $x^2\equiv 1 \mod m \implies x\equiv \pm 1 \mod m$  
+   (5) Wilson's theorem: $\prod_{(a,m)=1}a\equiv -1 \mod m$
+- Mod $2^n$?
+- logarithms: indices
+- $a\not\equiv 0 \mod p$ is of form $g^n \mod p$; $n=\log_g a$
+- p is prime? if we can factor $p-1$, we can find primitive root of $p$, 
+  $g$ of order $p-1$, check $g$ not have order dividing $\frac{p-1}{q}$:
+  $g^{\frac{p-1}{q}}\not\equiv 1\mod p$ with $q$ prime, $q\mid p-1$
+  
 
 # [lecture 23](https://www.youtube.com/watch?v=E8UTP0DiCCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=23&pp=iAQB): Primitive roots
 
