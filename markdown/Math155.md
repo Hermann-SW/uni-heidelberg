@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[31](#lecture-31-quadratic-residues) 
 [30](#lecture-30-fields-in-number-theory) 
 [29](#lecture-29-rings-in-number-theory) 
 [28](#lecture-28-products-of-groups) 
@@ -34,9 +35,26 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 30](https://www.youtube.com/watch?v=leBH9QpD9PQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=30): Fields in number theory
+# [lecture 31](https://www.youtube.com/watch?v=Pz6CL0nRmGQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=31): Quadratic residues
 
 - 
+
+# [lecture 30](https://www.youtube.com/watch?v=leBH9QpD9PQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=30): Fields in number theory
+
+- f(x) coefficients in k, f has $\leq n$ roots ( $n=deg(f)$ )
+- p has primitive root g, p prime, g has order p-1 in $(\mathbb{Z}/p\mathbb{Z})^\times$, cyclic
+- relation between $\mathbb{Z}$ and $k[x]$
+- finite field, of finite order $\mathbb{Z}/p\mathbb{Z}$, $(\mathbb{Z}/p\mathbb{Z})^\times[x]/f$ with f irreducible
+- any finite field has order $p^n$, some prime p, $n\geq 1$
+- $F^*$ cyclic, so has generator g
+- $F^+$ NOT cyclic (unless $F=\mathbb{Z}/p\mathbb{Z}$)
+- Fermat: $x^p\equiv x \mod p$
+- same for finite fields, order is $p^n$, $x^{p^n}=x$ for all $x\in F$
+- $x^{p^n}-x=\prod_{\alpha\in F}(x-\alpha)$ in F[x]; C.R.T.
+- Wilson
+- $f=x^3+x+1, x^3+x^2+1$ irreducible
+- there is exactly one finite field of order $p^n$, any prime p, $n\geq 1$
+- (key point: finite field of order $p^n$ is "splitting field" of $x^{p^n}-x$)
 
 # [lecture 29](https://www.youtube.com/watch?v=7IP3YvM1dP0&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=29): Rings in number theory
 
