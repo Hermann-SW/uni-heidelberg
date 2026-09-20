@@ -1,13 +1,13 @@
 // NOLINT(legal/copyright)
 /*
-$ g++ -O3 -std=c++17 proth_prover.cpp -o proth_prover -lgmpxx -lgmp
+$ g++ -O3 -std=c++17 -Wall -Wextra -pedantic proth_prover.cpp -o proth_prover -lgmpxx -lgmp
 $ ./proth_prover
 Digits of N: 1749
 CRT primes set up: 364 primes (Max: 4294967291)
 Precomputing Garner CRT coefficients...
 Starting modular exponentiation (3^((N-1)/2) mod N)...
 Progress: bit 0 / 5807             
-  -> Total Exponentiation time: 3054 ms
+  -> Total Exponentiation time: 1542 ms
 Comparing result against N - 1...
 Success! Result matches N - 1. N is prime!
 $ 
@@ -18,10 +18,26 @@ $
 #include <chrono>  // NOLINT(build/c++11)
 #include <cmath>
 #include <cstdint>
+#include <climits>
+
+// Fast Barrett reduction for x < p^2, p < 2^32, m = floor(2^64 / p)
+inline uint64_t barrett_reduce(uint64_t x, uint64_t p, uint64_t m) {
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
+    unsigned __int128 prod = static_cast<unsigned __int128>(x) * m;
+#pragma GCC diagnostic pop
+    uint64_t q = static_cast<uint64_t>(prod >> 64);
+    uint64_t r = x - q * p;
+
+    if (r >= p) r -= p;
+    if (r >= p) r -= p;
+    return r;
+}
 
 // Optimized Garner CRT structure with native precomputed tables
 struct GarnerCRT {
     std::vector<uint64_t> primes;
+    std::vector<uint64_t> barrett_m;
     // inv_table[i][j] stores p_j^{-1} mod p_i
     std::vector<std::vector<uint64_t>> inv_table;
 };
@@ -30,14 +46,25 @@ GarnerCRT precompute_garner(const std::vector<uint64_t>& primes) {
     size_t k = primes.size();
     GarnerCRT gc;
     gc.primes = primes;
+    gc.barrett_m.resize(k);
     gc.inv_table.resize(k);
 
     for (size_t i = 0; i < k; ++i) {
         gc.inv_table[i].resize(i);
+        uint64_t p_i_val = primes[i];
+        mpz_class p_i(p_i_val);
+
+        // Precompute Barrett multiplier m_i = floor(2^64 / p_i)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
+        gc.barrett_m[i] = static_cast<uint64_t>
+                              (((unsigned __int128)1 << 64) / p_i_val);
+#pragma GCC diagnostic pop
+
         for (size_t j = 0; j < i; ++j) {
             mpz_class inv;
             if (!mpz_invert(inv.get_mpz_t(), mpz_class(primes[j]).get_mpz_t(),
-                            mpz_class(primes[i]).get_mpz_t())) {
+                            p_i.get_mpz_t())) {
                 std::cerr << "Error: modular inverse failed during"
                           << " Garner precomputation\n";
             }
@@ -53,29 +80,28 @@ mpz_class garner_reconstruct(const std::vector<uint64_t>& residues_C,
     size_t k = gc.primes.size();
     std::vector<uint64_t> v(k);
 
+    // Phase 1: Mixed-radix digit calculation using 32-bit Barrett Reduction
     for (size_t i = 0; i < k; ++i) {
         uint64_t vi = residues_C[i];
         uint64_t p_i = gc.primes[i];
+        uint64_t m_i = gc.barrett_m[i];
 
         for (size_t j = 0; j < i; ++j) {
-            int64_t diff = static_cast<int64_t>(vi)-static_cast<int64_t>(v[j]);
-            uint64_t rem;
-            if (diff >= 0) {
-                rem = diff % p_i;
-            } else {
-                rem = p_i - ((-diff) % p_i);
-            }
-            vi = (rem * gc.inv_table[i][j]) % p_i;
+            // Guaranteed positive: vi < p_i and v[j] < p_i => diff < 2*p_i
+            uint64_t diff = vi + p_i - v[j];
+            uint64_t rem = barrett_reduce(diff, p_i, m_i);
+
+            uint64_t prod = rem * gc.inv_table[i][j];
+            vi = barrett_reduce(prod, p_i, m_i);
         }
         v[i] = vi;
     }
 
-    // Combine mixed-radix digits into final big integer (only once per mult)
-    mpz_class X = v[0];
-    mpz_class term = 1;
-    for (size_t i = 1; i < k; ++i) {
-        term *= gc.primes[i - 1];
-        X += mpz_class(v[i]) * term;
+    // Phase 2: Horner's Scheme for big integer reconstruction
+    // Computes X = v[0] + P0*(v[1] + P1*(v[2] + ... ))
+    mpz_class X = v[k - 1];
+    for (size_t i = k - 1; i > 0; --i) {
+        X = X * gc.primes[i - 1] + v[i - 1];
     }
     return X;
 }
@@ -227,7 +253,6 @@ int main() {
     }
     std::cout << "\rProgress: bit 0 / " << bit_len
               << "             " << std::endl;
-
 
     auto t2 = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>
