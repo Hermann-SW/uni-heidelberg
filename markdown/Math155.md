@@ -4,6 +4,7 @@
 
 Lectures:
 [31](#lecture-31-quadratic-residues) 
+[53](#lecture-53-three-calculators-for-number-theorists)
 [30](#lecture-30-fields-in-number-theory) 
 [29](#lecture-29-rings-in-number-theory) 
 [28](#lecture-28-products-of-groups) 
@@ -39,6 +40,12 @@ Lectures:
 
 - 
 
+# [lecture 53](https://www.youtube.com/watch?v=P1I3_x0tk2A&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=53): Three calculators for number theorists 
+
+- 3 pocket calculators: the Casio fx-300ES PLUS, the SwissMicros DM42, and the HP 50g.
+- free simulator for the DM42
+- GP / SAGE
+  
 # [lecture 30](https://www.youtube.com/watch?v=leBH9QpD9PQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=30): Fields in number theory
 
 - f(x) coefficients in k, f has $\leq n$ roots ( $n=deg(f)$ )
