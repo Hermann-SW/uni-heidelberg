@@ -42,6 +42,9 @@ Lectures:
   $G=A\times B$  
   A=elements a with ma=0   
   B=elements b with nb=0
+- an G (finite, abelian) is product of groups of prime power order
+- ... is product of cyclic groups
+- find smallest integer n such that $x^n\equiv 1\mod 1000000 for (x,1000000)=1$
 
 # [lecture 27](https://www.youtube.com/watch?v=bpzNGhiT4OI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=27): Groups and number theory
 
