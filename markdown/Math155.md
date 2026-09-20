@@ -3,6 +3,8 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[27](#lecture-27-groups-and-number-theory) 
+[26](#lecture-26-roots-of-polynomials-modulo-a-prime) 
 [25](#lecture-25-quadratic-equations-mod-p) 
 [24](#lecture-24-primitive-roots-for-prime-powers) 
 [23](#lecture-23-primitive-roots)
@@ -28,6 +30,18 @@ Lectures:
 [3](#lecture-3-divisibility-and-euclids-algorithm)
 [2](#lecture-2-survey)
 [1](#lecture-1)
+
+# [lecture 27](https://www.youtube.com/watch?v=bpzNGhiT4OI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=27): Groups and number theory
+
+-
+
+# [lecture 26](https://www.youtube.com/watch?v=GcJImruRSyE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=26&pp=iAQB): Roots of polynomials modulo p
+
+- Cantor-Zassenhaus  
+  (1) Euclid for (a,b), works with poly, fast if deg f,g small  
+  (2) Russian-Peasant
+- find roots of f
+
 
 # [lecture 25](https://www.youtube.com/watch?v=H7WFEGrmMEs&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=25&pp=iAQB): Quadratic equtions mod p
 
