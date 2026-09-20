@@ -115,6 +115,47 @@ mpz_class rns_mul(const mpz_class& A, const mpz_class& B,
     return res;
 }
 
+// Single-round Miller-Rabin test using GMP modular exponentiation
+inline bool miller_rabin_test(uint32_t n, uint32_t a, uint32_t d, int s) {
+    mpz_class base(a), exp(d), mod(n), x;
+
+    // x = (a^d) % n
+    mpz_powm(x.get_mpz_t(), base.get_mpz_t(), exp.get_mpz_t(), mod.get_mpz_t());
+
+    if (x == 1 || x == n - 1) return true;
+
+    for (int r = 1; r < s; r++) {
+        // x = (x^2) % n
+        mpz_powm_ui(x.get_mpz_t(), x.get_mpz_t(), 2, mod.get_mpz_t());
+        if (x == n - 1) return true;
+    }
+    return false;
+}
+
+// 100% Deterministic Miller-Rabin Primality Test for N < 2^32
+inline bool is_prime_u32(uint32_t n) {
+    if (n < 2) return false;
+    if (n == 2 || n == 3 || n == 5 || n == 7) return true;
+    if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0) return false;
+
+    uint32_t d = n - 1;
+    int s = 0;
+    while (d % 2 == 0) {
+        d /= 2;
+        s++;
+    }
+
+    // Proven base set for n < 2^32 (Jaeschke, 1993)
+    static const uint32_t bases[] = {2, 7, 61};
+
+    for (uint32_t a : bases) {
+        if (n <= a) break;
+        if (!miller_rabin_test(n, a, d, s)) return false;
+    }
+
+    return true;
+}
+
 int main() {
     mpz_class k = 5795;
     mpz_class n = 5795;
@@ -130,20 +171,19 @@ int main() {
     std::cout << "Digits of N: " << mpz_sizeinbase(N.get_mpz_t(), 10)
               << std::endl;
 
-    // 1. Build the prime list downwards from 4294967291
+    // 1. Build the prime list downwards from prime 4294967291
     double target_log = 2.0 * mpz_sizeinbase(N.get_mpz_t(), 2) * log(2.0);
     std::vector<uint64_t> primes_list;
     double current_log = 0.0;
 
-    mpz_class p = 4294967291UL;
+    uint32_t p = UINT_MAX;
     while (current_log < target_log) {
-        primes_list.push_back(p.get_ui());
-        current_log += log(p.get_ui());
-
-        mpz_sub_ui(p.get_mpz_t(), p.get_mpz_t(), 2);
-        while (mpz_probab_prime_p(p.get_mpz_t(), 15) == 0) {
-            mpz_sub_ui(p.get_mpz_t(), p.get_mpz_t(), 2);
+        while (!is_prime_u32(p)) {
+            p -= 2;
         }
+        primes_list.push_back(p);
+        p -= 2;
+        current_log += log(p);
     }
 
     std::cout << "CRT primes set up: " << primes_list.size()
