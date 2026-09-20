@@ -2,12 +2,12 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
-Lectures:
-[31](#lecture-31-quadratic-residues) 
+Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[31](#lecture-31-quadratic-residues) 
 [30](#lecture-30-fields-in-number-theory) 
 [29](#lecture-29-rings-in-number-theory) 
-[28](#lecture-28-products-of-groups) 
+[28](#lecture-28-products-of-groups)  
 [27](#lecture-27-groups-and-number-theory) 
 [26](#lecture-26-roots-of-polynomials-modulo-a-prime) 
 [25](#lecture-25-quadratic-equations-mod-p) 
