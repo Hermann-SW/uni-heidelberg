@@ -34,7 +34,14 @@ Lectures:
 
 # [lecture 28](https://www.youtube.com/watch?v=SLONKxYCmiA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=28): Products of groups
 
-- 
+- $G\times H$
+- vector space $\mathbb{R}^2$
+- $\mathbb{R}$, $\pm 1\times$ positive reals
+- C.R.T.
+- if G (abelian) has order mn with (m,n)=1  
+  $G=A\times B$  
+  A=elements a with ma=0   
+  B=elements b with nb=0
 
 # [lecture 27](https://www.youtube.com/watch?v=bpzNGhiT4OI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=27): Groups and number theory
 
@@ -262,7 +269,8 @@ $$a^{(p-1)/2}\equiv \begin{cases}
   returns 1 in 31ms, the demo did need 19s on AMD 9950X CPU. But it did show all the details,
   including the not mentioned by lecturer folding reductions. Gemini asked whether to port to C++ and we
   did in another very long chat. Down to only 3 seconds now with [proth_prover.cpp](../scripts/proth_prover.cpp)
-  based on libgmp and libgmpxx:
+  based on libgmp and libgmpxx. In later chat about performance improvements,
+  new fast Barret reduction and Horner Scheme reduced runtime by 50%:
   ```
   $ ./proth_prover
   Digits of N: 1749
@@ -270,7 +278,7 @@ $$a^{(p-1)/2}\equiv \begin{cases}
   Precomputing Garner CRT coefficients...
   Starting modular exponentiation (3^((N-1)/2) mod N)...
   Progress: bit 0 / 5807             
-    -> Total Exponentiation time: 3054 ms
+    -> Total Exponentiation time: 1542 ms
   Comparing result against N - 1...
   Success! Result matches N - 1. N is prime!
   $ 
