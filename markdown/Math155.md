@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[25](#lecture-25-quadratic-equations-mod-p) 
 [24](#lecture-24-primitive-roots-for-prime-powers) 
 [23](#lecture-23-primitive-roots)
 [22](#lecture-22-chevally-warning-theorem)
@@ -28,6 +29,28 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+# [lecture 25](https://www.youtube.com/watch?v=H7WFEGrmMEs&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=25&pp=iAQB): Quadratic equtions mod p
+
+- degree 2 congruences  
+  $ax^2+bx+c\equiv 0 \mod p$  
+  $a(x+b/2)^2\equiv \frac{b^2-4ac}{4a}$, discriminant $b^2-4ac$  
+  need /2, p odd OK because p=2 no problem  
+  $x^2\equiv d$ ($d\not \equiv 0$)
+  check has solution:  
+  solution exists $\iff d^\frac{p-1}{2}\equiv 1\mod p$
+- solve $x^2\equiv d$  
+  method 1: trial and error  
+  method 2: polynomial solver $f(x)\equiv 0$ (Berlekamp, Cantor-Zassenhaus)  
+  method 3: guess answer, better Ansatz  
+- general case:  
+  $p-1=2^k\cdot n$, $n$ odd  
+  pick g to have order $2^k$, $g=(random)^n$  
+  $2^ks+nt=1$ by Euclid  
+  $y=y^1=(y^n)^t\times (y^{2^k})^s$  
+  order of power of 2, previous method  
+  odd order, use method 3
+  (divide and conquer)
+
 # [lecture 24](https://www.youtube.com/watch?v=AfRpXi8r0So&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=24&pp=iAQB): Primitive roots for prime powers
 
 - $p^n$, p odd prime, $n>1$
@@ -35,7 +58,7 @@ Lectures:
   - theorem: if $g$ primitive root mod $p^2$, $p$ odd prime, then primitive root $\mod p^n$ with $n\geq 1$
 -  Equivalent  
    (1) m has primitive root  
-   (2) m has $\varph(\varphi(m))$ primitive roots  
+   (2) m has $\varphi(\varphi(m))$ primitive roots  
    (3) $m=1,2,4,p^n,2p^n$ (p odd prime  
    (4) $x^2\equiv 1 \mod m \implies x\equiv \pm 1 \mod m$  
    (5) Wilson's theorem: $\prod_{(a,m)=1}a\equiv -1 \mod m$
@@ -45,7 +68,6 @@ Lectures:
 - p is prime? if we can factor $p-1$, we can find primitive root of $p$, 
   $g$ of order $p-1$, check $g$ not have order dividing $\frac{p-1}{q}$:
   $g^{\frac{p-1}{q}}\not\equiv 1\mod p$ with $q$ prime, $q\mid p-1$
-  
 
 # [lecture 23](https://www.youtube.com/watch?v=E8UTP0DiCCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=23&pp=iAQB): Primitive roots
 
