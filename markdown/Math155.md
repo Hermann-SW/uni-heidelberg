@@ -3,6 +3,8 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[30](#lecture-30-fields-in-number-theory) 
+[29](#lecture-29-rings-in-number-theory) 
 [28](#lecture-28-products-of-groups) 
 [27](#lecture-27-groups-and-number-theory) 
 [26](#lecture-26-roots-of-polynomials-modulo-a-prime) 
@@ -31,6 +33,24 @@ Lectures:
 [3](#lecture-3-divisibility-and-euclids-algorithm)
 [2](#lecture-2-survey)
 [1](#lecture-1)
+
+# [lecture 30](https://www.youtube.com/watch?v=leBH9QpD9PQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=30): Fields in number theory
+
+- 
+
+# [lecture 29](https://www.youtube.com/watch?v=7IP3YvM1dP0&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=29): Rings in number theory
+
+- ring definition, examples $\mathbb{Z},\mathbb{R},\mathbb{C}$, integers mod n: $\mathbb{Z}/n\mathbb{Z}$
+- quotients:
+  - Groups: abelian, subgroup, G/H set of equivalence classes
+  - Rings: R/I, I need to be IDEAL, R/I is ring, $\mathbb{R}[x]/(f)$
+- C.R.T., analog for rings, pick ideals I,J of R, map $R: R/I\times R/J$
+- $\mathbb{Z}$ has unique factorization
+  - R is euclidean ring if it has division with remainder
+  - gaussian integers, subring of complex numbers
+  - unique factorization domain
+- fields: ring, all nonzero elements have inverse
+  - k[x]/(f) with f irreducibel (role of prime numbers)
 
 # [lecture 28](https://www.youtube.com/watch?v=SLONKxYCmiA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=28): Products of groups
 
