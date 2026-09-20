@@ -133,6 +133,7 @@ inline bool miller_rabin_test(uint32_t n, uint32_t a, uint32_t d, int s) {
 }
 
 // 100% Deterministic Miller-Rabin Primality Test for N < 2^32
+// proof of correctness:  https://gist.github.com/Hermann-SW/5ffc3bbe45c59130f0fb05caf674d441
 inline bool is_prime_u32(uint32_t n) {
     if (n < 2) return false;
     if (n == 2 || n == 3 || n == 5 || n == 7) return true;
