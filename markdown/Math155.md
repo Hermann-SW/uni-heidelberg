@@ -3,6 +3,7 @@
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
 Lectures:
+[28](#lecture-28-products-of-groups) 
 [27](#lecture-27-groups-and-number-theory) 
 [26](#lecture-26-roots-of-polynomials-modulo-a-prime) 
 [25](#lecture-25-quadratic-equations-mod-p) 
@@ -31,10 +32,38 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+# [lecture 28](https://www.youtube.com/watch?v=SLONKxYCmiA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=28): Products of groups
+
+- 
+
 # [lecture 27](https://www.youtube.com/watch?v=bpzNGhiT4OI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=27): Groups and number theory
 
--
-
+- group definition
+- important groups for number theory  
+  $\mathbb{Z}/m\mathbb{Z}$  
+  $(\mathbb{Z}/m\mathbb{Z})^\times$
+- Lagrange: order of subgroup H $\mid$ order of group G
+  - coset of $H = aH = \\{ ah_1, ah_2,\dots\\}$
+  - 2 cosets have same order (map back by $a^{-1}$ bijection)
+  - 2 cosets are same or disjoint
+  - G is disjoint union of cosets of same size $\implies$ Lagrange  
+- order of $g\in G$ divides order of $G$
+- corollary:
+  - Fermat $x^{p-1}\equiv 1 \mod p$  
+    Group= $(\mathbb{Z}/m\mathbb{Z})^\times$ = integers coprime to p, mod p
+  - Euler $x^{\varphi(m)}\equiv 1\mod m$, $(m,x)=1$  
+    $\varphi(m)=$ order of group $(\mathbb{Z}/m\mathbb{Z})^\times$
+- for abelian groups shorter proof
+- group is CYCLIC if it has 1 generator g, all elements ar powers of g
+- non obvious cyclic group:
+  $(\mathbb{Z}/m\mathbb{Z})^\times$ has generator $\equiv$ primitive root
+- isomorphic groups ("really the same")
+- Wilsons theorem $(p-1)!\equiv \-1 \mod p$ (p prime)  
+  G finite abelian group, product of all elements is  
+  g (if exactly one element g has order 2)  
+  1 (otherwise)  
+  $G=(\mathbb{Z}/m\mathbb{Z})^\times$
+    
 # [lecture 26](https://www.youtube.com/watch?v=GcJImruRSyE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=26&pp=iAQB): Roots of polynomials modulo p
 
 - Cantor-Zassenhaus  
