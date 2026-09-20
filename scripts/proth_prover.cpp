@@ -183,8 +183,8 @@ int main() {
             p -= 2;
         }
         primes_list.push_back(p);
-        p -= 2;
         current_log += log(p);
+        p -= 2;
     }
 
     std::cout << "CRT primes set up: " << primes_list.size()
