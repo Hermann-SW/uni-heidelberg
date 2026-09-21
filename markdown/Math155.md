@@ -44,7 +44,12 @@ Lectures:
 
 # [lecture 36](https://www.youtube.com/watch?v=8jnxAC9E4yE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=36): Kronecker symbol
 
--
+- all? a,b
+- nonzero b
+  - $\left(\frac{a}{b}\right)=$ Legendre, b prime > 0
+  - $\left(\frac{a}{2}\right)=+1/-1/0\text{ for }a\equiv \pm 1\mod 8/\pm 3\mod 8/0 \mod 2$
+  - $\left(\frac{a}{-1}\right)=+1/-1\text{ for } a\geq 0 / a<0$
+  - $\left(\frac{1}{0}\right)=\left(\frac{-1}{0}\right)=\left(\frac{0}{1}\right)=\left(\frac{0}{-1}\right)=1$, $\left(\frac{0}{b}\right)=\left(\frac{a}{0}\right)=0$ otherwise
 
 # [lecture 35](): Jacobi symbol
 
