@@ -4,7 +4,9 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
-[40](#lecture-41-more-examples-of-binary-quadratic-forms)
+[43](#lecture-43-gaussian-integers)
+[42](#lecture-42-examples-of-indefinite-binary-quadratic-forms)
+[41](#lecture-41-more-examples-of-binary-quadratic-forms)
 [40](#lecture-40-examples-of-positive-definite-forms)
 [39](#lecture-39-equivalence-of-binary-quadratic-forms)
 [38](#lecture-38-binary-quadratic-forms)
@@ -46,9 +48,79 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 40](): More examples of binary quadratic forms
+# [lecture 43](https://www.youtube.com/watch?v=MymWx2wJL7Y&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=43): Gaussian integers
 
 - 
+
+# [lecture 42](https://www.youtube.com/watch?v=ukbBe0ZvNp4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=42): Examples of indefinite binary quadratic forms
+
+- def. forms $3a^2\leq d$, indef. $4a^2\leq d$
+  - $\implies$ finite number of possibilities for a 
+  - $\implies$ finite for b (a$\neq$0)
+  - $\implies$ finite number of reduced forms of given d
+- d=0,1 mod 4 (0,1,4,5,8,9,...)
+- d=0: degenerate $\implies$ roots rational
+- d=1: a=0, b=$ \pm 1$: xy
+- d=4: a=0, $ \pm 1$:
+  - $\pm 2xy+cy^2=\pm y(2x+cy)$
+  - $x^2-y^2=(x-y)(x+y)$
+  - $-x^2+y^2$
+  - always happens for d square, rational $\frac{-b\pm \sqrt{d}}{2n}$, factorizes
+- d=5: a=+1: 4 equivalent to $x^2+xy-y^2$
+  - n rep. by some form of disc. d (x,y)=1 $\iff $ d square mod 4n
+  - n=p prime, 5 square mod p
+  - Q.R. p=5 or $p\equiv 1,4\mod 5$: $x^2+xy-y^2$ ($11=3^2+3\cdot 1-1^2$)
+- d=8: a=$\pm 1$, b=0: $x^2-2y^2$, $-x^2+2y^2$ equiv.
+  - n prim. rep. by $x^2-2y^2 \iff$ 8 square mod 4n (p odd)
+  - n=prime: $p\equiv \pm 1 \mod 8$
+  - So $p=x^2-2y^2$ solvable $\iff$ p=2 or $p\equiv \pm 1 \mod 8$ ($17=2\cdot 3^2-1^2=5^2-2\cdot 2^2$
+- definite forms
+  - 2 reduced forms equ. only if |a|=|b| of |a|=|c| (b -> -b)
+  - finite number of repr.
+- indefinite forms
+  - many nonequ. reduced forms
+  - infinite number of repr. ($x^2-2y^2=1$ has $\infty$ solutions)
+  - are there $\infty$ d with all forms equiv.? numerical evidence says yes
+
+# [lecture 41](https://www.youtube.com/watch?v=ymLXK06XErQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=41): More examples of binary quadratic forms
+
+- d=-15,-16,-19,-20,-23
+- d=-15:
+  - a=1, b=$\pm 1: x^2+xy+4y^2$, a=2, b=$\pm 1: 2x^2+xy+2y^2$
+  - prime p rep. by one of these $\iff$ -15 is square mod 4p
+  - p=3,5 divide d, funny, ignore
+  - $\left(\frac{-15}{p}\right)=+1$, $p\equiv 1,2,4,8 \mod 15$
+  - $\implies$ p rep. by either $x^2+xy+4y^2$ <- 0,1 mod 3
+    $2x^2+xy+2y^2$ <- 0,2 mod 3
+    - $p\equiv 1 mod 3 \implies p=x^2+xy+4y^2$
+    - $p\equiv 2 mod 3 \implies p=2x^2+xy+2y^2$
+- d=-16
+  - a=1,b=0: $x^2+4y^2$,  a=2,b=0: $2x^2+2y^2$
+  - n rep. by either form primitively $\iff$ -16 is square mod 4n
+  - n=p: -1 is square mod p, $p\equiv 1,2 \mod 4$
+  - $p\equiv 1\mod 4: p=x^2+4y^2$
+- d=-20
+  - a=1,b=0: $x^2+5y^2$, a=2,b=2: $2x^2+2xy+3y^2$
+  - -20 square mod 4n $\iff$ n prim. rep. by one of these
+  - n=prime: $p\neq 2,5$, -20 square mod 4n
+  - p=1,3,7,9 mod 20
+  - $p\equiv 1,9 \mod 20 \implies p=x^2+5y^2$
+  - $p\equiv 3,7 \mod 20 \implies p=2x^2+2xy+3y^2$
+- $x^2+ky^2$ with k=1,2,3,4,7 represent half of all primes
+- $x^2+5y^2$ represents 1/4 of all primes
+- d=-23
+  - a=1, b=$\pm 1: x^2+xy+6y^2$
+  - a=2, b=$\pm 1: 2x^2+xy+3y^2$ or $2x^2-xy+3y^2$ improperly equivalent
+  - p rep by one of there $\iff$ -23 is square mod 4p
+  - no identification which case happens by congruences
+- what can happen?
+  - only equ. class d=-3, 4, -7, -19
+  - d=-15, -20, >1 equ. class but can be separated by congruences
+  - >1 equ. class, hard to separate d=-23 (this cases takes over for big discriminants)
+- only one equ. class, d=-3, -4, -7, -8, -11, -19, -43, -67, -163 (all)
+- d=-163 (all forms are equ.)
+  - a=1, b=1: $x^2+xy+41y^2$ (unique)
+  - $e^{\pi \sqrt{163}=262537412640768743.99999999999925007259 (whenever unique equivalence class)
 
 # [lecture 40](https://www.youtube.com/watch?v=SpY0XjGF5Mk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=40): Examples of positive definite forms
 
