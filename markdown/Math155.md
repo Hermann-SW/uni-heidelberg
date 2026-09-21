@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[45](#lecture-45-dirichlet-series)
 [44](#lecture-44-pythagorean-triangles)
 [43](#lecture-43-gaussian-integers)
 [42](#lecture-42-examples-of-indefinite-binary-quadratic-forms)
@@ -49,7 +50,39 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 44](): Pythagorean triangles
+# [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
+
+- 
+
+# [lecture 44](https://www.youtube.com/watch?v=SCdDBYRrDtM&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=44): Pythagorean triangles
+
+- Pythagorean triangle, $3^2+4^2=5^2, 5^2+12^2=13^2, x^2+y^2=z^2$, x,y,z pairwise coprime
+- ternary quadratic form: $x^2+y^2-z^2=0$
+- $x^2+y^2=n$, n has primitive representation $\iff$ n has no factors p, $p\equiv 3\mod 4$, $4\nmid n$
+- only prime factors of primitive are 1 mod 4
+- method 2: $x^2+y^2=z^2$, geometrically, works for any rational t (PARI/GP):
+```pari
+$ gp -q
+? pt(t)=[(1-t^2)/(1+t^2), (2*t)/(1+t^2)];
+? pt(1/2)
+[3/5, 4/5]
+? pt(1/3)
+[4/5, 3/5]
+? pt(1/4)
+[15/17, 8/17]
+? 15^2+8^2==17^2
+1
+? pt(101/97)
+[-396/9805, 9797/9805]
+? (-396)^2+9797^2==9805^2
+1
+? 
+```
+- method 3: Gaussian integers
+- method 4: $x^2+y^2=z^2$, x,y,z coprime, z odd, x even, y odd, ...
+- Application of method 4
+  - to Fermat's last theorem: $x^n+y^n=z^n, n\geq 3, x,y,z\neq 0$
+  - n=4, "method of descent", elliptic curve
 
 # [lecture 43](https://www.youtube.com/watch?v=MymWx2wJL7Y&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=43): Gaussian integers
 
