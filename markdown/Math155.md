@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[32](#lecture-32-calculation-of-the-legendre-symbol)
 [31](#lecture-31-quadratic-residues) 
 [30](#lecture-30-fields-in-number-theory) 
 [29](#lecture-29-rings-in-number-theory) 
@@ -36,9 +37,30 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+# [lecture 32](): Calculation of the Legendre symbol
+
+-
+
 # [lecture 31](https://www.youtube.com/watch?v=Pz6CL0nRmGQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=31): Quadratic residues
 
-- 
+- $a\not\equiv0, x^2=a \mod p$ for some x, a is quadratic residue
+- $a\not\equiv0, x^2=a \mod p$ no solution, a is quadratic nonresidue
+
+$$
+\text{Legendre symbol, p odd prime: } \left(\frac{a}{p}\right)=\begin{cases}
+1 & \text{if a quadratic residue}\\
+-1 & \text{if a quadratic nonresidue}\\
+0 & \text{if }a\equiv 0\end{cases}
+$$
+
+- Euler $\left(\frac{a}{p}\right)\equiv a^{(p-1)/2}\mod p$
+- $\left(\frac{a}{p}\right)$ is homomorphism $(\mathbb{Z}/p\mathbb{Z})^\times\to \\{-1,1\\}$
+- $\left(\frac{-1}{p}\right)= +1/-1$ if $p\equiv 1/3 \mod 4$
+- $\left(\frac{2}{p}\right)= +1/-1$ if p= 1,7 / 3,5
+- Gauss's lemma:
+  - $\left(\frac{a}{p}\right)=(-1)^n$, n #residue classes
+  - $1 \equiv a^{(p-1)/2}(-1)^n \mod n$
+  - $\left(\frac{2}{p}\right)=(-1)^n -\left[p/4\right]$
 
 # [lecture 53](https://www.youtube.com/watch?v=P1I3_x0tk2A&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=53): Three calculators for number theorists 
 
