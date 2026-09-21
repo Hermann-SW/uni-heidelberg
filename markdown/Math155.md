@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[40](#lecture-40-examples-of-positive-definite-forms)
 [39](#lecture-39-equivalence-of-binary-quadratic-forms)
 [38](#lecture-38-binary-quadratic-forms)
 [37](#lecture-37-continued-fractions)
@@ -44,9 +45,88 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 38](https://www.youtube.com/watch?v=APgObNrZbjk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=39): Equivalence of binary quadratic forms
+# [lecture 40](https://www.youtube.com/watch?v=SpY0XjGF5Mk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=40): Examples of positive definite forms
 
 - 
+
+# [lecture 39](https://www.youtube.com/watch?v=APgObNrZbjk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=39): Equivalence of binary quadratic forms
+
+- Equivalence $ax^2+bxy+cy^2$
+  - $n=ax^2+bxy+cy^2=n$, (x,y)=1\iff some form $d=b^2-4ac$ is square mod 4n
+  - $x\to x+y$ does not change discriminant
+  - $x\to x+ny$, swap x and y, $x\to -x$
+  - $x\to Ax+By, y\to Cx+Dy$
+
+$$
+\begin{pmatrix}
+A & B\\
+C & D
+\end{pmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix}
+$$
+
+Inverse if det=$\pm 1$
+
+$$
+\begin{pmatrix}
+A & B\\
+C & D
+\end{pmatrix}
+\begin{pmatrix}
+D & -B\\
+-C & A
+\end{pmatrix}
+=\begin{pmatrix}
+\pm 1 & 0\\
+0 & \pm 1
+\end{pmatrix}
+$$
+
+Properly equivalent if AD-BC=+1, improperly ... =-1
+
+Matrix of new form
+
+$$
+\begin{pmatrix}
+x & y
+\end{pmatrix}
+\underset{=\pm 1}{\begin{pmatrix}
+A & B\\
+C & D
+\end{pmatrix}}
+\underset{d/4}{\begin{pmatrix}
+a & b/2\\
+b/2 & c
+\end{pmatrix}}
+\underset{=\pm 1}{\begin{pmatrix}
+A & B\\
+C & D
+\end{pmatrix}}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix}
+$$
+
+does not change discriminant.
+
+Problem: Classify forms of discriminant d up to EQUIVALENCE.
+
+Problem: can we find simplest for equivalent  
+(1) try make |a| as small as possible  
+(2) if |a| min, try to make |b| minimal
+
+Use 2 ops, x<->y or x->x+y
+
+Say form is REDUCED ($ax^2+bxy+cy^2$)  
+$\vert b \vert \leq \vert a \vert \leq \vert c \vert$.  
+Every form is equivalent to REDUCED one.
+
+Only finite number of reduced forms is positive definite.
+
 
 # [lecture 38](https://www.youtube.com/watch?v=13YcTRHzyDg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=38): Binary quadratic forms
 
