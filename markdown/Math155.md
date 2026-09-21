@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[38](#lecture-38-binary-quadratic-forms)
 [37](#lecture-37-continued-fractions)
 [36](#lecture-36-kronecker-symbol)
 [35](#lecture-35-jacobi-symbol)
@@ -42,11 +43,24 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-
-# [lecture 37](https://www.youtube.com/watch?v=MCPn7Bnuh2o&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=37): Continued fractions
+# [lecture 38](https://www.youtube.com/watch?v=13YcTRHzyDg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=38): Binary quadratic forms
 
 -
 
+# [lecture 37](https://www.youtube.com/watch?v=MCPn7Bnuh2o&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=37): Continued fractions
+
+- polynomial $f(x,,y,z,\dots)=0$
+  - degrees 1/2/3/4 linear/quadratic/cubic/quadric
+  - #variables 2/3/... binary/ternary/..
+  - quadratic binary form
+    - $ax^2+bxy+cy^2+dx+ey+f=0$, strike out dx, ey
+    - $ax^2+bxy+cy^2=$ constant
+    - Pellian equation: $x^2-Dy^2=1$
+    - Brahmagupta 650 AD.
+      - $x^2-92y^2=1$, find rational x/y close to $\sqrt{92}$
+      - $\pi=\dots$, $\sqrt{23}=4+\frac{1}{1+\frac{1}{3+\frac{1}{1+\frac{1}{8+\dots}}}}$
+      - shows how to get solutions with example calculations only
+    
 # [lecture 36](https://www.youtube.com/watch?v=8jnxAC9E4yE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=36): Kronecker symbol
 
 - all? a,b
@@ -71,9 +85,9 @@ Lectures:
     - -1 if p does not split; 3
     - 0 if 0 = square; 2=(1+i)(1-i)
   - $L(s) = \sum_n \left(\frac{D}{n}\right) \frac{1}{n^s}$
-  - $L(s)=\frac{1}{1^s}-\frac{1}{3^s}+\frac{1}{5^s}-\frac{1}{7^s}+\dots$
-    $= \frac{1}{1+3^{-s}}\cdot\frac{1}{1-5^{-s}}\cdot\frac{1}{1+7^{-s}}\cdot\frac{1}{1-11^{-s}}\cdot\dots$
-    $=\prod_p \frac{1}{1-\chi(p)p^{-s}}; \chi(p)=\left(\frac{D}{p}\right)=\left(\frac{-4}{p}\right)$
+  - $L(s)=\frac{1}{1^s}-\frac{1}{3^s}+\frac{1}{5^s}-\frac{1}{7^s}+\dots$  
+    $= \frac{1}{1+3^{-s}}\cdot\frac{1}{1-5^{-s}}\cdot\frac{1}{1+7^{-s}}\cdot\frac{1}{1-11^{-s}}\cdot\dots$  
+    $=\prod_p \frac{1}{1-\chi(p)p^{-s}}; \chi(p)=\left(\frac{D}{p}\right)=\left(\frac{-4}{p}\right)$  
 - application: $L(s)\zeta(s)$, ...
 
  
