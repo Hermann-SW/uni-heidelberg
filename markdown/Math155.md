@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[32](#lecture-33-quadratic-reciprocity)
 [32](#lecture-32-calculation-of-the-legendre-symbol)
 [31](#lecture-31-quadratic-residues) 
 [30](#lecture-30-fields-in-number-theory) 
@@ -37,9 +38,21 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 32](): Calculation of the Legendre symbol
+# [lecture 33](): Quadratic reciprocity
 
 -
+
+# [lecture 32](https://www.youtube.com/watch?v=MxwdmjtK1BQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=32): Calculation of the Legendre symbol
+
+- $\left(\frac{-2}{p}\right)=\left(\frac{-1}{p}\right)\left(\frac{2}{p}\right)$, +1/-1 if p is 1,3/5,7 mod 8
+- infinitely many primes $\equiv 7 \mod 8$
+- infinitely many primes $\equiv 3 \mod 8$
+- infinitely many primes $\equiv 5 \mod 8$, exercise
+- $\left(\frac{3}{p}\right)=?$, +1/-1 if p=1,11 / 5,7 mod 12
+- application to Fermat numbers:  
+  $p=2^{2^n}+1$ is prime $\iff 3^{(p-1)/2}\equiv -1 \mod p$
+- $\left(\frac{5}{p}\right)=+1 \iff p=1,9,11,19 \mod 20\iff p=1,4 \mod 5$
+- $\left(\frac{5}{p}\right)=+1 \iff p=1,5,19,23 \mod 24$
 
 # [lecture 31](https://www.youtube.com/watch?v=Pz6CL0nRmGQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=31): Quadratic residues
 
