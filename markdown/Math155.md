@@ -4,7 +4,8 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
-[32](#lecture-33-quadratic-reciprocity)
+[34](#lecture-34-gauss-sums)
+[33](#lecture-33-quadratic-reciprocity)
 [32](#lecture-32-calculation-of-the-legendre-symbol)
 [31](#lecture-31-quadratic-residues) 
 [30](#lecture-30-fields-in-number-theory) 
@@ -38,9 +39,15 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 33](): Quadratic reciprocity
+# [lecture 34](https://www.youtube.com/watch?v=arL7oQV4asY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=34): Gauss sums
 
 -
+
+# [lecture 33](https://www.youtube.com/watch?v=k8qJaV7qGL4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=33): Quadratic reciprocity
+
+- $\left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=(-1)^{(p-1)/2\cdot(q-1)/2}$
+- example calculation of $\left(\frac{1001}{99991}\right)=+1$, 1001 is square, $38521^2$
+- long proof of above
 
 # [lecture 32](https://www.youtube.com/watch?v=MxwdmjtK1BQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=32): Calculation of the Legendre symbol
 
