@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[37](#lecture-37-continued-fractions)
 [36](#lecture-36-kronecker-symbol)
 [35](#lecture-35-jacobi-symbol)
 [34](#lecture-34-gauss-sums)
@@ -42,6 +43,10 @@ Lectures:
 [1](#lecture-1)
 
 
+# [lecture 37](https://www.youtube.com/watch?v=MCPn7Bnuh2o&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=37): Continued fractions
+
+-
+
 # [lecture 36](https://www.youtube.com/watch?v=8jnxAC9E4yE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=36): Kronecker symbol
 
 - all? a,b
@@ -50,7 +55,28 @@ Lectures:
   - $\left(\frac{a}{2}\right)=+1/-1/0\text{ for }a\equiv \pm 1\mod 8/\pm 3\mod 8/0 \mod 2$
   - $\left(\frac{a}{-1}\right)=+1/-1\text{ for } a\geq 0 / a<0$
   - $\left(\frac{1}{0}\right)=\left(\frac{-1}{0}\right)=\left(\frac{0}{1}\right)=\left(\frac{0}{-1}\right)=1$, $\left(\frac{0}{b}\right)=\left(\frac{a}{0}\right)=0$ otherwise
+- properties
+  - $\left(\frac{a}{b}\right)=¸pm 1$ if (a,b)=1, 0 if not
+  - if $a\equiv 0,1 \mod 4$ then $\left(\frac{a}{b+na}\right)=\left(\frac{a}{b}\right)$  
+    $a\equiv 2 \mod 4$: period 4a  
+    $a\equiv 3 \mod 4$: mess
+  - $\left(\frac{a_1a_2}{b}\right)=\left(\frac{a_1}{b}\right)\left(\frac{a_2}{b}\right)$, for $a,b\neq 0$
+  - $\left(\frac{a}{b_1b_2}\right)=\left(\frac{a}{b_1}\right)\left(\frac{a}{b_2}\right)$
+  - $\left(\frac{-1}{0}\right)\left(\frac{-1}{-1}\right)\neq\left(\frac{-1}{0\cdot (-1)}\right)$
+- quadratic reprocity is mess, best: only for a,b odd > 0
+- 2D table demonstrating where Legendre/Jacobi/Kronecker values are
+- Dirichlet L series of imaginary quadratic field, $\mathbb{Z}[i]$
+  - $$\left(\frac{D}{p}\right)$, discriminant D=0,1 mod 4, p odd primes
+    - +1 if p splits as product of 2 distinct primes
+    - -1 if p does not split; 3
+    - 0 if 0 = square; 2=(1+i)(1-i)
+  - $L(s) = \sum_n \left(\frac{D}{n}\right) \frac{1}{n^s}$
+  - $L(s)=\frac{1}{1^s}-\frac{1}{3^s}+\frac{1}{5^s}-\frac{1}{7^s}+\dots$
+    $= \frac{1}{1+3^{-s}}\cdot\frac{1}{1-5^{-s}}\cdot\frac{1}{1+7^{-s}}\cdot\frac{1}{1-11^{-s}}\cdot\dots$
+    $=\prod_p \frac{1}{1-\chi(p)p^{-s}}; \chi(p)=\left(\frac{D}{p}\right)=\left(\frac{-4}{p}\right)$
+- application: $L(s)\zeta(s)$, ...
 
+ 
 # [lecture 35](): Jacobi symbol
 
 - Legendre symbol $\left(\frac{a}{b}\right)$ for b prime
