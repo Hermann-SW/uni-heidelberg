@@ -52,7 +52,28 @@ Lectures:
 
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
-- 
+- Johan Petr Gustav Lejeune Dirichlet
+- Generating function: $c_0, c_1, c_2, \dots$
+- $f(x)=c_0+c_1x+c_2x^2+\dots$
+- $f_{n+2}=f_{n+1}+f_n, f_0=0,f_1=1$ (0,1,1,2,3,5,8,13,...)
+
+$$
+\begin{eqnarray*}
+F(x) & = & f_0x^0 &+& f_1x^1 &+& f_2x^2 &+&\dots\\
+xF(x) & = &       & & f_0x^1 &+& f_1x^2 &+&\dots\\
+x^2F(x) & = &     & &        & & f_0x^2 &+&\dots\\
+(1-x-x^2)F(x) &=& & &     x\\
+F(x) & = & \frac{x}{1-x-x^2}\\
+     & = & \frac{x}{(1-\varphi x)(1-(-\varphi)x)} & &  & &\varphi=\frac{\sqrt{5}+1}{2}\\
+     & = & \frac{1}{\sqrt{5}}\left(\frac{1}{1-\varphi x}-\frac{1}{1-(-\varphi)x}\right)\\
+     & = & \frac{1}{\sqrt{5}} \sum_n x_n\left(\varphi^n-(1-\varphi)^n\right)\\
+f_n  & = & \frac{1}{\sqrt{5}}\left(\varphi^n-(1-\varphi)^n\right) 
+\end{eqnarray*}
+$$
+
+- $\varphi(n)$
+  - previous approach does not work
+  - $f(s)=\frac{c_1}{1^s}+\frac{c_1}{2^s}+\frac{c_3}{3^s}+\dots$
 
 # [lecture 44](https://www.youtube.com/watch?v=SCdDBYRrDtM&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=44): Pythagorean triangles
 
@@ -79,6 +100,16 @@ $ gp -q
 ? 
 ```
 - method 3: Gaussian integers
+```pari
+? gi(a,b)=a*b;
+? gi(3/5+4/5*I,3/5+4/5*I)
+-7/25 + 24/25*I
+? gi(3/5+4/5*I,-7/25+24/25*I)
+-117/125 + 44/125*I
+? (-117)^2+44^2==125^2
+1
+? 
+```
 - method 4: $x^2+y^2=z^2$, x,y,z coprime, z odd, x even, y odd, ...
 - Application of method 4
   - to Fermat's last theorem: $x^n+y^n=z^n, n\geq 3, x,y,z\neq 0$
