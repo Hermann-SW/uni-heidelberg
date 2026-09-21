@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[36](#lecture-36-kronecker-symbol)
 [35](#lecture-35-jacobi-symbol)
 [34](#lecture-34-gauss-sums)
 [33](#lecture-33-quadratic-reciprocity)
@@ -40,13 +41,31 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+
+# [lecture 36](https://www.youtube.com/watch?v=8jnxAC9E4yE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=36): Kronecker symbol
+
+-
+
 # [lecture 35](): Jacobi symbol
 
-- 
+- Legendre symbol $\left(\frac{a}{b}\right)$ for b prime
+- Jacobi symbol $\left(\frac{a}{b}\right)$ for b odd positive
+- Kronecker symbol $\left(\frac{a}{b}\right)$ for all integers a,b
+- Jacobi: mutiplicative in a, b; (-1/b), (2/b), (a+nb/b)=(a/b), all easy
+- proof for law of reciprocity
+- Warning: (a/b)=+1 does NOT imply a square
+- No need to factor a for Jacobi reciprocity!
+- compute is "Euclid", but take out factors of 2, keep track of signs
+- Euclid without division, fast
+- application, primality test that is a bit faster
+- 1-step definition of Legendre symbol? Yes, Zolotarev, sign of permutation
+- cycle of even length, odd permutation
+- ...
 
 # [lecture 34](https://www.youtube.com/watch?v=arL7oQV4asY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=34): Gauss sums
 
 - gauss sum, gamma function, similarity
+- another proof of quadratic reciprocity (there are 300 proofs)
 
 # [lecture 33](https://www.youtube.com/watch?v=k8qJaV7qGL4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=33): Quadratic reciprocity
 
