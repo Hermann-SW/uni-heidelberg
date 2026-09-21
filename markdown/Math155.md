@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[44](#lecture-44-pythagorean-triangles)
 [43](#lecture-43-gaussian-integers)
 [42](#lecture-42-examples-of-indefinite-binary-quadratic-forms)
 [41](#lecture-41-more-examples-of-binary-quadratic-forms)
@@ -48,10 +49,46 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+# [lecture 44](): Pythagorean triangles
+
 # [lecture 43](https://www.youtube.com/watch?v=MymWx2wJL7Y&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=43): Gaussian integers
 
-- 
+- relation of Gaussian integers to binary quadratic forms
+- $ax^2+bxy+cy^2 = n$ (prime)
+- $p=x^2+y^2\iff p=2, p\equiv 1\mod 4$
+- $n=x^2+y^2$, which integers n, in how many ways, $n\geq 0$, $d=b^2-4ac=-4$
+- n repr. primitively by $x^2+y^2 \iff$ d=-4 is a square mod 4n
+- n=p^k
+  - $p\equiv 3\mod 4$; no solutions
+  - $p\equiv 1\mod 4$; ok
+  - p=2: -4 square mod 8, but not mod 16; n=2 but not 4
+  - n prim. repr. by $x^2+y^2 \iff $ all primes dividing n are 1,2 mod 4
+    - $2^2$ not divide n
+  - non primitive representations? $8=2^2+2^2$ has non primitive representation, but no primitive
+    - (x,y)=g, gX=x, gY=y
+    - $g^2(X^2+Y^2)$
+    - g=square $\times$ something with prim. repr.
+    - $\iff$ all primes dividing n that are $3\mod 4$ divide n to an even power
+    - if m,n both sums of 2 squares, so is mn
+    - Gaussian integer: $m+ni, m,n \in \mathbb{Z}, i^2=-1$
+    - $76500=2^3\cdot 5^3\cdot 3^2\cdot 17=(1+i)^2(1-i)^2(2+i)^2(2-i)^23^2(4+i)^2(4-i)^2=(m+ni)(m-ni)$
+    - $m+ni=i(1+i)^2(2+i)^33(4-i)=-114-252i; 76500=114^2+(252)^2$
+  - off topic, sum of 4 squares, similar product, i,j,k Hamiltonian quaternions
+  - nothing similar for sum of 3 squares
+- suppose $p\equiv 1\mod 4$, find x,y with $p=x^2+y^2$
+  - slow trial and error
+  - fast: first solve $x^2\equiv -1 \mod p$, probabilistic, choose g, try $g^{(p-1)/4}$
+  - $x^2+1=pn$, (x+i)(x-i)=pn, p->(y+iz)(y-iz)
+  - determine (x+i,p) in Gaussian integers
+  - (y+iz) p=(y+iz)(y-iz), so $p=x^2+y^2$
+  - p=13, first solve $x^2\equiv -1 \mod 13$, x=5
+  - $5^2+1=13\cdot 2, (5+i)(5-i)=13$
+  - (5+i,13), Euclid, gcd=3-2i, $13=3^2+2^2$
+- description of Euclid for Gaussian integers
+- Euclid $\implies$ Gaussian integers have unique factorization
+- How many solutions to $x^2+y^2=n$?
 
+ 
 # [lecture 42](https://www.youtube.com/watch?v=ukbBe0ZvNp4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=42): Examples of indefinite binary quadratic forms
 
 - def. forms $3a^2\leq d$, indef. $4a^2\leq d$
