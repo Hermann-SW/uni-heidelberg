@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[35](#lecture-35-jacobi-symbol)
 [34](#lecture-34-gauss-sums)
 [33](#lecture-33-quadratic-reciprocity)
 [32](#lecture-32-calculation-of-the-legendre-symbol)
@@ -39,9 +40,13 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+# [lecture 35](): Jacobi symbol
+
+- 
+
 # [lecture 34](https://www.youtube.com/watch?v=arL7oQV4asY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=34): Gauss sums
 
--
+- gauss sum, gamma function, similarity
 
 # [lecture 33](https://www.youtube.com/watch?v=k8qJaV7qGL4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=33): Quadratic reciprocity
 
