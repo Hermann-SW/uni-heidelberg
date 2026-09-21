@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[39](#lecture-39-equivalence-of-binary-quadratic-forms)
 [38](#lecture-38-binary-quadratic-forms)
 [37](#lecture-37-continued-fractions)
 [36](#lecture-36-kronecker-symbol)
@@ -43,10 +44,54 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+# [lecture 38](https://www.youtube.com/watch?v=APgObNrZbjk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=39): Equivalence of binary quadratic forms
+
+- 
+
 # [lecture 38](https://www.youtube.com/watch?v=13YcTRHzyDg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=38): Binary quadratic forms
 
--
-
+- $ax^2+bxy+cy^2=n$
+  - $ax^2+bxy+cy^2=0$ over $\mathbb{C}$
+  - $\frac{x}{y}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$, term under sqrt discriminant
+    - $d=b^24ac$
+     - d>0: roots x/y real, distinct   
+     - d=0: roots are real   (not interesting)
+     - d<0: roots non-real
+    - possible values $d\equiv b^2\mod 4 \implies d\equiv 0,1\mod 4$
+    - $x^2-ny^2$, d=4n
+    - $x^2+xy-ny^2$, d=4n+1
+    - -12, -11, -8, -7, -4, -3, 0, 1, 4, 5, ...
+    -  Kronecker $\left(\frac{d}{b}\right)$
+      - $\geq 0$, $x^2+y^2$, d=-4, <0, definit
+      - $<0, >0$, $x^2-2y^2$, d=8, >0, indefinit
+      - $\leq 0$, $-x^2-2y^2$, d=-8, <0, definit
+    - $ax^2+bxy+cy^2$, $x\to x+ky$ d unchanged b^2-4ac
+      - $ax^2+cy^2$, d=-4ac
+        - $>0 \implies$ indefinite
+        - $<0 \implies$ definite
+    - $ax^2+bxy+cy^2=n$ represents n if (x,y)=1
+      - $x^2+y^2$ represents $5=1^2+2^2$ (primitive)
+      - $x^2+y^2$ not represents -1
+      - $x^2+y^2$ represents $8=2^2+2^2$ (not primitive)
+      - $x^2+4y^2$ represents 4 in 2 ways:
+        - $4=2^2+4\cdot 0^2$ (not primitive)
+        - $4=0^2+4\cdot 1^2$ (primitive)
+  - Theorem: If n is primitively represented by $ax^2+bxy+cy^2, d=b^2-4ac$,  
+    then d is square mod 4n
+  - Converse?
+    - f d is square mod 4n, is n represented (primitively)?
+    - NO: $x^2+5y^2$, d=-20 is square mod $4\times 3$ (n=3)
+      but x^2+5y^2 does not represent n
+  - Weak converse
+    - If d is square mod 4n, then n is primitively represented by SOME form
+      of discriminant d
+  - Following equivalent  
+    (1) d is square mod 4n  
+    (2) n is primitively represented by some form of discriminant d
+    
+    
+  
+      
 # [lecture 37](https://www.youtube.com/watch?v=MCPn7Bnuh2o&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=37): Continued fractions
 
 - polynomial $f(x,,y,z,\dots)=0$
