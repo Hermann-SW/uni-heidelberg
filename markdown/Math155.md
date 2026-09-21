@@ -4,6 +4,7 @@
 
 Lectures:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[40](#lecture-41-more-examples-of-binary-quadratic-forms)
 [40](#lecture-40-examples-of-positive-definite-forms)
 [39](#lecture-39-equivalence-of-binary-quadratic-forms)
 [38](#lecture-38-binary-quadratic-forms)
@@ -45,9 +46,39 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-# [lecture 40](https://www.youtube.com/watch?v=SpY0XjGF5Mk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=40): Examples of positive definite forms
+# [lecture 40](): More examples of binary quadratic forms
 
 - 
+
+# [lecture 40](https://www.youtube.com/watch?v=SpY0XjGF5Mk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=40): Examples of positive definite forms
+
+- which primes can represented by $p=x^2+y^2$, $p=x^2+2y^2$, $p=x^2+3y^2$?
+- n prim. rep. by some form ... $\iff$ d square mod 4n
+- any form equivalent to reduced form $|b|\leq|a|\leq|c|$
+- all form positive definite
+- d=-3,-4,-7,-8,-11,-12,-15
+  - d=-3  any pos. def. form d=-3 is equ. to $x^2+xy+y^2$
+    - n rep. by $x^2+xy+y^2$ (x,y)=1 $\iff$ d=-3 is square mod n
+    - n=p prime, p is of form $x^2+xy+y^2 \iff\text{ -3 is square mod p }\iff p\equiv 0,1 \mod 3$
+    - So p (prime) is of form $x^2+3y^2 \iff p\equiv 0,1 \mod 3$
+  - d=-4  any pos. def. form d=-4 is equ. to $x^2+y^2$
+    - n rep. by $x^2+y^2$ (x,y)=1 $\iff$ -4 is square mod 4n
+    - n=p prime, p is of form $x^2+xy+y^2 \iff\text{ -4 is square mod p }\iff p\equiv 1,2 \mod 4$
+    - Fermat: p (prime) is of form $x^2 +y^2\iff p\equiv 1,2\mod 4$
+  - d=-7  any pos. def. form -7 is equ. to $x^2+xy+2y^2$
+    - n rep. by $x^2+xy+2y^2$ (x,y)=1 $\iff$ -7 is square mod 4n
+    - n=p prime, p is of form $x^2+xy+2y^2 \iff\text{ -7 is square mod p }\iff p\equiv 0,1,2,4 \mod 7$
+  - d=-8  any pos. def. form -8 is equ. to $x^2+2y^2$
+    - n rep. by $x^2+2y^2$ (x,y)=1 $\iff$ -8 is square mod 4n
+    - n=p prime, p is of form $x^2+xy+2y^2 \iff\text{ -7 is square mod p }\iff p\equiv 1,3 \mod 8$
+  - d=-11  any pos. def. form -11 is equ. to $x^2+xy+3y^2$
+    - n rep. by $x^2+xy+3y^2$ (x,y)=1 $\iff$ -11 is square mod 4n
+    - n=p prime, p is of form $x^2+xy+3y^2 \iff\text{ -11 is square mod p }\iff p\equiv 0,1,4,9.5.3 \mod 11$
+  - d=-12  any pos. def. form -12 is equ. to $x^2+xy+3y^2$
+    - a=1,b=0,c=3: $x^2+3y^2$ (sometimes odd), a=2,b=-2,0,2: $2x^2+2xy+2y^2$ (even)
+    - any pos. def. form d=-12 is equ. to one of these forms
+    - n rep. by at least one of $x^2+3y^2, 2x^2+2xy+2y^2$ (x,y)=1 $\iff$ -12 is square mod 4n
+    - if n is odd, -12 square mod 4n $\implies n=x^2+3y^2$ (n=p: $p\equiv 0,1 \mod 3$)
 
 # [lecture 39](https://www.youtube.com/watch?v=APgObNrZbjk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=39): Equivalence of binary quadratic forms
 
