@@ -2,7 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
-Lectures:  
+Lecture summaries:  
 [53](#lecture-53-three-calculators-for-number-theorists)
 [45](#lecture-45-dirichlet-series)
 [44](#lecture-44-pythagorean-triangles)
