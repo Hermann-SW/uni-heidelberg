@@ -879,6 +879,13 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - sum of three or four squares, three cubes
 - Fermat: If p is prime, then $a^p\equiv a \mod p$
 - fast modular exponentiation
+- Carmichael numbers (see code in remarks below)
+- probabilistic prime number test
+- if $p\vert n^2+1$, then $p=2$ or $p\equiv 1 \mod 4$
+----
+Remarks:
+- While [SAT](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) is NP-complete,
+[XOR-SAT](https://en.wikipedia.org/wiki/XOR-SAT) is in P since an XOR-SAT formula can also be viewed as a system of linear equations mod 2 (congruences), and can be solved in cubic time by Gaussian elimination.
 - Carmichael numbers [31:09 min](https://youtu.be/E1tikA1GEVU?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=1869)
   - [carm10e24.bin](https://stamm-wilbrandt.de/carm10e24.bin) contains all 308,279,939 Carmichael numbers below $10^{24}$ (converted and stored binary (11.45GB) for PARI/GP fast read, original file from [Jonathan Webster's website](https://blue.butler.edu/~jewebste/)).
 [[carm10e22.bin](https://stamm-wilbrandt.de/carm10e22.bin) / 49,679,870 Carmichael numbers below $10^{22}$ (1.82GB)]]
@@ -911,8 +918,6 @@ cpu time = 39,198 ms, real time = 39,209 ms.
 ? 
 ```
 
-- probabilistic prime number test
-- if $p\vert n^2+1$, then $p=2$ or $p\equiv 1 \mod 4$
 
 ## [lecture 8](https://www.youtube.com/watch?v=KIvuGT5V1Fg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=8&pp=iAQB): Applications of binomial coefficients
 
