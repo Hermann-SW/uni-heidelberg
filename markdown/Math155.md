@@ -4,6 +4,7 @@
 
 My lecture summaries:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[46](#lecture-46-products-of-dirichlet-series)
 [45](#lecture-45-dirichlet-series)
 [44](#lecture-44-pythagorean-triangles)
 [43](#lecture-43-gaussian-integers)
@@ -56,6 +57,10 @@ My example code (with lecture number):
 | Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) | p-1 primality test ([23](#lecture-23-primitive-roots)) | Cryptography ([18](#lecture-18-cryptography)) |
 | Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) | Carmichael numbers ([9](#lecture-9-congruences)) | [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm))|
 
+# [lecture 46](https://www.youtube.com/watch?v=lAAXBUuU9wY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=46): Products of Dirichlet series
+
+- 
+
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
 - Johan Petr Gustav Lejeune Dirichlet
@@ -77,10 +82,54 @@ f_n  & = & \frac{1}{\sqrt{5}}\left(\varphi^n-(1-\varphi)^n\right)
 \end{eqnarray*}
 $$
 
-- $\varphi(n)$
-  - previous approach does not work
-  - $f(s)=\frac{c_1}{1^s}+\frac{c_1}{2^s}+\frac{c_3}{3^s}+\dots$
+- $1+x+x^2+\dots=\frac{1}{1-x}$
+- $\zeta(s)=\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\dots$
+  - converges for $Re(\zeta)>1$
+  - $\zeta(s)=\frac{1}{1-2^s}\frac{1}{1-3^s}\frac{1}{1-5^s}\dots=\prod_p\frac{1}{1-p^s}$
+- $n^k$: $\frac{1}{1^s}+\frac{2^k}{2^s}+\frac{3^k}{3^s}+\dots=\zeta(s-k)=\prod_p\frac{1}{1-p^{k-s}}$
+- $\varphi(n)$: Euler factor at p, $\frac{1}{1^s}+\frac{\varphi(p)}{p^s}+\frac{\varphi(p^2)}{p^{2s}}+\dots=\frac{1-p^{-s}}{1-p^{1-s}}$
+  - $\sum\varphi(n)n^s=\prod_p\frac{1-p^{-s}}{1-p^{1-s}}=\frac{\zeta(s-1)}{\zeta(s)}$
+- $\tau(n)$=#divisors of n
+  - $\frac{1}{1^s}+\frac{\tau(2)}{2^s}+\frac{\tau(3)}{3^s}+\dots=\frac{1}{(1-p^{-s})^2}$
+  - $\prod_p\frac{1}{(1-p^{-s})^2}=\zeta(s)^2$
+- $\sigma(n) = \sum$ divisors of n
+  - $\sigma(p^k)=1+p+p^2+\dots+p^k=\frac{p^{k+1}-1}{p-1}$
+  - $\frac{1}{1^s}+\frac{1+p}{p^s}+\frac{1+p+p^2}{p^{2s}}+\dots=\frac{1}{(1-p^{-s})(1-p^{1-s})}$
+  - $\sum\frac{\sigma(n)}{n^s}=\prod_p\frac{\sigma(n)}{n^s}=\zeta(s)\zeta(s-1)$
+  - $\sigma_{k}(n)=\sum_{d\mid n }d^k$
+  - $\sum\frac{\sigma_k(n)}{n^s}=\zeta(s)\zeta(s-k)$
+  - $\sigma_o(n)=\tau(n), \sigma_1(n)=\sigma(n)$
+- Moebius function
+ 
+$$  
+\mu(n) = \begin{cases} 0 & \text{if n divisible by square >1}\\
+(-1)^k & \text{if n product of k distinct primes}\end{cases}
+$$
+  - $1+\frac{\mu(p)}{p^s}+\frac{\mu(p^2)}{p^{2s}}+\dots=1-\frac{1}{p^s}$
+  - $\sum\frac{\mu(n)}{n^s}=\prod_p(1-p^{-s})=\frac{1}{\zeta(s)}$
+- $\lambda(n)=(-1)^{\text{number of prime factors of} n}$
+  - $\sum\frac{\lambda(n)}{n^s}=\prod_p\frac{1}{1+p^{-s}}=\frac{\zeta(2s)}{\zeta(s)}$
 
+$$
+\chi(n) = \begin{cases} +1 & \text{if }n\equiv 1\mod 4\\
+-1 & \text{if }n\equiv 3\mod 4\\
+0 & if n even\end{cases}
+$$
+
+(simplest example of Dirichlet character)
+  - $L(s)=\sum\frac{\chi(n)}{n^s}=\prod_p\frac{1}{1-\chi(p)p^{-s}}$
+
+$$
+\Lambda(n)=\begin{cases} log(p) & \text{if }n=p^k\\
+0 & \text{otherwise}\end{cases}
+$$
+
+- not multiplicative!
+- $\frac{\Lambda(1)}{1^s}+\frac{\Lambda(2)}{2^s}+\frac{\Lambda(3)}{3^s}+\dots=\frac{\zeta'(s)}{\zeta{s}}=\frac{d}{ds}\log\zeta(s)$
+- $\zeta(s)=\prod_p\frac{1}{1-p^{-s}}$
+- $\log \zeta(s)=\prod_p\log(1-p^{-s})=-\sum_p p^{-s}+\frac{p^{-2s}}{2}+\dots$
+- $\frac{d}{ds}: \sum_n\Lambda(n)n^{-s}$
+  
 # [lecture 44](https://www.youtube.com/watch?v=SCdDBYRrDtM&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=44): Pythagorean triangles
 
 - Pythagorean triangle, $3^2+4^2=5^2, 5^2+12^2=13^2, x^2+y^2=z^2$, x,y,z pairwise coprime
