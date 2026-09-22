@@ -981,9 +981,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
     - #steps ≤ log(n)
     - formula F_n, guess->Ansatz
     - phi, golden ratio
-
-----
-- observation: divisors in Euclid's algorithm determne continued fraction
+- observation: divisors in Euclid's algorithm determine continued fraction
 - Euclid's algorithm finitely many steps implies rational numbers are finite continued fractions
 
 ## [lecture 2](https://www.youtube.com/watch?v=mduJOLdKrak&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=2&pp=iAQB): Survey
