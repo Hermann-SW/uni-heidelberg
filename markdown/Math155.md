@@ -2,7 +2,7 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
-Lecture summaries:  
+My lecture summaries:  
 [53](#lecture-53-three-calculators-for-number-theorists)
 [45](#lecture-45-dirichlet-series)
 [44](#lecture-44-pythagorean-triangles)
@@ -50,7 +50,7 @@ Lecture summaries:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
-Example code (with lecture number):
+My example code (with lecture number):
 ||||
 |--------------------------|--------------------------|----------------------|
 | Pythagorean triangles (44) | p-1 primality test (23) | Cryptography (18) |
