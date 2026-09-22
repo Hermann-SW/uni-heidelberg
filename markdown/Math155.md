@@ -66,19 +66,19 @@ My example code (with lecture number):
 
 - product of power series, $c_n=\sum_i a_i b_{n-i}$ named convolution
 - Moebius inversion formula
-- $\zeta(s)L(s)=\frac{1}{4}\sum_n\frac{R(n)}{n^s}
+- $\zeta(s)L(s)=\frac{1}{4}\sum_n\frac{R(n)}{n^s}$
   - Zeta function of Gaussian integers 
   - R(n) = #solutions to n=$a^2+b^2$
 
 $$
 = \begin{cases} \frac{1}{1-2^s} & p=2 \\
-\frac{1}{(1-p^{-s})^s} & p\equiv 1 \mod 4 }}
-\frac{1}{1-p^{-2s}} & p\equiv 1 \mod 4 }}
+\frac{1}{(1-p^{-s})^s} & p\equiv 1 \mod 4 \\
+\frac{1}{1-p^{-2s}} & p\equiv 3 \mod 4 \end{cases}
 $$
 
 - derivative of Dirichlet series
 - Selberg's identity
-  - $\Lambda(n)\log n+\sum_{d\mid n}\Lambda(d)\Lambda(\frac{n}{d})=\sum_{d\mid n}\mu(d)\left(\log \frac{n}{d}\right)^2
+  - $\Lambda(n)\log n+\sum_{d\mid n}\Lambda(d)\Lambda(\frac{n}{d})=\sum_{d\mid n}\mu(d)\left(\log \frac{n}{d}\right)^2$
   - nightmare to prove otherwise
   - with generating function trivial to prove 
 
