@@ -302,7 +302,7 @@ cpu time = 39,198 ms, real time = 39,209 ms.
 - $a^{\varphi(m)}\equiv 1 \mod m, (a,m)=1$
 - Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
 - primitive roots
-- last two digits of $7^403$
+- last two digits of $7^{403}$
 - last digit of $7^{7^{7^7}}$
 
 ## [lecture 12](https://www.youtube.com/watch?v=3JBaDZqtgug&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=12&pp=iAQB): Wilsons theorem
