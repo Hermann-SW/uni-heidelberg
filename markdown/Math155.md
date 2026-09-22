@@ -2,397 +2,863 @@
 
 - Youtube lecture series [spring 2022](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1)
 
-My lecture summaries:  
-[53](#lecture-53-three-calculators-for-number-theorists)
-[52](#lecture-52-nonvanishing-of-L-series-at-s1)
-[51](#lecture-51-proof-of-dirichlets-theorem)
-[50](#lecture-50-dirichlet-characters)
-[49](#lecture-49-dirichlets-theorem)
-[48](#lecture-48-proof-of-the-prime-number-theorem)
-[47](#lecture-47-the-prime-number-theorem)
-[46](#lecture-46-products-of-dirichlet-series)
-[45](#lecture-45-dirichlet-series)
-[44](#lecture-44-pythagorean-triangles)
-[43](#lecture-43-gaussian-integers)
-[42](#lecture-42-examples-of-indefinite-binary-quadratic-forms)
-[41](#lecture-41-more-examples-of-binary-quadratic-forms)
-[40](#lecture-40-examples-of-positive-definite-forms)
-[39](#lecture-39-equivalence-of-binary-quadratic-forms)
-[38](#lecture-38-binary-quadratic-forms)
-[37](#lecture-37-continued-fractions)
-[36](#lecture-36-kronecker-symbol)
-[35](#lecture-35-jacobi-symbol)
-[34](#lecture-34-gauss-sums)
-[33](#lecture-33-quadratic-reciprocity)
-[32](#lecture-32-calculation-of-the-legendre-symbol)
-[31](#lecture-31-quadratic-residues) 
-[30](#lecture-30-fields-in-number-theory) 
-[29](#lecture-29-rings-in-number-theory) 
-[28](#lecture-28-products-of-groups)  
-[27](#lecture-27-groups-and-number-theory) 
-[26](#lecture-26-roots-of-polynomials-modulo-a-prime) 
-[25](#lecture-25-quadratic-equations-mod-p) 
-[24](#lecture-24-primitive-roots-for-prime-powers) 
-[23](#lecture-23-primitive-roots)
-[22](#lecture-22-chevally-warning-theorem)
-[21](#lecture-21-congruences-modulo-a-prime)
-[20](#lecture-20-padic-numbers)
-[19](#lecture-19-hensel-and-newtons-method)
-[18](#lecture-18-cryptography)
-[17](#lecture-17-factorization)
-[16](#lecture-16-more-numerical-calculation)
-[15](#lecture-15-numerical-calculation)
-[14](#lecture-14-eulers-phi-totient-function)
-[13](#lecture-13-chinese-remainder-theorem)
-[12](#lecture-12-wilsons-theorem)
-[11](#lecture-11-eulers-theorem)
-[10](#lecture-10-fermats-theorem)
-[9](#lecture-9-congruences)
-[8](#lecture-8-applications-of-binomial-coefficients)
-[7](#lecture-7-binomial-coefficients)
-[6](#lecture-6-arithmetical-functions)
-[5](#lecture-5-primes)
-[4](#lecture-4-more-on-euclids-algorithm)
-[3](#lecture-3-divisibility-and-euclids-algorithm)
-[2](#lecture-2-survey)
+My lecture summaries ([table of content](Math155.toc.md)):  
 [1](#lecture-1)
+[2](#lecture-2-survey)
+[3](#lecture-3-divisibility-and-euclids-algorithm)
+[4](#lecture-4-more-on-euclids-algorithm)
+[5](#lecture-5-primes)
+[6](#lecture-6-arithmetical-functions)
+[7](#lecture-7-binomial-coefficients)
+[8](#lecture-8-applications-of-binomial-coefficients)
+[9](#lecture-9-congruences)
+[10](#lecture-10-fermats-theorem)
+[11](#lecture-11-eulers-theorem)
+[12](#lecture-12-wilsons-theorem)
+[13](#lecture-13-chinese-remainder-theorem)
+[14](#lecture-14-eulers-phi-totient-function)
+[15](#lecture-15-numerical-calculation)
+[16](#lecture-16-more-numerical-calculation)
+[17](#lecture-17-factorization)
+[18](#lecture-18-cryptography)
+[19](#lecture-19-hensel-and-newtons-method)
+[20](#lecture-20-padic-numbers)
+[21](#lecture-21-congruences-modulo-a-prime)
+[22](#lecture-22-chevally-warning-theorem)
+[23](#lecture-23-primitive-roots)
+[24](#lecture-24-primitive-roots-for-prime-powers) 
+[25](#lecture-25-quadratic-equations-mod-p) 
+[26](#lecture-26-roots-of-polynomials-modulo-a-prime) 
+[27](#lecture-27-groups-and-number-theory) 
+[28](#lecture-28-products-of-groups)  
+[29](#lecture-29-rings-in-number-theory) 
+[30](#lecture-30-fields-in-number-theory) 
+[31](#lecture-31-quadratic-residues) 
+[32](#lecture-32-calculation-of-the-legendre-symbol)
+[33](#lecture-33-quadratic-reciprocity)
+[34](#lecture-34-gauss-sums)
+[35](#lecture-35-jacobi-symbol)
+[36](#lecture-36-kronecker-symbol)
+[37](#lecture-37-continued-fractions)
+[38](#lecture-38-binary-quadratic-forms)
+[39](#lecture-39-equivalence-of-binary-quadratic-forms)
+[40](#lecture-40-examples-of-positive-definite-forms)
+[41](#lecture-41-more-examples-of-binary-quadratic-forms)
+[42](#lecture-42-examples-of-indefinite-binary-quadratic-forms)
+[43](#lecture-43-gaussian-integers)
+[44](#lecture-44-pythagorean-triangles)
+[45](#lecture-45-dirichlet-series)
+[46](#lecture-46-products-of-dirichlet-series)
+[47](#lecture-47-the-prime-number-theorem)
+[48](#lecture-48-proof-of-the-prime-number-theorem)
+[49](#lecture-49-dirichlets-theorem)
+[50](#lecture-50-dirichlet-characters)
+[51](#lecture-51-proof-of-dirichlets-theorem)
+[52](#lecture-52-nonvanishing-of-L-series-at-s1)
+[53](#lecture-53-three-calculators-for-number-theorists)
 
 My example code (with lecture number):
 ||||
 |--------------------------|--------------------------|----------------------|
-| Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) | p-1 primality test ([23](#lecture-23-primitive-roots)) | Cryptography ([18](#lecture-18-cryptography)) |
-| Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) | Carmichael numbers ([9](#lecture-9-congruences)) | [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm))|
+| [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm))
+| Carmichael numbers ([9](#lecture-9-congruences)) 
+| Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) 
+|
+| Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) 
+| p-1 primality test ([23](#lecture-23-primitive-roots)) 
+| Cryptography ([18](#lecture-18-cryptography)) 
+|
 
-# [lecture 52](): Nonvanishing of L series at s=1
+## [lecture 1](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1&pp=iAQB): Introduction
+- primes
+  - sieve of Eratosthenes
+- infinitely many primes
+  - $p_{n+1}=p_1\times\dots\times p_n+1$
+  - if $p_{n+1}$ is not prime, take smallest prime factor of $p_{n+1}$ as $p_{n+1}$
+  - product of no primes is 1, $1+1=2=p_1$
+  - next $2+1=3=p_2$, then $2\times 3+1=7=p_3$, $2\times 3\times 7+1=43=p_4$
+  - then $2\times 3\times 7\times 43+1=1807=13\times 139$, so $p_5=13$, $\dots$
+- how to find large primes?
+  - Mersenne prime $2^n-1$
+  - open problem: infinitely many?
+- Fermat primes
+  - $2^n+1$, n=ab with a odd, divisible by $2^a+1$
+  - better $2^{2^n}+1$, only prime for $n<5$
+- generate large primes
+  - $f(n)=n^2+n+41$, prime for $0≤n≤40$, not prime for $n=41$
+  - no polynomial can always produce primes
+- $π(n)$ number of primes ≤n, roughly $n/log(n)$
+  - problem with infinite sums
+- $Li(x) = \int_0^x 1/log(x) dx$
+- Riemann: prime powers
+  - $p^n$ counts as $1/n$
+- $π'(n) = $# $prime powers ≤n$
+  - $= Li(x) - \sum_p Li(x^p)$   "zeta function zeros"
+- $zeta(2)=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+... = \frac{π^2}{6}$
+  - rho with $zeta(rho)=0$
+    - hypothesis: $Re(rho)≤1/2$
+ - unique prime factorization
+- $\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\dots = \frac{1}{1-2^{-s}}\frac{1}{1-3^{-s}}\frac{1}{1-5^{-s}}\dots$
+- diophantine equations
+- $x^n+y^n=z^n$ (Fermat, $n\geq 3$, $x,y,z>0$)
+- $x^4+y^4+z^4=t^4$, big solutions
+- Hilbert's 10th problem:
+  - is there algorithm to solve all diophantine equations?
+  - no
+- Pell's equation
+- $1729$ sum of two cube in two different ways
 
-- proof for $L\chi(1)\neq 0$
-- #primes 3 mod 4 $\sim$ #primes 1 mod 4
-  - always slightly more primes 3 mod 4 than 1 mod 4
+## [lecture 2](https://www.youtube.com/watch?v=mduJOLdKrak&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=2&pp=iAQB): Survey
 
-# [lecture 51](https://www.youtube.com/watch?v=Gl10NCS6eBI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=51): Proof of Dirichlet's theorem
-
-- proof and examples
-
-# [lecture 50](https://www.youtube.com/watch?v=P-muxBNVbCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=50): Dirichlet characters
-
-- Dirichlet characters
-  - $\chi: (\mathbb{Z}/N\mathbb{Z})^\*\to \mathbb{C}^\*$
-  - $\chi(m+N)=\chi{m}$
-  - $\chi(m)=0, (m,N)=1, \chi(1)=1$
-  - $\chi(mn)=\chi(m)\chi(n)$
-  - number of characters of $(\mathbb{Z}/N\mathbb{Z})^\* =$ order of $(\mathbb{Z}/N\mathbb{Z})^\*$
-  - finite abelian group G: $G\to \mathbb{C}^\*$ homomorphism
-    - #characters = order G
-    - characters of G is a group, character group
-  - Fourier theory: $f(x+2\pi)=f(x)$, $sin(2\pi n), cos(2\pi n)$
-  - $e^{inx}, n\in \mathbb{Z}$ are characters of $\mathbb{R}/2\pi \mathbb{Z}$
-  - show function on $(\mathbb{Z}/N\mathbb{Z})^\*$ is linear combination of Dirichlet characters
-- primitive characters
-
-# [lecture 49](https://www.youtube.com/watch?v=eHhyVx2cTw4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=49): Dirichlet's theorem
-
-- Dirichlet's theorem
-  - there are infinitely many primes in $an+b$ with $(a,b)=1$ and $n\geq 1$
-- proof overview
-  - (1) define analog of $\chi(n), L(s)$
-  - (2) show that $L\chi(1)\neq 0$
-  - (3) show that $L\chi(1)\neq 0 \implies Dirichlet$
-
-# [lecture 48](https://www.youtube.com/watch?v=Mn2LeGAolAw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=48): Proof of the prime number theorem)
-
-- proofs of (1),...,(5) from last lecture
-
-# [lecture 47](https://www.youtube.com/watch?v=TxuIK_Rg0lI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=47): The prime number theorem
-
-- Prime number theorem (1896, improved 1948)
-  - #primes< x
-  - $\pi(x) \sim \frac{x}{\log x}$
-  - upper bound
-    - $\pi_{n<p<2n}p \leq \binom{2n}{n}\leq 2^{2n}$
-    - $\pi(x)\leq 2\frac{x}{\log x}$
-  - lower bound
-    - $\pi_{p^k\leq 2n}p \geq \binom{2n}{n}$
-    - $\pi(x)\geq \frac{1}{2}\frac{x}{\log x}$
-  - $\zeta(s)=\frac{1}{1^s}+\frac{2}{2^s}+\dots$
-  - $\left(\log \zeta(s)\right)'=\frac{\zeta'(s)}{\zeta(s)}=\frac{\Lambda(1)}{1^s}+\frac{\Lambda(2)}{2^s}+\dots$  ($\Lambda(p^n)=\log p$)
-- $\psi(n)=\Lambda(1)+\Lambda(2)+\dots+\Lambda(n)$
-- (1) $\zeta(s)$ has no zeros with $Re(s)\leq 1$ (key step)
-- (2) Newman's Tauberian theorem
-- (3) $\int_1^\infty \frac{\psi(x)-x}{x^2}dx$ converges
-- (4) $\psi(x) \sim x$
-- (5) $\pi(x)\sim \frac{x}{\log x}$
-
+- congruences
+- Fermat's theorem
+- Euler
+- test if big n is prime
+- quadratic residue
+- quadratic reciprocity
+- addititive number theory   
+  - is every even number sum of two primes? (Goldbach)
+- twin prime conjecture, Zhang, Tao
+- Dirichlet: a+nb with (a,b)=1 has infinitely many primes
+- $n^2+1$
+  - likely contains infinitely many primes
+  - nobody knows how to prove
+- recreational number theory
+  - perfect numbers 6,28,496
+  - amicable numbers 220-284
+  - 3n+1 problem
+- algebraic number theory
+  - m+ni, i=sqrt(-1)
+  - Gaussian integers
+    - unique factorization
+    - 5=(2+i)(2-i)
+- combinatorial number theory
+  - partition p(n)
+  - power series formula
   
-# [lecture 46](https://www.youtube.com/watch?v=lAAXBUuU9wY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=46): Products of Dirichlet series
+## [lecture 3](https://www.youtube.com/watch?v=pVKhDtOjji8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=3&pp=iAQB): Divisibility and Euclid's algorithm
 
-- product of power series, $c_n=\sum_i a_i b_{n-i}$ named convolution
-- Moebius inversion formula
-- $\zeta(s)L(s)=\frac{1}{4}\sum_n\frac{R(n)}{n^s}$
-  - Zeta function of Gaussian integers 
-  - R(n) = #solutions to n=$a^2+b^2$
+- a | b  "divides"
+- n(n+1)(n+2)
+- Euclid's division algorithm
+- different methods to compute gcd
+  - stupid, test 1,2,3,...
+  - factorize (slow)
+  - Euclid's algorithm
+  - runtime analysis
+    - fibonacci numbers worst case
+    - #steps ≤ log(n)
+    - formula F_n, guess->Ansatz
+    - phi, golden ratio
+- observation: divisors in Euclid's algorithm determine continued fraction
+- Euclid's algorithm finitely many steps implies rational numbers are finite continued fractions
 
-$$
-= \begin{cases} \frac{1}{1-2^s} & p=2 \\
-\frac{1}{(1-p^{-s})^s} & p\equiv 1 \mod 4 \\
-\frac{1}{1-p^{-2s}} & p\equiv 3 \mod 4 \end{cases}
-$$
+## [lecture 4](https://www.youtube.com/watch?v=R-O8j7FHEXI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=4&pp=iAQB): More on Euclid's algorithm
 
-- derivative of Dirichlet series
-- Selberg's identity
-  - $\Lambda(n)\log n+\sum_{d\mid n}\Lambda(d)\Lambda(\frac{n}{d})=\sum_{d\mid n}\mu(d)\left(\log \frac{n}{d}\right)^2$
-  - nightmare to prove otherwise
-  - with generating function trivial to prove 
+- Euclid's algorithm allows to solve ax+by=d with (a,b)=d
+- ax+by=c solvable <=> (a,b)|c
+- works: polynomial in 1 variable
+- fails: for polynomial in 2 variables
+- works: in 3 variables
+- better euclid, avoid long division  
+  I implemented [gcds.cpp](../scripts/gcds.cpp) to compare ```gcd()``` implementations using ```modulus``` (with long division) and ```subtraction``` per [lecture 4, 15:45min](https://youtu.be/R-O8j7FHEXI?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=945). Nothing can compare to builtin ```mpz_gcd()```, but tuned by Gemini implementations show subtraction being $3\times$ faster than modulus, confirming lecturer statement:
+  ```
+  hermann@9950x:~$ ./gcds 5000000
+  1,044,938-digit consecutive fibonaci numbers
+  mpz_gcd(): 0.192115s
+   loop mod: 110.977s (4999998)
+   loop sub: 96.6452s (2451621)
+  now both approaches tuned by Gemini
+   loop mod: 81.1123s (4999998)
+   loop sub: 26.2251s (2451621)
+  hermann@9950x:~$ 
+  ```
+- lcm(a,b)=ab/gcd(a,b)
 
+## [lecture 5](https://www.youtube.com/watch?v=VRrP4US7idg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=5&pp=iAQB): Primes
 
-
-# [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
-
-- Johan Petr Gustav Lejeune Dirichlet
-- Generating function: $c_0, c_1, c_2, \dots$
-- $f(x)=c_0+c_1x+c_2x^2+\dots$
-- $f_{n+2}=f_{n+1}+f_n, f_0=0,f_1=1$ (0,1,1,2,3,5,8,13,...)
-
-$$
-\begin{eqnarray*}
-F(x) & = & f_0x^0 &+& f_1x^1 &+& f_2x^2 &+&\dots\\
-xF(x) & = &       & & f_0x^1 &+& f_1x^2 &+&\dots\\
-x^2F(x) & = &     & &        & & f_0x^2 &+&\dots\\
-(1-x-x^2)F(x) &=& & &     x\\
-F(x) & = & \frac{x}{1-x-x^2}\\
-     & = & \frac{x}{(1-\varphi x)(1-(-\varphi)x)} & &  & &\varphi=\frac{\sqrt{5}+1}{2}\\
-     & = & \frac{1}{\sqrt{5}}\left(\frac{1}{1-\varphi x}-\frac{1}{1-(-\varphi)x}\right)\\
-     & = & \frac{1}{\sqrt{5}} \sum_n x_n\left(\varphi^n-(1-\varphi)^n\right)\\
-f_n  & = & \frac{1}{\sqrt{5}}\left(\varphi^n-(1-\varphi)^n\right) 
-\end{eqnarray*}
-$$
-
-- $1+x+x^2+\dots=\frac{1}{1-x}$
-- $\zeta(s)=\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\dots$
-  - converges for $Re(\zeta)>1$
-  - $\zeta(s)=\frac{1}{1-2^s}\frac{1}{1-3^s}\frac{1}{1-5^s}\dots=\prod_p\frac{1}{1-p^s}$
-- $n^k$: $\frac{1}{1^s}+\frac{2^k}{2^s}+\frac{3^k}{3^s}+\dots=\zeta(s-k)=\prod_p\frac{1}{1-p^{k-s}}$
-- $\varphi(n)$: Euler factor at p, $\frac{1}{1^s}+\frac{\varphi(p)}{p^s}+\frac{\varphi(p^2)}{p^{2s}}+\dots=\frac{1-p^{-s}}{1-p^{1-s}}$
-  - $\sum\varphi(n)n^s=\prod_p\frac{1-p^{-s}}{1-p^{1-s}}=\frac{\zeta(s-1)}{\zeta(s)}$
-- $\tau(n)$=#divisors of n
-  - $\frac{1}{1^s}+\frac{\tau(2)}{2^s}+\frac{\tau(3)}{3^s}+\dots=\frac{1}{(1-p^{-s})^2}$
-  - $\prod_p\frac{1}{(1-p^{-s})^2}=\zeta(s)^2$
-- $\sigma(n) = \sum$ divisors of n
-  - $\sigma(p^k)=1+p+p^2+\dots+p^k=\frac{p^{k+1}-1}{p-1}$
-  - $\frac{1}{1^s}+\frac{1+p}{p^s}+\frac{1+p+p^2}{p^{2s}}+\dots=\frac{1}{(1-p^{-s})(1-p^{1-s})}$
-  - $\sum\frac{\sigma(n)}{n^s}=\prod_p\frac{\sigma(n)}{n^s}=\zeta(s)\zeta(s-1)$
-  - $\sigma_{k}(n)=\sum_{d\mid n }d^k$
-  - $\sum\frac{\sigma_k(n)}{n^s}=\zeta(s)\zeta(s-k)$
-  - $\sigma_o(n)=\tau(n), \sigma_1(n)=\sigma(n)$
-- Moebius function
+- negative prime: product with unit
+- prime test: only primes as divisors, up to sqrt(N)
+- fundamental theorem of arithmetic, proof; for poly
+- no primes on reals
+- no primes on functions of reals
+- algebraic numbers m+sqrt(-1) gaussian integers unique factorization
+- euclid numbers are not always prime
+- Dirichlet: an+b infinitely many primes if (a,b)=1
+- $$(2 p_1 p_2 ... p_k)^2+1$$ implies of form $$4n+1 or 2$$, not divisible by $$2, p_1,\dots,p_k$$ => infinitely many primes $$4n+1$$
+- no bound on size of gaps between primes ($$n! + 2,3,\dots,n$$ all composite)
  
-$$  
-\mu(n) = \begin{cases} 0 & \text{if n divisible by square >1}\\
-(-1)^k & \text{if n product of k distinct primes}\end{cases}
-$$
-  - $1+\frac{\mu(p)}{p^s}+\frac{\mu(p^2)}{p^{2s}}+\dots=1-\frac{1}{p^s}$
-  - $\sum\frac{\mu(n)}{n^s}=\prod_p(1-p^{-s})=\frac{1}{\zeta(s)}$
-- $\lambda(n)=(-1)^{\text{number of prime factors of} n}$
-  - $\sum\frac{\lambda(n)}{n^s}=\prod_p\frac{1}{1+p^{-s}}=\frac{\zeta(2s)}{\zeta(s)}$
+## [lecture 6](https://www.youtube.com/watch?v=skTslDpxeL8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=6&pp=iAQB): arithmetical functions
 
-$$
-\chi(n) = \begin{cases} +1 & \text{if }n\equiv 1\mod 4\\
--1 & \text{if }n\equiv 3\mod 4\\
-0 & if n even\end{cases}
-$$
+- multiplicative functions
+  - d(n) #divisors
+  - sigma(n) sum of divisors
+  - Euler phi(n) #coprime <n
+  - $$tau(n) = q (1-q)^{24} (1-q^2)^{24} \dots$$
+  - $$mu(n) = (-1)^w(n)$$ if n squarefree and divisible by w(n) primes, 0 otherwise
+  - why interesting: $$\frac{1}{zeta(s)} = \frac{1}{1^s} + \frac{mu(2)}{2^s} + \frac{mu(3)}{3^s} \dots$$
+  - perfect numbers; Euclid $$n=2^{p-1}(2^p-1)$$ with $$2^p-1$$ prime, then n is perfect number
+  - Euler: even perfect numbers are of this form
+  - infinitely many even perfect numbers?
+  - odd perfect numbers?
+  - Landau (infinitely many): 
+    - $$2n=p_1+p_2$$? (Goldbach conjecture)
+    - $$p_1-p_2=2$$? (twin prime conjectore)
+    - $$n^2 < p < (n+1)^2$$?
+    - $$n^2+1$$?
+    - likely all 4 are yes, but out of reach
 
-(simplest example of Dirichlet character)
-  - $L(s)=\sum\frac{\chi(n)}{n^s}=\prod_p\frac{1}{1-\chi(p)p^{-s}}$
+## [lecture 7](https://www.youtube.com/watch?v=TBolWCObRgg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=7&pp=iAQB): Binomial coefficients
 
-$$
-\Lambda(n)=\begin{cases} log(p) & \text{if }n=p^k\\
-0 & \text{otherwise}\end{cases}
-$$
+- binomial $\binom{n}{k}$
+  - $(x+y)^n=\binom{n}{0}x^ny^0+\binom{n}{1}x^{n-1}y^1+\dots$
+  - #k-element subsets of n-element set
+  - Pascal's triangle
+  - $= \frac{n!}{(n-k)!k!}$
+  - all four are equivalent
+- trinomial
+- Pascal's triangle
+  - triangular numbers
+  - tetrahedral numbers
+  - 4-dim tetrahedon numbers
+- basic properties of binomials
+  - horizontal symmetry of Pascal's triangle
+  - row n sum is $2^n$
+  - alternating sign horizontal sum is 0 for $n>0$
+  - sum of binomial mirror products
+  - #ways driving from one point to another on a rectangular grid
+  - k people, divide n coins, there are $\binom{n+k-1}{k-1}$ ways
 
-- not multiplicative!
-- $\frac{\Lambda(1)}{1^s}+\frac{\Lambda(2)}{2^s}+\frac{\Lambda(3)}{3^s}+\dots=\frac{\zeta'(s)}{\zeta{s}}=\frac{d}{ds}\log\zeta(s)$
-- $\zeta(s)=\prod_p\frac{1}{1-p^{-s}}$
-- $\log \zeta(s)=\prod_p\log(1-p^{-s})=-\sum_p p^{-s}+\frac{p^{-2s}}{2}+\dots$
-- $\frac{d}{ds}: \sum_n\Lambda(n)n^{-s}$
-  
-# [lecture 44](https://www.youtube.com/watch?v=SCdDBYRrDtM&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=44): Pythagorean triangles
+## [lecture 8](https://www.youtube.com/watch?v=KIvuGT5V1Fg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=8&pp=iAQB): Applications of binomial coefficients
 
-- Pythagorean triangle, $3^2+4^2=5^2, 5^2+12^2=13^2, x^2+y^2=z^2$, x,y,z pairwise coprime
-- ternary quadratic form: $x^2+y^2-z^2=0$
-- $x^2+y^2=n$, n has primitive representation $\iff$ n has no factors p, $p\equiv 3\mod 4$, $4\nmid n$
-- only prime factors of primitive are 1 mod 4
-- method 2: $x^2+y^2=z^2$, geometrically, works for any rational t (PARI/GP):
+- fractal like pattern for Pascal's triangle "mod 2"
+- "mod prime"
+- 1000! ends in exactly 249 zeros
+- powers of 7 dividing $\binom{100}{40}$ is two
+- estimates on binomial size, Stirling formula for factorial
+- simple prove of weak version of prime number theorem:   
+  $\frac{1}{2}\frac{n}{\log{n}}\leq\pi(x)\leq 2\frac{n}{\log{n}}$
+- Catalan numbers $\frac{1}{k+1}\binom{n}{k}$, generating function
+
+## [lecture 9](https://www.youtube.com/watch?v=E1tikA1GEVU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=9&pp=iAQB): Congruences
+
+- $a\equiv b (\mod c)$
+- residue classes
+- ring, zero divisor
+- divisibility by 9, 11
+- sum of three or four squares, three cubes
+- Fermat: If p is prime, then $a^p\equiv a \mod p$
+- fast modular exponentiation
+- Carmichael numbers (see code in remarks below)
+- probabilistic prime number test
+- if $p\vert n^2+1$, then $p=2$ or $p\equiv 1 \mod 4$
+----
+Remarks:
+- While [SAT](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) is NP-complete,
+[XOR-SAT](https://en.wikipedia.org/wiki/XOR-SAT) is in P since an XOR-SAT formula can also be viewed as a system of linear equations mod 2 (congruences), and can be solved in cubic time by Gaussian elimination.
+- Carmichael numbers [31:09 min](https://youtu.be/E1tikA1GEVU?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=1869)
+  - [carm10e24.bin](https://stamm-wilbrandt.de/carm10e24.bin) contains all 308,279,939 Carmichael numbers below $10^{24}$ (converted and stored binary (11.45GB) for PARI/GP fast read, original file from [Jonathan Webster's website](https://blue.butler.edu/~jewebste/)).
+[[carm10e22.bin](https://stamm-wilbrandt.de/carm10e22.bin) / 49,679,870 Carmichael numbers below $10^{22}$ (1.82GB)]]
+  - check that files have not been tampered
+  - fast reading bigger file into PARI/GP needs ≥25GB RAM to succeed
+  - fast verifying the $10^n$ Carmichael number counts of [https://oeis.org/A055553](https://oeis.org/A055553)
+```
+$ sha256sum carm10e24.bin carm10e22.bin
+964abcc780b9786ae9f18d75a688cfc83f2bf74fb592ead9f58fd94bf6441946  carm10e24.bin
+4feaa4bf6911c97ef5f0cadfad4231a70ab321e430fc48567a6b31ad6f89f7ca  carm10e22.bin
+$
+```
 ```pari
 $ gp -q
-? pt(t)=[(1-t^2)/(1+t^2), (2*t)/(1+t^2)];
-? pt(1/2)
-[3/5, 4/5]
-? pt(1/3)
-[4/5, 3/5]
-? pt(1/4)
-[15/17, 8/17]
-? 15^2+8^2==17^2
-1
-? pt(101/97)
-[-396/9805, 9797/9805]
-? (-396)^2+9797^2==9805^2
-1
+? #
+   timer = 1 (on)
+? b=read("carm10e24.bin");0  \\ Karim's "...;0 trick" avoids array in history/double size
+cpu time = 3,937 ms, real time = 8,298 ms.
+0
+? #b
+308279939
+? b[#b]
+999999999855878641139521
 ? 
 ```
-- method 3: Gaussian integers
 ```pari
-? gi(a,b)=a*b;
-? pt1=3/5+4/5*I;
-? pt2=gi(pt1, pt1)
--7/25 + 24/25*I
-? pt3=gi(pt1, pt2)
--117/125 + 44/125*I
-? (-117)^2+44^2==125^2
+? d=10^3;C=0;foreach(b,c,if(c>=d,print1(C",");d=d*10);C+=1);print(C)
+1,7,16,43,105,255,646,1547,3605,8241,19279,44706,105212,246683,585355,1401644,3381806,8220777,20138200,49679870,123381982,308279939
+cpu time = 39,198 ms, real time = 39,209 ms.
+? 
+```
+
+
+## [lecture 10](https://www.youtube.com/watch?v=fgHEKAdErbU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=10&pp=iAQB): Fermat's theorem
+
+- order of $a$ mod $p$, smallest $n>0$ with $a^n\equiv 1 \mod p$
+- Fermat prime $2^n+1$, with $n$ power of $2$
+- $p|2^{2^n}+1$, then $p\equiv 1 \mod 2^{n+1}$, Euler $641\vert 2^{2^5}+1$
+- $a^2\equiv b^2 \mod m$ only if $m$ is prime
+- $a^2\equiv b^2 \mod m^2$ implies $a\equiv \pm b \mod m$? No
+- 
+
+## [lecture 11](https://www.youtube.com/watch?v=V4cB7t-zHxE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=11&pp=iAQB): Euler's theorem
+
+- if $p$ divides $a^q-1$ with $p, q$ prime then either $p\equiv 1 \mod q$ or $a\equiv 1 \mod p$
+- $\frac{x^q-1}{x-1}$
+- infinitely many primes $\equiv 1 \mod 10$
+- $a^x\equiv a^y$
+- disjoint union of cycles, same size
+- $a^{\varphi(m)}\equiv 1 \mod m, (a,m)=1$
+- Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
+- primitive roots
+- last two digits of $7^403$
+- last digit of $7^{7^{7^7}}$
+
+## [lecture 12](https://www.youtube.com/watch?v=3JBaDZqtgug&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=12&pp=iAQB): Wilsons theorem
+
+- $(p-1)! \mod p$ ?
+- $p$ prime implies $\equiv -1 \mod p$
+- (useless) test for prime: $p$ is prime $\iff (p-1)! \equiv -1 \mod p$
+- application: find $x^2\equiv -1 \mod p$  
+  $p\equiv 3 \mod 4$ no solution
+- $\left(\frac{p-1}{2}\right)!$ is $\sqrt{-1}$ if $p\equiv 1\mod 4$
+
+$$\prod_{(a,m)=1} a = \begin{cases}
+1 & \text{if >2 solutions exist to }x^2=1\\
+-1 & \text{if -1 is only solution to }x^2=1\text{ (other than 1)}
+\end{cases}$$
+
+## [lecture 13](https://www.youtube.com/watch?v=q99aBlC5Xfk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=13&pp=iAQB0gcJCSQMAYcqIYzv): Chinese remainder theorem
+- $ax\equiv b \mod m$ solvable iff b divisible by (a,m)
+- (a,m)=1 then unique solution, (a,m)>1 then many solutions
+- Solve polynomial $f(x)\equiv 0 \mod m$  
+  (1) m prime: if $(a,m)=1$, a has inverse or $a\equiv 0$  
+  (2) $m=p^n$ prime power, reduce to m=p (later)  
+  (3) $m=p_1^{n_1}p_2^{n_2}\dots$, reduce to (2) using C.R.T.
+- (3) reduce to (2), ho many solutions?
+
+## [lecture 14](https://www.youtube.com/watch?v=8I0z_Lobtso&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=14&pp=iAQB0gcJCSQMAYcqIYzv): Euler's $\varphi$ (totient) function
+
+- number of residue classes (mod n) coprime to n
+- $\varphi(mn)=\varphi(m)\varphi(n), (m,n)=1$
+- $\varphi(n)=\varphi(p_1^{n_1})\varphi(p_2^{n_2})\dots$
+- $\varphi(n)=p_1^{n_1-1}(p_1-1)p_2^{n_2-1}(p_2-1)\dots=n(1-\frac{1}{p_1})(1-\frac{1}{p_2})\dots$
+- inclusion-exclusion principle
+- probability interpretation
+- find all numbers n with $\varphi(n)=24$
+- Carmichael conjecture: given n, is there $m\neq n$ with $\varphi(n)=\varphi(m)$
+- $\varphi(n)=$ power of 2? Construct n-gon
+- how big is $\varphi(n)$?
+- average value of $\varphi(n)/n$?
+- probability m, n coprime is $\frac{\pi^2}{6}$
+- generating function
+- $\sum_{d\vert n}\varphi(d)=n$
+
+# [lecture 15](https://www.youtube.com/watch?v=ne0gHR57qUU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=15&pp=iAQB): Numerical calculation 
+
+- (1) solve ax+by=c  
+  (2) Is n prime? Factorize it  
+  (3) Solve $f(x)\equiv 0\mod p$; $x^2+1\equiv 0 \mod p$  
+  (4) $a^b \mod m$
+- O() notation
+- Fast Fourier Transform: $O(N\log N)+O(N)+O(N\log N)$ [7:53min in video]  
+  - FFT (choose $P=2\cdot 3\cdot\dots >mn$)  
+  - pointwise multiplication (modulo the prime divisors of P)  
+  - inverse FFT (use C.R.T. to reconstruct $mn \mod P$)  
+  I implemented [proth.gp](../scripts/proth.gp) demo with Gemini, proving 1749 decimal digit Proth number prime
+  using "RNS/CRT/folding reduction" multiplication. While ```Mod(3,N)^((N-1)/2)==Mod(-1,N)```
+  ([prime proof for Proth number](https://arxiv.org/pdf/0812.2596#page=3) N=k*2^n+1 with k≤n and $3\nmid k$)
+  returns 1 in 31ms, the demo did need 19s on AMD 9950X CPU. But it did show all the details,
+  including the not mentioned by lecturer folding reductions. Gemini asked whether to port to C++ and we
+  did in another very long chat. Down to only 3 seconds now with [proth_prover.cpp](../scripts/proth_prover.cpp)
+  based on libgmp and libgmpxx. In later chat about performance improvements,
+  new fast Barret reduction and Horner Scheme reduced runtime by 50%:
+  ```
+  $ ./proth_prover
+  Digits of N: 1749
+  CRT primes set up: 364 primes (Max: 4294967291)
+  Precomputing Garner CRT coefficients...
+  Starting modular exponentiation (3^((N-1)/2) mod N)...
+  Progress: bit 0 / 5807             
+    -> Total Exponentiation time: 1542 ms
+  Comparing result against N - 1...
+  Success! Result matches N - 1. N is prime!
+  $ 
+  ``` 
+- example: compute determinant of $10\times 10$ matrix of BIG numbers with FFT
+- Russian peasant algorithm, bad for multiplication,  
+  good for exponentiation $O(N\log N)$
+- best possible? NO! $a^{15}$; smallest $l(n)$, $l(191)$
+- calculate polynomial; multiplication by Horner's method
+
+# [lecture 16](https://www.youtube.com/watch?v=roBKA4adPJE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=16&pp=iAQB): More numerical calculation
+
+- how solve $x^2\equiv -1 \mod p$, p prime, $p\equiv 1\mod 4$?
+- guess at random, 50% chance to work, repeat
+- worst case EXP TIME, average case POLY TIME
+- test if x is prime
+  - test all factors < $\sqrt{x}$, EXP TIME
+  - write as $x=a^2-b^2$, best with $x=ab$ and a,b close
+  - test whether $a^{m-1}\equiv 1 \mod m$
+
+# [lecture 17](https://www.youtube.com/watch?v=Imxx1tFDeSw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=17&pp=iAQB): Factorization
+
+- Pollard $\rho$ method: find factor p of n  
+  expected running time $<\sqrt[4]{n}$
+- Pollard's $p-1$ methd  
+  good for finding factors p with $p-1$ smooth
+- Lenstra's elliptic curve method
+
+# [lecture 18](https://www.youtube.com/watch?v=16dAteWM5ZA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=18&pp=iAQB): Cryptography
+
+- Alice, Bob, Eve
+  - code book
+  - one time pad
+  - Enigma
+  (share something)
+- Diffie Hellman, trapdoor function: easy to compute, inverse hard
+- blockchain, each block contains "secure hash" of previous blocks
+  - mining bitcoin: find a so that f(a) "nice"
+- Rivest/Shamir/Adleman
+  - choose large p,q, large int k
+  - publish m=pq and k,but not p,q
+  - $f(x)=x^k \mod m$ public function
+  - easy to find large primes, hard to factorize large numbers
+- random
+  - never use builtin random number generation
+- breaking codes
+  - factor m, Shor's algorithm quantum computers
+  - decode without factoring?
+  - rubber host cryptographie
+  - man in the middle attack
+  - users do something stupid
+  - monitor traffic
+  - direction finding
+  - Eve can send fake messages to A, B
+  - social engineering
+  - message padded with junk
+  - compressed message
+  - extra security
+  - Remarks:
+    - latest factorings of big numbers from RSA challenge (d is number of decimal digits or bits for RSA-d)
+      - [RSA-250](https://en.wikipedia.org/wiki/RSA_numbers#RSA-250) was factored 2/2020 utilising approximately 2700 CPU core-years
+      - [RSA-260](https://en.wikipedia.org/wiki/RSA_numbers#RSA-260) was factored 9/2026 utilising approximately 4900 GPU-days (about 13.5 GPU-years)
+      - [RSA-896](https://en.wikipedia.org/wiki/RSA_numbers#RSA-896) (270 decimal digits) was factored 19 days later using a maximum of 2048 GPUs for about 30 GPU-years over 10 days
+      - they were factorized using [Generalized number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve)
+      - on the public internet, 2048-bit is the standard RSA key length, which is far out of reach
+    - Knowing two sum of two squares representations for RSA semiprime instantaneously breaks RSA ([RSA_numbers_factored repo](https://github.com/Hermann-SW/RSA_numbers_factored/) for easy determination of the representations):
+      - determine factored RSA numbers having two sum of two squares representations
+      - since prime factors of unfactored RSA numbers are unknown, testing necessary property shows the smallest three such candidates
+      - determine two sum of two squares representations of RSA-768 (quickly with its known factors from repo)
+      - RSA-768 can be factored immediately then (PARI/GP)
+```pari
+pi@raspberrypi5:~/RSA_numbers_factored/pari $ gp -q RSA_numbers_factored.gp
+? foreach(RSA.factored(mod4=[1,1]),t,print1(t[1]," "))
+59 129 180 230 768 
+? 
+```
+```pari
+? foreach(RSA.unfactored(mod4=1)[1..3],t,print1(t[1]," "))
+280 309 310 
+? 
+```
+```pari
+? t=RSA.get(768);
+? n=t[2]; [e,f]=RSA.square_sums(t);[a,b]=e;[c,d]=f;
+? (a^2+b^2)==n&&(c^2+d^2)==n
+1
+? #Set([a,b,c,d])
+4
+? 
+```
+```pari
+? p=gcd((a+c)^2+(b+d)^2,n)
+36746043666799590428244633799627952632279158164343087642676032283815739666511279233373417143396810270092798736308917
+? ##
+  ***   last result computed in 0 ms.
+? q=gcd((a+c)^2+(b-d)^2,n)
+33478071698956898786044169848212690817704794983713768568912431388982883793878002287614711652531743087737814467999489
+? ##
+  ***   last result computed in 0 ms.
+? n==p*q
 1
 ? 
 ```
-- method 4: $x^2+y^2=z^2$, x,y,z coprime, z odd, x even, y odd, ...
-- Application of method 4
-  - to Fermat's last theorem: $x^n+y^n=z^n, n\geq 3, x,y,z\neq 0$
-  - n=4, "method of descent", elliptic curve
 
-# [lecture 43](https://www.youtube.com/watch?v=MymWx2wJL7Y&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=43): Gaussian integers
 
-- relation of Gaussian integers to binary quadratic forms
-- $ax^2+bxy+cy^2 = n$ (prime)
-- $p=x^2+y^2\iff p=2, p\equiv 1\mod 4$
-- $n=x^2+y^2$, which integers n, in how many ways, $n\geq 0$, $d=b^2-4ac=-4$
-- n repr. primitively by $x^2+y^2 \iff$ d=-4 is a square mod 4n
-- n=p^k
-  - $p\equiv 3\mod 4$; no solutions
-  - $p\equiv 1\mod 4$; ok
-  - p=2: -4 square mod 8, but not mod 16; n=2 but not 4
-  - n prim. repr. by $x^2+y^2 \iff $ all primes dividing n are 1,2 mod 4
-    - $2^2$ not divide n
-  - non primitive representations? $8=2^2+2^2$ has non primitive representation, but no primitive
-    - (x,y)=g, gX=x, gY=y
-    - $g^2(X^2+Y^2)$
-    - g=square $\times$ something with prim. repr.
-    - $\iff$ all primes dividing n that are $3\mod 4$ divide n to an even power
-    - if m,n both sums of 2 squares, so is mn
-    - Gaussian integer: $m+ni, m,n \in \mathbb{Z}, i^2=-1$
-    - $76500=2^3\cdot 5^3\cdot 3^2\cdot 17=(1+i)^2(1-i)^2(2+i)^2(2-i)^23^2(4+i)^2(4-i)^2=(m+ni)(m-ni)$
-    - $m+ni=i(1+i)^2(2+i)^33(4-i)=-114-252i; 76500=114^2+(252)^2$
-  - off topic, sum of 4 squares, similar product, i,j,k Hamiltonian quaternions
-  - nothing similar for sum of 3 squares
-- suppose $p\equiv 1\mod 4$, find x,y with $p=x^2+y^2$
-  - slow trial and error
-  - fast: first solve $x^2\equiv -1 \mod p$, probabilistic, choose g, try $g^{(p-1)/4}$
-  - $x^2+1=pn$, (x+i)(x-i)=pn, p->(y+iz)(y-iz)
-  - determine (x+i,p) in Gaussian integers
-  - (y+iz) p=(y+iz)(y-iz), so $p=x^2+y^2$
-  - p=13, first solve $x^2\equiv -1 \mod 13$, x=5
-  - $5^2+1=13\cdot 2, (5+i)(5-i)=13$
-  - (5+i,13), Euclid, gcd=3-2i, $13=3^2+2^2$
-- description of Euclid for Gaussian integers
-- Euclid $\implies$ Gaussian integers have unique factorization
-- How many solutions to $x^2+y^2=n$?
+# [lecture 19](https://www.youtube.com/watch?v=nrH2vs04TyQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=19&pp=iAQB): Hensel and Newton's method
+
+- $f(x)\equiv 0 \mod m$
+- today "Reduce from $p^m$ to $p$
+  - stupid method $O(p^m)$
+  - not quite so stupid method $O(p*m)$
+    - $x^2\equiv 17 \mod 2^10$, problems: not unique, no lifts
+  - Hensel's method $O(n)$
+    - $f(x_1)\equiv 0 \mod p$, $x_1$ solution
+    - Taylor, derivative, key point:
+    $$\frac{\left(\frac{d}{dx}\right)^n f(x)}{n!}$$
+    has integer solutions  
+    we can solve $f(x)\equiv 0 \mod p$ IF:  
+    (1) we can solve $f(x_1)\equiv 0 \mod p$  
+    (2) $f'(x_1)\not\equiv 0 \mod p$
+
+  - Newton's method (the same)
+    - for reals $f(x)=0$ with tangents
+    - if $f(x)=0\mod p^n$ and $f'(x)\not\equiv 0 \mod p$  
+      then $f(x-\frac{f(x)}{f'(x)})\equiv 0 \mod p^{2n\}$  
+      $O(\log n)$ because of doubling
+
+# [lecture 20](https://www.youtube.com/watch?v=1HTq2zq2RtY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=20&pp=iAQB): p-adic numbers
+
+- what if $f'(x_1)\equiv 0 \mod p$?
+- p-adic numbers
+  - (informal) number in base p, goes left infinite distance
+  - does not converge to real number, but mod p
+  - add, multiply p-adic numbers, also subtract
+  - division by all numbers $a$ for $p\nmid a$
+- which numbers are square? reals, 2-adics, p-adics
+  -  square $\iff a\text{ is square }\mod p$
+- any for reals has analog for p-adics
+- iteration for reals and p-adics
+
+# [lecture 21](https://www.youtube.com/watch?v=E-6llnLZ7J8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=21&pp=iAQB): Congruences modulo a prime
+
+- advantages of p prime:
+  - no zero divisors
+  - inverses exist
+  - polynomials of degree n have $\leq n$v roots
+  - Fermat: $x^p\equiv x\mod p$
+  - primitive roots exist mod p
+- wolstenholme's theorem:  
+  $1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{p-1}$, numerator
+  is divisible by $p$ if $p>2$
+- Given $f(x)\equiv 0 \mod p$, problems:  
+  (1) any solutions?  
+  (2) how many?  
+  (3) find them?
+- Euler: (fast, better replace by faster method later [Jacobi symbol])
+
+$$a^{(p-1)/2}\equiv \begin{cases}
++1 & \text{if a is square}\\
+-1 & \text{if a is not square}
+\end{cases}$$
+
+  - If $d$ divides $p-1$, then $x^d-1\equiv 0 \mod p$ has
+    exactly $d$ roots
+  
+
+# [lecture 22](https://www.youtube.com/watch?v=6QZYfpcf79I&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=22&pp=iAQB): Chevalley-Warning theorem
+
+- If $f(x_1,\dots,x_n)$ has degree $d<n$  
+  then #solutions to $f(x_1,\dots,x_n)\equiv 0\mod p$ is divisible by $p$
+- Useful lemma:
+  $0^i+1^i+2^i+\dots+(p-1)^i\equiv 0 \mod p$ if $i<p-1$
+- Chevalley-Warning theorem implies that integers mod p are "quasi algebraicly closed"   
+
+# [lecture 23](https://www.youtube.com/watch?v=E8UTP0DiCCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=23&pp=iAQB): Primitive roots
+
+- answer questions:  
+  Which numbers have primitive roots? How many? How find?
+  (carefully counting)
+- Theorem: if $p$ is prime, $p$ has primitive root
+- if $a$ is primitive root mod $m$, order of $a$ is $\varphi(m)$.  
+  Now: $a^b$ has order $\varphi(m) \iff (b, \varphi(m))=1$  
+  primitive roots: $$\\{a^b \mid (b, \varphi(m))=1\\}$$  
+  #primitive roots = $\varphi(\varphi(m))$
+- "p-1 primality test" [17:22 min](https://youtu.be/AfRpXi8r0So?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=1042), here with PARI/GP:  
+```pari
+$ gp -q
+? p=7457*2^59659+1; #digits(p)
+17964
+? #
+   timer = 1 (on)
+? isprime(p)
+cpu time = 1min, 12,553 ms, real time = 1min, 14,480 ms.
+1
+? g=znprimroot(p); type(g)
+cpu time = 50,621 ms, real time = 50,629 ms.
+"t_INTMOD"
+? print(factor(p-1))
+[2, 59659; 7457, 1]
+? g^((p-1)/2)!=Mod(1,p)
+cpu time = 10,768 ms, real time = 10,770 ms.
+1
+? g^((p-1)/7457)!=Mod(1,p)
+cpu time = 10,724 ms, real time = 10,724 ms.
+1
+? 
+```
+
+# [lecture 24](https://www.youtube.com/watch?v=AfRpXi8r0So&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=24&pp=iAQB): Primitive roots for prime powers
+
+- $p^n$, p odd prime, $n>1$
+  - $p^2$
+  - theorem: if $g$ primitive root mod $p^2$, $p$ odd prime, then primitive root $\mod p^n$ with $n\geq 1$
+-  Equivalent  
+   (1) m has primitive root  
+   (2) m has $\varphi(\varphi(m))$ primitive roots  
+   (3) $m=1,2,4,p^n,2p^n$ (p odd prime  
+   (4) $x^2\equiv 1 \mod m \implies x\equiv \pm 1 \mod m$  
+   (5) Wilson's theorem: $\prod_{(a,m)=1}a\equiv -1 \mod m$
+- Mod $2^n$?
+- logarithms: indices
+- $a\not\equiv 0 \mod p$ is of form $g^n \mod p$; $n=\log_g a$
+- p is prime? if we can factor $p-1$, we can find primitive root of $p$, 
+  $g$ of order $p-1$, check $g$ not have order dividing $\frac{p-1}{q}$:
+  $g^{\frac{p-1}{q}}\not\equiv 1\mod p$ with $q$ prime, $q\mid p-1$
+
+# [lecture 25](https://www.youtube.com/watch?v=H7WFEGrmMEs&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=25&pp=iAQB): Quadratic equtions mod p
+
+- degree 2 congruences  
+  $ax^2+bx+c\equiv 0 \mod p$  
+  $a(x+b/2)^2\equiv \frac{b^2-4ac}{4a}$, discriminant $b^2-4ac$  
+  need /2, p odd OK because p=2 no problem  
+  $x^2\equiv d$ ($d\not \equiv 0$)
+  check has solution:  
+  solution exists $\iff d^\frac{p-1}{2}\equiv 1\mod p$
+- solve $x^2\equiv d$  
+  method 1: trial and error  
+  method 2: polynomial solver $f(x)\equiv 0$ (Berlekamp, Cantor-Zassenhaus)  
+  method 3: guess answer, better Ansatz  
+- general case:  
+  $p-1=2^k\cdot n$, $n$ odd  
+  pick g to have order $2^k$, $g=(random)^n$  
+  $2^ks+nt=1$ by Euclid  
+  $y=y^1=(y^n)^t\times (y^{2^k})^s$  
+  order of power of 2, previous method  
+  odd order, use method 3
+  (divide and conquer)
+
+# [lecture 26](https://www.youtube.com/watch?v=GcJImruRSyE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=26&pp=iAQB): Roots of polynomials modulo p
+
+- Cantor-Zassenhaus  
+  (1) Euclid for (a,b), works with poly, fast if deg f,g small  
+  (2) Russian-Peasant
+- find roots of f
+
+
+# [lecture 27](https://www.youtube.com/watch?v=bpzNGhiT4OI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=27): Groups and number theory
+
+- group definition
+- important groups for number theory  
+  $\mathbb{Z}/m\mathbb{Z}$  
+  $(\mathbb{Z}/m\mathbb{Z})^\times$
+- Lagrange: order of subgroup H $\mid$ order of group G
+  - coset of $H = aH = \\{ ah_1, ah_2,\dots\\}$
+  - 2 cosets have same order (map back by $a^{-1}$ bijection)
+  - 2 cosets are same or disjoint
+  - G is disjoint union of cosets of same size $\implies$ Lagrange  
+- order of $g\in G$ divides order of $G$
+- corollary:
+  - Fermat $x^{p-1}\equiv 1 \mod p$  
+    Group= $(\mathbb{Z}/m\mathbb{Z})^\times$ = integers coprime to p, mod p
+  - Euler $x^{\varphi(m)}\equiv 1\mod m$, $(m,x)=1$  
+    $\varphi(m)=$ order of group $(\mathbb{Z}/m\mathbb{Z})^\times$
+- for abelian groups shorter proof
+- group is CYCLIC if it has 1 generator g, all elements ar powers of g
+- non obvious cyclic group:
+  $(\mathbb{Z}/m\mathbb{Z})^\times$ has generator $\equiv$ primitive root
+- isomorphic groups ("really the same")
+- Wilsons theorem $(p-1)!\equiv \-1 \mod p$ (p prime)  
+  G finite abelian group, product of all elements is
+  
+$$\\begin{cases} 
+  g & (\text{if exactly one element g has order 2})\\  
+  1 & (otherwise)
+\\end{cases}$$
+
+  $G=(\mathbb{Z}/m\mathbb{Z})^\times$
+    
+# [lecture 28](https://www.youtube.com/watch?v=SLONKxYCmiA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=28): Products of groups
+
+- $G\times H$
+- vector space $\mathbb{R}^2$
+- $\mathbb{R}$, $\pm 1\times$ positive reals
+- C.R.T.
+- if G (abelian) has order mn with (m,n)=1  
+  $G=A\times B$  
+  A=elements a with ma=0   
+  B=elements b with nb=0
+- an G (finite, abelian) is product of groups of prime power order
+- ... is product of cyclic groups
+- find smallest integer n such that $x^n\equiv 1\mod 1000000 for (x,1000000)=1$
+
+# [lecture 29](https://www.youtube.com/watch?v=7IP3YvM1dP0&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=29): Rings in number theory
+
+- ring definition, examples $\mathbb{Z},\mathbb{R},\mathbb{C}$, integers mod n: $\mathbb{Z}/n\mathbb{Z}$
+- quotients:
+  - Groups: abelian, subgroup, G/H set of equivalence classes
+  - Rings: R/I, I need to be IDEAL, R/I is ring, $\mathbb{R}[x]/(f)$
+- C.R.T., analog for rings, pick ideals I,J of R, map $R: R/I\times R/J$
+- $\mathbb{Z}$ has unique factorization
+  - R is euclidean ring if it has division with remainder
+  - gaussian integers, subring of complex numbers
+  - unique factorization domain
+- fields: ring, all nonzero elements have inverse
+  - k[x]/(f) with f irreducibel (role of prime numbers)
+
+# [lecture 30](https://www.youtube.com/watch?v=leBH9QpD9PQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=30): Fields in number theory
+
+- f(x) coefficients in k, f has $\leq n$ roots ( $n=deg(f)$ )
+- p has primitive root g, p prime, g has order p-1 in $(\mathbb{Z}/p\mathbb{Z})^\times$, cyclic
+- relation between $\mathbb{Z}$ and $k[x]$
+- finite field, of finite order $\mathbb{Z}/p\mathbb{Z}$, $(\mathbb{Z}/p\mathbb{Z})^\times[x]/f$ with f irreducible
+- any finite field has order $p^n$, some prime p, $n\geq 1$
+- $F^*$ cyclic, so has generator g
+- $F^+$ NOT cyclic (unless $F=\mathbb{Z}/p\mathbb{Z}$)
+- Fermat: $x^p\equiv x \mod p$
+- same for finite fields, order is $p^n$, $x^{p^n}=x$ for all $x\in F$
+- $x^{p^n}-x=\prod_{\alpha\in F}(x-\alpha)$ in F[x]; C.R.T.
+- Wilson
+- $f=x^3+x+1, x^3+x^2+1$ irreducible
+- there is exactly one finite field of order $p^n$, any prime p, $n\geq 1$
+- (key point: finite field of order $p^n$ is "splitting field" of $x^{p^n}-x$)
+
+# [lecture 31](https://www.youtube.com/watch?v=Pz6CL0nRmGQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=31): Quadratic residues
+
+- $a\not\equiv0, x^2=a \mod p$ for some x, a is quadratic residue
+- $a\not\equiv0, x^2=a \mod p$ no solution, a is quadratic nonresidue
+
+$$
+\text{Legendre symbol, p odd prime: } \left(\frac{a}{p}\right)=\begin{cases}
+1 & \text{if a quadratic residue}\\
+-1 & \text{if a quadratic nonresidue}\\
+0 & \text{if }a\equiv 0\end{cases}
+$$
+
+- Euler $\left(\frac{a}{p}\right)\equiv a^{(p-1)/2}\mod p$
+- $\left(\frac{a}{p}\right)$ is homomorphism $(\mathbb{Z}/p\mathbb{Z})^\times\to \\{-1,1\\}$
+- $\left(\frac{-1}{p}\right)= +1/-1$ if $p\equiv 1/3 \mod 4$
+- $\left(\frac{2}{p}\right)= +1/-1$ if p= 1,7 / 3,5
+- Gauss's lemma:
+  - $\left(\frac{a}{p}\right)=(-1)^n$, n #residue classes
+  - $1 \equiv a^{(p-1)/2}(-1)^n \mod n$
+  - $\left(\frac{2}{p}\right)=(-1)^n -\left[p/4\right]$
+
+# [lecture 32](https://www.youtube.com/watch?v=MxwdmjtK1BQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=32): Calculation of the Legendre symbol
+
+- $\left(\frac{-2}{p}\right)=\left(\frac{-1}{p}\right)\left(\frac{2}{p}\right)$, +1/-1 if p is 1,3/5,7 mod 8
+- infinitely many primes $\equiv 7 \mod 8$
+- infinitely many primes $\equiv 3 \mod 8$
+- infinitely many primes $\equiv 5 \mod 8$, exercise
+- $\left(\frac{3}{p}\right)=?$, +1/-1 if p=1,11 / 5,7 mod 12
+- application to Fermat numbers:  
+  $p=2^{2^n}+1$ is prime $\iff 3^{(p-1)/2}\equiv -1 \mod p$
+- $\left(\frac{5}{p}\right)=+1 \iff p=1,9,11,19 \mod 20\iff p=1,4 \mod 5$
+- $\left(\frac{5}{p}\right)=+1 \iff p=1,5,19,23 \mod 24$
+
+# [lecture 33](https://www.youtube.com/watch?v=k8qJaV7qGL4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=33): Quadratic reciprocity
+
+- $\left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=(-1)^{(p-1)/2\cdot(q-1)/2}$
+- example calculation of $\left(\frac{1001}{99991}\right)=+1$, 1001 is square, $38521^2$
+- long proof of above
+
+# [lecture 34](https://www.youtube.com/watch?v=arL7oQV4asY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=34): Gauss sums
+
+- gauss sum, gamma function, similarity
+- another proof of quadratic reciprocity (there are 300 proofs)
+
+# [lecture 35](): Jacobi symbol
+
+- Legendre symbol $\left(\frac{a}{b}\right)$ for b prime
+- Jacobi symbol $\left(\frac{a}{b}\right)$ for b odd positive
+- Kronecker symbol $\left(\frac{a}{b}\right)$ for all integers a,b
+- Jacobi: mutiplicative in a, b; (-1/b), (2/b), (a+nb/b)=(a/b), all easy
+- proof for law of reciprocity
+- Warning: (a/b)=+1 does NOT imply a square
+- No need to factor a for Jacobi reciprocity!
+- compute is "Euclid", but take out factors of 2, keep track of signs
+- Euclid without division, fast
+- application, primality test that is a bit faster
+- 1-step definition of Legendre symbol? Yes, Zolotarev, sign of permutation
+- cycle of even length, odd permutation
+- ...
+
+# [lecture 36](https://www.youtube.com/watch?v=8jnxAC9E4yE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=36): Kronecker symbol
+
+- all? a,b
+- nonzero b
+  - $\left(\frac{a}{b}\right)=$ Legendre, b prime > 0
+  - $\left(\frac{a}{2}\right)=+1/-1/0\text{ for }a\equiv \pm 1\mod 8/\pm 3\mod 8/0 \mod 2$
+  - $\left(\frac{a}{-1}\right)=+1/-1\text{ for } a\geq 0 / a<0$
+  - $\left(\frac{1}{0}\right)=\left(\frac{-1}{0}\right)=\left(\frac{0}{1}\right)=\left(\frac{0}{-1}\right)=1$, $\left(\frac{0}{b}\right)=\left(\frac{a}{0}\right)=0$ otherwise
+- properties
+  - $\left(\frac{a}{b}\right)=¸pm 1$ if (a,b)=1, 0 if not
+  - if $a\equiv 0,1 \mod 4$ then $\left(\frac{a}{b+na}\right)=\left(\frac{a}{b}\right)$  
+    $a\equiv 2 \mod 4$: period 4a  
+    $a\equiv 3 \mod 4$: mess
+  - $\left(\frac{a_1a_2}{b}\right)=\left(\frac{a_1}{b}\right)\left(\frac{a_2}{b}\right)$, for $a,b\neq 0$
+  - $\left(\frac{a}{b_1b_2}\right)=\left(\frac{a}{b_1}\right)\left(\frac{a}{b_2}\right)$
+  - $\left(\frac{-1}{0}\right)\left(\frac{-1}{-1}\right)\neq\left(\frac{-1}{0\cdot (-1)}\right)$
+- quadratic reprocity is mess, best: only for a,b odd > 0
+- 2D table demonstrating where Legendre/Jacobi/Kronecker values are
+- Dirichlet L series of imaginary quadratic field, $\mathbb{Z}[i]$
+  - $$\left(\frac{D}{p}\right)$, discriminant D=0,1 mod 4, p odd primes
+    - +1 if p splits as product of 2 distinct primes
+    - -1 if p does not split; 3
+    - 0 if 0 = square; 2=(1+i)(1-i)
+  - $L(s) = \sum_n \left(\frac{D}{n}\right) \frac{1}{n^s}$
+  - $L(s)=\frac{1}{1^s}-\frac{1}{3^s}+\frac{1}{5^s}-\frac{1}{7^s}+\dots$  
+    $= \frac{1}{1+3^{-s}}\cdot\frac{1}{1-5^{-s}}\cdot\frac{1}{1+7^{-s}}\cdot\frac{1}{1-11^{-s}}\cdot\dots$  
+    $=\prod_p \frac{1}{1-\chi(p)p^{-s}}; \chi(p)=\left(\frac{D}{p}\right)=\left(\frac{-4}{p}\right)$  
+- application: $L(s)\zeta(s)$, ...
 
  
-# [lecture 42](https://www.youtube.com/watch?v=ukbBe0ZvNp4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=42): Examples of indefinite binary quadratic forms
+# [lecture 37](https://www.youtube.com/watch?v=MCPn7Bnuh2o&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=37): Continued fractions
 
-- def. forms $3a^2\leq d$, indef. $4a^2\leq d$
-  - $\implies$ finite number of possibilities for a 
-  - $\implies$ finite for b (a$\neq$0)
-  - $\implies$ finite number of reduced forms of given d
-- d=0,1 mod 4 (0,1,4,5,8,9,...)
-- d=0: degenerate $\implies$ roots rational
-- d=1: a=0, b=$ \pm 1$: xy
-- d=4: a=0, $ \pm 1$:
-  - $\pm 2xy+cy^2=\pm y(2x+cy)$
-  - $x^2-y^2=(x-y)(x+y)$
-  - $-x^2+y^2$
-  - always happens for d square, rational $\frac{-b\pm \sqrt{d}}{2n}$, factorizes
-- d=5: a=+1: 4 equivalent to $x^2+xy-y^2$
-  - n rep. by some form of disc. d (x,y)=1 $\iff $ d square mod 4n
-  - n=p prime, 5 square mod p
-  - Q.R. p=5 or $p\equiv 1,4\mod 5$: $x^2+xy-y^2$ ($11=3^2+3\cdot 1-1^2$)
-- d=8: a=$\pm 1$, b=0: $x^2-2y^2$, $-x^2+2y^2$ equiv.
-  - n prim. rep. by $x^2-2y^2 \iff$ 8 square mod 4n (p odd)
-  - n=prime: $p\equiv \pm 1 \mod 8$
-  - So $p=x^2-2y^2$ solvable $\iff$ p=2 or $p\equiv \pm 1 \mod 8$ ($17=2\cdot 3^2-1^2=5^2-2\cdot 2^2$
-- definite forms
-  - 2 reduced forms equ. only if |a|=|b| of |a|=|c| (b -> -b)
-  - finite number of repr.
-- indefinite forms
-  - many nonequ. reduced forms
-  - infinite number of repr. ($x^2-2y^2=1$ has $\infty$ solutions)
-  - are there $\infty$ d with all forms equiv.? numerical evidence says yes
+- polynomial $f(x,,y,z,\dots)=0$
+  - degrees 1/2/3/4 linear/quadratic/cubic/quadric
+  - #variables 2/3/... binary/ternary/..
+  - quadratic binary form
+    - $ax^2+bxy+cy^2+dx+ey+f=0$, strike out dx, ey
+    - $ax^2+bxy+cy^2=$ constant
+    - Pellian equation: $x^2-Dy^2=1$
+    - Brahmagupta 650 AD.
+      - $x^2-92y^2=1$, find rational x/y close to $\sqrt{92}$
+      - $\pi=\dots$, $\sqrt{23}=4+\frac{1}{1+\frac{1}{3+\frac{1}{1+\frac{1}{8+\dots}}}}$
+      - shows how to get solutions with example calculations only
+    
+# [lecture 38](https://www.youtube.com/watch?v=13YcTRHzyDg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=38): Binary quadratic forms
 
-# [lecture 41](https://www.youtube.com/watch?v=ymLXK06XErQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=41): More examples of binary quadratic forms
-
-- d=-15,-16,-19,-20,-23
-- d=-15:
-  - a=1, b=$\pm 1: x^2+xy+4y^2$, a=2, b=$\pm 1: 2x^2+xy+2y^2$
-  - prime p rep. by one of these $\iff$ -15 is square mod 4p
-  - p=3,5 divide d, funny, ignore
-  - $\left(\frac{-15}{p}\right)=+1$, $p\equiv 1,2,4,8 \mod 15$
-  - $\implies$ p rep. by either $x^2+xy+4y^2$ <- 0,1 mod 3
-    $2x^2+xy+2y^2$ <- 0,2 mod 3
-    - $p\equiv 1 mod 3 \implies p=x^2+xy+4y^2$
-    - $p\equiv 2 mod 3 \implies p=2x^2+xy+2y^2$
-- d=-16
-  - a=1,b=0: $x^2+4y^2$,  a=2,b=0: $2x^2+2y^2$
-  - n rep. by either form primitively $\iff$ -16 is square mod 4n
-  - n=p: -1 is square mod p, $p\equiv 1,2 \mod 4$
-  - $p\equiv 1\mod 4: p=x^2+4y^2$
-- d=-20
-  - a=1,b=0: $x^2+5y^2$, a=2,b=2: $2x^2+2xy+3y^2$
-  - -20 square mod 4n $\iff$ n prim. rep. by one of these
-  - n=prime: $p\neq 2,5$, -20 square mod 4n
-  - p=1,3,7,9 mod 20
-  - $p\equiv 1,9 \mod 20 \implies p=x^2+5y^2$
-  - $p\equiv 3,7 \mod 20 \implies p=2x^2+2xy+3y^2$
-- $x^2+ky^2$ with k=1,2,3,4,7 represent half of all primes
-- $x^2+5y^2$ represents 1/4 of all primes
-- d=-23
-  - a=1, b=$\pm 1: x^2+xy+6y^2$
-  - a=2, b=$\pm 1: 2x^2+xy+3y^2$ or $2x^2-xy+3y^2$ improperly equivalent
-  - p rep by one of there $\iff$ -23 is square mod 4p
-  - no identification which case happens by congruences
-- what can happen?
-  - only equ. class d=-3, 4, -7, -19
-  - d=-15, -20, >1 equ. class but can be separated by congruences
-  - >1 equ. class, hard to separate d=-23 (this cases takes over for big discriminants)
-- only one equ. class, d=-3, -4, -7, -8, -11, -19, -43, -67, -163 (all)
-- d=-163 (all forms are equ.)
-  - a=1, b=1: $x^2+xy+41y^2$ (unique)
-  - $e^{\pi \sqrt{163}=262537412640768743.99999999999925007259 (whenever unique equivalence class)
-
-# [lecture 40](https://www.youtube.com/watch?v=SpY0XjGF5Mk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=40): Examples of positive definite forms
-
-- which primes can represented by $p=x^2+y^2$, $p=x^2+2y^2$, $p=x^2+3y^2$?
-- n prim. rep. by some form ... $\iff$ d square mod 4n
-- any form equivalent to reduced form $|b|\leq|a|\leq|c|$
-- all form positive definite
-- d=-3,-4,-7,-8,-11,-12,-15
-  - d=-3  any pos. def. form d=-3 is equ. to $x^2+xy+y^2$
-    - n rep. by $x^2+xy+y^2$ (x,y)=1 $\iff$ d=-3 is square mod n
-    - n=p prime, p is of form $x^2+xy+y^2 \iff\text{ -3 is square mod p }\iff p\equiv 0,1 \mod 3$
-    - So p (prime) is of form $x^2+3y^2 \iff p\equiv 0,1 \mod 3$
-  - d=-4  any pos. def. form d=-4 is equ. to $x^2+y^2$
-    - n rep. by $x^2+y^2$ (x,y)=1 $\iff$ -4 is square mod 4n
-    - n=p prime, p is of form $x^2+xy+y^2 \iff\text{ -4 is square mod p }\iff p\equiv 1,2 \mod 4$
-    - Fermat: p (prime) is of form $x^2 +y^2\iff p\equiv 1,2\mod 4$
-  - d=-7  any pos. def. form -7 is equ. to $x^2+xy+2y^2$
-    - n rep. by $x^2+xy+2y^2$ (x,y)=1 $\iff$ -7 is square mod 4n
-    - n=p prime, p is of form $x^2+xy+2y^2 \iff\text{ -7 is square mod p }\iff p\equiv 0,1,2,4 \mod 7$
-  - d=-8  any pos. def. form -8 is equ. to $x^2+2y^2$
-    - n rep. by $x^2+2y^2$ (x,y)=1 $\iff$ -8 is square mod 4n
-    - n=p prime, p is of form $x^2+xy+2y^2 \iff\text{ -7 is square mod p }\iff p\equiv 1,3 \mod 8$
-  - d=-11  any pos. def. form -11 is equ. to $x^2+xy+3y^2$
-    - n rep. by $x^2+xy+3y^2$ (x,y)=1 $\iff$ -11 is square mod 4n
-    - n=p prime, p is of form $x^2+xy+3y^2 \iff\text{ -11 is square mod p }\iff p\equiv 0,1,4,9.5.3 \mod 11$
-  - d=-12  any pos. def. form -12 is equ. to $x^2+xy+3y^2$
-    - a=1,b=0,c=3: $x^2+3y^2$ (sometimes odd), a=2,b=-2,0,2: $2x^2+2xy+2y^2$ (even)
-    - any pos. def. form d=-12 is equ. to one of these forms
-    - n rep. by at least one of $x^2+3y^2, 2x^2+2xy+2y^2$ (x,y)=1 $\iff$ -12 is square mod 4n
-    - if n is odd, -12 square mod 4n $\implies n=x^2+3y^2$ (n=p: $p\equiv 0,1 \mod 3$)
-
+- $ax^2+bxy+cy^2=n$
+  - $ax^2+bxy+cy^2=0$ over $\mathbb{C}$
+  - $\frac{x}{y}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$, term under sqrt discriminant
+    - $d=b^24ac$
+     - d>0: roots x/y real, distinct   
+     - d=0: roots are real   (not interesting)
+     - d<0: roots non-real
+    - possible values $d\equiv b^2\mod 4 \implies d\equiv 0,1\mod 4$
+    - $x^2-ny^2$, d=4n
+    - $x^2+xy-ny^2$, d=4n+1
+    - -12, -11, -8, -7, -4, -3, 0, 1, 4, 5, ...
+    -  Kronecker $\left(\frac{d}{b}\right)$
+      - $\geq 0$, $x^2+y^2$, d=-4, <0, definit
+      - $<0, >0$, $x^2-2y^2$, d=8, >0, indefinit
+      - $\leq 0$, $-x^2-2y^2$, d=-8, <0, definit
+    - $ax^2+bxy+cy^2$, $x\to x+ky$ d unchanged b^2-4ac
+      - $ax^2+cy^2$, d=-4ac
+        - $>0 \implies$ indefinite
+        - $<0 \implies$ definite
+    - $ax^2+bxy+cy^2=n$ represents n if (x,y)=1
+      - $x^2+y^2$ represents $5=1^2+2^2$ (primitive)
+      - $x^2+y^2$ not represents -1
+      - $x^2+y^2$ represents $8=2^2+2^2$ (not primitive)
+      - $x^2+4y^2$ represents 4 in 2 ways:
+        - $4=2^2+4\cdot 0^2$ (not primitive)
+        - $4=0^2+4\cdot 1^2$ (primitive)
+  - Theorem: If n is primitively represented by $ax^2+bxy+cy^2, d=b^2-4ac$,  
+    then d is square mod 4n
+  - Converse?
+    - f d is square mod 4n, is n represented (primitively)?
+    - NO: $x^2+5y^2$, d=-20 is square mod $4\times 3$ (n=3)
+      but x^2+5y^2 does not represent n
+  - Weak converse
+    - If d is square mod 4n, then n is primitively represented by SOME form
+      of discriminant d
+  - Following equivalent  
+    (1) d is square mod 4n  
+    (2) n is primitively represented by some form of discriminant d
+    
+    
+  
+      
 # [lecture 39](https://www.youtube.com/watch?v=APgObNrZbjk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=39): Equivalence of binary quadratic forms
 
 - Equivalence $ax^2+bxy+cy^2$
@@ -472,153 +938,335 @@ Every form is equivalent to REDUCED one.
 Only finite number of reduced forms is positive definite.
 
 
-# [lecture 38](https://www.youtube.com/watch?v=13YcTRHzyDg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=38): Binary quadratic forms
+# [lecture 40](https://www.youtube.com/watch?v=SpY0XjGF5Mk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=40): Examples of positive definite forms
 
-- $ax^2+bxy+cy^2=n$
-  - $ax^2+bxy+cy^2=0$ over $\mathbb{C}$
-  - $\frac{x}{y}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$, term under sqrt discriminant
-    - $d=b^24ac$
-     - d>0: roots x/y real, distinct   
-     - d=0: roots are real   (not interesting)
-     - d<0: roots non-real
-    - possible values $d\equiv b^2\mod 4 \implies d\equiv 0,1\mod 4$
-    - $x^2-ny^2$, d=4n
-    - $x^2+xy-ny^2$, d=4n+1
-    - -12, -11, -8, -7, -4, -3, 0, 1, 4, 5, ...
-    -  Kronecker $\left(\frac{d}{b}\right)$
-      - $\geq 0$, $x^2+y^2$, d=-4, <0, definit
-      - $<0, >0$, $x^2-2y^2$, d=8, >0, indefinit
-      - $\leq 0$, $-x^2-2y^2$, d=-8, <0, definit
-    - $ax^2+bxy+cy^2$, $x\to x+ky$ d unchanged b^2-4ac
-      - $ax^2+cy^2$, d=-4ac
-        - $>0 \implies$ indefinite
-        - $<0 \implies$ definite
-    - $ax^2+bxy+cy^2=n$ represents n if (x,y)=1
-      - $x^2+y^2$ represents $5=1^2+2^2$ (primitive)
-      - $x^2+y^2$ not represents -1
-      - $x^2+y^2$ represents $8=2^2+2^2$ (not primitive)
-      - $x^2+4y^2$ represents 4 in 2 ways:
-        - $4=2^2+4\cdot 0^2$ (not primitive)
-        - $4=0^2+4\cdot 1^2$ (primitive)
-  - Theorem: If n is primitively represented by $ax^2+bxy+cy^2, d=b^2-4ac$,  
-    then d is square mod 4n
-  - Converse?
-    - f d is square mod 4n, is n represented (primitively)?
-    - NO: $x^2+5y^2$, d=-20 is square mod $4\times 3$ (n=3)
-      but x^2+5y^2 does not represent n
-  - Weak converse
-    - If d is square mod 4n, then n is primitively represented by SOME form
-      of discriminant d
-  - Following equivalent  
-    (1) d is square mod 4n  
-    (2) n is primitively represented by some form of discriminant d
-    
-    
-  
-      
-# [lecture 37](https://www.youtube.com/watch?v=MCPn7Bnuh2o&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=37): Continued fractions
+- which primes can represented by $p=x^2+y^2$, $p=x^2+2y^2$, $p=x^2+3y^2$?
+- n prim. rep. by some form ... $\iff$ d square mod 4n
+- any form equivalent to reduced form $|b|\leq|a|\leq|c|$
+- all form positive definite
+- d=-3,-4,-7,-8,-11,-12,-15
+  - d=-3  any pos. def. form d=-3 is equ. to $x^2+xy+y^2$
+    - n rep. by $x^2+xy+y^2$ (x,y)=1 $\iff$ d=-3 is square mod n
+    - n=p prime, p is of form $x^2+xy+y^2 \iff\text{ -3 is square mod p }\iff p\equiv 0,1 \mod 3$
+    - So p (prime) is of form $x^2+3y^2 \iff p\equiv 0,1 \mod 3$
+  - d=-4  any pos. def. form d=-4 is equ. to $x^2+y^2$
+    - n rep. by $x^2+y^2$ (x,y)=1 $\iff$ -4 is square mod 4n
+    - n=p prime, p is of form $x^2+xy+y^2 \iff\text{ -4 is square mod p }\iff p\equiv 1,2 \mod 4$
+    - Fermat: p (prime) is of form $x^2 +y^2\iff p\equiv 1,2\mod 4$
+  - d=-7  any pos. def. form -7 is equ. to $x^2+xy+2y^2$
+    - n rep. by $x^2+xy+2y^2$ (x,y)=1 $\iff$ -7 is square mod 4n
+    - n=p prime, p is of form $x^2+xy+2y^2 \iff\text{ -7 is square mod p }\iff p\equiv 0,1,2,4 \mod 7$
+  - d=-8  any pos. def. form -8 is equ. to $x^2+2y^2$
+    - n rep. by $x^2+2y^2$ (x,y)=1 $\iff$ -8 is square mod 4n
+    - n=p prime, p is of form $x^2+xy+2y^2 \iff\text{ -7 is square mod p }\iff p\equiv 1,3 \mod 8$
+  - d=-11  any pos. def. form -11 is equ. to $x^2+xy+3y^2$
+    - n rep. by $x^2+xy+3y^2$ (x,y)=1 $\iff$ -11 is square mod 4n
+    - n=p prime, p is of form $x^2+xy+3y^2 \iff\text{ -11 is square mod p }\iff p\equiv 0,1,4,9.5.3 \mod 11$
+  - d=-12  any pos. def. form -12 is equ. to $x^2+xy+3y^2$
+    - a=1,b=0,c=3: $x^2+3y^2$ (sometimes odd), a=2,b=-2,0,2: $2x^2+2xy+2y^2$ (even)
+    - any pos. def. form d=-12 is equ. to one of these forms
+    - n rep. by at least one of $x^2+3y^2, 2x^2+2xy+2y^2$ (x,y)=1 $\iff$ -12 is square mod 4n
+    - if n is odd, -12 square mod 4n $\implies n=x^2+3y^2$ (n=p: $p\equiv 0,1 \mod 3$)
 
-- polynomial $f(x,,y,z,\dots)=0$
-  - degrees 1/2/3/4 linear/quadratic/cubic/quadric
-  - #variables 2/3/... binary/ternary/..
-  - quadratic binary form
-    - $ax^2+bxy+cy^2+dx+ey+f=0$, strike out dx, ey
-    - $ax^2+bxy+cy^2=$ constant
-    - Pellian equation: $x^2-Dy^2=1$
-    - Brahmagupta 650 AD.
-      - $x^2-92y^2=1$, find rational x/y close to $\sqrt{92}$
-      - $\pi=\dots$, $\sqrt{23}=4+\frac{1}{1+\frac{1}{3+\frac{1}{1+\frac{1}{8+\dots}}}}$
-      - shows how to get solutions with example calculations only
-    
-# [lecture 36](https://www.youtube.com/watch?v=8jnxAC9E4yE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=36): Kronecker symbol
+# [lecture 41](https://www.youtube.com/watch?v=ymLXK06XErQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=41): More examples of binary quadratic forms
 
-- all? a,b
-- nonzero b
-  - $\left(\frac{a}{b}\right)=$ Legendre, b prime > 0
-  - $\left(\frac{a}{2}\right)=+1/-1/0\text{ for }a\equiv \pm 1\mod 8/\pm 3\mod 8/0 \mod 2$
-  - $\left(\frac{a}{-1}\right)=+1/-1\text{ for } a\geq 0 / a<0$
-  - $\left(\frac{1}{0}\right)=\left(\frac{-1}{0}\right)=\left(\frac{0}{1}\right)=\left(\frac{0}{-1}\right)=1$, $\left(\frac{0}{b}\right)=\left(\frac{a}{0}\right)=0$ otherwise
-- properties
-  - $\left(\frac{a}{b}\right)=¸pm 1$ if (a,b)=1, 0 if not
-  - if $a\equiv 0,1 \mod 4$ then $\left(\frac{a}{b+na}\right)=\left(\frac{a}{b}\right)$  
-    $a\equiv 2 \mod 4$: period 4a  
-    $a\equiv 3 \mod 4$: mess
-  - $\left(\frac{a_1a_2}{b}\right)=\left(\frac{a_1}{b}\right)\left(\frac{a_2}{b}\right)$, for $a,b\neq 0$
-  - $\left(\frac{a}{b_1b_2}\right)=\left(\frac{a}{b_1}\right)\left(\frac{a}{b_2}\right)$
-  - $\left(\frac{-1}{0}\right)\left(\frac{-1}{-1}\right)\neq\left(\frac{-1}{0\cdot (-1)}\right)$
-- quadratic reprocity is mess, best: only for a,b odd > 0
-- 2D table demonstrating where Legendre/Jacobi/Kronecker values are
-- Dirichlet L series of imaginary quadratic field, $\mathbb{Z}[i]$
-  - $$\left(\frac{D}{p}\right)$, discriminant D=0,1 mod 4, p odd primes
-    - +1 if p splits as product of 2 distinct primes
-    - -1 if p does not split; 3
-    - 0 if 0 = square; 2=(1+i)(1-i)
-  - $L(s) = \sum_n \left(\frac{D}{n}\right) \frac{1}{n^s}$
-  - $L(s)=\frac{1}{1^s}-\frac{1}{3^s}+\frac{1}{5^s}-\frac{1}{7^s}+\dots$  
-    $= \frac{1}{1+3^{-s}}\cdot\frac{1}{1-5^{-s}}\cdot\frac{1}{1+7^{-s}}\cdot\frac{1}{1-11^{-s}}\cdot\dots$  
-    $=\prod_p \frac{1}{1-\chi(p)p^{-s}}; \chi(p)=\left(\frac{D}{p}\right)=\left(\frac{-4}{p}\right)$  
-- application: $L(s)\zeta(s)$, ...
+- d=-15,-16,-19,-20,-23
+- d=-15:
+  - a=1, b=$\pm 1: x^2+xy+4y^2$, a=2, b=$\pm 1: 2x^2+xy+2y^2$
+  - prime p rep. by one of these $\iff$ -15 is square mod 4p
+  - p=3,5 divide d, funny, ignore
+  - $\left(\frac{-15}{p}\right)=+1$, $p\equiv 1,2,4,8 \mod 15$
+  - $\implies$ p rep. by either $x^2+xy+4y^2$ <- 0,1 mod 3
+    $2x^2+xy+2y^2$ <- 0,2 mod 3
+    - $p\equiv 1 mod 3 \implies p=x^2+xy+4y^2$
+    - $p\equiv 2 mod 3 \implies p=2x^2+xy+2y^2$
+- d=-16
+  - a=1,b=0: $x^2+4y^2$,  a=2,b=0: $2x^2+2y^2$
+  - n rep. by either form primitively $\iff$ -16 is square mod 4n
+  - n=p: -1 is square mod p, $p\equiv 1,2 \mod 4$
+  - $p\equiv 1\mod 4: p=x^2+4y^2$
+- d=-20
+  - a=1,b=0: $x^2+5y^2$, a=2,b=2: $2x^2+2xy+3y^2$
+  - -20 square mod 4n $\iff$ n prim. rep. by one of these
+  - n=prime: $p\neq 2,5$, -20 square mod 4n
+  - p=1,3,7,9 mod 20
+  - $p\equiv 1,9 \mod 20 \implies p=x^2+5y^2$
+  - $p\equiv 3,7 \mod 20 \implies p=2x^2+2xy+3y^2$
+- $x^2+ky^2$ with k=1,2,3,4,7 represent half of all primes
+- $x^2+5y^2$ represents 1/4 of all primes
+- d=-23
+  - a=1, b=$\pm 1: x^2+xy+6y^2$
+  - a=2, b=$\pm 1: 2x^2+xy+3y^2$ or $2x^2-xy+3y^2$ improperly equivalent
+  - p rep by one of there $\iff$ -23 is square mod 4p
+  - no identification which case happens by congruences
+- what can happen?
+  - only equ. class d=-3, 4, -7, -19
+  - d=-15, -20, >1 equ. class but can be separated by congruences
+  - >1 equ. class, hard to separate d=-23 (this cases takes over for big discriminants)
+- only one equ. class, d=-3, -4, -7, -8, -11, -19, -43, -67, -163 (all)
+- d=-163 (all forms are equ.)
+  - a=1, b=1: $x^2+xy+41y^2$ (unique)
+  - $e^{\pi \sqrt{163}=262537412640768743.99999999999925007259 (whenever unique equivalence class)
+
+# [lecture 42](https://www.youtube.com/watch?v=ukbBe0ZvNp4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=42): Examples of indefinite binary quadratic forms
+
+- def. forms $3a^2\leq d$, indef. $4a^2\leq d$
+  - $\implies$ finite number of possibilities for a 
+  - $\implies$ finite for b (a$\neq$0)
+  - $\implies$ finite number of reduced forms of given d
+- d=0,1 mod 4 (0,1,4,5,8,9,...)
+- d=0: degenerate $\implies$ roots rational
+- d=1: a=0, b=$ \pm 1$: xy
+- d=4: a=0, $ \pm 1$:
+  - $\pm 2xy+cy^2=\pm y(2x+cy)$
+  - $x^2-y^2=(x-y)(x+y)$
+  - $-x^2+y^2$
+  - always happens for d square, rational $\frac{-b\pm \sqrt{d}}{2n}$, factorizes
+- d=5: a=+1: 4 equivalent to $x^2+xy-y^2$
+  - n rep. by some form of disc. d (x,y)=1 $\iff $ d square mod 4n
+  - n=p prime, 5 square mod p
+  - Q.R. p=5 or $p\equiv 1,4\mod 5$: $x^2+xy-y^2$ ($11=3^2+3\cdot 1-1^2$)
+- d=8: a=$\pm 1$, b=0: $x^2-2y^2$, $-x^2+2y^2$ equiv.
+  - n prim. rep. by $x^2-2y^2 \iff$ 8 square mod 4n (p odd)
+  - n=prime: $p\equiv \pm 1 \mod 8$
+  - So $p=x^2-2y^2$ solvable $\iff$ p=2 or $p\equiv \pm 1 \mod 8$ ($17=2\cdot 3^2-1^2=5^2-2\cdot 2^2$
+- definite forms
+  - 2 reduced forms equ. only if |a|=|b| of |a|=|c| (b -> -b)
+  - finite number of repr.
+- indefinite forms
+  - many nonequ. reduced forms
+  - infinite number of repr. ($x^2-2y^2=1$ has $\infty$ solutions)
+  - are there $\infty$ d with all forms equiv.? numerical evidence says yes
+
+# [lecture 43](https://www.youtube.com/watch?v=MymWx2wJL7Y&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=43): Gaussian integers
+
+- relation of Gaussian integers to binary quadratic forms
+- $ax^2+bxy+cy^2 = n$ (prime)
+- $p=x^2+y^2\iff p=2, p\equiv 1\mod 4$
+- $n=x^2+y^2$, which integers n, in how many ways, $n\geq 0$, $d=b^2-4ac=-4$
+- n repr. primitively by $x^2+y^2 \iff$ d=-4 is a square mod 4n
+- n=p^k
+  - $p\equiv 3\mod 4$; no solutions
+  - $p\equiv 1\mod 4$; ok
+  - p=2: -4 square mod 8, but not mod 16; n=2 but not 4
+  - n prim. repr. by $x^2+y^2 \iff $ all primes dividing n are 1,2 mod 4
+    - $2^2$ not divide n
+  - non primitive representations? $8=2^2+2^2$ has non primitive representation, but no primitive
+    - (x,y)=g, gX=x, gY=y
+    - $g^2(X^2+Y^2)$
+    - g=square $\times$ something with prim. repr.
+    - $\iff$ all primes dividing n that are $3\mod 4$ divide n to an even power
+    - if m,n both sums of 2 squares, so is mn
+    - Gaussian integer: $m+ni, m,n \in \mathbb{Z}, i^2=-1$
+    - $76500=2^3\cdot 5^3\cdot 3^2\cdot 17=(1+i)^2(1-i)^2(2+i)^2(2-i)^23^2(4+i)^2(4-i)^2=(m+ni)(m-ni)$
+    - $m+ni=i(1+i)^2(2+i)^33(4-i)=-114-252i; 76500=114^2+(252)^2$
+  - off topic, sum of 4 squares, similar product, i,j,k Hamiltonian quaternions
+  - nothing similar for sum of 3 squares
+- suppose $p\equiv 1\mod 4$, find x,y with $p=x^2+y^2$
+  - slow trial and error
+  - fast: first solve $x^2\equiv -1 \mod p$, probabilistic, choose g, try $g^{(p-1)/4}$
+  - $x^2+1=pn$, (x+i)(x-i)=pn, p->(y+iz)(y-iz)
+  - determine (x+i,p) in Gaussian integers
+  - (y+iz) p=(y+iz)(y-iz), so $p=x^2+y^2$
+  - p=13, first solve $x^2\equiv -1 \mod 13$, x=5
+  - $5^2+1=13\cdot 2, (5+i)(5-i)=13$
+  - (5+i,13), Euclid, gcd=3-2i, $13=3^2+2^2$
+- description of Euclid for Gaussian integers
+- Euclid $\implies$ Gaussian integers have unique factorization
+- How many solutions to $x^2+y^2=n$?
 
  
-# [lecture 35](): Jacobi symbol
+# [lecture 44](https://www.youtube.com/watch?v=SCdDBYRrDtM&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=44): Pythagorean triangles
 
-- Legendre symbol $\left(\frac{a}{b}\right)$ for b prime
-- Jacobi symbol $\left(\frac{a}{b}\right)$ for b odd positive
-- Kronecker symbol $\left(\frac{a}{b}\right)$ for all integers a,b
-- Jacobi: mutiplicative in a, b; (-1/b), (2/b), (a+nb/b)=(a/b), all easy
-- proof for law of reciprocity
-- Warning: (a/b)=+1 does NOT imply a square
-- No need to factor a for Jacobi reciprocity!
-- compute is "Euclid", but take out factors of 2, keep track of signs
-- Euclid without division, fast
-- application, primality test that is a bit faster
-- 1-step definition of Legendre symbol? Yes, Zolotarev, sign of permutation
-- cycle of even length, odd permutation
-- ...
+- Pythagorean triangle, $3^2+4^2=5^2, 5^2+12^2=13^2, x^2+y^2=z^2$, x,y,z pairwise coprime
+- ternary quadratic form: $x^2+y^2-z^2=0$
+- $x^2+y^2=n$, n has primitive representation $\iff$ n has no factors p, $p\equiv 3\mod 4$, $4\nmid n$
+- only prime factors of primitive are 1 mod 4
+- method 2: $x^2+y^2=z^2$, geometrically, works for any rational t (PARI/GP):
+```pari
+$ gp -q
+? pt(t)=[(1-t^2)/(1+t^2), (2*t)/(1+t^2)];
+? pt(1/2)
+[3/5, 4/5]
+? pt(1/3)
+[4/5, 3/5]
+? pt(1/4)
+[15/17, 8/17]
+? 15^2+8^2==17^2
+1
+? pt(101/97)
+[-396/9805, 9797/9805]
+? (-396)^2+9797^2==9805^2
+1
+? 
+```
+- method 3: Gaussian integers
+```pari
+? gi(a,b)=a*b;
+? pt1=3/5+4/5*I;
+? pt2=gi(pt1, pt1)
+-7/25 + 24/25*I
+? pt3=gi(pt1, pt2)
+-117/125 + 44/125*I
+? (-117)^2+44^2==125^2
+1
+? 
+```
+- method 4: $x^2+y^2=z^2$, x,y,z coprime, z odd, x even, y odd, ...
+- Application of method 4
+  - to Fermat's last theorem: $x^n+y^n=z^n, n\geq 3, x,y,z\neq 0$
+  - n=4, "method of descent", elliptic curve
 
-# [lecture 34](https://www.youtube.com/watch?v=arL7oQV4asY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=34): Gauss sums
+# [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
-- gauss sum, gamma function, similarity
-- another proof of quadratic reciprocity (there are 300 proofs)
-
-# [lecture 33](https://www.youtube.com/watch?v=k8qJaV7qGL4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=33): Quadratic reciprocity
-
-- $\left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=(-1)^{(p-1)/2\cdot(q-1)/2}$
-- example calculation of $\left(\frac{1001}{99991}\right)=+1$, 1001 is square, $38521^2$
-- long proof of above
-
-# [lecture 32](https://www.youtube.com/watch?v=MxwdmjtK1BQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=32): Calculation of the Legendre symbol
-
-- $\left(\frac{-2}{p}\right)=\left(\frac{-1}{p}\right)\left(\frac{2}{p}\right)$, +1/-1 if p is 1,3/5,7 mod 8
-- infinitely many primes $\equiv 7 \mod 8$
-- infinitely many primes $\equiv 3 \mod 8$
-- infinitely many primes $\equiv 5 \mod 8$, exercise
-- $\left(\frac{3}{p}\right)=?$, +1/-1 if p=1,11 / 5,7 mod 12
-- application to Fermat numbers:  
-  $p=2^{2^n}+1$ is prime $\iff 3^{(p-1)/2}\equiv -1 \mod p$
-- $\left(\frac{5}{p}\right)=+1 \iff p=1,9,11,19 \mod 20\iff p=1,4 \mod 5$
-- $\left(\frac{5}{p}\right)=+1 \iff p=1,5,19,23 \mod 24$
-
-# [lecture 31](https://www.youtube.com/watch?v=Pz6CL0nRmGQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=31): Quadratic residues
-
-- $a\not\equiv0, x^2=a \mod p$ for some x, a is quadratic residue
-- $a\not\equiv0, x^2=a \mod p$ no solution, a is quadratic nonresidue
+- Johan Petr Gustav Lejeune Dirichlet
+- Generating function: $c_0, c_1, c_2, \dots$
+- $f(x)=c_0+c_1x+c_2x^2+\dots$
+- $f_{n+2}=f_{n+1}+f_n, f_0=0,f_1=1$ (0,1,1,2,3,5,8,13,...)
 
 $$
-\text{Legendre symbol, p odd prime: } \left(\frac{a}{p}\right)=\begin{cases}
-1 & \text{if a quadratic residue}\\
--1 & \text{if a quadratic nonresidue}\\
-0 & \text{if }a\equiv 0\end{cases}
+\begin{eqnarray*}
+F(x) & = & f_0x^0 &+& f_1x^1 &+& f_2x^2 &+&\dots\\
+xF(x) & = &       & & f_0x^1 &+& f_1x^2 &+&\dots\\
+x^2F(x) & = &     & &        & & f_0x^2 &+&\dots\\
+(1-x-x^2)F(x) &=& & &     x\\
+F(x) & = & \frac{x}{1-x-x^2}\\
+     & = & \frac{x}{(1-\varphi x)(1-(-\varphi)x)} & &  & &\varphi=\frac{\sqrt{5}+1}{2}\\
+     & = & \frac{1}{\sqrt{5}}\left(\frac{1}{1-\varphi x}-\frac{1}{1-(-\varphi)x}\right)\\
+     & = & \frac{1}{\sqrt{5}} \sum_n x_n\left(\varphi^n-(1-\varphi)^n\right)\\
+f_n  & = & \frac{1}{\sqrt{5}}\left(\varphi^n-(1-\varphi)^n\right) 
+\end{eqnarray*}
 $$
 
-- Euler $\left(\frac{a}{p}\right)\equiv a^{(p-1)/2}\mod p$
-- $\left(\frac{a}{p}\right)$ is homomorphism $(\mathbb{Z}/p\mathbb{Z})^\times\to \\{-1,1\\}$
-- $\left(\frac{-1}{p}\right)= +1/-1$ if $p\equiv 1/3 \mod 4$
-- $\left(\frac{2}{p}\right)= +1/-1$ if p= 1,7 / 3,5
-- Gauss's lemma:
-  - $\left(\frac{a}{p}\right)=(-1)^n$, n #residue classes
-  - $1 \equiv a^{(p-1)/2}(-1)^n \mod n$
-  - $\left(\frac{2}{p}\right)=(-1)^n -\left[p/4\right]$
+- $1+x+x^2+\dots=\frac{1}{1-x}$
+- $\zeta(s)=\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\dots$
+  - converges for $Re(\zeta)>1$
+  - $\zeta(s)=\frac{1}{1-2^s}\frac{1}{1-3^s}\frac{1}{1-5^s}\dots=\prod_p\frac{1}{1-p^s}$
+- $n^k$: $\frac{1}{1^s}+\frac{2^k}{2^s}+\frac{3^k}{3^s}+\dots=\zeta(s-k)=\prod_p\frac{1}{1-p^{k-s}}$
+- $\varphi(n)$: Euler factor at p, $\frac{1}{1^s}+\frac{\varphi(p)}{p^s}+\frac{\varphi(p^2)}{p^{2s}}+\dots=\frac{1-p^{-s}}{1-p^{1-s}}$
+  - $\sum\varphi(n)n^s=\prod_p\frac{1-p^{-s}}{1-p^{1-s}}=\frac{\zeta(s-1)}{\zeta(s)}$
+- $\tau(n)$=#divisors of n
+  - $\frac{1}{1^s}+\frac{\tau(2)}{2^s}+\frac{\tau(3)}{3^s}+\dots=\frac{1}{(1-p^{-s})^2}$
+  - $\prod_p\frac{1}{(1-p^{-s})^2}=\zeta(s)^2$
+- $\sigma(n) = \sum$ divisors of n
+  - $\sigma(p^k)=1+p+p^2+\dots+p^k=\frac{p^{k+1}-1}{p-1}$
+  - $\frac{1}{1^s}+\frac{1+p}{p^s}+\frac{1+p+p^2}{p^{2s}}+\dots=\frac{1}{(1-p^{-s})(1-p^{1-s})}$
+  - $\sum\frac{\sigma(n)}{n^s}=\prod_p\frac{\sigma(n)}{n^s}=\zeta(s)\zeta(s-1)$
+  - $\sigma_{k}(n)=\sum_{d\mid n }d^k$
+  - $\sum\frac{\sigma_k(n)}{n^s}=\zeta(s)\zeta(s-k)$
+  - $\sigma_o(n)=\tau(n), \sigma_1(n)=\sigma(n)$
+- Moebius function
+ 
+$$  
+\mu(n) = \begin{cases} 0 & \text{if n divisible by square >1}\\
+(-1)^k & \text{if n product of k distinct primes}\end{cases}
+$$
+  - $1+\frac{\mu(p)}{p^s}+\frac{\mu(p^2)}{p^{2s}}+\dots=1-\frac{1}{p^s}$
+  - $\sum\frac{\mu(n)}{n^s}=\prod_p(1-p^{-s})=\frac{1}{\zeta(s)}$
+- $\lambda(n)=(-1)^{\text{number of prime factors of} n}$
+  - $\sum\frac{\lambda(n)}{n^s}=\prod_p\frac{1}{1+p^{-s}}=\frac{\zeta(2s)}{\zeta(s)}$
+
+$$
+\chi(n) = \begin{cases} +1 & \text{if }n\equiv 1\mod 4\\
+-1 & \text{if }n\equiv 3\mod 4\\
+0 & if n even\end{cases}
+$$
+
+(simplest example of Dirichlet character)
+  - $L(s)=\sum\frac{\chi(n)}{n^s}=\prod_p\frac{1}{1-\chi(p)p^{-s}}$
+
+$$
+\Lambda(n)=\begin{cases} log(p) & \text{if }n=p^k\\
+0 & \text{otherwise}\end{cases}
+$$
+
+- not multiplicative!
+- $\frac{\Lambda(1)}{1^s}+\frac{\Lambda(2)}{2^s}+\frac{\Lambda(3)}{3^s}+\dots=\frac{\zeta'(s)}{\zeta{s}}=\frac{d}{ds}\log\zeta(s)$
+- $\zeta(s)=\prod_p\frac{1}{1-p^{-s}}$
+- $\log \zeta(s)=\prod_p\log(1-p^{-s})=-\sum_p p^{-s}+\frac{p^{-2s}}{2}+\dots$
+- $\frac{d}{ds}: \sum_n\Lambda(n)n^{-s}$
+  
+# [lecture 46](https://www.youtube.com/watch?v=lAAXBUuU9wY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=46): Products of Dirichlet series
+
+- product of power series, $c_n=\sum_i a_i b_{n-i}$ named convolution
+- Moebius inversion formula
+- $\zeta(s)L(s)=\frac{1}{4}\sum_n\frac{R(n)}{n^s}$
+  - Zeta function of Gaussian integers 
+  - R(n) = #solutions to n=$a^2+b^2$
+
+$$
+= \begin{cases} \frac{1}{1-2^s} & p=2 \\
+\frac{1}{(1-p^{-s})^s} & p\equiv 1 \mod 4 \\
+\frac{1}{1-p^{-2s}} & p\equiv 3 \mod 4 \end{cases}
+$$
+
+- derivative of Dirichlet series
+- Selberg's identity
+  - $\Lambda(n)\log n+\sum_{d\mid n}\Lambda(d)\Lambda(\frac{n}{d})=\sum_{d\mid n}\mu(d)\left(\log \frac{n}{d}\right)^2$
+  - nightmare to prove otherwise
+  - with generating function trivial to prove 
+
+
+
+# [lecture 47](https://www.youtube.com/watch?v=TxuIK_Rg0lI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=47): The prime number theorem
+
+- Prime number theorem (1896, improved 1948)
+  - #primes< x
+  - $\pi(x) \sim \frac{x}{\log x}$
+  - upper bound
+    - $\pi_{n<p<2n}p \leq \binom{2n}{n}\leq 2^{2n}$
+    - $\pi(x)\leq 2\frac{x}{\log x}$
+  - lower bound
+    - $\pi_{p^k\leq 2n}p \geq \binom{2n}{n}$
+    - $\pi(x)\geq \frac{1}{2}\frac{x}{\log x}$
+  - $\zeta(s)=\frac{1}{1^s}+\frac{2}{2^s}+\dots$
+  - $\left(\log \zeta(s)\right)'=\frac{\zeta'(s)}{\zeta(s)}=\frac{\Lambda(1)}{1^s}+\frac{\Lambda(2)}{2^s}+\dots$  ($\Lambda(p^n)=\log p$)
+- $\psi(n)=\Lambda(1)+\Lambda(2)+\dots+\Lambda(n)$
+- (1) $\zeta(s)$ has no zeros with $Re(s)\leq 1$ (key step)
+- (2) Newman's Tauberian theorem
+- (3) $\int_1^\infty \frac{\psi(x)-x}{x^2}dx$ converges
+- (4) $\psi(x) \sim x$
+- (5) $\pi(x)\sim \frac{x}{\log x}$
+
+  
+# [lecture 48](https://www.youtube.com/watch?v=Mn2LeGAolAw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=48): Proof of the prime number theorem)
+
+- proofs of (1),...,(5) from last lecture
+
+# [lecture 49](https://www.youtube.com/watch?v=eHhyVx2cTw4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=49): Dirichlet's theorem
+
+- Dirichlet's theorem
+  - there are infinitely many primes in $an+b$ with $(a,b)=1$ and $n\geq 1$
+- proof overview
+  - (1) define analog of $\chi(n), L(s)$
+  - (2) show that $L\chi(1)\neq 0$
+  - (3) show that $L\chi(1)\neq 0 \implies Dirichlet$
+
+# [lecture 50](https://www.youtube.com/watch?v=P-muxBNVbCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=50): Dirichlet characters
+
+- Dirichlet characters
+  - $\chi: (\mathbb{Z}/N\mathbb{Z})^\*\to \mathbb{C}^\*$
+  - $\chi(m+N)=\chi{m}$
+  - $\chi(m)=0, (m,N)=1, \chi(1)=1$
+  - $\chi(mn)=\chi(m)\chi(n)$
+  - number of characters of $(\mathbb{Z}/N\mathbb{Z})^\* =$ order of $(\mathbb{Z}/N\mathbb{Z})^\*$
+  - finite abelian group G: $G\to \mathbb{C}^\*$ homomorphism
+    - #characters = order G
+    - characters of G is a group, character group
+  - Fourier theory: $f(x+2\pi)=f(x)$, $sin(2\pi n), cos(2\pi n)$
+  - $e^{inx}, n\in \mathbb{Z}$ are characters of $\mathbb{R}/2\pi \mathbb{Z}$
+  - show function on $(\mathbb{Z}/N\mathbb{Z})^\*$ is linear combination of Dirichlet characters
+- primitive characters
+
+# [lecture 51](https://www.youtube.com/watch?v=Gl10NCS6eBI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=51): Proof of Dirichlet's theorem
+
+- proof and examples
+
+# [lecture 52](): Nonvanishing of L series at s=1
+
+- proof for $L\chi(1)\neq 0$
+- #primes 3 mod 4 $\sim$ #primes 1 mod 4
+  - always slightly more primes 3 mod 4 than 1 mod 4
 
 # [lecture 53](https://www.youtube.com/watch?v=P1I3_x0tk2A&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=53): Three calculators for number theorists 
 
@@ -626,645 +1274,3 @@ $$
 - free simulator for the DM42
 - GP / SAGE
   
-# [lecture 30](https://www.youtube.com/watch?v=leBH9QpD9PQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=30): Fields in number theory
-
-- f(x) coefficients in k, f has $\leq n$ roots ( $n=deg(f)$ )
-- p has primitive root g, p prime, g has order p-1 in $(\mathbb{Z}/p\mathbb{Z})^\times$, cyclic
-- relation between $\mathbb{Z}$ and $k[x]$
-- finite field, of finite order $\mathbb{Z}/p\mathbb{Z}$, $(\mathbb{Z}/p\mathbb{Z})^\times[x]/f$ with f irreducible
-- any finite field has order $p^n$, some prime p, $n\geq 1$
-- $F^*$ cyclic, so has generator g
-- $F^+$ NOT cyclic (unless $F=\mathbb{Z}/p\mathbb{Z}$)
-- Fermat: $x^p\equiv x \mod p$
-- same for finite fields, order is $p^n$, $x^{p^n}=x$ for all $x\in F$
-- $x^{p^n}-x=\prod_{\alpha\in F}(x-\alpha)$ in F[x]; C.R.T.
-- Wilson
-- $f=x^3+x+1, x^3+x^2+1$ irreducible
-- there is exactly one finite field of order $p^n$, any prime p, $n\geq 1$
-- (key point: finite field of order $p^n$ is "splitting field" of $x^{p^n}-x$)
-
-# [lecture 29](https://www.youtube.com/watch?v=7IP3YvM1dP0&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=29): Rings in number theory
-
-- ring definition, examples $\mathbb{Z},\mathbb{R},\mathbb{C}$, integers mod n: $\mathbb{Z}/n\mathbb{Z}$
-- quotients:
-  - Groups: abelian, subgroup, G/H set of equivalence classes
-  - Rings: R/I, I need to be IDEAL, R/I is ring, $\mathbb{R}[x]/(f)$
-- C.R.T., analog for rings, pick ideals I,J of R, map $R: R/I\times R/J$
-- $\mathbb{Z}$ has unique factorization
-  - R is euclidean ring if it has division with remainder
-  - gaussian integers, subring of complex numbers
-  - unique factorization domain
-- fields: ring, all nonzero elements have inverse
-  - k[x]/(f) with f irreducibel (role of prime numbers)
-
-# [lecture 28](https://www.youtube.com/watch?v=SLONKxYCmiA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=28): Products of groups
-
-- $G\times H$
-- vector space $\mathbb{R}^2$
-- $\mathbb{R}$, $\pm 1\times$ positive reals
-- C.R.T.
-- if G (abelian) has order mn with (m,n)=1  
-  $G=A\times B$  
-  A=elements a with ma=0   
-  B=elements b with nb=0
-- an G (finite, abelian) is product of groups of prime power order
-- ... is product of cyclic groups
-- find smallest integer n such that $x^n\equiv 1\mod 1000000 for (x,1000000)=1$
-
-# [lecture 27](https://www.youtube.com/watch?v=bpzNGhiT4OI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=27): Groups and number theory
-
-- group definition
-- important groups for number theory  
-  $\mathbb{Z}/m\mathbb{Z}$  
-  $(\mathbb{Z}/m\mathbb{Z})^\times$
-- Lagrange: order of subgroup H $\mid$ order of group G
-  - coset of $H = aH = \\{ ah_1, ah_2,\dots\\}$
-  - 2 cosets have same order (map back by $a^{-1}$ bijection)
-  - 2 cosets are same or disjoint
-  - G is disjoint union of cosets of same size $\implies$ Lagrange  
-- order of $g\in G$ divides order of $G$
-- corollary:
-  - Fermat $x^{p-1}\equiv 1 \mod p$  
-    Group= $(\mathbb{Z}/m\mathbb{Z})^\times$ = integers coprime to p, mod p
-  - Euler $x^{\varphi(m)}\equiv 1\mod m$, $(m,x)=1$  
-    $\varphi(m)=$ order of group $(\mathbb{Z}/m\mathbb{Z})^\times$
-- for abelian groups shorter proof
-- group is CYCLIC if it has 1 generator g, all elements ar powers of g
-- non obvious cyclic group:
-  $(\mathbb{Z}/m\mathbb{Z})^\times$ has generator $\equiv$ primitive root
-- isomorphic groups ("really the same")
-- Wilsons theorem $(p-1)!\equiv \-1 \mod p$ (p prime)  
-  G finite abelian group, product of all elements is
-  
-$$\\begin{cases} 
-  g & (\text{if exactly one element g has order 2})\\  
-  1 & (otherwise)
-\\end{cases}$$
-
-  $G=(\mathbb{Z}/m\mathbb{Z})^\times$
-    
-# [lecture 26](https://www.youtube.com/watch?v=GcJImruRSyE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=26&pp=iAQB): Roots of polynomials modulo p
-
-- Cantor-Zassenhaus  
-  (1) Euclid for (a,b), works with poly, fast if deg f,g small  
-  (2) Russian-Peasant
-- find roots of f
-
-
-# [lecture 25](https://www.youtube.com/watch?v=H7WFEGrmMEs&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=25&pp=iAQB): Quadratic equtions mod p
-
-- degree 2 congruences  
-  $ax^2+bx+c\equiv 0 \mod p$  
-  $a(x+b/2)^2\equiv \frac{b^2-4ac}{4a}$, discriminant $b^2-4ac$  
-  need /2, p odd OK because p=2 no problem  
-  $x^2\equiv d$ ($d\not \equiv 0$)
-  check has solution:  
-  solution exists $\iff d^\frac{p-1}{2}\equiv 1\mod p$
-- solve $x^2\equiv d$  
-  method 1: trial and error  
-  method 2: polynomial solver $f(x)\equiv 0$ (Berlekamp, Cantor-Zassenhaus)  
-  method 3: guess answer, better Ansatz  
-- general case:  
-  $p-1=2^k\cdot n$, $n$ odd  
-  pick g to have order $2^k$, $g=(random)^n$  
-  $2^ks+nt=1$ by Euclid  
-  $y=y^1=(y^n)^t\times (y^{2^k})^s$  
-  order of power of 2, previous method  
-  odd order, use method 3
-  (divide and conquer)
-
-# [lecture 24](https://www.youtube.com/watch?v=AfRpXi8r0So&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=24&pp=iAQB): Primitive roots for prime powers
-
-- $p^n$, p odd prime, $n>1$
-  - $p^2$
-  - theorem: if $g$ primitive root mod $p^2$, $p$ odd prime, then primitive root $\mod p^n$ with $n\geq 1$
--  Equivalent  
-   (1) m has primitive root  
-   (2) m has $\varphi(\varphi(m))$ primitive roots  
-   (3) $m=1,2,4,p^n,2p^n$ (p odd prime  
-   (4) $x^2\equiv 1 \mod m \implies x\equiv \pm 1 \mod m$  
-   (5) Wilson's theorem: $\prod_{(a,m)=1}a\equiv -1 \mod m$
-- Mod $2^n$?
-- logarithms: indices
-- $a\not\equiv 0 \mod p$ is of form $g^n \mod p$; $n=\log_g a$
-- p is prime? if we can factor $p-1$, we can find primitive root of $p$, 
-  $g$ of order $p-1$, check $g$ not have order dividing $\frac{p-1}{q}$:
-  $g^{\frac{p-1}{q}}\not\equiv 1\mod p$ with $q$ prime, $q\mid p-1$
-
-# [lecture 23](https://www.youtube.com/watch?v=E8UTP0DiCCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=23&pp=iAQB): Primitive roots
-
-- answer questions:  
-  Which numbers have primitive roots? How many? How find?
-  (carefully counting)
-- Theorem: if $p$ is prime, $p$ has primitive root
-- if $a$ is primitive root mod $m$, order of $a$ is $\varphi(m)$.  
-  Now: $a^b$ has order $\varphi(m) \iff (b, \varphi(m))=1$  
-  primitive roots: $$\\{a^b \mid (b, \varphi(m))=1\\}$$  
-  #primitive roots = $\varphi(\varphi(m))$
-- "p-1 primality test" [17:22 min](https://youtu.be/AfRpXi8r0So?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=1042), here with PARI/GP:  
-```pari
-$ gp -q
-? p=7457*2^59659+1; #digits(p)
-17964
-? #
-   timer = 1 (on)
-? isprime(p)
-cpu time = 1min, 12,553 ms, real time = 1min, 14,480 ms.
-1
-? g=znprimroot(p); type(g)
-cpu time = 50,621 ms, real time = 50,629 ms.
-"t_INTMOD"
-? print(factor(p-1))
-[2, 59659; 7457, 1]
-? g^((p-1)/2)!=Mod(1,p)
-cpu time = 10,768 ms, real time = 10,770 ms.
-1
-? g^((p-1)/7457)!=Mod(1,p)
-cpu time = 10,724 ms, real time = 10,724 ms.
-1
-? 
-```
-
-# [lecture 22](https://www.youtube.com/watch?v=6QZYfpcf79I&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=22&pp=iAQB): Chevalley-Warning theorem
-
-- If $f(x_1,\dots,x_n)$ has degree $d<n$  
-  then #solutions to $f(x_1,\dots,x_n)\equiv 0\mod p$ is divisible by $p$
-- Useful lemma:
-  $0^i+1^i+2^i+\dots+(p-1)^i\equiv 0 \mod p$ if $i<p-1$
-- Chevalley-Warning theorem implies that integers mod p are "quasi algebraicly closed"   
-
-# [lecture 21](https://www.youtube.com/watch?v=E-6llnLZ7J8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=21&pp=iAQB): Congruences modulo a prime
-
-- advantages of p prime:
-  - no zero divisors
-  - inverses exist
-  - polynomials of degree n have $\leq n$v roots
-  - Fermat: $x^p\equiv x\mod p$
-  - primitive roots exist mod p
-- wolstenholme's theorem:  
-  $1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{p-1}$, numerator
-  is divisible by $p$ if $p>2$
-- Given $f(x)\equiv 0 \mod p$, problems:  
-  (1) any solutions?  
-  (2) how many?  
-  (3) find them?
-- Euler: (fast, better replace by faster method later [Jacobi symbol])
-
-$$a^{(p-1)/2}\equiv \begin{cases}
-+1 & \text{if a is square}\\
--1 & \text{if a is not square}
-\end{cases}$$
-
-  - If $d$ divides $p-1$, then $x^d-1\equiv 0 \mod p$ has
-    exactly $d$ roots
-  
-
-# [lecture 20](https://www.youtube.com/watch?v=1HTq2zq2RtY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=20&pp=iAQB): p-adic numbers
-
-- what if $f'(x_1)\equiv 0 \mod p$?
-- p-adic numbers
-  - (informal) number in base p, goes left infinite distance
-  - does not converge to real number, but mod p
-  - add, multiply p-adic numbers, also subtract
-  - division by all numbers $a$ for $p\nmid a$
-- which numbers are square? reals, 2-adics, p-adics
-  -  square $\iff a\text{ is square }\mod p$
-- any for reals has analog for p-adics
-- iteration for reals and p-adics
-
-# [lecture 19](https://www.youtube.com/watch?v=nrH2vs04TyQ&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=19&pp=iAQB): Hensel and Newton's method
-
-- $f(x)\equiv 0 \mod m$
-- today "Reduce from $p^m$ to $p$
-  - stupid method $O(p^m)$
-  - not quite so stupid method $O(p*m)$
-    - $x^2\equiv 17 \mod 2^10$, problems: not unique, no lifts
-  - Hensel's method $O(n)$
-    - $f(x_1)\equiv 0 \mod p$, $x_1$ solution
-    - Taylor, derivative, key point:
-    $$\frac{\left(\frac{d}{dx}\right)^n f(x)}{n!}$$
-    has integer solutions  
-    we can solve $f(x)\equiv 0 \mod p$ IF:  
-    (1) we can solve $f(x_1)\equiv 0 \mod p$  
-    (2) $f'(x_1)\not\equiv 0 \mod p$
-
-  - Newton's method (the same)
-    - for reals $f(x)=0$ with tangents
-    - if $f(x)=0\mod p^n$ and $f'(x)\not\equiv 0 \mod p$  
-      then $f(x-\frac{f(x)}{f'(x)})\equiv 0 \mod p^{2n\}$  
-      $O(\log n)$ because of doubling
-
-# [lecture 18](https://www.youtube.com/watch?v=16dAteWM5ZA&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=18&pp=iAQB): Cryptography
-
-- Alice, Bob, Eve
-  - code book
-  - one time pad
-  - Enigma
-  (share something)
-- Diffie Hellman, trapdoor function: easy to compute, inverse hard
-- blockchain, each block contains "secure hash" of previous blocks
-  - mining bitcoin: find a so that f(a) "nice"
-- Rivest/Shamir/Adleman
-  - choose large p,q, large int k
-  - publish m=pq and k,but not p,q
-  - $f(x)=x^k \mod m$ public function
-  - easy to find large primes, hard to factorize large numbers
-- random
-  - never use builtin random number generation
-- breaking codes
-  - factor m, Shor's algorithm quantum computers
-  - decode without factoring?
-  - rubber host cryptographie
-  - man in the middle attack
-  - users do something stupid
-  - monitor traffic
-  - direction finding
-  - Eve can send fake messages to A, B
-  - social engineering
-  - message padded with junk
-  - compressed message
-  - extra security
-  - Remarks:
-    - latest factorings of big numbers from RSA challenge (d is number of decimal digits or bits for RSA-d)
-      - [RSA-250](https://en.wikipedia.org/wiki/RSA_numbers#RSA-250) was factored 2/2020 utilising approximately 2700 CPU core-years
-      - [RSA-260](https://en.wikipedia.org/wiki/RSA_numbers#RSA-260) was factored 9/2026 utilising approximately 4900 GPU-days (about 13.5 GPU-years)
-      - [RSA-896](https://en.wikipedia.org/wiki/RSA_numbers#RSA-896) (270 decimal digits) was factored 19 days later using a maximum of 2048 GPUs for about 30 GPU-years over 10 days
-      - they were factorized using [Generalized number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve)
-      - on the public internet, 2048-bit is the standard RSA key length, which is far out of reach
-    - Knowing two sum of two squares representations for RSA semiprime instantaneously breaks RSA ([RSA_numbers_factored repo](https://github.com/Hermann-SW/RSA_numbers_factored/) for easy determination of the representations):
-      - determine factored RSA numbers having two sum of two squares representations
-      - since prime factors of unfactored RSA numbers are unknown, testing necessary property shows the smallest three such candidates
-      - determine two sum of two squares representations of RSA-768 (quickly with its known factors from repo)
-      - RSA-768 can be factored immediately then (PARI/GP)
-```pari
-pi@raspberrypi5:~/RSA_numbers_factored/pari $ gp -q RSA_numbers_factored.gp
-? foreach(RSA.factored(mod4=[1,1]),t,print1(t[1]," "))
-59 129 180 230 768 
-? 
-```
-```pari
-? foreach(RSA.unfactored(mod4=1)[1..3],t,print1(t[1]," "))
-280 309 310 
-? 
-```
-```pari
-? t=RSA.get(768);
-? n=t[2]; [e,f]=RSA.square_sums(t);[a,b]=e;[c,d]=f;
-? (a^2+b^2)==n&&(c^2+d^2)==n
-1
-? #Set([a,b,c,d])
-4
-? 
-```
-```pari
-? p=gcd((a+c)^2+(b+d)^2,n)
-36746043666799590428244633799627952632279158164343087642676032283815739666511279233373417143396810270092798736308917
-? ##
-  ***   last result computed in 0 ms.
-? q=gcd((a+c)^2+(b-d)^2,n)
-33478071698956898786044169848212690817704794983713768568912431388982883793878002287614711652531743087737814467999489
-? ##
-  ***   last result computed in 0 ms.
-? n==p*q
-1
-? 
-```
-
-
-# [lecture 17](https://www.youtube.com/watch?v=Imxx1tFDeSw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=17&pp=iAQB): Factorization
-
-- Pollard $\rho$ method: find factor p of n  
-  expected running time $<\sqrt[4]{n}$
-- Pollard's $p-1$ methd  
-  good for finding factors p with $p-1$ smooth
-- Lenstra's elliptic curve method
-
-# [lecture 16](https://www.youtube.com/watch?v=roBKA4adPJE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=16&pp=iAQB): More numerical calculation
-
-- how solve $x^2\equiv -1 \mod p$, p prime, $p\equiv 1\mod 4$?
-- guess at random, 50% chance to work, repeat
-- worst case EXP TIME, average case POLY TIME
-- test if x is prime
-  - test all factors < $\sqrt{x}$, EXP TIME
-  - write as $x=a^2-b^2$, best with $x=ab$ and a,b close
-  - test whether $a^{m-1}\equiv 1 \mod m$
-
-# [lecture 15](https://www.youtube.com/watch?v=ne0gHR57qUU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=15&pp=iAQB): Numerical calculation 
-
-- (1) solve ax+by=c  
-  (2) Is n prime? Factorize it  
-  (3) Solve $f(x)\equiv 0\mod p$; $x^2+1\equiv 0 \mod p$  
-  (4) $a^b \mod m$
-- O() notation
-- Fast Fourier Transform: $O(N\log N)+O(N)+O(N\log N)$ [7:53min in video]  
-  - FFT (choose $P=2\cdot 3\cdot\dots >mn$)  
-  - pointwise multiplication (modulo the prime divisors of P)  
-  - inverse FFT (use C.R.T. to reconstruct $mn \mod P$)  
-  I implemented [proth.gp](../scripts/proth.gp) demo with Gemini, proving 1749 decimal digit Proth number prime
-  using "RNS/CRT/folding reduction" multiplication. While ```Mod(3,N)^((N-1)/2)==Mod(-1,N)```
-  ([prime proof for Proth number](https://arxiv.org/pdf/0812.2596#page=3) N=k*2^n+1 with k≤n and $3\nmid k$)
-  returns 1 in 31ms, the demo did need 19s on AMD 9950X CPU. But it did show all the details,
-  including the not mentioned by lecturer folding reductions. Gemini asked whether to port to C++ and we
-  did in another very long chat. Down to only 3 seconds now with [proth_prover.cpp](../scripts/proth_prover.cpp)
-  based on libgmp and libgmpxx. In later chat about performance improvements,
-  new fast Barret reduction and Horner Scheme reduced runtime by 50%:
-  ```
-  $ ./proth_prover
-  Digits of N: 1749
-  CRT primes set up: 364 primes (Max: 4294967291)
-  Precomputing Garner CRT coefficients...
-  Starting modular exponentiation (3^((N-1)/2) mod N)...
-  Progress: bit 0 / 5807             
-    -> Total Exponentiation time: 1542 ms
-  Comparing result against N - 1...
-  Success! Result matches N - 1. N is prime!
-  $ 
-  ``` 
-- example: compute determinant of $10\times 10$ matrix of BIG numbers with FFT
-- Russian peasant algorithm, bad for multiplication,  
-  good for exponentiation $O(N\log N)$
-- best possible? NO! $a^{15}$; smallest $l(n)$, $l(191)$
-- calculate polynomial; multiplication by Horner's method
-
-## [lecture 14](https://www.youtube.com/watch?v=8I0z_Lobtso&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=14&pp=iAQB0gcJCSQMAYcqIYzv): Euler's $\varphi$ (totient) function
-
-- number of residue classes (mod n) coprime to n
-- $\varphi(mn)=\varphi(m)\varphi(n), (m,n)=1$
-- $\varphi(n)=\varphi(p_1^{n_1})\varphi(p_2^{n_2})\dots$
-- $\varphi(n)=p_1^{n_1-1}(p_1-1)p_2^{n_2-1}(p_2-1)\dots=n(1-\frac{1}{p_1})(1-\frac{1}{p_2})\dots$
-- inclusion-exclusion principle
-- probability interpretation
-- find all numbers n with $\varphi(n)=24$
-- Carmichael conjecture: given n, is there $m\neq n$ with $\varphi(n)=\varphi(m)$
-- $\varphi(n)=$ power of 2? Construct n-gon
-- how big is $\varphi(n)$?
-- average value of $\varphi(n)/n$?
-- probability m, n coprime is $\frac{\pi^2}{6}$
-- generating function
-- $\sum_{d\vert n}\varphi(d)=n$
-
-## [lecture 13](https://www.youtube.com/watch?v=q99aBlC5Xfk&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=13&pp=iAQB0gcJCSQMAYcqIYzv): Chinese remainder theorem
-- $ax\equiv b \mod m$ solvable iff b divisible by (a,m)
-- (a,m)=1 then unique solution, (a,m)>1 then many solutions
-- Solve polynomial $f(x)\equiv 0 \mod m$  
-  (1) m prime: if $(a,m)=1$, a has inverse or $a\equiv 0$  
-  (2) $m=p^n$ prime power, reduce to m=p (later)  
-  (3) $m=p_1^{n_1}p_2^{n_2}\dots$, reduce to (2) using C.R.T.
-- (3) reduce to (2), ho many solutions?
-
-## [lecture 12](https://www.youtube.com/watch?v=3JBaDZqtgug&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=12&pp=iAQB): Wilsons theorem
-
-- $(p-1)! \mod p$ ?
-- $p$ prime implies $\equiv -1 \mod p$
-- (useless) test for prime: $p$ is prime $\iff (p-1)! \equiv -1 \mod p$
-- application: find $x^2\equiv -1 \mod p$  
-  $p\equiv 3 \mod 4$ no solution
-- $\left(\frac{p-1}{2}\right)!$ is $\sqrt{-1}$ if $p\equiv 1\mod 4$
-
-$$\prod_{(a,m)=1} a = \begin{cases}
-1 & \text{if >2 solutions exist to }x^2=1\\
--1 & \text{if -1 is only solution to }x^2=1\text{ (other than 1)}
-\end{cases}$$
-
-## [lecture 11](https://www.youtube.com/watch?v=V4cB7t-zHxE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=11&pp=iAQB): Euler's theorem
-
-- if $p$ divides $a^q-1$ with $p, q$ prime then either $p\equiv 1 \mod q$ or $a\equiv 1 \mod p$
-- $\frac{x^q-1}{x-1}$
-- infinitely many primes $\equiv 1 \mod 10$
-- $a^x\equiv a^y$
-- disjoint union of cycles, same size
-- $a^{\varphi(m)}\equiv 1 \mod m, (a,m)=1$
-- Lagrange; If $G$ is group, $g\in G$, then $ord(g) \vert \vert G\vert$
-- primitive roots
-- last two digits of $7^403$
-- last digit of $7^{7^{7^7}}$
-
-## [lecture 10](https://www.youtube.com/watch?v=fgHEKAdErbU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=10&pp=iAQB): Fermat's theorem
-
-- order of $a$ mod $p$, smallest $n>0$ with $a^n\equiv 1 \mod p$
-- Fermat prime $2^n+1$, with $n$ power of $2$
-- $p|2^{2^n}+1$, then $p\equiv 1 \mod 2^{n+1}$, Euler $641\vert 2^{2^5}+1$
-- $a^2\equiv b^2 \mod m$ only if $m$ is prime
-- $a^2\equiv b^2 \mod m^2$ implies $a\equiv \pm b \mod m$? No
-- 
-
-## [lecture 9](https://www.youtube.com/watch?v=E1tikA1GEVU&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=9&pp=iAQB): Congruences
-
-- $a\equiv b (\mod c)$
-- residue classes
-- ring, zero divisor
-- divisibility by 9, 11
-- sum of three or four squares, three cubes
-- Fermat: If p is prime, then $a^p\equiv a \mod p$
-- fast modular exponentiation
-- Carmichael numbers (see code in remarks below)
-- probabilistic prime number test
-- if $p\vert n^2+1$, then $p=2$ or $p\equiv 1 \mod 4$
-----
-Remarks:
-- While [SAT](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) is NP-complete,
-[XOR-SAT](https://en.wikipedia.org/wiki/XOR-SAT) is in P since an XOR-SAT formula can also be viewed as a system of linear equations mod 2 (congruences), and can be solved in cubic time by Gaussian elimination.
-- Carmichael numbers [31:09 min](https://youtu.be/E1tikA1GEVU?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=1869)
-  - [carm10e24.bin](https://stamm-wilbrandt.de/carm10e24.bin) contains all 308,279,939 Carmichael numbers below $10^{24}$ (converted and stored binary (11.45GB) for PARI/GP fast read, original file from [Jonathan Webster's website](https://blue.butler.edu/~jewebste/)).
-[[carm10e22.bin](https://stamm-wilbrandt.de/carm10e22.bin) / 49,679,870 Carmichael numbers below $10^{22}$ (1.82GB)]]
-  - check that files have not been tampered
-  - fast reading bigger file into PARI/GP needs ≥25GB RAM to succeed
-  - fast verifying the $10^n$ Carmichael number counts of [https://oeis.org/A055553](https://oeis.org/A055553)
-```
-$ sha256sum carm10e24.bin carm10e22.bin
-964abcc780b9786ae9f18d75a688cfc83f2bf74fb592ead9f58fd94bf6441946  carm10e24.bin
-4feaa4bf6911c97ef5f0cadfad4231a70ab321e430fc48567a6b31ad6f89f7ca  carm10e22.bin
-$
-```
-```pari
-$ gp -q
-? #
-   timer = 1 (on)
-? b=read("carm10e24.bin");0  \\ Karim's "...;0 trick" avoids array in history/double size
-cpu time = 3,937 ms, real time = 8,298 ms.
-0
-? #b
-308279939
-? b[#b]
-999999999855878641139521
-? 
-```
-```pari
-? d=10^3;C=0;foreach(b,c,if(c>=d,print1(C",");d=d*10);C+=1);print(C)
-1,7,16,43,105,255,646,1547,3605,8241,19279,44706,105212,246683,585355,1401644,3381806,8220777,20138200,49679870,123381982,308279939
-cpu time = 39,198 ms, real time = 39,209 ms.
-? 
-```
-
-
-## [lecture 8](https://www.youtube.com/watch?v=KIvuGT5V1Fg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=8&pp=iAQB): Applications of binomial coefficients
-
-- fractal like pattern for Pascal's triangle "mod 2"
-- "mod prime"
-- 1000! ends in exactly 249 zeros
-- powers of 7 dividing $\binom{100}{40}$ is two
-- estimates on binomial size, Stirling formula for factorial
-- simple prove of weak version of prime number theorem:   
-  $\frac{1}{2}\frac{n}{\log{n}}\leq\pi(x)\leq 2\frac{n}{\log{n}}$
-- Catalan numbers $\frac{1}{k+1}\binom{n}{k}$, generating function
-
-## [lecture 7](https://www.youtube.com/watch?v=TBolWCObRgg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=7&pp=iAQB): Binomial coefficients
-
-- binomial $\binom{n}{k}$
-  - $(x+y)^n=\binom{n}{0}x^ny^0+\binom{n}{1}x^{n-1}y^1+\dots$
-  - #k-element subsets of n-element set
-  - Pascal's triangle
-  - $= \frac{n!}{(n-k)!k!}$
-  - all four are equivalent
-- trinomial
-- Pascal's triangle
-  - triangular numbers
-  - tetrahedral numbers
-  - 4-dim tetrahedon numbers
-- basic properties of binomials
-  - horizontal symmetry of Pascal's triangle
-  - row n sum is $2^n$
-  - alternating sign horizontal sum is 0 for $n>0$
-  - sum of binomial mirror products
-  - #ways driving from one point to another on a rectangular grid
-  - k people, divide n coins, there are $\binom{n+k-1}{k-1}$ ways
-
-## [lecture 6](https://www.youtube.com/watch?v=skTslDpxeL8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=6&pp=iAQB): arithmetical functions
-
-- multiplicative functions
-  - d(n) #divisors
-  - sigma(n) sum of divisors
-  - Euler phi(n) #coprime <n
-  - $$tau(n) = q (1-q)^{24} (1-q^2)^{24} \dots$$
-  - $$mu(n) = (-1)^w(n)$$ if n squarefree and divisible by w(n) primes, 0 otherwise
-  - why interesting: $$\frac{1}{zeta(s)} = \frac{1}{1^s} + \frac{mu(2)}{2^s} + \frac{mu(3)}{3^s} \dots$$
-  - perfect numbers; Euclid $$n=2^{p-1}(2^p-1)$$ with $$2^p-1$$ prime, then n is perfect number
-  - Euler: even perfect numbers are of this form
-  - infinitely many even perfect numbers?
-  - odd perfect numbers?
-  - Landau (infinitely many): 
-    - $$2n=p_1+p_2$$? (Goldbach conjecture)
-    - $$p_1-p_2=2$$? (twin prime conjectore)
-    - $$n^2 < p < (n+1)^2$$?
-    - $$n^2+1$$?
-    - likely all 4 are yes, but out of reach
-
-## [lecture 5](https://www.youtube.com/watch?v=VRrP4US7idg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=5&pp=iAQB): Primes
-
-- negative prime: product with unit
-- prime test: only primes as divisors, up to sqrt(N)
-- fundamental theorem of arithmetic, proof; for poly
-- no primes on reals
-- no primes on functions of reals
-- algebraic numbers m+sqrt(-1) gaussian integers unique factorization
-- euclid numbers are not always prime
-- Dirichlet: an+b infinitely many primes if (a,b)=1
-- $$(2 p_1 p_2 ... p_k)^2+1$$ implies of form $$4n+1 or 2$$, not divisible by $$2, p_1,\dots,p_k$$ => infinitely many primes $$4n+1$$
-- no bound on size of gaps between primes ($$n! + 2,3,\dots,n$$ all composite)
- 
-## [lecture 4](https://www.youtube.com/watch?v=R-O8j7FHEXI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=4&pp=iAQB): More on Euclid's algorithm
-
-- Euclid's algorithm allows to solve ax+by=d with (a,b)=d
-- ax+by=c solvable <=> (a,b)|c
-- works: polynomial in 1 variable
-- fails: for polynomial in 2 variables
-- works: in 3 variables
-- better euclid, avoid long division  
-  I implemented [gcds.cpp](../scripts/gcds.cpp) to compare ```gcd()``` implementations using ```modulus``` (with long division) and ```subtraction``` per [lecture 4, 15:45min](https://youtu.be/R-O8j7FHEXI?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=945). Nothing can compare to builtin ```mpz_gcd()```, but tuned by Gemini implementations show subtraction being $3\times$ faster than modulus, confirming lecturer statement:
-  ```
-  hermann@9950x:~$ ./gcds 5000000
-  1,044,938-digit consecutive fibonaci numbers
-  mpz_gcd(): 0.192115s
-   loop mod: 110.977s (4999998)
-   loop sub: 96.6452s (2451621)
-  now both approaches tuned by Gemini
-   loop mod: 81.1123s (4999998)
-   loop sub: 26.2251s (2451621)
-  hermann@9950x:~$ 
-  ```
-- lcm(a,b)=ab/gcd(a,b)
-
-## [lecture 3](https://www.youtube.com/watch?v=pVKhDtOjji8&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=3&pp=iAQB): Divisibility and Euclid's algorithm
-
-- a | b  "divides"
-- n(n+1)(n+2)
-- Euclid's division algorithm
-- different methods to compute gcd
-  - stupid, test 1,2,3,...
-  - factorize (slow)
-  - Euclid's algorithm
-  - runtime analysis
-    - fibonacci numbers worst case
-    - #steps ≤ log(n)
-    - formula F_n, guess->Ansatz
-    - phi, golden ratio
-- observation: divisors in Euclid's algorithm determine continued fraction
-- Euclid's algorithm finitely many steps implies rational numbers are finite continued fractions
-
-## [lecture 2](https://www.youtube.com/watch?v=mduJOLdKrak&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=2&pp=iAQB): Survey
-
-- congruences
-- Fermat's theorem
-- Euler
-- test if big n is prime
-- quadratic residue
-- quadratic reciprocity
-- addititive number theory   
-  - is every even number sum of two primes? (Goldbach)
-- twin prime conjecture, Zhang, Tao
-- Dirichlet: a+nb with (a,b)=1 has infinitely many primes
-- $n^2+1$
-  - likely contains infinitely many primes
-  - nobody knows how to prove
-- recreational number theory
-  - perfect numbers 6,28,496
-  - amicable numbers 220-284
-  - 3n+1 problem
-- algebraic number theory
-  - m+ni, i=sqrt(-1)
-  - Gaussian integers
-    - unique factorization
-    - 5=(2+i)(2-i)
-- combinatorial number theory
-  - partition p(n)
-  - power series formula
-  
-## [lecture 1](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1&pp=iAQB)
-- primes
-  - sieve of Eratosthenes
-- infinitely many primes
-  - $p_{n+1}=p_1\times\dots\times p_n+1$
-  - if $p_{n+1}$ is not prime, take smallest prime factor of $p_{n+1}$ as $p_{n+1}$
-  - product of no primes is 1, $1+1=2=p_1$
-  - next $2+1=3=p_2$, then $2\times 3+1=7=p_3$, $2\times 3\times 7+1=43=p_4$
-  - then $2\times 3\times 7\times 43+1=1807=13\times 139$, so $p_5=13$, $\dots$
-- how to find large primes?
-  - Mersenne prime $2^n-1$
-  - open problem: infinitely many?
-- Fermat primes
-  - $2^n+1$, n=ab with a odd, divisible by $2^a+1$
-  - better $2^{2^n}+1$, only prime for $n<5$
-- generate large primes
-  - $f(n)=n^2+n+41$, prime for $0≤n≤40$, not prime for $n=41$
-  - no polynomial can always produce primes
-- $π(n)$ number of primes ≤n, roughly $n/log(n)$
-  - problem with infinite sums
-- $Li(x) = \int_0^x 1/log(x) dx$
-- Riemann: prime powers
-  - $p^n$ counts as $1/n$
-- $π'(n) = $# $prime powers ≤n$
-  - $= Li(x) - \sum_p Li(x^p)$   "zeta function zeros"
-- $zeta(2)=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+... = \frac{π^2}{6}$
-  - rho with $zeta(rho)=0$
-    - hypothesis: $Re(rho)≤1/2$
- - unique prime factorization
-- $\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\dots = \frac{1}{1-2^{-s}}\frac{1}{1-3^{-s}}\frac{1}{1-5^{-s}}\dots$
-- diophantine equations
-- $x^n+y^n=z^n$ (Fermat, $n\geq 3$, $x,y,z>0$)
-- $x^4+y^4+z^4=t^4$, big solutions
-- Hilbert's 10th problem:
-  - is there algorithm to solve all diophantine equations?
-  - no
-- Pell's equation
-- $1729$ sum of two cube in two different ways
- 
