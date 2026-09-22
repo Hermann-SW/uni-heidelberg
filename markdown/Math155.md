@@ -4,6 +4,7 @@
 
 My lecture summaries:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[52](#lecture-52-nonvanishing-of-L-series-at-s1)
 [51](#lecture-51-proof-of-dirichlets-theorem)
 [50](#lecture-50-dirichlet-characters)
 [49](#lecture-49-dirichlets-theorem)
@@ -62,9 +63,13 @@ My example code (with lecture number):
 | Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) | p-1 primality test ([23](#lecture-23-primitive-roots)) | Cryptography ([18](#lecture-18-cryptography)) |
 | Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) | Carmichael numbers ([9](#lecture-9-congruences)) | [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm))|
 
+# [lecture 52](): Nonvanishing of L series at s=1
+
+-
+
 # [lecture 51](https://www.youtube.com/watch?v=Gl10NCS6eBI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=51): Proof of Dirichlet's theorem
 
-- 
+- proof and examples
 
 # [lecture 50](https://www.youtube.com/watch?v=P-muxBNVbCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=50): Dirichlet characters
 
@@ -82,7 +87,7 @@ My example code (with lecture number):
   - show function on $(\mathbb{Z}/N\mathbb{Z})^\*$ is linear combination of Dirichlet characters
 - primitive characters
 
-# [lecture 49](https://www.youtube.com/watch?v=eHhyVx2cTw4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=49): Dirichlet's theorem)
+# [lecture 49](https://www.youtube.com/watch?v=eHhyVx2cTw4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=49): Dirichlet's theorem
 
 - Dirichlet's theorem
   - there are infinitely many primes in $an+b$ with $(a,b)=1$ and $n\geq 1$
