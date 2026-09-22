@@ -4,6 +4,7 @@
 
 My lecture summaries:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[47](#lecture-47-the-prime-number-theorem)
 [46](#lecture-46-products-of-dirichlet-series)
 [45](#lecture-45-dirichlet-series)
 [44](#lecture-44-pythagorean-triangles)
@@ -57,9 +58,31 @@ My example code (with lecture number):
 | Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) | p-1 primality test ([23](#lecture-23-primitive-roots)) | Cryptography ([18](#lecture-18-cryptography)) |
 | Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) | Carmichael numbers ([9](#lecture-9-congruences)) | [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm))|
 
-# [lecture 46](https://www.youtube.com/watch?v=lAAXBUuU9wY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=46): Products of Dirichlet series
+# [lecture 47](https://www.youtube.com/watch?v=TxuIK_Rg0lI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=47): The prime number theorem
 
 - 
+
+# [lecture 46](https://www.youtube.com/watch?v=lAAXBUuU9wY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=46): Products of Dirichlet series
+
+- product of power series, $c_n=\sum_i a_i b_{n-i}$ named convolution
+- Moebius inversion formula
+- $\zeta(s)L(s)=\frac{1}{4}\sum_n\frac{R(n)}{n^s}
+  - Zeta function of Gaussian integers 
+  - R(n) = #solutions to n=$a^2+b^2$
+
+$$
+= \begin{cases} \frac{1}{1-2^s} & p=2 \\
+\frac{1}{(1-p^{-s})^s} & p\equiv 1 \mod 4 }}
+\frac{1}{1-p^{-2s}} & p\equiv 1 \mod 4 }}
+$$
+
+- derivative of Dirichlet series
+- Selberg's identity
+  - $\Lambda(n)\log n+\sum_{d\mid n}\Lambda(d)\Lambda(\frac{n}{d})=\sum_{d\mid n}\mu(d)\left(\log \frac{n}{d}\right)^2
+  - nightmare to prove otherwise
+  - with generating function trivial to prove 
+
+
 
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
