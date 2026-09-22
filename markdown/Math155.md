@@ -65,7 +65,9 @@ My example code (with lecture number):
 
 # [lecture 52](): Nonvanishing of L series at s=1
 
--
+- proof for $L\chi(1)\neq 0$
+- #primes 3 mod 4 $\sim$ #primes 1 mod 4
+  - always slightly more primes 3 mod 4 than 1 mod 4
 
 # [lecture 51](https://www.youtube.com/watch?v=Gl10NCS6eBI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=51): Proof of Dirichlet's theorem
 
