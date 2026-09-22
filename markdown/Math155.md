@@ -622,6 +622,29 @@ $$\\begin{cases}
   Now: $a^b$ has order $\varphi(m) \iff (b, \varphi(m))=1$  
   primitive roots: $$\\{a^b \mid (b, \varphi(m))=1\\}$$  
   #primitive roots = $\varphi(\varphi(m))$
+- "p-1 primality test" [17:22 min](https://youtu.be/AfRpXi8r0So?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=1042), here with PARI/GP:  
+```pari
+$ gp -q
+? p=7457*2^59659+1; #digits(p)
+17964
+? #
+   timer = 1 (on)
+? isprime(p)
+cpu time = 1min, 12,553 ms, real time = 1min, 14,480 ms.
+1
+? g=znprimroot(p); type(g)
+cpu time = 50,621 ms, real time = 50,629 ms.
+"t_INTMOD"
+? print(factor(p-1))
+[2, 59659; 7457, 1]
+? g^((p-1)/2)!=Mod(1,p)
+cpu time = 10,768 ms, real time = 10,770 ms.
+1
+? g^((p-1)/7457)!=Mod(1,p)
+cpu time = 10,724 ms, real time = 10,724 ms.
+1
+? 
+```
 
 # [lecture 22](https://www.youtube.com/watch?v=6QZYfpcf79I&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=22&pp=iAQB): Chevalley-Warning theorem
 
