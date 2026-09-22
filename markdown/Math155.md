@@ -4,6 +4,10 @@
 
 My lecture summaries:  
 [53](#lecture-53-three-calculators-for-number-theorists)
+[51](#lecture-51-proof-of-dirichlets-theorem)
+[50](#lecture-50-dirichlet-characters)
+[49](#lecture-49-dirichlets-theorem)
+[48](#lecture-48-proof-of-the-prime-number-theorem)
 [47](#lecture-47-the-prime-number-theorem)
 [46](#lecture-46-products-of-dirichlet-series)
 [45](#lecture-45-dirichlet-series)
@@ -58,6 +62,39 @@ My example code (with lecture number):
 | Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) | p-1 primality test ([23](#lecture-23-primitive-roots)) | Cryptography ([18](#lecture-18-cryptography)) |
 | Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) | Carmichael numbers ([9](#lecture-9-congruences)) | [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm))|
 
+# [lecture 51](https://www.youtube.com/watch?v=Gl10NCS6eBI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=51): Proof of Dirichlet's theorem
+
+- 
+
+# [lecture 50](https://www.youtube.com/watch?v=P-muxBNVbCg&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=50): Dirichlet characters
+
+- Dirichlet characters
+  - $\chi: (\mathbb{Z}/N\mathbb{Z})^\*\to \mathbb{C}^\*$
+  - $\chi(m+N)=\chi{m}$
+  - $\chi(m)=0, (m,N)=1, \chi(1)=1$
+  - $\chi(mn)=\chi(m)\chi(n)$
+  - number of characters of $(\mathbb{Z}/N\mathbb{Z})^\* =$ order of $(\mathbb{Z}/N\mathbb{Z})^\*$
+  - finite abelian group G: $G\to \mathbb{C}^\*$ homomorphism
+    - #characters = order G
+    - characters of G is a group, character group
+  - Fourier theory: $f(x+2\pi)=f(x)$, $sin(2\pi n), cos(2\pi n)$
+  - $e^{inx}, n\in \mathbb{Z}$ are characters of $\mathbb{R}/2\pi \mathbb{Z}$
+  - show function on $(\mathbb{Z}/N\mathbb{Z})^\*$ is linear combination of Dirichlet characters
+- primitive characters
+
+# [lecture 49](https://www.youtube.com/watch?v=eHhyVx2cTw4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=49): Dirichlet's theorem)
+
+- Dirichlet's theorem
+  - there are infinitely many primes in $an+b$ with $(a,b)=1$ and $n\geq 1$
+- proof overview
+  - (1) define analog of $\chi(n), L(s)$
+  - (2) show that $L\chi(1)\neq 0$
+  - (3) show that $L\chi(1)\neq 0 \implies Dirichlet$
+
+# [lecture 48](https://www.youtube.com/watch?v=Mn2LeGAolAw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=48): Proof of the prime number theorem)
+
+- proofs of (1),...,(5) from last lecture
+
 # [lecture 47](https://www.youtube.com/watch?v=TxuIK_Rg0lI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=47): The prime number theorem
 
 - Prime number theorem (1896, improved 1948)
@@ -70,7 +107,7 @@ My example code (with lecture number):
     - $\pi_{p^k\leq 2n}p \geq \binom{2n}{n}$
     - $\pi(x)\geq \frac{1}{2}\frac{x}{\log x}$
   - $\zeta(s)=\frac{1}{1^s}+\frac{2}{2^s}+\dots$
-  - $\left(\log \zeta(s)\right)'=\frac{\zeta'(s)}{zeta(s)}=\frac{\Lambda(1)}{1^s}+\frac{\Lambda(2)}{2^s}+\dots$  ($\Lambda(p^n)=\log p$)
+  - $\left(\log \zeta(s)\right)'=\frac{\zeta'(s)}{\zeta(s)}=\frac{\Lambda(1)}{1^s}+\frac{\Lambda(2)}{2^s}+\dots$  ($\Lambda(p^n)=\log p$)
 - $\psi(n)=\Lambda(1)+\Lambda(2)+\dots+\Lambda(n)$
 - (1) $\zeta(s)$ has no zeros with $Re(s)\leq 1$ (key step)
 - (2) Newman's Tauberian theorem
