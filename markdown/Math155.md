@@ -53,8 +53,8 @@ My lecture summaries:
 My example code (with lecture number):
 ||||
 |--------------------------|--------------------------|----------------------|
-| Pythagorean triangles (44) | p-1 primality test (23) | Cryptography (18) |
-| Residue Number System<br> Proth prime prover (15) | Carmichael numbers (9) | [Euclid] gcd algorithms (4)|
+| Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) | p-1 primality test ([23](#lecture-23-primitive-roots)) | Cryptography ([18](#lecture-18-cryptography)) |
+| Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) | Carmichael numbers ([9](#lecture-9-congruences)) | [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm))|
 
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
