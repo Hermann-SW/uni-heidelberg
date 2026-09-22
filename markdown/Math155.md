@@ -60,8 +60,25 @@ My example code (with lecture number):
 
 # [lecture 47](https://www.youtube.com/watch?v=TxuIK_Rg0lI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=47): The prime number theorem
 
-- 
+- Prime number theorem (1896, improved 1948)
+  - #primes< x
+  - $\pi(x) \sim \frac{x}{\log x}$
+  - upper bound
+    - $\pi_{n<p<2n}p \leq \binom{2n}{n}\leq 2^{2n}$
+    - $\pi(x)\leq 2\frac{x}{\log x}$
+  - lower bound
+    - $\pi_{p^k\leq 2n}p \geq \binom{2n}{n}$
+    - $\pi(x)\geq \frac{1}{2}\frac{x}{\log x}$
+  - $\zeta(s)=\frac{1}{1^s}+\frac{2}{2^s}+\dots$
+  - $\left(\log \zeta(s)\right)'=\frac{\zeta'(s)}{zeta(s)}=\frac{\Lambda(1)}{1^s}+\frac{\Lambda(2)}{2^s}+\dots$  ($\Lambda(p^n)=\log p$)
+- $\psi(n)=\Lambda(1)+\Lambda(2)+\dots+\Lambda(n)$
+- (1) $\zeta(s)$ has no zeros with $Re(s)\leq 1$ (key step)
+- (2) Newman's Tauberian theorem
+- (3) $\int_1^\infty \frac{\psi(x)-x}{x^2}dx$ converges
+- (4) $\psi(x) \sim x$
+- (5) $\pi(x)\sim \frac{x}{\log x}$
 
+  
 # [lecture 46](https://www.youtube.com/watch?v=lAAXBUuU9wY&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=46): Products of Dirichlet series
 
 - product of power series, $c_n=\sum_i a_i b_{n-i}$ named convolution
