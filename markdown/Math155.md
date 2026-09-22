@@ -50,6 +50,11 @@ Lectures:
 [2](#lecture-2-survey)
 [1](#lecture-1)
 
+Example code:  
+- p-1 rimality test (lecture 23)
+- Residue Numer System Proth prime prover (lecture 15)
+- Euclid gcd algorithms (lecture 4)
+
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
 - Johan Petr Gustav Lejeune Dirichlet
