@@ -51,11 +51,10 @@ Lectures:
 [1](#lecture-1)
 
 Example code (with lecture number):
-
 ||||
 |--------------------------|--------------------------|----------------------|
-| Pythagorean triangles (44) | p-1 rimality test (23) | Residue Numer System<br> Proth prime prover (15) |
-| Carmichale numbers (9) | Euclid gcd algorithms (4)| |
+| Pythagorean triangles (44) | p-1 rimality test (23) | Cryptography (18) |
+| Residue Numer System<br> Proth prime prover (15) | Carmichale numbers (9) | [Euclid] gcd algorithms (4)|
 
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
@@ -752,6 +751,52 @@ $$a^{(p-1)/2}\equiv \begin{cases}
   - message padded with junk
   - compressed message
   - extra security
+  - Remarks:
+    - latest factorings of big numbers from RSA challenge (d is number of decimal digits or bits for RSA-d)
+      - [RSA-250](https://en.wikipedia.org/wiki/RSA_numbers#RSA-250) was factored 2/2020 utilising approximately 2700 CPU core-years
+      - [RSA-260](https://en.wikipedia.org/wiki/RSA_numbers#RSA-260) was factored 9/2026 utilising approximately 4900 GPU-days (about 13.5 GPU-years)
+      - [RSA-896](https://en.wikipedia.org/wiki/RSA_numbers#RSA-896) (270 decimal digits) was factored 19 days later using a maximum of 2048 GPUs for about 30 GPU-years over 10 days
+      - they were factorized using [Generalized number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve)
+      - on the public internet, 2048-bit is the standard RSA key length, which is far out of reach
+    - Knowing two sum of two squares representations for RSA semiprime instantaneously breaks RSA ([RSA_numbers_factored repo](https://github.com/Hermann-SW/RSA_numbers_factored/) for easy determination of the representations):
+      - determine factored RSA numbers having two sum of two squares representations
+      - since prime factors of unfactored RSA numbers are unknown, testing necessary property shows the smallest three such candidates
+      - determine two sum of two squares representations of RSA-768 (quickly with its known factors from repo)
+      - RSA-768 can be factored immediately then (PARI/GP)
+```pari
+pi@raspberrypi5:~/RSA_numbers_factored/pari $ gp -q RSA_numbers_factored.gp
+? foreach(RSA.factored(mod4=[1,1]),t,print1(t[1]," "))
+59 129 180 230 768 
+? 
+```
+```pari
+? foreach(RSA.unfactored(mod4=1)[1..3],t,print1(t[1]," "))
+280 309 310 
+? 
+```
+```pari
+? t=RSA.get(768);
+? n=t[2]; [e,f]=RSA.square_sums(t);[a,b]=e;[c,d]=f;
+? (a^2+b^2)==n&&(c^2+d^2)==n
+1
+? #Set([a,b,c,d])
+4
+? 
+```
+```pari
+? p=gcd((a+c)^2+(b+d)^2,n)
+36746043666799590428244633799627952632279158164343087642676032283815739666511279233373417143396810270092798736308917
+? ##
+  ***   last result computed in 0 ms.
+? q=gcd((a+c)^2+(b-d)^2,n)
+33478071698956898786044169848212690817704794983713768568912431388982883793878002287614711652531743087737814467999489
+? ##
+  ***   last result computed in 0 ms.
+? n==p*q
+1
+? 
+```
+
 
 # [lecture 17](https://www.youtube.com/watch?v=Imxx1tFDeSw&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=17&pp=iAQB): Factorization
 
