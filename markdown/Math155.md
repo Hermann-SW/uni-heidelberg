@@ -55,7 +55,7 @@ Example code (with lecture number):
 ||||
 |--------------------------|--------------------------|----------------------|
 | Pythagorean triangles (44) | p-1 rimality test (23) | Residue Numer System<br> Proth prime prover (15) |
-| Euclid gcd algorithms (4)| | |
+| Carmichale numbers (9) | Euclid gcd algorithms (4)| |
 
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
@@ -879,7 +879,38 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - sum of three or four squares, three cubes
 - Fermat: If p is prime, then $a^p\equiv a \mod p$
 - fast modular exponentiation
-- Carmichael number
+- Carmichael numbers [31:09 min](https://youtu.be/E1tikA1GEVU?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=1869)
+  - [carm10e24.bin](https://stamm-wilbrandt.de/carm10e24.bin) contains all 308,279,939 Carmichael numbers below $10^{24}$ (converted and stored binary (11.45GB) for PARI/GP fast read, original file from [Jonathan Webster's website](https://blue.butler.edu/~jewebste/)).
+[[carm10e22.bin](https://stamm-wilbrandt.de/carm10e22.bin) / 49,679,870 Carmichael numbers below $10^{22}$ (1.82GB)]]
+  - check that files have not been tampered
+  - fast reading bigger file into PARI/GP needs ≥25GB RAM to succeed
+  - fast verifying the $10^n$ Carmichael number counts of [https://oeis.org/A055553](https://oeis.org/A055553)
+```
+$ sha256sum carm10e24.bin carm10e22.bin
+964abcc780b9786ae9f18d75a688cfc83f2bf74fb592ead9f58fd94bf6441946  carm10e24.bin
+4feaa4bf6911c97ef5f0cadfad4231a70ab321e430fc48567a6b31ad6f89f7ca  carm10e22.bin
+$
+```
+```pari
+$ gp -q
+? #
+   timer = 1 (on)
+? b=read("carm10e24.bin");0  \\ Karim's "...;0 trick" avoids array in history/double size
+cpu time = 3,937 ms, real time = 8,298 ms.
+0
+? #b
+308279939
+? b[#b]
+999999999855878641139521
+? 
+```
+```pari
+? d=10^3;C=0;foreach(b,c,if(c>=d,print1(C",");d=d*10);C+=1);print(C)
+1,7,16,43,105,255,646,1547,3605,8241,19279,44706,105212,246683,585355,1401644,3381806,8220777,20138200,49679870,123381982,308279939
+cpu time = 39,198 ms, real time = 39,209 ms.
+? 
+```
+
 - probabilistic prime number test
 - if $p\vert n^2+1$, then $p=2$ or $p\equiv 1 \mod 4$
 
