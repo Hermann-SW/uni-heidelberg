@@ -60,14 +60,8 @@ My lecture summaries ([table of content](Math155.toc.md)):
 My example code (with lecture number):
 ||||
 |--------------------------|--------------------------|----------------------|
-| [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm))
-| Carmichael numbers ([9](#lecture-9-congruences)) 
-| Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) 
-|
-| Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) 
-| p-1 primality test ([23](#lecture-23-primitive-roots)) 
-| Cryptography ([18](#lecture-18-cryptography)) 
-|
+| [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm)) | Carmichael numbers ([9](#lecture-9-congruences)) | Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) |
+| Cryptography ([18](#lecture-18-cryptography)) | p-1 primality test ([23](#lecture-23-primitive-roots)) | Pythagorean triangles ([44](#lecture-44-pythagorean-triangles)) |
 
 ## [lecture 1](https://www.youtube.com/watch?v=EzE6it9kAsI&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=1&pp=iAQB): Introduction
 - primes
