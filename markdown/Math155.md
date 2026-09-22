@@ -954,11 +954,7 @@ $$\prod_{(a,m)=1} a = \begin{cases}
 - fails: for polynomial in 2 variables
 - works: in 3 variables
 - better euclid, avoid long division  
-  I implemented [gcds.cpp](../scripts/gcds.cpp) to compare ```gcd()```
-  implementations using ```modulus``` (with long division)  
-  and ```subtraction``` per [lecture 4, 15:45min](https://youtu.be/R-O8j7FHEXI?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=945).
-  Nothing can compare to builtin ```mpz_gcd()```,
-  but tuned by Gemini implementations show subtraction being $3\times$ better that modulus, confirming lecturer statement:
+  I implemented [gcds.cpp](../scripts/gcds.cpp) to compare ```gcd()``` implementations using ```modulus``` (with long division) and ```subtraction``` per [lecture 4, 15:45min](https://youtu.be/R-O8j7FHEXI?list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&t=945). Nothing can compare to builtin ```mpz_gcd()```, but tuned by Gemini implementations show subtraction being $3\times$ faster than modulus, confirming lecturer statement:
   ```
   hermann@9950x:~$ ./gcds 5000000
   1,044,938-digit consecutive fibonaci numbers
