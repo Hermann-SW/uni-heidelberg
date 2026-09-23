@@ -1111,6 +1111,17 @@ $ gp -q
   - to Fermat's last theorem: $x^n+y^n=z^n, n\geq 3, x,y,z\neq 0$
   - n=4, "method of descent", elliptic curve
 
+[pytri.py](../scripts/pytri.py) is just on playing with method 2 and 3 a bit.
+pt1 is pt(1/2) converted to complex number.
+pt2 is gaussian multiplication pt1\*pt1.
+pti is pt_{i-1}\*Pt_{i-2}.
+Gaussian multiplication preserves norm of 1 for pt1.
+In order to be able to "see" the order of points generated
+I asked Gemini to scale the point norms and draw spiral
+edges between consecutive points.  
+![../res/pytri.py.25pc.png](../res/pytri.py.25pc.png)
+
+
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
 - Johan Petr Gustav Lejeune Dirichlet
