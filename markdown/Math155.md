@@ -736,7 +736,7 @@ $$
 - application to Fermat numbers:  
   $p=2^{2^n}+1$ is prime $\iff 3^{(p-1)/2}\equiv -1 \mod p$
 - $\left(\frac{5}{p}\right)=+1 \iff p=1,9,11,19 \mod 20\iff p=1,4 \mod 5$
-- $\left(\frac{5}{p}\right)=+1 \iff p=1,5,19,23 \mod 24$
+- $\left(\frac{6}{p}\right)=+1 \iff p=1,5,19,23 \mod 24$
 
 # [lecture 33](https://www.youtube.com/watch?v=k8qJaV7qGL4&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=33): Quadratic reciprocity
 
