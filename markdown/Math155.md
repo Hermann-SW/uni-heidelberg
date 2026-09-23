@@ -784,7 +784,7 @@ $$
 - quadratic reprocity is mess, best: only for a,b odd > 0
 - 2D table demonstrating where Legendre/Jacobi/Kronecker values are
 - Dirichlet L series of imaginary quadratic field, $\mathbb{Z}[i]$
-  - $$\left(\frac{D}{p}\right)$, discriminant D=0,1 mod 4, p odd primes
+  - $\left(\frac{D}{p}\right)$, discriminant D=0,1 mod 4, p odd primes
     - +1 if p splits as product of 2 distinct primes
     - -1 if p does not split; 3
     - 0 if 0 = square; 2=(1+i)(1-i)
