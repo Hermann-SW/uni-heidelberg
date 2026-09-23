@@ -1,4 +1,4 @@
-""" learned from Gemini about this related to pythogarean triples, and got code """
+""" learned from Gemini about this related to pythagorean triples, and got code """
 import networkx as nx
 import matplotlib.pyplot as plt
 
