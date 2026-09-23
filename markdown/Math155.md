@@ -1113,9 +1113,9 @@ $ gp -q
 
 [pytri.py](../scripts/pytri.py) is just on playing with method 2 and 3 a bit.
 pt1 is pt(1/2) converted to complex number.
-pt2 is gaussian multiplication pt1\*pt1.
-pti is pt_{i-1}\*Pt_{i-2}.
-Gaussian multiplication preserves norm of 1 for pt1.
+pt2 is complex multiplication pt1\*pt1.
+pti is pt_{i-1}\*pt_{i-2}.
+Complex multiplication preserves norm of 1 for pt1.
 In order to be able to "see" the order of points generated
 I asked Gemini to scale the point norms and draw spiral
 edges between consecutive points.  

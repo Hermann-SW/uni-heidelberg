@@ -1,7 +1,7 @@
 """ 
 result of discussion with Gemini
 
-Gaussian multiplication preserves norm of 1 for pt1
+Complex multiplication preserves norm of 1 for pt1
 In order to be able to "see" the order of points generated
 I asked Gemini to scale the point norms and draw spiral
 edges between consecutive points.
