@@ -1121,6 +1121,8 @@ I asked Gemini to scale the point norms and draw spiral
 edges between consecutive points.  
 ![../res/pytri.py.25pc.png](../res/pytri.py.25pc.png)
 
+I asked Gemini on that multiplicative algebraic structure, and learned that its resulting directed acyclic graph (DAG) is well-studied in discrete mathematics and number theory. After few iterations [divisibility_dag_of_gaussian_integer_monoid.py](divisibility_dag_of_gaussian_integer_monoid.py) showed below DAG:  
+![../res/pythagorean_triples.33pc.png](../res/pythagorean_triples.33pc.png)
 
 # [lecture 45](https://www.youtube.com/watch?v=A4n-Zy6OAwE&list=PL8yHsr3EFj53L8sMbzIhhXSAOpuZ1Fov8&index=45): Dirichlet series
 
