@@ -190,7 +190,7 @@ My example code (with lecture number):
   - Euler $\varphi(n)$ #coprime <n
   - $$\tau(n) = q (1-q)^{24} (1-q^2)^{24} \dots$$
   - $$\mu(n) = (-1)^{w(n)}$$ if n squarefree and divisible by w(n) primes, 0 otherwise
-  - why interesting: $$\frac{1}{\zeta(s)} = \frac{1}{1^s} + \frac{mu(2)}{2^s} + \frac{mu(3)}{3^s} \dots$$
+  - why interesting: $$\frac{1}{\zeta(s)} = \frac{1}{1^s} + \frac{\mu(2)}{2^s} + \frac{\mu(3)}{3^s} \dots$$
   - perfect numbers; Euclid $$n=2^{p-1}(2^p-1)$$ with $$2^p-1$$ prime, then n is perfect number
   - Euler: even perfect numbers are of this form
   - infinitely many even perfect numbers?
