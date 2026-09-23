@@ -89,7 +89,7 @@ My example code (with lecture number):
 - $π'(n) = $# $prime powers ≤n$
   - $= Li(x) - \sum_p Li(x^p)$   "zeta function zeros"
 - $\zeta(2)=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+... = \frac{π^2}{6}$
-  - \rho with $\zeta(\rho)=0$
+  - $\rho$ with $\zeta(\rho)=0$
     - hypothesis: $Re(\rho)≤1/2$
  - unique prime factorization
 - $\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\dots = \frac{1}{1-2^{-s}}\frac{1}{1-3^{-s}}\frac{1}{1-5^{-s}}\dots$
