@@ -24,7 +24,7 @@ def generate_sequence(m):
 
     # Recurrence: pt_i = pt_{i-2} * pt_{i-1}
     for j in range(2, m):
-        trpls.append(triples[j-2] * triples[j-1])
+        trpls.append(trpls[j-2] * trpls[j-1])
 
     return trpls
 
