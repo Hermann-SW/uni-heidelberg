@@ -88,9 +88,9 @@ My example code (with lecture number):
   - $p^n$ counts as $1/n$
 - $π'(n) = $# $prime powers ≤n$
   - $= Li(x) - \sum_p Li(x^p)$   "zeta function zeros"
-- $zeta(2)=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+... = \frac{π^2}{6}$
-  - rho with $zeta(rho)=0$
-    - hypothesis: $Re(rho)≤1/2$
+- $\zeta(2)=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+... = \frac{π^2}{6}$
+  - \rho with $\zeta(\rho)=0$
+    - hypothesis: $Re(\rho)≤1/2$
  - unique prime factorization
 - $\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\dots = \frac{1}{1-2^{-s}}\frac{1}{1-3^{-s}}\frac{1}{1-5^{-s}}\dots$
 - diophantine equations
@@ -190,7 +190,7 @@ My example code (with lecture number):
   - Euler phi(n) #coprime <n
   - $$tau(n) = q (1-q)^{24} (1-q^2)^{24} \dots$$
   - $$mu(n) = (-1)^w(n)$$ if n squarefree and divisible by w(n) primes, 0 otherwise
-  - why interesting: $$\frac{1}{zeta(s)} = \frac{1}{1^s} + \frac{mu(2)}{2^s} + \frac{mu(3)}{3^s} \dots$$
+  - why interesting: $$\frac{1}{\zeta(s)} = \frac{1}{1^s} + \frac{mu(2)}{2^s} + \frac{mu(3)}{3^s} \dots$$
   - perfect numbers; Euclid $$n=2^{p-1}(2^p-1)$$ with $$2^p-1$$ prime, then n is perfect number
   - Euler: even perfect numbers are of this form
   - infinitely many even perfect numbers?
