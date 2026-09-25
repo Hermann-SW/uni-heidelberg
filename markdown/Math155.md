@@ -803,7 +803,8 @@ $$
   - quadratic binary form
     - $ax^2+bxy+cy^2+dx+ey+f=0$, strike out dx, ey
     - $ax^2+bxy+cy^2=$ constant
-    - Pellian equation: $x^2-Dy^2=1$
+    - Pellian equation: $x^2-Dy^2=1$   
+      (determining n-th solution to Pell equation with PARI/GP can be seen [in different lecture](https://github.com/Hermann-SW/uni-heidelberg/blob/main/README.md#pell))
     - Brahmagupta 650 AD.
       - $x^2-92y^2=1$, find rational x/y close to $\sqrt{92}$
       - $\pi=\dots$, $\sqrt{23}=4+\frac{1}{1+\frac{1}{3+\frac{1}{1+\frac{1}{8+\dots}}}}$
