@@ -94,12 +94,12 @@ $ gp -q
 
 Exercise 12.2 was on [metallic mean](https://en.wikipedia.org/wiki/Metallic_mean) S(n)=[n,n,n,…]. S(1) is golden, S(2) silber ratio.
 We should derive closed formula [S(n)=(n+sqrt(n²+4))/2] and prove that (S(n))³ is a metallic mean again. Related is sequence
-https://oeis.org/A352403 "Indices of metallic means that are powers of other metallic means". I submitted new PARI/GP formula (not approved yet):
+https://oeis.org/A352403 "Indices of metallic means that are powers of other metallic means". I submitted new PARI/GP formula, which was approved:
 ```
 (PARI) [i|i<-Set([contfrac(((n+sqrt(n^2+4))/2)^p)[1]|n<-[1..32]; p<-[3..19], p%2]), i<30000] \\ Hermann Stamm-Wilbrandt, Sep 17 2026
 ```
    
-```fundsol(d)``` in [scripts/pell.gp](scripts/pell.gp) determines fundamental solution of Pell equation x²-dy²=1 per
+<a name="pell">⁠</a>```fundsol(d)``` in [scripts/pell.gp](scripts/pell.gp) determines fundamental solution of Pell equation x²-dy²=1 per
 Cor 6.42 of script.  
 ```fundpari(d)``` determines it the PARI/GP way based on [quadunit()](https://pari.math.u-bordeaux.fr/pub/pari/manuals/2.17.4/users.pdf#pdf@labse:quadunit):  
 ```
@@ -122,7 +122,40 @@ hermann@8840hs:~/Downloads$ gp -q
 -1
 ? 
 ```
-   
+
+Best option to compute n-th solution to Pell equation is quadunit, here for d=21 from above:
+```
+? d=21;
+? f=quadunit(4*d)
+55 + 12*w
+? real(f)^2-d*imag(f)^2
+1
+? u=f^2
+6049 + 1320*w
+? real(u)^2-d*imag(u)^2
+1
+? u=f^3
+665335 + 145188*w
+? real(u)^2-d*imag(u)^2
+1
+? 
+```
+
+For d=29 from above, only odd powers keep solution x²-dy²=-1:
+```
+? d=29;
+? f=quadunit(4*d)
+70 + 13*w
+? real(f)^2-d*imag(f)^2
+-1
+? u=f^3
+1372210 + 254813*w
+? real(f)^2-d*imag(f)^2
+-1
+? 
+```
+
+
 New tool "LaTex labels for Graphviz":  
 https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
 <table>
