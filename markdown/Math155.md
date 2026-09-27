@@ -57,7 +57,7 @@ My lecture summaries ([table of content](Math155.toc.md)):
 [52](#lecture-52-nonvanishing-of-L-series-at-s1)
 [53](#lecture-53-three-calculators-for-number-theorists)
 
-My example code (with lecture number):
+My example code (with lecture number), other number theory example code in notes on [other number theory lecture](https://github.com/Hermann-SW/uni-heidelberg/tree/main#elementary-number-theory):
 ||||
 |--------------------------|--------------------------|----------------------|
 | [Euclid] gcd algorithms ([4](#lecture-4-more-on-euclids-algorithm)) | Carmichael numbers ([9](#lecture-9-congruences)) | Residue Number System<br> Proth prime prover ([15](#lecture-15-numerical-calculation)) |
