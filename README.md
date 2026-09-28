@@ -40,6 +40,9 @@ Difference: {0, 0}
 $
 ```
 
+Formulas f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf). §1.2 formula 1.4:  
+[formula.1_4.png](formula.1_4.png)
+
 ## Higher Analysis
 
 Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
