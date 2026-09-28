@@ -26,6 +26,20 @@ https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optim
 My seminar presentation:  
 "Elliptic curves and Fermat's proof" (for $n=4$)
 
+Symbolic proof of equation equalities using WolframScript [1_5.wls](scripts/1_5.wls):  
+```
+$ wolframscript -f scripts/1_5.wls 
+=== 1. Testing f(g(x, y)) ===
+{x, y}
+
+=== 2. Testing g(f(u, v, w)) ===
+{u, v, w}
+
+=== 3. Proof that (h o g)(x, y) == Formula (1.4) ===
+Difference: {0, 0}
+$
+```
+
 ## Higher Analysis
 
 Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
