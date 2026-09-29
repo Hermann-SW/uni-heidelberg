@@ -26,6 +26,12 @@ https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optim
 My seminar presentation:  
 "Elliptic curves and Fermat's proof" (for $n=4$)
 
+Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf).
+![Fermat_seminar.10pc.png](res/Fermat_seminar.10pc.png)
+
+§1.2 formula 1.4:  
+![formula.1_4.png](res/formula.1_4.png)
+
 Symbolic proof of equation equalities using WolframScript [1_5.wls](scripts/1_5.wls):  
 ```
 hermann@8840hs:~/uni-heidelberg$ wolframscript -f scripts/1_5.wls 
@@ -46,12 +52,6 @@ True
 
 hermann@8840hs:~/uni-heidelberg$ 
 ```
-
-Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf).
-![Fermat_seminar.10pc.png](res/Fermat_seminar.10pc.png)
-
-§1.2 formula 1.4:  
-![formula.1_4.png](res/formula.1_4.png)
 
 ## Higher Analysis
 
