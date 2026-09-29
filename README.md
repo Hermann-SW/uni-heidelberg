@@ -47,7 +47,10 @@ True
 hermann@8840hs:~/uni-heidelberg$ 
 ```
 
-Formulas f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf). §1.2 formula 1.4:  
+Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf).
+![Fermat_seminar.10pc.png](res/Fermat_seminar.10pc.png)
+
+§1.2 formula 1.4:  
 ![formula.1_4.png](res/formula.1_4.png)
 
 ## Higher Analysis
