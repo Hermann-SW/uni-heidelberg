@@ -11,6 +11,16 @@ g[x_, y_] :=
 h[u_, v_, w_] :=
     {u^2 + a, u * v * w}
 
+(* test the condition for (x,y) in C *)
+
+fverify[x_, y_] :=
+    y^2 == (x - a) * (x - b) * (x - c) && y != 0
+
+(* test the condition for (u,v,w) in B *)
+
+gverify[u_, v_, w_] :=
+    u^2 + a == v^2 + b == w^2 + c
+
 (* Overload to automatically unpack a list argument *)
 
 f[list_List] :=
@@ -22,18 +32,34 @@ g[list_List] :=
 h[list_List] :=
     h @@ list
 
-(* 1. Direction: f(g(x, y)) = {x, y} on C *)
+fverify[list_List] :=
+    fverify @@ list
 
-Print["=== 1. Testing f(g(x, y)) ==="]
+gverify[list_List] :=
+    gverify @@ list
+
+Print["=== 1. Proof that f(u, v, w) maps into C ==="]
+
+Print[FullSimplify[fverify[f[u, v, w]], Assumptions -> {u^2 + a == v^
+    2 + b, u^2 + a == w^2 + c, a != b, b != c, c != a}]]
+
+Print[""]
+
+Print["=== 2. Proof that g(x, y) maps into B ==="]
+
+Print[FullSimplify[gverify[g[x, y]], Assumptions -> y^2 == (x - a) * 
+    (x - b) * (x - c)]]
+
+Print[""]
+
+Print["=== 3. Testing f(g(x, y)) ==="]
 
 Print[FullSimplify[f[g[x, y]], Assumptions -> y^2 == (x - a) * (x - b
     ) * (x - c)]]
 
 Print[""]
 
-(* 2. Direction: g(f(u, v, w)) = {u, v, w} on B *)
-
-Print["=== 2. Testing g(f(u, v, w)) ==="]
+Print["=== 4. Testing g(f(u, v, w)) ==="]
 
 (* Step 1: Eliminate parameters 'a' and 'c' using set B relations:
    u^2 + a = v^2 + b  =>  a -> v^2 - u^2 + b
@@ -81,9 +107,9 @@ y3[x_, y_] :=
 map2P[x_, y_] :=
     {x3[x, y], y3[x, y]}
 
-(* Proof: Compare h(g(x, y)) with map2P(x, y) *)
+Print["=== 5. Proof that (h o g)(x, y) == map2P(x, y) ==="]
 
-Print["=== 3. Proof that (h o g)(x, y) == Formula (1.4) ==="]
+Print[FullSimplify[h[g[x, y]] == map2P[x, y], Assumptions -> y^2 == (
+    x - a) * (x - b) * (x - c)]]
 
-Print["Difference: ", FullSimplify[h[g[x, y]] - map2P[x, y], Assumptions
-     -> {y^2 == (x - a) * (x - b) * (x - c)}]]
+Print[""]
