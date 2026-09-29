@@ -28,16 +28,23 @@ My seminar presentation:
 
 Symbolic proof of equation equalities using WolframScript [1_5.wls](scripts/1_5.wls):  
 ```
-$ wolframscript -f scripts/1_5.wls 
-=== 1. Testing f(g(x, y)) ===
+hermann@8840hs:~/uni-heidelberg$ wolframscript -f scripts/1_5.wls 
+=== 1. Proof that f(u, v, w) maps into C ===
+True
+
+=== 2. Proof that g(x, y) maps into B ===
+True
+
+=== 3. Testing f(g(x, y)) ===
 {x, y}
 
-=== 2. Testing g(f(u, v, w)) ===
+=== 4. Testing g(f(u, v, w)) ===
 {u, v, w}
 
-=== 3. Proof that (h o g)(x, y) == Formula (1.4) ===
-Difference: {0, 0}
-$
+=== 5. Proof that (h o g)(x, y) == map2P(x, y) ===
+True
+
+hermann@8840hs:~/uni-heidelberg$ 
 ```
 
 Formulas f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf). §1.2 formula 1.4:  
