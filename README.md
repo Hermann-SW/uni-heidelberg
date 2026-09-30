@@ -53,6 +53,9 @@ True
 === 6. Proof that (h o g)(x, y) == map2P(x, y) ===
 True
 
+=== 7. (x0,y0) on y^2=x^3-x => ((x0+1)/(x0-1),2y0/(x0-1)^2) on y^2=x^3-x ===
+True
+
 hermann@8840hs:~/uni-heidelberg$ 
 ```
 
