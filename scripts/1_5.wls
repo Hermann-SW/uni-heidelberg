@@ -91,9 +91,9 @@ Print[Map[FullSimplify, step1]]
 
 Print[""]
 
-(* Definition of (x3, y3) from §1.2 Formula (1.4) *)
+Print["=== 6. Proof that (h o g)(x, y) == map2P(x, y) ==="]
 
-(* (x-a)(x-b)(x-c) coefficient parameters *)
+(* (x-a)(x-b)(x-c) coefficients *)
 
 A = 1;
 
@@ -107,7 +107,7 @@ Unprotect[D]; Clear[D] (* D is differentiation operator *)
 
 D = -a * b * c;
 
-(* Formula (1.4) *)
+(* Definition of (x3, y3) from §1.2 Formula (1.4) *)
 
 x3[x_, y_] :=
     (1 / (4 * A * y^2)) * (A^2 * x^4 - 2 * A * C * x^2 - 8 * A * D * 
@@ -121,8 +121,6 @@ y3[x_, y_] :=
 
 map2P[x_, y_] :=
     {x3[x, y], y3[x, y]}
-
-Print["=== 6. Proof that (h o g)(x, y) == map2P(x, y) ==="]
 
 Print[FullSimplify[h[g[x, y]] == map2P[x, y], Assumptions -> y^2 == (
     x - a) * (x - b) * (x - c)]]
