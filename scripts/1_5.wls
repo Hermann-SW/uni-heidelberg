@@ -11,6 +11,11 @@ g[x_, y_] :=
 h[u_, v_, w_] :=
     {u^2 + a, u * v * w}
 
+(* on elliptic curve y^2=x^3-x? *)
+
+oec[x_, y_] :=
+    y^2 == x^3 - x
+
 (* test the condition for (x,y) in C *)
 
 fverify[x_, y_] :=
@@ -124,5 +129,13 @@ map2P[x_, y_] :=
 
 Print[FullSimplify[h[g[x, y]] == map2P[x, y], Assumptions -> y^2 == (
     x - a) * (x - b) * (x - c)]]
+
+Print[""]
+
+Print["=== 7. (x0,y0) on y^2=x^3-x => ((x0+1)/(x0-1),2y0/(x0-1)^2) on y^2=x^3-x ==="
+    ]
+
+Print[FullSimplify[oec[(x0 + 1) / (x0 - 1), 2 * y0 / (x0 - 1) ^ 2], Assumptions
+     -> oec[x0, y0]]]
 
 Print[""]
