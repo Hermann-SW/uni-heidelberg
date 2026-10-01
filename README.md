@@ -26,7 +26,7 @@ https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optim
 My seminar presentation:  
 "Elliptic curves and Fermat's proof" (for $n=4$)
 
-Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf).
+Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf):  
 ![Fermat_seminar.10pc.png](res/Fermat_seminar.10pc.png)
 
 §1.2 formula 1.4, this is called map2P in symbolic proof below:  
