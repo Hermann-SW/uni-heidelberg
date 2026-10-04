@@ -59,6 +59,14 @@ True
 hermann@8840hs:~/uni-heidelberg$ 
 ```
 
+Observation not part of book for seminar presentation:
+
+Given two points $(x_1,y_1)$ and $(x_2,y_2)$ with $x_1\neq x_2$ there is a unique elliptic curve going through both points. Can be simply seen by rewriting eliptic curve formula $y^2=x^3+ax+b$ as $y^2-x^3=ax+b$. For a given pair $(x,y)$ the left hand side is constant, and two points result in simple system of two equations and two variables $a$ and $b$. Script [unique_ec.py](scripts/unique_ec.py) (generated with 3 prompts in 10 minutes by free gemini.google.com) allows to easily display that curve via matplotlib, example:  
+```python scripts/unique_ec.py 9 2 7 6```
+
+Animation shows curves through 4 integer points with $x^2+y^2=85$, differing by sign and order only. Here is [100% size animation](res/ecs_85_anim.gif):  
+![50% size animation](res/ecs_85_anim.50pc.gif)
+
 ## Higher Analysis
 
 Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
