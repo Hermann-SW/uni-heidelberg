@@ -12,40 +12,68 @@ def format_frac_tex(f):
     return f"\\frac{{{f.numerator}}}{{{f.denominator}}}"
 
 
-def format_term(val, variable_str):
-  if val == 0:
+def format_term_frac(f, variable_str):
+  """Formats a coefficient Fraction for terms like x with proper signs."""
+  if f == 0:
     return ""
-  elif val > 0:
-    return f" + {val:.1f}{variable_str}"
+  val = abs(f)
+  num_str = (
+      str(val.numerator)
+      if val.denominator == 1
+      else f"\\frac{{{val.numerator}}}{{{val.denominator}}}"
+  )
+  if f > 0:
+    return f" + {num_str}{variable_str}"
   else:
-    return f" - {abs(val):.1f}{variable_str}"
+    return f" - {num_str}{variable_str}"
 
 
-def format_constant(val):
-  if val == 0:
+def format_constant_frac(f):
+  """Formats a constant Fraction with proper signs."""
+  if f == 0:
     return ""
-  elif val > 0:
-    return f" + {val:.1f}"
+  val = abs(f)
+  num_str = (
+      str(val.numerator)
+      if val.denominator == 1
+      else f"\\frac{{{val.numerator}}}{{{val.denominator}}}"
+  )
+  if f > 0:
+    return f" + {num_str}"
   else:
-    return f" - {abs(val):.1f}"
+    return f" - {num_str}"
 
 
 def plot_elliptic_curve(f_P1, f_P2):
   fx1, fy1 = f_P1
   fx2, fy2 = f_P2
+
+  # 1. Exact fraction arithmetic to solve for a and b:
+  # M = [[x1, 1], [x2, 1]], Y = [y1^2 - x1^3, y2^2 - x2^3]
+  # Cramer's rule for exact fractions:
+  det = fx1 - fx2
+  # x1*a + b = y1^2 - x1^3
+  # x2*a + b = y2^2 - x2^3
+  Y1 = fy1**2 - fx1**3
+  Y2 = fy2**2 - fx2**3
+
+  # a = (Y1 - Y2) / (fx1 - fx2)
+  f_a = (Y1 - Y2) / (fx1 - fx2)
+  # b = Y1 - fx1 * f_a
+  f_b = Y1 - fx1 * f_a
+
+  print("Calculated parameters (Exact Fractions):")
+  print(f"a = {f_a}")
+  print(f"b = {f_b}")
+
+  # Convert to float for numerical plotting/contour evaluation
+  a, b = float(f_a), float(f_b)
   x1, y1 = float(fx1), float(fy1)
   x2, y2 = float(fx2), float(fy2)
 
-  # 1. Solve for a and b
-  M = np.array([[x1, 1.0], [x2, 1.0]])
-  Y_vals = np.array([y1**2 - x1**3, y2**2 - x2**3])
-  a, b = np.linalg.solve(M, Y_vals)
-
-  eq_str = f"$y^2 = x^3{format_term(a, 'x')}{format_constant(b)}$"
-
-  print("Calculated parameters:")
-  print(f"a = {a}")
-  print(f"b = {b}")
+  eq_str = (
+      f"$y^2 = x^3{format_term_frac(f_a, 'x')}{format_constant_frac(f_b)}$"
+  )
 
   fig, ax = plt.subplots(figsize=(9, 7))
 
@@ -68,7 +96,6 @@ def plot_elliptic_curve(f_P1, f_P2):
     xmin, xmax = ax_obj.get_xlim()
     ymin, ymax = ax_obj.get_ylim()
 
-    # Generate fresh grid matching current view limits
     x = np.linspace(xmin, xmax, 800)
     y = np.linspace(ymin, ymax, 800)
     X, Y = np.meshgrid(x, y)
@@ -91,10 +118,8 @@ def plot_elliptic_curve(f_P1, f_P2):
   ax.callbacks.connect("xlim_changed", on_lims_changed)
   ax.callbacks.connect("ylim_changed", on_lims_changed)
 
-  # Initial draw
   update_contour(ax)
 
-  # Plot the given points
   p1_str = f"({format_frac_tex(fx1)}, {format_frac_tex(fy1)})"
   p2_str = f"({format_frac_tex(fx2)}, {format_frac_tex(fy2)})"
   ax.scatter(
