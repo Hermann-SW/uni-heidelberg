@@ -67,11 +67,14 @@ Given two points $(x_1,y_1)$ and $(x_2,y_2)$ with $x_1\neq x_2$ there is a uniqu
 Animation shows curves through 2 integer points with $x^2+y^2=85$ (e.g. $(9,2)$ or $(7,6)$⁠), differing by sign and order only. Here is [100% size animation](res/ecs_85_anim.gif):  
 ![50% size animation](res/ecs_85_anim.50pc.gif)  
   
-[unique_ec_ℚ.py](scripts/unique_ec_ℚ.py) allows for rational coordinates, aspect preserving zoom in/out and dynamic redraw:  
+[unique_ec_ℚ.py](scripts/unique_ec_ℚ.py) allows for rational coordinates, aspect preserving zoom in/out and dynamic redraw. Alternative input now allows to specify rational a and b for elliptic curve $y^2=x^3+ax+b$ as well:     
 ```
 $ python scripts/unique_ec_ℚ.py 
-Usage: python unique_ec_ℚ.py x1 y1 x2 y2
-Example: python unique_ec_ℚ.py 9/2 1 7/6 1
+Usage options:
+  1) python unique_ec_ℚ.py x1 y1 x2 y2   (Specify via two rational points)
+  2) python unique_ec_ℚ.py a b          (Specify via curve parameters a and b)
+Example 1: python unique_ec_ℚ.py 9/2 1 7/6 1
+Example 2: python unique_ec_ℚ.py -209 1156
 $
 ```
 
