@@ -67,7 +67,7 @@ Given two points $(x_1,y_1)$ and $(x_2,y_2)$ with $x_1\neq x_2$ there is a uniqu
 Animation shows curves through 2 integer points with $x^2+y^2=85$ (e.g. $(9,2)$ or $(7,6)$⁠), differing by sign and order only. Here is [100% size animation](res/ecs_85_anim.gif):  
 ![50% size animation](res/ecs_85_anim.50pc.gif)  
   
-[unique_ec_ℚ.py](scripts/unique_ec_ℚ.py) allows for rational coordinates:  
+[unique_ec_ℚ.py](scripts/unique_ec_ℚ.py) allows for rational coordinates, aspect preserving zoom in/out and dynamic redraw:  
 ```
 $ python scripts/unique_ec_ℚ.py 
 Usage: python unique_ec_ℚ.py x1 y1 x2 y2
