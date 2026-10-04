@@ -59,7 +59,7 @@ True
 hermann@8840hs:~/uni-heidelberg$ 
 ```
 
-Observation not part of book chapters for my seminar talk:
+<a name="Observation">Observation not part of book chapters for my seminar talk:
 
 Given two points $(x_1,y_1)$ and $(x_2,y_2)$ with $x_1\neq x_2$ there is a unique elliptic curve going through both points. Can be simply seen by rewriting eliptic curve formula $y^2=x^3+ax+b$ as $y^2-x^3=ax+b$. For a given pair $(x,y)$ the left hand side is constant, and two points result in simple system of two linear equations and two variables $a$ and $b$. Script [unique_ec.py](scripts/unique_ec.py) (generated with 3 prompts in 10 minutes by free gemini.google.com) allows to easily display that curve via matplotlib, example:  
 ```python scripts/unique_ec.py 9 2 7 6```
