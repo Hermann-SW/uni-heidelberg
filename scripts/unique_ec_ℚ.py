@@ -13,7 +13,6 @@ def format_frac_tex(f):
 
 
 def format_term(val, variable_str):
-  """Helper to format terms like + 2x or - 2x cleanly."""
   if val == 0:
     return ""
   elif val > 0:
@@ -23,7 +22,6 @@ def format_term(val, variable_str):
 
 
 def format_constant(val):
-  """Helper to format the constant term b cleanly."""
   if val == 0:
     return ""
   elif val > 0:
@@ -33,51 +31,73 @@ def format_constant(val):
 
 
 def plot_elliptic_curve(f_P1, f_P2):
-  # Keep fraction objects for display, convert to float for computation
   fx1, fy1 = f_P1
   fx2, fy2 = f_P2
-
   x1, y1 = float(fx1), float(fy1)
   x2, y2 = float(fx2), float(fy2)
 
-  # 1. Solve the linear system for a and b:
+  # 1. Solve for a and b
   M = np.array([[x1, 1.0], [x2, 1.0]])
   Y_vals = np.array([y1**2 - x1**3, y2**2 - x2**3])
-
   a, b = np.linalg.solve(M, Y_vals)
 
-  # Build formatted equation string
   eq_str = f"$y^2 = x^3{format_term(a, 'x')}{format_constant(b)}$"
 
   print("Calculated parameters:")
   print(f"a = {a}")
   print(f"b = {b}")
 
-  # 2. Set up the plotting grid around the points
-  x_min = min(x1, x2) - 4
-  x_max = max(x1, x2) + 4
-  y_min = -max(abs(y1), abs(y2)) - 6
-  y_max = max(abs(y1), abs(y2)) + 6
+  fig, ax = plt.subplots(figsize=(9, 7))
 
-  x = np.linspace(x_min, x_max, 600)
-  y = np.linspace(y_min, y_max, 600)
-  X, Y = np.meshgrid(x, y)
+  # Enforce aspect-preserving 1:1 scaling ratio
+  ax.set_aspect("equal", adjustable="datalim")
 
-  # Implicit function F(x, y) = y^2 - (x^3 + ax + b) = 0
-  F = Y**2 - (X**3 + a * X + b)
+  # Initial view bounds centered around the points
+  x_span = max(abs(x1 - x2) * 2, 8)
+  y_span = max(abs(y1 - y2) * 2, 12)
+  ax.set_xlim(min(x1, x2) - x_span, max(x1, x2) + x_span)
+  ax.set_ylim(-max(abs(y1), abs(y2)) - y_span, max(abs(y1), abs(y2)) + y_span)
 
-  # 3. Create the plot
-  plt.figure(figsize=(9, 7))
+  contour_holder = [None]
 
-  # Plot the curve where F(x, y) = 0
-  plt.contour(X, Y, F, levels=[0], colors="royalblue", linewidths=2.5)
+  def update_contour(ax_obj):
+    if contour_holder[0] is not None:
+      for coll in contour_holder[0].collections:
+        coll.remove()
 
-  # Format points for legend using LaTeX fractions
+    xmin, xmax = ax_obj.get_xlim()
+    ymin, ymax = ax_obj.get_ylim()
+
+    # Generate fresh grid matching current view limits
+    x = np.linspace(xmin, xmax, 800)
+    y = np.linspace(ymin, ymax, 800)
+    X, Y = np.meshgrid(x, y)
+    F = Y**2 - (X**3 + a * X + b)
+
+    contour_holder[0] = ax_obj.contour(
+        X, Y, F, levels=[0], colors="royalblue", linewidths=2.5
+    )
+    fig.canvas.draw_idle()
+
+  is_updating = [False]
+
+  def on_lims_changed(ax_obj):
+    if is_updating[0]:
+      return
+    is_updating[0] = True
+    update_contour(ax_obj)
+    is_updating[0] = False
+
+  ax.callbacks.connect("xlim_changed", on_lims_changed)
+  ax.callbacks.connect("ylim_changed", on_lims_changed)
+
+  # Initial draw
+  update_contour(ax)
+
+  # Plot the given points
   p1_str = f"({format_frac_tex(fx1)}, {format_frac_tex(fy1)})"
   p2_str = f"({format_frac_tex(fx2)}, {format_frac_tex(fy2)})"
-
-  # Plot the given points (Fixed label definition)
-  plt.scatter(
+  ax.scatter(
       [x1, x2],
       [y1, y2],
       color="crimson",
@@ -86,16 +106,13 @@ def plot_elliptic_curve(f_P1, f_P2):
       label=f"Points: $P_1{p1_str}$, $P_2{p2_str}$",
   )
 
-  # Axis formatting & aesthetics
-  plt.axhline(0, color="black", linewidth=0.8, linestyle="--")
-  plt.axvline(0, color="black", linewidth=0.8, linestyle="--")
-  plt.title(f"Elliptic Curve: {eq_str}", fontsize=13, pad=12)
-  plt.xlabel("$x$", fontsize=11)
-  plt.ylabel("$y$", fontsize=11)
-  plt.grid(True, linestyle=":", alpha=0.5)
-  plt.legend(loc="upper left")
-  plt.xlim(x_min, x_max)
-  plt.ylim(y_min, y_max)
+  ax.axhline(0, color="black", linewidth=0.8, linestyle="--")
+  ax.axvline(0, color="black", linewidth=0.8, linestyle="--")
+  ax.set_title(f"Elliptic Curve: {eq_str}", fontsize=13, pad=12)
+  ax.set_xlabel("$x$", fontsize=11)
+  ax.set_ylabel("$y$", fontsize=11)
+  ax.grid(True, linestyle=":", alpha=0.5)
+  ax.legend(loc="upper left")
 
   plt.show()
 
@@ -113,7 +130,7 @@ if __name__ == "__main__":
           "Error: Please provide valid numbers or fractions for coordinates"
           " (e.g., 9/2)."
       )
-      print("Usage: python unique_ec_ℚ.py x1 y1 x2 y2")
+      print("Usage: python unique_ec.py x1 y1 x2 y2")
   else:
-    print("Usage: python unique_ec_ℚ.py x1 y1 x2 y2")
-    print("Example: python unique_ec_ℚ.py 9/2 1 7/6 1")
+    print("Usage: python unique_ec.py x1 y1 x2 y2")
+    print("Example: python unique_ec.py 9/2 1 7/6 1")
