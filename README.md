@@ -33,6 +33,7 @@ Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf):
 ![formula.1_4.png](res/formula.1_4.png)
 
 Symbolic proof of equation equalities using WolframScript [1_5.wls](scripts/1_5.wls):  
+[there is [free for personal and educational use license](https://www.wolfram.com/engine/free-license/) of wolframscript]   
 ```
 hermann@8840hs:~/uni-heidelberg$ wolframscript -f scripts/1_5.wls
 === 1. Proof that f(u, v, w) maps into C ===
