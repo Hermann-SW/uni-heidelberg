@@ -1,4 +1,4 @@
-Studyinc in my 60s](https://github.com/Hermann-SW/Hermann-SW.github.io/tree/master/studying_in_my_60s#studying-in-my-60s) at Heidelberg/Germany University:
+[Studying in my 60s](https://github.com/Hermann-SW/Hermann-SW.github.io/tree/master/studying_in_my_60s#studying-in-my-60s) at Heidelberg/Germany University:
 
 - [future lectures](https://stamm-wilbrandt.de/GraphvizFiddle/#_math) currently planned to attend
 - [fall 2026](#fall-2026)
