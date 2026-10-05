@@ -79,7 +79,8 @@ $
 ```
 
 In case cypari2 module is installed, "Find ellratpoints" checkbox allows to determine and display all rational points on elliptic curve up to height specified in "Height" input field (via cypari2 PARI/GP function ```ellratpoints()```). Button "Zoom to all points" resets zoom so that all points up to height are visible.  
-<table><td><tr><td><a href="res/unique_ec_ellratpoints.png">![unique_ec_ellratpoints.33pc.png](res/unique_ec_ellratpoints.33pc.png)</a></td><td>![ec_hover.png](res/ec_hover.png)</td></tr></table>
+<table><tr><td><a href="res/unique_ec_ellratpoints.png"><img src="res/unique_ec_ellratpoints.33pc.png"></a></td><td><img src="res/ec_hover.png"></td></tr></table>
+
 
 
 ## Higher Analysis

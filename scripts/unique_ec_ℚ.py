@@ -97,6 +97,17 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
 
   state = {"active": False, "height": 1000}
 
+  # Store point lookups for hover tooltips: maps (x_float, y_float) -> rational label string
+  point_labels = {}
+
+  if input_points:
+    point_labels[(float(input_points[0][0]), float(input_points[0][1]))] = (
+        f"P1: ({input_points[0][0]}, {input_points[0][1]})"
+    )
+    point_labels[(float(input_points[1][0]), float(input_points[1][1]))] = (
+        f"P2: ({input_points[1][0]}, {input_points[1][1]})"
+    )
+
   def get_pari_points():
     if not CYPARI_AVAILABLE or not state["active"]:
       return []
@@ -110,9 +121,11 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       for pt in pts:
         if len(pt) >= 2:
           try:
+            rx_str = str(pt[0])
+            ry_str = str(pt[1])
             px = float(pt[0])
             py = float(pt[1])
-            parsed.append((px, py))
+            parsed.append((px, py, rx_str, ry_str))
           except Exception:
             pass
       return parsed
@@ -141,11 +154,30 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       rat_scatter_holder[0].remove()
       rat_scatter_holder[0] = None
 
+    # Clear dynamic rational points from tooltip registry before re-populating
+    keys_to_remove = [
+        k
+        for k in point_labels.keys()
+        if (
+            input_points is None
+            or k
+            not in [
+                (float(input_points[0][0]), float(input_points[0][1])),
+                (float(input_points[1][0]), float(input_points[1][1])),
+            ]
+        )
+    ]
+    for k in keys_to_remove:
+      del point_labels[k]
+
     if state["active"] and CYPARI_AVAILABLE:
       r_pts = get_pari_points()
       if r_pts:
         rx = [p[0] for p in r_pts]
         ry = [p[1] for p in r_pts]
+        for p in r_pts:
+          point_labels[(p[0], p[1])] = f"({p[2]}, {p[3]})"
+
         rat_scatter_holder[0] = ax.scatter(
             rx,
             ry,
@@ -208,6 +240,49 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
   ax.set_ylabel("$y$", fontsize=11)
   ax.grid(True, linestyle=":", alpha=0.5)
   ax.legend(loc="upper left")
+
+  # --- Hover Tooltip Setup ---
+  annot = ax.annotate(
+      "",
+      xy=(0, 0),
+      xytext=(15, 15),
+      textcoords="offset points",
+      bbox=dict(boxstyle="round,pad=0.5", fc="yellow", alpha=0.8, ec="black"),
+      arrowprops=dict(arrowstyle="->", connectionstyle="arc3"),
+  )
+  annot.set_visible(False)
+
+  def on_hover(event):
+    if event.inaxes != ax:
+      if annot.get_visible():
+        annot.set_visible(False)
+        fig.canvas.draw_idle()
+      return
+
+    found = False
+    if point_labels:
+      xmin, xmax = ax.get_xlim()
+      ymin, ymax = ax.get_ylim()
+      data_w = xmax - xmin
+      data_h = ymax - ymin
+
+      for (px, py), label_text in point_labels.items():
+        dx = (event.xdata - px) / data_w
+        dy = (event.ydata - py) / data_h
+        dist = np.sqrt(dx**2 + dy**2)
+        if dist < 0.03:
+          annot.xy = (px, py)
+          annot.set_text(label_text)
+          annot.set_visible(True)
+          found = True
+          fig.canvas.draw_idle()
+          break
+
+    if not found and annot.get_visible():
+      annot.set_visible(False)
+      fig.canvas.draw_idle()
+
+  fig.canvas.mpl_connect("motion_notify_event", on_hover)
 
   # --- UI Widgets Setup ---
   ax_check = fig.add_axes([0.08, 0.08, 0.26, 0.08])
@@ -275,8 +350,8 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
     fig.text(
         0.08,
         0.02,
-        "Check box & enter height to load rational points via"
-        " pari.ellratpoints",
+        "Hover over points to see rational coordinates. Check box & enter"
+        " height for ellratpoints.",
         fontsize=9,
         color="dimgray",
     )
