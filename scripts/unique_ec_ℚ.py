@@ -93,7 +93,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
     ax.set_xlim(-10, 10)
     ax.set_ylim(-12, 12)
 
-  contour_holder = [None]
+  curve_lines_holder = []
   rat_scatter_holder = [None]
   input_scatter_holder = [None]
 
@@ -106,10 +106,17 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
 
   point_labels = {}
 
+  def get_scale_factor(x_val):
+    """Smooth C-infinity scale factor D(x) = sqrt((4 + x^3) / (4 + x^2))."""
+    if x_val <= 0:
+      return 1.0
+    return np.sqrt((4.0 + x_val**3) / (4.0 + x_val**2))
+
   def transform_point(px, py):
-    """Maps curve-space point (px, py) to plot-space with y-axis scaling y / sqrt(x)."""
+    """Maps curve-space point (px, py) to plot-space with smooth scale."""
     if state["scale45"] and px > 0:
-      return px, py / np.sqrt(px)
+      d = get_scale_factor(px)
+      return px, py / d
     return px, py
 
   def get_pari_points():
@@ -132,8 +139,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
             ry_str = str(pt[1])
             px = float(pt[0])
             py = float(pt[1])
-            if py != 0:
-              parsed.append((px, py, rx_str, ry_str))
+            parsed.append((px, py, rx_str, ry_str))
           except Exception:
             pass
       return parsed
@@ -142,76 +148,126 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       return []
 
   def y_tick_formatter(val, pos):
-    if not state["scale45"] or val == 0:
-      return f"{val:.0f}" if isinstance(val, int) or val == int(val) else f"{val}"
+    if not state["scale45"] or abs(val) < 1e-5:
+      return (
+          f"{val:.0f}" if isinstance(val, int) or val == int(val) else f"{val}"
+      )
     try:
-      roots = np.roots([1.0, 0.0, a - val**2, b])
-      real_roots = [r.real for r in roots if np.isreal(r) and r.real > 0]
-      if real_roots:
-        x_val = min(real_roots)
-        y_val = val * np.sqrt(x_val)
-        if val < 0:
-          y_val = -y_val
-        if abs(y_val - round(y_val)) < 1e-3:
-          return str(int(round(y_val)))
-        return f"{y_val:.1f}"
+      abs_val = abs(val)
+      # Check if tick corresponds to loop branch (x <= 0)
+      roots_neg = np.roots([1.0, 0.0, a, b - abs_val**2])
+      real_roots_neg = [r.real for r in roots_neg if np.isreal(r) and r.real <= 0]
+      if real_roots_neg:
+        y_val = abs_val
+      else:
+        # Exact 5th-degree polynomial for x > 0 scaled branch
+        poly = [
+            1.0,
+            0.0,
+            4.0 + a - abs_val**2,
+            b,
+            4.0 * a,
+            4.0 * b - 4.0 * abs_val**2,
+        ]
+        roots_pos = np.roots(poly)
+        real_roots_pos = [
+            r.real for r in roots_pos if np.isreal(r) and r.real > 0
+        ]
+        if real_roots_pos:
+          x_val = min(real_roots_pos)
+          y_val = np.sqrt(x_val**3 + a * x_val + b)
+        else:
+          y_val = abs_val
+
+      if val < 0:
+        y_val = -y_val
+      if abs(y_val - round(y_val)) < 1e-2:
+        return str(int(round(y_val)))
+      return f"{y_val:.1f}"
     except Exception:
       pass
-    return f"{val}"
+    return (
+        f"{val:.0f}" if isinstance(val, int) or val == int(val) else f"{val}"
+    )
 
   ax.yaxis.set_major_formatter(FuncFormatter(y_tick_formatter))
 
   def format_coord(x, y):
     true_y = y
     if state["scale45"] and x > 0:
-      try:
-        roots = np.roots([1.0, 0.0, a - y**2, b])
-        real_roots = [r.real for r in roots if np.isreal(r) and r.real > 0]
-        if real_roots:
-          x_approx = min(real_roots)
-          true_y = y * np.sqrt(x_approx)
-          if y < 0:
-            true_y = -true_y
-      except Exception:
-        pass
+      d = get_scale_factor(x)
+      true_y = y * d
     return f"x={x:.3f}, y={true_y:.3f} (plot_y={y:.3f})"
 
   ax.format_coord = format_coord
 
   def update_plot_elements():
-    if contour_holder[0] is not None:
-      for coll in contour_holder[0].collections:
-        coll.remove()
+    nonlocal curve_lines_holder
+    for line in curve_lines_holder:
+      line.remove()
+    curve_lines_holder = []
+
+    # Refresh y-ticks so FuncFormatter re-evaluates labels for the current scale
+    ax.yaxis.set_major_locator(ax.yaxis.get_major_locator())
 
     xmin, xmax = ax.get_xlim()
     ymin, ymax = ax.get_ylim()
 
-    gx = np.linspace(xmin, xmax, 800)
-    gy = np.linspace(ymin, ymax, 800)
-    X, Y = np.meshgrid(gx, gy)
+    cubic_roots = np.roots([1.0, 0.0, a, b])
+    real_roots = sorted([r.real for r in cubic_roots if abs(r.imag) < 1e-7])
 
-    if state["scale45"]:
-      safe_sqrt_x = np.sqrt(np.maximum(0, X))
-      F = np.where(
-          X > 0,
-          (Y * safe_sqrt_x) ** 2 - (X**3 + a * X + b),
-          Y**2 - (X**3 + a * X + b),
-      )
+    intervals = []
+    if len(real_roots) == 1:
+      r1 = real_roots[0]
+      intervals.append((max(xmin, r1), max(xmin, xmax)))
+    elif len(real_roots) == 3:
+      r1, r2, r3 = real_roots
+      intervals.append((max(xmin, r1), min(xmax, r2)))
+      intervals.append((max(xmin, r3), max(xmin, xmax)))
     else:
-      F = Y**2 - (X**3 + a * X + b)
+      intervals.append((xmin, xmax))
 
-    contour_holder[0] = ax.contour(
-        X, Y, F, levels=[0], colors="royalblue", linewidths=2.5
-    )
+    for start, end in intervals:
+      if end <= start:
+        continue
+      xs = np.linspace(start, end, 1000)
+      val = xs**3 + a * xs + b
+      val = np.maximum(0, val)
+      ys = np.sqrt(val)
+
+      bx_pos, by_pos = [], []
+      bx_neg, by_neg = [], []
+
+      for x, y in zip(xs, ys):
+        if state["scale45"] and x > 0:
+          d = get_scale_factor(x)
+          px, py_p = x, y / d
+          _, py_n = x, -y / d
+        else:
+          px, py_p = x, y
+          _, py_n = x, -y
+
+        bx_pos.append(px)
+        by_pos.append(py_p)
+        bx_neg.append(px)
+        by_neg.append(py_n)
+
+      if bx_pos:
+        (line_p,) = ax.plot(
+            bx_pos, by_pos, color="royalblue", linewidth=2.5, zorder=3
+        )
+        (line_n,) = ax.plot(
+            bx_neg, by_neg, color="royalblue", linewidth=2.5, zorder=3
+        )
+        curve_lines_holder.extend([line_p, line_n])
 
     point_labels.clear()
 
     if input_points:
       for p in input_points:
         orig_px, orig_py = float(p[0]), float(p[1])
-        if orig_py != 0:
-          plot_px, plot_py = transform_point(orig_px, orig_py)
-          point_labels[(plot_px, plot_py)] = f"({p[0]}, {p[1]})"
+        plot_px, plot_py = transform_point(orig_px, orig_py)
+        point_labels[(plot_px, plot_py)] = f"({p[0]}, {p[1]})"
 
       if input_scatter_holder[0] is not None:
         input_scatter_holder[0].remove()
@@ -254,7 +310,6 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
             alpha=0.8,
         )
 
-    # Only show legend if there are labeled artists
     handles, labels = ax.get_legend_handles_labels()
     if handles:
       ax.legend(loc="upper left")
@@ -397,21 +452,17 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       r_pts = get_pari_points()
       if input_points:
         all_x = [k[0] for k in point_labels.keys()] + [
-            transform_point(p[0], p[1])[0] for p in r_pts if p[1] != 0
+            transform_point(p[0], p[1])[0] for p in r_pts
         ]
         all_y = [k[1] for k in point_labels.keys()] + [
-            transform_point(p[0], p[1])[1] for p in r_pts if p[1] != 0
+            transform_point(p[0], p[1])[1] for p in r_pts
         ]
       else:
         all_x = (
-            [transform_point(p[0], p[1])[0] for p in r_pts if p[1] != 0]
-            if r_pts
-            else [-5, 5]
+            [transform_point(p[0], p[1])[0] for p in r_pts] if r_pts else [-5, 5]
         )
         all_y = (
-            [transform_point(p[0], p[1])[1] for p in r_pts if p[1] != 0]
-            if r_pts
-            else [-5, 5]
+            [transform_point(p[0], p[1])[1] for p in r_pts] if r_pts else [-5, 5]
         )
 
       if not all_x:
@@ -500,8 +551,8 @@ if __name__ == "__main__":
       plot_elliptic_curve(f_a, f_b, input_points=None)
     except (ValueError, ZeroDivisionError):
       print(
-          "Error: Please provide valid numbers or fractions for a and b (e.g.,"
-          " -209 1156)."
+          "Error: Please provide valid numbers or fractions for a and b (e.g., "
+          "-209 1156)."
       )
       print_usage()
   else:
