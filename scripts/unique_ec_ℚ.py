@@ -95,7 +95,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
   contour_holder = [None]
   rat_scatter_holder = [None]
 
-  state = {"active": False, "height": 1000}
+  state = {"active": False, "integral": False, "height": 1000}
 
   # Store point lookups for hover tooltips: maps (x_float, y_float) -> rational label string
   point_labels = {}
@@ -116,7 +116,10 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       pa = pari(str(f_a))
       pb = pari(str(f_b))
       E = pari.ellinit([0, 0, 0, pa, pb])
-      pts = pari.ellratpoints(E, state["height"])
+      if state["integral"]:
+        pts = pari.ellratpoints(E, [state["height"], 1])
+      else:
+        pts = pari.ellratpoints(E, state["height"])
       parsed = []
       for pt in pts:
         if len(pt) >= 2:
@@ -285,19 +288,54 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
   fig.canvas.mpl_connect("motion_notify_event", on_hover)
 
   # --- UI Widgets Setup ---
-  ax_check = fig.add_axes([0.08, 0.08, 0.26, 0.08])
-  ax_box = fig.add_axes([0.45, 0.09, 0.12, 0.06])
-  ax_btn = fig.add_axes([0.60, 0.09, 0.22, 0.06])
+  ax_check = fig.add_axes([0.08, 0.06, 0.28, 0.12])
+  ax_box = fig.add_axes([0.42, 0.09, 0.12, 0.06])
+  ax_btn = fig.add_axes([0.57, 0.09, 0.22, 0.06])
 
   if CYPARI_AVAILABLE:
-    chk = CheckButtons(ax_check, ["Find ellratpoints"], [False])
+    chk = CheckButtons(
+        ax_check, ["Find ellratpoints", "Integral only"], [False, False]
+    )
     txt_box = TextBox(ax_box, "Height: ", initial="1000")
     btn_zoom = Button(ax_btn, "Zoom to All Points")
 
+    # Initially grey out/disable the second checkbox rectangle & text since ellratpoints is off
+    chk.rectangles[1].set_facecolor("#e0e0e0")
+    chk.rectangles[1].set_edgecolor("#aaaaaa")
+    for text in chk.labels[1:]:
+      text.set_color("#888888")
+
     def on_check(label):
-      state["active"] = not state["active"]
-      txt_box.ax.set_visible(state["active"])
-      btn_zoom.ax.set_visible(state["active"])
+      if label == "Find ellratpoints":
+        state["active"] = not state["active"]
+        txt_box.ax.set_visible(state["active"])
+        btn_zoom.ax.set_visible(state["active"])
+
+        # Update visual availability (grey out/activate) of "Integral only"
+        if state["active"]:
+          chk.rectangles[1].set_facecolor("#ffffff")
+          chk.rectangles[1].set_edgecolor("black")
+          for text in chk.labels[1:]:
+            text.set_color("black")
+        else:
+          state["integral"] = False
+          # Uncheck visual state if it was checked
+          if chk.get_status()[1]:
+            chk.set_active(1)  # toggles it off
+          chk.rectangles[1].set_facecolor("#e0e0e0")
+          chk.rectangles[1].set_edgecolor("#aaaaaa")
+          for text in chk.labels[1:]:
+            text.set_color("#888888")
+
+      elif label == "Integral only":
+        if state["active"]:
+          state["integral"] = not state["integral"]
+        else:
+          # If main search is disabled, keep it unchecked
+          if chk.get_status()[1]:
+            chk.set_active(1)
+          return
+
       update_plot_elements()
 
     chk.on_clicked(on_check)
@@ -349,14 +387,16 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
 
     fig.text(
         0.08,
-        0.02,
-        "Hover over points to see rational coordinates. Check box & enter"
-        " height for ellratpoints.",
+        0.01,
+        "Hover over points to see coordinates. Check boxes & enter height for"
+        " points.",
         fontsize=9,
         color="dimgray",
     )
   else:
-    chk = CheckButtons(ax_check, ["Find ellratpoints (Disabled)"], [False])
+    chk = CheckButtons(
+        ax_check, ["Find ellratpoints (Disabled)", "Integral only"], [False, False]
+    )
     chk.ax.set_facecolor("#e0e0e0")
     txt_box = TextBox(ax_box, "Height: ", initial="1000")
     btn_zoom = Button(ax_btn, "Zoom to All Points")
@@ -367,7 +407,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
 
     fig.text(
         0.08,
-        0.02,
+        0.01,
         "*(Note: Install cypari2 via 'pip install cypari2' to unlock"
         " ellratpoints features)*",
         fontsize=9,
