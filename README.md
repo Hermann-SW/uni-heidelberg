@@ -25,7 +25,7 @@ https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optim
 
 Seminar on book "[KKS00] Kato, Kazuya, Nobushige Kurokawa, and Takeshi Saitō. Number Theory: Fermat’s dream. AMS Bookstore, 2000."
 
-Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf) [built with [Fermat_seminar.build_graph.py](res/Fermat_seminar.build_graph.py)]  
+Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf) [built with [Fermat_seminar.build_graph.py](scripts/Fermat_seminar.build_graph.py)]  
 of "Elliptic curves and Fermat's proof" (for $n=4$):  
 <a href="res/Fermat_seminar.pdf">![Fermat_seminar.10pc.png](res/Fermat_seminar.10pc.png)</a>
 
