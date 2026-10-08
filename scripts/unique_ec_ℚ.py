@@ -154,13 +154,11 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       )
     try:
       abs_val = abs(val)
-      # Check if tick corresponds to loop branch (x <= 0)
       roots_neg = np.roots([1.0, 0.0, a, b - abs_val**2])
       real_roots_neg = [r.real for r in roots_neg if np.isreal(r) and r.real <= 0]
       if real_roots_neg:
         y_val = abs_val
       else:
-        # Exact 5th-degree polynomial for x > 0 scaled branch
         poly = [
             1.0,
             0.0,
@@ -207,7 +205,6 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       line.remove()
     curve_lines_holder = []
 
-    # Refresh y-ticks so FuncFormatter re-evaluates labels for the current scale
     ax.yaxis.set_major_locator(ax.yaxis.get_major_locator())
 
     xmin, xmax = ax.get_xlim()
@@ -398,8 +395,10 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
     txt_box = TextBox(ax_box, "Height: ", initial="1000")
     btn_zoom = Button(ax_btn, "Zoom to All Points")
 
-    chk.rectangles[1].set_facecolor("#e0e0e0")
-    chk.rectangles[1].set_edgecolor("#aaaaaa")
+    # Version-safe check for older matplotlib .rectangles attribute
+    if hasattr(chk, "rectangles") and len(chk.rectangles) > 1:
+      chk.rectangles[1].set_facecolor("#e0e0e0")
+      chk.rectangles[1].set_edgecolor("#aaaaaa")
     for text in chk.labels[1:2]:
       text.set_color("#888888")
 
@@ -410,15 +409,17 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
         btn_zoom.ax.set_visible(state["active"])
 
         if state["active"]:
-          chk.rectangles[1].set_facecolor("#ffffff")
-          chk.rectangles[1].set_edgecolor("black")
+          if hasattr(chk, "rectangles") and len(chk.rectangles) > 1:
+            chk.rectangles[1].set_facecolor("#ffffff")
+            chk.rectangles[1].set_edgecolor("black")
           chk.labels[1].set_color("black")
         else:
           state["integral"] = False
           if chk.get_status()[1]:
             chk.set_active(1)
-          chk.rectangles[1].set_facecolor("#e0e0e0")
-          chk.rectangles[1].set_edgecolor("#aaaaaa")
+          if hasattr(chk, "rectangles") and len(chk.rectangles) > 1:
+            chk.rectangles[1].set_facecolor("#e0e0e0")
+            chk.rectangles[1].set_edgecolor("#aaaaaa")
           chk.labels[1].set_color("#888888")
 
       elif label == "Integral only":
@@ -551,8 +552,8 @@ if __name__ == "__main__":
       plot_elliptic_curve(f_a, f_b, input_points=None)
     except (ValueError, ZeroDivisionError):
       print(
-          "Error: Please provide valid numbers or fractions for a and b (e.g., "
-          "-209 1156)."
+          "Error: Please provide valid numbers or fractions for a and b (e.g.,"
+          " -209 1156)."
       )
       print_usage()
   else:
