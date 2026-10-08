@@ -1,6 +1,7 @@
 from fractions import Fraction
 import sys
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
 from matplotlib.widgets import Button, CheckButtons, TextBox
 import numpy as np
 
@@ -73,7 +74,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
 
   # Adjust layout to make room for widgets at the bottom
   fig, ax = plt.subplots(figsize=(10, 8))
-  fig.subplots_adjust(bottom=0.22)
+  fig.subplots_adjust(bottom=0.25)
 
   ax.set_aspect("equal", adjustable="datalim")
 
@@ -94,19 +95,22 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
 
   contour_holder = [None]
   rat_scatter_holder = [None]
+  input_scatter_holder = [None]
 
-  state = {"active": False, "integral": False, "height": 1000}
+  state = {
+      "active": False,
+      "integral": False,
+      "scale45": False,
+      "height": 1000,
+  }
 
-  # Store point lookups for hover tooltips: maps (x_float, y_float) -> rational label string
   point_labels = {}
 
-  if input_points:
-    point_labels[(float(input_points[0][0]), float(input_points[0][1]))] = (
-        f"P1: ({input_points[0][0]}, {input_points[0][1]})"
-    )
-    point_labels[(float(input_points[1][0]), float(input_points[1][1]))] = (
-        f"P2: ({input_points[1][0]}, {input_points[1][1]})"
-    )
+  def transform_point(px, py):
+    """Maps curve-space point (px, py) to plot-space with y-axis scaling y / sqrt(x)."""
+    if state["scale45"] and px > 0:
+      return px, py / np.sqrt(px)
+    return px, py
 
   def get_pari_points():
     if not CYPARI_AVAILABLE or not state["active"]:
@@ -128,13 +132,51 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
             ry_str = str(pt[1])
             px = float(pt[0])
             py = float(pt[1])
-            parsed.append((px, py, rx_str, ry_str))
+            if py != 0:
+              parsed.append((px, py, rx_str, ry_str))
           except Exception:
             pass
       return parsed
     except Exception as e:
       print(f"Error fetching ellratpoints: {e}")
       return []
+
+  def y_tick_formatter(val, pos):
+    if not state["scale45"] or val == 0:
+      return f"{val:.0f}" if isinstance(val, int) or val == int(val) else f"{val}"
+    try:
+      roots = np.roots([1.0, 0.0, a - val**2, b])
+      real_roots = [r.real for r in roots if np.isreal(r) and r.real > 0]
+      if real_roots:
+        x_val = min(real_roots)
+        y_val = val * np.sqrt(x_val)
+        if val < 0:
+          y_val = -y_val
+        if abs(y_val - round(y_val)) < 1e-3:
+          return str(int(round(y_val)))
+        return f"{y_val:.1f}"
+    except Exception:
+      pass
+    return f"{val}"
+
+  ax.yaxis.set_major_formatter(FuncFormatter(y_tick_formatter))
+
+  def format_coord(x, y):
+    true_y = y
+    if state["scale45"] and x > 0:
+      try:
+        roots = np.roots([1.0, 0.0, a - y**2, b])
+        real_roots = [r.real for r in roots if np.isreal(r) and r.real > 0]
+        if real_roots:
+          x_approx = min(real_roots)
+          true_y = y * np.sqrt(x_approx)
+          if y < 0:
+            true_y = -true_y
+      except Exception:
+        pass
+    return f"x={x:.3f}, y={true_y:.3f} (plot_y={y:.3f})"
+
+  ax.format_coord = format_coord
 
   def update_plot_elements():
     if contour_holder[0] is not None:
@@ -147,39 +189,60 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
     gx = np.linspace(xmin, xmax, 800)
     gy = np.linspace(ymin, ymax, 800)
     X, Y = np.meshgrid(gx, gy)
-    F = Y**2 - (X**3 + a * X + b)
+
+    if state["scale45"]:
+      safe_sqrt_x = np.sqrt(np.maximum(0, X))
+      F = np.where(
+          X > 0,
+          (Y * safe_sqrt_x) ** 2 - (X**3 + a * X + b),
+          Y**2 - (X**3 + a * X + b),
+      )
+    else:
+      F = Y**2 - (X**3 + a * X + b)
 
     contour_holder[0] = ax.contour(
         X, Y, F, levels=[0], colors="royalblue", linewidths=2.5
     )
 
+    point_labels.clear()
+
+    if input_points:
+      for p in input_points:
+        orig_px, orig_py = float(p[0]), float(p[1])
+        if orig_py != 0:
+          plot_px, plot_py = transform_point(orig_px, orig_py)
+          point_labels[(plot_px, plot_py)] = f"({p[0]}, {p[1]})"
+
+      if input_scatter_holder[0] is not None:
+        input_scatter_holder[0].remove()
+
+      ix = [k[0] for k in point_labels.keys()]
+      iy = [k[1] for k in point_labels.keys()]
+      if ix:
+        p1_str = f"({format_frac_tex(input_points[0][0])}, {format_frac_tex(input_points[0][1])})"
+        p2_str = f"({format_frac_tex(input_points[1][0])}, {format_frac_tex(input_points[1][1])})"
+        input_scatter_holder[0] = ax.scatter(
+            ix,
+            iy,
+            color="crimson",
+            s=90,
+            zorder=6,
+            label=f"Input Points: $P_1{p1_str}$, $P_2{p2_str}$",
+        )
+
     if rat_scatter_holder[0] is not None:
       rat_scatter_holder[0].remove()
       rat_scatter_holder[0] = None
 
-    # Clear dynamic rational points from tooltip registry before re-populating
-    keys_to_remove = [
-        k
-        for k in point_labels.keys()
-        if (
-            input_points is None
-            or k
-            not in [
-                (float(input_points[0][0]), float(input_points[0][1])),
-                (float(input_points[1][0]), float(input_points[1][1])),
-            ]
-        )
-    ]
-    for k in keys_to_remove:
-      del point_labels[k]
-
     if state["active"] and CYPARI_AVAILABLE:
       r_pts = get_pari_points()
       if r_pts:
-        rx = [p[0] for p in r_pts]
-        ry = [p[1] for p in r_pts]
+        rx, ry = [], []
         for p in r_pts:
-          point_labels[(p[0], p[1])] = f"({p[2]}, {p[3]})"
+          plot_px, plot_py = transform_point(p[0], p[1])
+          point_labels[(plot_px, plot_py)] = f"({p[2]}, {p[3]})"
+          rx.append(plot_px)
+          ry.append(plot_py)
 
         rat_scatter_holder[0] = ax.scatter(
             rx,
@@ -191,6 +254,11 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
             alpha=0.8,
         )
 
+    # Only show legend if there are labeled artists
+    handles, labels = ax.get_legend_handles_labels()
+    if handles:
+      ax.legend(loc="upper left")
+
     fig.canvas.draw_idle()
 
   is_updating = [False]
@@ -199,19 +267,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
     if is_updating[0]:
       return
     is_updating[0] = True
-    xmin, xmax = ax_obj.get_xlim()
-    ymin, ymax = ax_obj.get_ylim()
-    gx = np.linspace(xmin, xmax, 800)
-    gy = np.linspace(ymin, ymax, 800)
-    X, Y = np.meshgrid(gx, gy)
-    F = Y**2 - (X**3 + a * X + b)
-    if contour_holder[0] is not None:
-      for coll in contour_holder[0].collections:
-        coll.remove()
-    contour_holder[0] = ax_obj.contour(
-        X, Y, F, levels=[0], colors="royalblue", linewidths=2.5
-    )
-    fig.canvas.draw_idle()
+    update_plot_elements()
     is_updating[0] = False
 
   ax.callbacks.connect("xlim_changed", on_lims_changed)
@@ -219,30 +275,16 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
 
   update_plot_elements()
 
-  # Plot input points bigger (s=90) only if provided
-  if input_points:
-    fx1, fy1 = input_points[0]
-    fx2, fy2 = input_points[1]
-    x1, y1 = float(fx1), float(fy1)
-    x2, y2 = float(fx2), float(fy2)
-    p1_str = f"({format_frac_tex(fx1)}, {format_frac_tex(fy1)})"
-    p2_str = f"({format_frac_tex(fx2)}, {format_frac_tex(fy2)})"
-    ax.scatter(
-        [x1, x2],
-        [y1, y2],
-        color="crimson",
-        s=90,
-        zorder=6,
-        label=f"Input Points: $P_1{p1_str}$, $P_2{p2_str}$",
-    )
-
   ax.axhline(0, color="black", linewidth=0.8, linestyle="--")
   ax.axvline(0, color="black", linewidth=0.8, linestyle="--")
   ax.set_title(f"Elliptic Curve: {eq_str}", fontsize=13, pad=12)
   ax.set_xlabel("$x$", fontsize=11)
   ax.set_ylabel("$y$", fontsize=11)
   ax.grid(True, linestyle=":", alpha=0.5)
-  ax.legend(loc="upper left")
+
+  handles, labels = ax.get_legend_handles_labels()
+  if handles:
+    ax.legend(loc="upper left")
 
   # --- Hover Tooltip Setup ---
   annot = ax.annotate(
@@ -288,21 +330,22 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
   fig.canvas.mpl_connect("motion_notify_event", on_hover)
 
   # --- UI Widgets Setup ---
-  ax_check = fig.add_axes([0.08, 0.06, 0.28, 0.12])
+  ax_check = fig.add_axes([0.08, 0.05, 0.28, 0.15])
   ax_box = fig.add_axes([0.42, 0.09, 0.12, 0.06])
   ax_btn = fig.add_axes([0.57, 0.09, 0.22, 0.06])
 
   if CYPARI_AVAILABLE:
     chk = CheckButtons(
-        ax_check, ["Find ellratpoints", "Integral only"], [False, False]
+        ax_check,
+        ["Find ellratpoints", "Integral only", "±45° Scale"],
+        [False, False, False],
     )
     txt_box = TextBox(ax_box, "Height: ", initial="1000")
     btn_zoom = Button(ax_btn, "Zoom to All Points")
 
-    # Initially grey out/disable the second checkbox rectangle & text since ellratpoints is off
     chk.rectangles[1].set_facecolor("#e0e0e0")
     chk.rectangles[1].set_edgecolor("#aaaaaa")
-    for text in chk.labels[1:]:
+    for text in chk.labels[1:2]:
       text.set_color("#888888")
 
     def on_check(label):
@@ -311,30 +354,28 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
         txt_box.ax.set_visible(state["active"])
         btn_zoom.ax.set_visible(state["active"])
 
-        # Update visual availability (grey out/activate) of "Integral only"
         if state["active"]:
           chk.rectangles[1].set_facecolor("#ffffff")
           chk.rectangles[1].set_edgecolor("black")
-          for text in chk.labels[1:]:
-            text.set_color("black")
+          chk.labels[1].set_color("black")
         else:
           state["integral"] = False
-          # Uncheck visual state if it was checked
           if chk.get_status()[1]:
-            chk.set_active(1)  # toggles it off
+            chk.set_active(1)
           chk.rectangles[1].set_facecolor("#e0e0e0")
           chk.rectangles[1].set_edgecolor("#aaaaaa")
-          for text in chk.labels[1:]:
-            text.set_color("#888888")
+          chk.labels[1].set_color("#888888")
 
       elif label == "Integral only":
         if state["active"]:
           state["integral"] = not state["integral"]
         else:
-          # If main search is disabled, keep it unchecked
           if chk.get_status()[1]:
             chk.set_active(1)
           return
+
+      elif label == "±45° Scale":
+        state["scale45"] = not state["scale45"]
 
       update_plot_elements()
 
@@ -355,13 +396,23 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
         return
       r_pts = get_pari_points()
       if input_points:
-        fx1, fy1 = input_points[0]
-        fx2, fy2 = input_points[1]
-        all_x = [float(fx1), float(fx2)] + [p[0] for p in r_pts]
-        all_y = [float(fy1), float(fy2)] + [p[1] for p in r_pts]
+        all_x = [k[0] for k in point_labels.keys()] + [
+            transform_point(p[0], p[1])[0] for p in r_pts if p[1] != 0
+        ]
+        all_y = [k[1] for k in point_labels.keys()] + [
+            transform_point(p[0], p[1])[1] for p in r_pts if p[1] != 0
+        ]
       else:
-        all_x = [p[0] for p in r_pts] if r_pts else [-5, 5]
-        all_y = [p[1] for p in r_pts] if r_pts else [-5, 5]
+        all_x = (
+            [transform_point(p[0], p[1])[0] for p in r_pts if p[1] != 0]
+            if r_pts
+            else [-5, 5]
+        )
+        all_y = (
+            [transform_point(p[0], p[1])[1] for p in r_pts if p[1] != 0]
+            if r_pts
+            else [-5, 5]
+        )
 
       if not all_x:
         all_x = [-5, 5]
@@ -395,7 +446,9 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
     )
   else:
     chk = CheckButtons(
-        ax_check, ["Find ellratpoints (Disabled)", "Integral only"], [False, False]
+        ax_check,
+        ["Find ellratpoints (Disabled)", "Integral only", "±45° Scale"],
+        [False, False, False],
     )
     chk.ax.set_facecolor("#e0e0e0")
     txt_box = TextBox(ax_box, "Height: ", initial="1000")
