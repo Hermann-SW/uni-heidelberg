@@ -60,6 +60,8 @@ True
 hermann@8840hs:~/uni-heidelberg$ 
 ```
 
+Just in case it might be interesting, discussion with Gemini on Lenstra's Elliptic Curve Method for factoring resulted in 156 lines GMP C++ code that works (slowly), with Gemini analysis on why that is much slower than Linux ```gmp-ecm``` package, in this [gist with comments](https://gist.github.com/Hermann-SW/57a3a898c498e96fdf8589b87a0dab8a). 
+
 <a name="Observation">Observation not part of book chapters I have read:
 
 Given two points $(x_1,y_1)$ and $(x_2,y_2)$ with $x_1\neq x_2$ there is a unique elliptic curve going through both points. Can be simply seen by rewriting eliptic curve formula $y^2=x^3+ax+b$ as $y^2-x^3=ax+b$. For a given pair $(x,y)$ the left hand side is constant, and two points result in simple system of two linear equations and two variables $a$ and $b$. Script [unique_ec.py](scripts/unique_ec.py) (generated with 3 prompts in 10 minutes by free gemini.google.com) allows to easily display that curve via matplotlib, example:  
