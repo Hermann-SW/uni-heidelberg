@@ -216,12 +216,12 @@ For d=29 from above, only odd powers keep solution x²-dy²=-1:
 ```
 
 
-New tool "LaTex labels for Graphviz":  
-https://gist.github.com/Hermann-SW/12c7644ac0c75b4eb019f76c3f023fe5
+New repo "graphviz_latex_pipeline" generated PDF with 37 LaTeX node and edge labels:  
+https://github.com/Hermann-SW/graphviz_latex_pipeline
 <table>
   <tr>
     <td bgcolor="white">
-      <img src="res/Latex_labels_for_Graphviz.png" />
+      <img src="res/number_theory.20pc.png" />
     </td>
   </tr>
 </table>
