@@ -25,9 +25,9 @@ https://scoop.iwr.uni-heidelberg.de/teaching/2026ws/lecture-grundlagen-der-optim
 
 Seminar on book "[KKS00] Kato, Kazuya, Nobushige Kurokawa, and Takeshi Saitō. Number Theory: Fermat’s dream. AMS Bookstore, 2000."
 
-Functions f,g,h in Lemma 1.5 of [proof diagram](res/Fermat_seminar.pdf) [built with [Fermat_seminar.build_graph.py](scripts/Fermat_seminar.build_graph.py)]  
+Functions f,g,h in Lemma 1.5 of [proof tree](res/Fermat_seminar.pdf) [built with [graphviz_latex_pipeline](https://github.com/Hermann-SW/graphviz_latex_pipeline) repo]  
 of "Elliptic curves and Fermat's proof" (for $n=4$, click for 100% size PDF):  
-<a href="res/Fermat_seminar.pdf">![Fermat_seminar.10pc.png](res/Fermat_seminar.10pc.png)</a>
+<a href="res/Fermat_seminar.pdf">![Fermat_seminar.20pc.png](res/Fermat_seminar.20pc.png)</a>
 
 §1.2 formula 1.4, this is called map2P in symbolic proof below:  
 ![formula.1_4.png](res/formula.1_4.png)
