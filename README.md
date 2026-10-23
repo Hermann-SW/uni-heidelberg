@@ -90,6 +90,8 @@ In case cypari2 module is installed, "Find ellratpoints" checkbox allows to dete
 
 Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
 
+https://github.com/Hermann-SW/graphviz_latex_pipeline#banach-tarski-paradox
+
 # spring 2026
 (5 lectures)
 - [Linear Algebra 2](#linears-algebra-2)
