@@ -52,6 +52,25 @@ def format_constant_frac(f):
     return f" - {num_str}"
 
 
+def check_discriminant(f_a, f_b, f_c):
+  """Computes exact polynomial discriminant of x^3 + a*x^2 + b*x + c and aborts if 0."""
+  disc_poly = (
+      (f_a**2) * (f_b**2)
+      - 4 * (f_b**3)
+      - 4 * (f_a**3) * f_c
+      - 27 * (f_c**2)
+      + 18 * f_a * f_b * f_c
+  )
+  disc_ec = 16 * disc_poly
+  print(f"Discriminant Δ = {disc_ec}")
+  if disc_poly == 0:
+    print(
+        "Error: Singular curve! The cubic x^3 + ax^2 + bx + c has multiple"
+        " zeros (Δ = 0), so it does not define an elliptic curve."
+    )
+    sys.exit(1)
+
+
 def print_usage():
   print("Usage options:")
   print(
@@ -76,6 +95,8 @@ def print_usage():
 
 
 def plot_elliptic_curve(f_a, f_b, f_c, input_points=None):
+  check_discriminant(f_a, f_b, f_c)
+
   a, b, c = float(f_a), float(f_b), float(f_c)
   eq_str = (
       f"$y^2 = x^3{format_term_frac(f_a, 'x^2')}"

@@ -70,15 +70,31 @@ Given two points $(x_1,y_1)$ and $(x_2,y_2)$ with $x_1\neq x_2$ there is a uniqu
 Animation shows curves through 2 integer points with $x^2+y^2=85$ (e.g. $(9,2)$ or $(7,6)$⁠), differing by sign and order only. Here is [100% size animation](res/ecs_85_anim.gif):  
 ![50% size animation](res/ecs_85_anim.50pc.gif)  
   
-[unique_ec_ℚ.py](scripts/unique_ec_ℚ.py) allows for rational coordinates, aspect preserving zoom in/out and dynamic redraw. Alternative input now allows to specify rational a and b for elliptic curve $y^2=x^3+ax+b$ as well:     
+[unique_ec_ℚ.py](scripts/unique_ec_ℚ.py) allows for rational coordinates, aspect preserving zoom in/out and dynamic redraw. Alternative input now allows to specify rational a and b for elliptic curve $y^2=x^3+ax+b$ or a, b and c for elliptic curve $y^2=x^3+ax^2+bx+c$ as well:     
 ```
-$ python scripts/unique_ec_ℚ.py 
+$ python unique_ec_ℚ.py 
 Usage options:
-  1) python unique_ec_ℚ.py x1 y1 x2 y2   (Specify via two rational points)
-  2) python unique_ec_ℚ.py a b          (Specify via curve parameters a and b)
+  1) python unique_ec_ℚ.py x1 y1 x2 y2       (Specify via two rational points for y^2 = x^3 + bx + c)
+  2) python unique_ec_ℚ.py x1 y1 x2 y2 x3 y3 (Specify via three rational points for y^2 = x^3 + ax^2 + bx + c)
+  3) python unique_ec_ℚ.py b c               (Specify via curve parameters b and c for y^2 = x^3 + bx + c)
+  4) python unique_ec_ℚ.py a b c             (Specify via curve parameters a, b, and c for y^2 = x^3 + ax^2 + bx + c)
 Example 1: python unique_ec_ℚ.py 9/2 1 7/6 1
-Example 2: python unique_ec_ℚ.py -209 1156
+Example 2: python unique_ec_ℚ.py -1 0 1 1 2 2
+Example 3: python unique_ec_ℚ.py 0 -4
 $
+```
+
+Additionally the discriminant of the polynom is determined and aborts in case of 0, which means a multiple root and therefore not being an elliptic curve:
+```
+$ python unique_ec_ℚ.py 0 0
+Using curve parameters: a(x^2)=0, b(x)=0, c=0
+Discriminant Δ = 0
+Error: Singular curve! The cubic x^3 + ax^2 + bx + c has multiple zeros (Δ = 0), so it does not define an elliptic curve.
+$ python unique_ec_ℚ.py 1 0 0
+Using curve parameters: a(x^2)=1, b(x)=0, c=0
+Discriminant Δ = 0
+Error: Singular curve! The cubic x^3 + ax^2 + bx + c has multiple zeros (Δ = 0), so it does not define an elliptic curve.
+$ 
 ```
 
 In case cypari2 module is installed, "Find ellratpoints" checkbox allows to determine and display all rational points on elliptic curve up to height specified in "Height" input field (via cypari2 PARI/GP function ```ellratpoints()```). Button "Zoom to all points" resets zoom so that all points up to height are visible. Rational point coordinates hover help gives details.  
