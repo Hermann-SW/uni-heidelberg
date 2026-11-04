@@ -55,21 +55,32 @@ def format_constant_frac(f):
 def print_usage():
   print("Usage options:")
   print(
-      "  1) python unique_ec_ℚ.py x1 y1 x2 y2   (Specify via two rational"
-      " points)"
+      "  1) python unique_ec_ℚ.py x1 y1 x2 y2       (Specify via two rational"
+      " points for y^2 = x^3 + bx + c)"
   )
   print(
-      "  2) python unique_ec_ℚ.py a b          (Specify via curve parameters a"
-      " and b)"
+      "  2) python unique_ec_ℚ.py x1 y1 x2 y2 x3 y3 (Specify via three"
+      " rational points for y^2 = x^3 + ax^2 + bx + c)"
+  )
+  print(
+      "  3) python unique_ec_ℚ.py b c               (Specify via curve"
+      " parameters b and c for y^2 = x^3 + bx + c)"
+  )
+  print(
+      "  4) python unique_ec_ℚ.py a b c             (Specify via curve"
+      " parameters a, b, and c for y^2 = x^3 + ax^2 + bx + c)"
   )
   print("Example 1: python unique_ec_ℚ.py 9/2 1 7/6 1")
-  print("Example 2: python unique_ec_ℚ.py -209 1156")
+  print("Example 2: python unique_ec_ℚ.py -1 0 1 1 2 2")
+  print("Example 3: python unique_ec_ℚ.py 0 -4")
 
 
-def plot_elliptic_curve(f_a, f_b, input_points=None):
-  a, b = float(f_a), float(f_b)
+def plot_elliptic_curve(f_a, f_b, f_c, input_points=None):
+  a, b, c = float(f_a), float(f_b), float(f_c)
   eq_str = (
-      f"$y^2 = x^3{format_term_frac(f_a, 'x')}{format_constant_frac(f_b)}$"
+      f"$y^2 = x^3{format_term_frac(f_a, 'x^2')}"
+      f"{format_term_frac(f_b, 'x')}"
+      f"{format_constant_frac(f_c)}$"
   )
 
   # Adjust layout to make room for widgets at the bottom
@@ -79,16 +90,12 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
   ax.set_aspect("equal", adjustable="datalim")
 
   if input_points:
-    fx1, fy1 = input_points[0]
-    fx2, fy2 = input_points[1]
-    x1, y1 = float(fx1), float(fy1)
-    x2, y2 = float(fx2), float(fy2)
-    x_span = max(abs(x1 - x2) * 2, 8)
-    y_span = max(abs(y1 - y2) * 2, 12)
-    ax.set_xlim(min(x1, x2) - x_span, max(x1, x2) + x_span)
-    ax.set_ylim(
-        -max(abs(y1), abs(y2)) - y_span, max(abs(y1), abs(y2)) + y_span
-    )
+    xs_in = [float(p[0]) for p in input_points]
+    ys_in = [float(p[1]) for p in input_points]
+    x_span = max((max(xs_in) - min(xs_in)) * 2, 8)
+    y_span = max(max(map(abs, ys_in)) * 2, 12)
+    ax.set_xlim(min(xs_in) - x_span / 2, max(xs_in) + x_span / 2)
+    ax.set_ylim(-max(map(abs, ys_in)) - y_span, max(map(abs, ys_in)) + y_span)
   else:
     ax.set_xlim(-10, 10)
     ax.set_ylim(-12, 12)
@@ -126,7 +133,9 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       pari = cypari2.Pari()
       pa = pari(str(f_a))
       pb = pari(str(f_b))
-      E = pari.ellinit([0, 0, 0, pa, pb])
+      pc = pari(str(f_c))
+      # General Weierstrass form [0, a, 0, b, c] for y^2 = x^3 + ax^2 + bx + c
+      E = pari.ellinit([0, pa, 0, pb, pc])
       if state["integral"]:
         pts = pari.ellratpoints(E, [state["height"], 1])
       else:
@@ -154,18 +163,20 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       )
     try:
       abs_val = abs(val)
-      roots_neg = np.roots([1.0, 0.0, a, b - abs_val**2])
-      real_roots_neg = [r.real for r in roots_neg if np.isreal(r) and r.real <= 0]
+      roots_neg = np.roots([1.0, a, b, c - abs_val**2])
+      real_roots_neg = [
+          r.real for r in roots_neg if np.isreal(r) and r.real <= 0
+      ]
       if real_roots_neg:
         y_val = abs_val
       else:
         poly = [
             1.0,
-            0.0,
-            4.0 + a - abs_val**2,
-            b,
-            4.0 * a,
-            4.0 * b - 4.0 * abs_val**2,
+            a,
+            4.0 + b - abs_val**2,
+            c + 4.0 * a,
+            4.0 * b,
+            4.0 * c - 4.0 * abs_val**2,
         ]
         roots_pos = np.roots(poly)
         real_roots_pos = [
@@ -173,7 +184,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
         ]
         if real_roots_pos:
           x_val = min(real_roots_pos)
-          y_val = np.sqrt(x_val**3 + a * x_val + b)
+          y_val = np.sqrt(max(0.0, x_val**3 + a * x_val**2 + b * x_val + c))
         else:
           y_val = abs_val
 
@@ -210,7 +221,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
     xmin, xmax = ax.get_xlim()
     ymin, ymax = ax.get_ylim()
 
-    cubic_roots = np.roots([1.0, 0.0, a, b])
+    cubic_roots = np.roots([1.0, a, b, c])
     real_roots = sorted([r.real for r in cubic_roots if abs(r.imag) < 1e-7])
 
     intervals = []
@@ -228,7 +239,7 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       if end <= start:
         continue
       xs = np.linspace(start, end, 1000)
-      val = xs**3 + a * xs + b
+      val = xs**3 + a * xs**2 + b * xs + c
       val = np.maximum(0, val)
       ys = np.sqrt(val)
 
@@ -272,15 +283,17 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
       ix = [k[0] for k in point_labels.keys()]
       iy = [k[1] for k in point_labels.keys()]
       if ix:
-        p1_str = f"({format_frac_tex(input_points[0][0])}, {format_frac_tex(input_points[0][1])})"
-        p2_str = f"({format_frac_tex(input_points[1][0])}, {format_frac_tex(input_points[1][1])})"
+        pts_str = ", ".join([
+            f"$P_{{{i+1}}}({format_frac_tex(pt[0])}, {format_frac_tex(pt[1])})$"
+            for i, pt in enumerate(input_points)
+        ])
         input_scatter_holder[0] = ax.scatter(
             ix,
             iy,
             color="crimson",
             s=90,
             zorder=6,
-            label=f"Input Points: $P_1{p1_str}$, $P_2{p2_str}$",
+            label=f"Input Points: {pts_str}",
         )
 
     if rat_scatter_holder[0] is not None:
@@ -395,7 +408,6 @@ def plot_elliptic_curve(f_a, f_b, input_points=None):
     txt_box = TextBox(ax_box, "Height: ", initial="1000")
     btn_zoom = Button(ax_btn, "Zoom to All Points")
 
-    # Version-safe check for older matplotlib .rectangles attribute
     if hasattr(chk, "rectangles") and len(chk.rectangles) > 1:
       chk.rectangles[1].set_facecolor("#e0e0e0")
       chk.rectangles[1].set_edgecolor("#aaaaaa")
@@ -532,12 +544,64 @@ if __name__ == "__main__":
       f_y2 = Fraction(sys.argv[4])
       Y1 = f_y1**2 - f_x1**3
       Y2 = f_y2**2 - f_x2**3
-      f_a = (Y1 - Y2) / (f_x1 - f_x2)
-      f_b = Y1 - f_x1 * f_a
+      f_a = Fraction(0)
+      f_b = (Y1 - Y2) / (f_x1 - f_x2)
+      f_c = Y1 - f_x1 * f_b
       print("Calculated parameters (Exact Fractions):")
-      print(f"a = {f_a}")
-      print(f"b = {f_b}")
-      plot_elliptic_curve(f_a, f_b, input_points=((f_x1, f_y1), (f_x2, f_y2)))
+      print(f"a (x^2 coeff) = {f_a}")
+      print(f"b (x coeff)   = {f_b}")
+      print(f"c (constant)  = {f_c}")
+      plot_elliptic_curve(
+          f_a, f_b, f_c, input_points=((f_x1, f_y1), (f_x2, f_y2))
+      )
+    except (ValueError, ZeroDivisionError):
+      print(
+          "Error: Please provide valid numbers or fractions for coordinates"
+          " with distinct x-values (e.g., 9/2)."
+      )
+      print_usage()
+  elif len(sys.argv) == 7:
+    try:
+      f_x1 = Fraction(sys.argv[1])
+      f_y1 = Fraction(sys.argv[2])
+      f_x2 = Fraction(sys.argv[3])
+      f_y2 = Fraction(sys.argv[4])
+      f_x3 = Fraction(sys.argv[5])
+      f_y3 = Fraction(sys.argv[6])
+      Y1 = f_y1**2 - f_x1**3
+      Y2 = f_y2**2 - f_x2**3
+      Y3 = f_y3**2 - f_x3**3
+
+      def det3(m):
+        return (
+            m[0][0] * (m[1][1] * m[2][2] - m[1][2] * m[2][1])
+            - m[0][1] * (m[1][0] * m[2][2] - m[1][2] * m[2][0])
+            + m[0][2] * (m[1][0] * m[2][1] - m[1][1] * m[2][0])
+        )
+
+      M = [[f_x1**2, f_x1, 1], [f_x2**2, f_x2, 1], [f_x3**2, f_x3, 1]]
+      d = det3(M)
+      if d == 0:
+        print("Error: The three points must have pairwise distinct x-coordinates.")
+        sys.exit(1)
+
+      Ma = [[Y1, f_x1, 1], [Y2, f_x2, 1], [Y3, f_x3, 1]]
+      Mb = [[f_x1**2, Y1, 1], [f_x2**2, Y2, 1], [f_x3**2, Y3, 1]]
+      Mc = [[f_x1**2, f_x1, Y1], [f_x2**2, f_x2, Y2], [f_x3**2, f_x3, Y3]]
+
+      f_a = det3(Ma) / d
+      f_b = det3(Mb) / d
+      f_c = det3(Mc) / d
+      print("Calculated parameters (Exact Fractions):")
+      print(f"a (x^2 coeff) = {f_a}")
+      print(f"b (x coeff)   = {f_b}")
+      print(f"c (constant)  = {f_c}")
+      plot_elliptic_curve(
+          f_a,
+          f_b,
+          f_c,
+          input_points=((f_x1, f_y1), (f_x2, f_y2), (f_x3, f_y3)),
+      )
     except (ValueError, ZeroDivisionError):
       print(
           "Error: Please provide valid numbers or fractions for coordinates"
@@ -546,14 +610,28 @@ if __name__ == "__main__":
       print_usage()
   elif len(sys.argv) == 3:
     try:
-      f_a = Fraction(sys.argv[1])
-      f_b = Fraction(sys.argv[2])
-      print(f"Using curve parameters: a = {f_a}, b = {f_b}")
-      plot_elliptic_curve(f_a, f_b, input_points=None)
+      f_a = Fraction(0)
+      f_b = Fraction(sys.argv[1])
+      f_c = Fraction(sys.argv[2])
+      print(f"Using curve parameters: a(x^2)=0, b(x)={f_b}, c={f_c}")
+      plot_elliptic_curve(f_a, f_b, f_c, input_points=None)
     except (ValueError, ZeroDivisionError):
       print(
-          "Error: Please provide valid numbers or fractions for a and b (e.g.,"
+          "Error: Please provide valid numbers or fractions for b and c (e.g.,"
           " -209 1156)."
+      )
+      print_usage()
+  elif len(sys.argv) == 4:
+    try:
+      f_a = Fraction(sys.argv[1])
+      f_b = Fraction(sys.argv[2])
+      f_c = Fraction(sys.argv[3])
+      print(f"Using curve parameters: a(x^2)={f_a}, b(x)={f_b}, c={f_c}")
+      plot_elliptic_curve(f_a, f_b, f_c, input_points=None)
+    except (ValueError, ZeroDivisionError):
+      print(
+          "Error: Please provide valid numbers or fractions for a, b, and c"
+          " (e.g., 1 -209 1156)."
       )
       print_usage()
   else:
