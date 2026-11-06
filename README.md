@@ -6,7 +6,7 @@
 - [fall 2025](#fall-2025)
 
 # fall 2026
-(4 lectures)  
+(4 lectures, 1 seminar)  
 - [Algebra 1](#algebra-1)
 - [Introduction to Optimization](#introduction-to-optimization)
 - [(S) Fermat and Number theory](#s-fermat-and-number-theory)
