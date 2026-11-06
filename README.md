@@ -10,6 +10,7 @@
 - [Algebra 1](#algebra-1)
 - [Introduction to Optimization](#introduction-to-optimization)
 - [(S) Fermat and Number theory](#s-fermat-and-number-theory)
+- [Elementary Hyperbolic Geometry](#elementary-hyperbolic-geometry)
 - [Higher Analysis](#higher-analysis)
 
 ## Algebra 1
@@ -101,6 +102,10 @@ In case cypari2 module is installed, "Find ellratpoints" checkbox allows to dete
 <table><tr><td><a href="res/unique_ec_ellratpoints.png"><img src="res/unique_ec_ellratpoints.33pc.png"></a></td><td><img src="res/ec_hover.png"></td></tr></table>
 
 
+## Elementary Hyperbolic Geometry
+
+Interactive [Hyperbolic Triangle Explorer](https://stamm-wilbrandt.de/hyperbolic_triangle_explorer/) runs via pyodide in browser. For running locally use [t7.py](scripts/t7.py):  
+![HTE.anim.gif](res/HTE.anim.gif)
 
 ## Higher Analysis
 
