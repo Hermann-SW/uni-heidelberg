@@ -104,6 +104,8 @@ In case cypari2 module is installed, "Find ellratpoints" checkbox allows to dete
 
 ## Elementary Hyperbolic Geometry
 
+Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
+
 Interactive [Hyperbolic Triangle Explorer](https://stamm-wilbrandt.de/hyperbolic_triangle_explorer/) runs via pyodide in browser. For running locally use [t7.py](scripts/t7.py):  
 ![HTE.anim.gif](res/HTE.anim.gif)
 
