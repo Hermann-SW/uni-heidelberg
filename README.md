@@ -17,6 +17,9 @@
 
 Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
 
+[Weeks 1-4 of script as English and German language Graphviz graphs](https://github.com/Hermann-SW/graphviz_latex_pipeline/tree/main#algebra-1-weeks-1-4)  
+![zathura.png](res/zathura.png)
+
 ## Introduction to Optimization
 
 Script, recordings and exercises:  
