@@ -18,6 +18,7 @@
 Script and exercises behind VPN on mampf.mathi.uni-heidelberg.de
 
 [Weeks 1-4 of script as English and German language Graphviz graphs](https://github.com/Hermann-SW/graphviz_latex_pipeline/tree/main#algebra-1-weeks-1-4)  
+145 searchable LaTeX nodes (definitions, theorems, $\dots$ / Definitionen, Theoreme, $\dots$):  
 ![zathura.png](res/zathura.png)
 
 ## Introduction to Optimization
