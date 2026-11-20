@@ -116,8 +116,7 @@ Interactive [Hyperbolic Triangle Explorer](https://stamm-wilbrandt.de/hyperbolic
 
 Form lecture 12:  
 **Theorem 5.11.** The Möbius transformations $\text{Möb}(\overline{\mathbb{C}})$ act 3-point transitively on $\overline{\mathbb{C}}$.
-
-That is, for two ordered triples $(z_1, z_2, z_3)$ and $(w_1, w_2, w_3)$ of pairwise distinct points in $\overline{\mathbb{C}}$, there exists a unique Möbius transformation $\mu \in \text{Möb}(\overline{\mathbb{C}})$ with $\mu(z_i) = w_i$ for $i \in \{1, 2, 3\}$.
+That is, for two ordered triples $(z_1, z_2, z_3)$ and $(w_1, w_2, w_3)$ of pairwise distinct points in $\overline{\mathbb{C}}$, there exists a unique Möbius transformation $\mu \in \text{Möb}(\overline{\mathbb{C}})$ with $\mu(z_i) = w_i$ for $i \in \lbrace 1, 2, 3\rbrace$.
 
 I asked gemini to create script [mobius_3point_trans.py](scripts/mobius_3point_trans.py) on that, for playing with:  
 ```
