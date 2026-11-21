@@ -120,16 +120,18 @@ That is, for two ordered triples $(z_1, z_2, z_3)$ and $(w_1, w_2, w_3)$ of pair
 
 I asked gemini to create script [mobius_3point_trans.py](scripts/mobius_3point_trans.py) on that, for playing with:  
 ```
-hermann@8840hs:~/uni-heidelberg$ python scripts/mobius_3point_trans.py 
-Usage: python unique.py z1 z2 z3 w1 w2 w3 [z ...]
-hermann@8840hs:~/uni-heidelberg$ python scripts/mobius_3point_trans.py 8+i 4+7i 0 4+7i 8+i 0 -1+8i
-a = (-0-1j)
-b = (-0+0j)
-c = (-0.12307692307692307-0.18461538461538463j)
-d = (-0+1j)
+hermann@8840hs:~/uni-heidelberg/scripts$ python mobius_3point_trans.py 8+1i 1+8i -1+8i 1+8i -1+8i 8+1i 4+7i 0.2281660893852303+6.5169939280656415i
+a = (0.5+4.142857142857143j)
+b = (32.642857142857146-1.1428571428571428j)
+c = (0.5021978021978022+0.017582417582417582j)
+d = (0.5-4.142857142857143j)
 
-(-1+8j) -> (5-1.3664283380001927e-16j)
-hermann@8840hs:~/uni-heidelberg$ 
+Fixpoint 1: (0.34876894325387453+9.961712941688791j)
+Fixpoint 2: (0.2281660893852303+6.5169939280656415j)
+
+(4+7j) -> (0.4858891533491999+8.047602856171371j)
+(0.2281660893852303+6.5169939280656415j) -> (0.22816608938522856+6.516993928065638j)
+hermann@8840hs:~/uni-heidelberg/scripts$ 
 ```
 
 ## Higher Analysis

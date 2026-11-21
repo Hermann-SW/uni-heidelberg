@@ -48,6 +48,27 @@ def compute_mobius(z1, z2, z3, w1, w2, w3):
     return a / scale, b / scale, c / scale, d / scale
 
 
+def find_fixpoints(a: complex, b: complex, c: complex, d: complex, tol: float = 1e-12):
+    """Return fixed points of T(z) = (az + b) / (cz + d) on the Riemann sphere."""
+    if cmath.isclose(c, 0.0, abs_tol=tol):
+        # T(inf) = a / c = inf, so inf is a fixed point
+        if cmath.isclose(d - a, 0.0, abs_tol=tol):
+            if cmath.isclose(b, 0.0, abs_tol=tol):
+                return ["all points (identity)"]
+            return ["inf"]
+        return [b / (d - a), "inf"]
+
+    # Solve c * z^2 + (d - a) * z - b = 0
+    discriminant = (d - a) ** 2 + 4 * b * c
+    if cmath.isclose(discriminant, 0.0, abs_tol=tol):
+        return [(a - d) / (2 * c)]
+
+    sqrt_disc = cmath.sqrt(discriminant)
+    z_plus = ((a - d) + sqrt_disc) / (2 * c)
+    z_minus = ((a - d) - sqrt_disc) / (2 * c)
+    return [z_plus, z_minus]
+
+
 def apply_mobius(a: complex, b: complex, c: complex, d: complex, z: complex):
     denom = c * z + d
     if cmath.isclose(denom, 0, abs_tol=1e-12):
@@ -72,6 +93,14 @@ def main():
     print(f"b = {b}")
     print(f"c = {c}")
     print(f"d = {d}")
+
+    fixpoints = find_fixpoints(a, b, c, d)
+    print()
+    if fixpoints == ["all points (identity)"]:
+        print("Fixpoints: all points (identity)")
+    else:
+        for idx, fp in enumerate(fixpoints, start=1):
+            print(f"Fixpoint {idx}: {fp}")
 
     if extra_z:
         print()
